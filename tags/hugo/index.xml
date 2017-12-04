@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Mon, 04 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://memoex.github.io/note/hugo/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/hugo/</guid>
+      <description>&lt;p&gt;Hugo releated notes. Current take some notes when reading official docuemts&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

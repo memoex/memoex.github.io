@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Hugo</title>
+  <meta property="og:title" content="Hugo" />
+  <meta name="twitter:title" content="Hugo" />
+  <meta name="description" content="Hugo releated notes. Current take some notes when reading official docuemts
+
+">
+  <meta property="og:description" content="Hugo releated notes. Current take some notes when reading official docuemts
+
+">
+  <meta name="twitter:description" content="Hugo releated notes. Current take some notes when reading official docuemts
+
+">
+  <meta name="author" content="Mr. Blue"/>
+  <link href='https://memoex.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://memoex.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://memoex.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://memoex.github.io/note/hugo/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mr.Blue&#39;s notes" />
+
+  <meta name="generator" content="Hugo 0.26" />
+  <link rel="canonical" href="https://memoex.github.io/note/hugo/" />
+  <link rel="alternate" href="" type="application/rss+xml" title="Mr.Blue&#39;s notes">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://memoex.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://memoex.github.io/css/highlighting.css" />
+  <link rel="stylesheet" href="https://memoex.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://memoex.github.io/css/highlight.min.css" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://memoex.github.io">Mr.Blue&#39;s notes</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Note" href="/note/">Note</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Mr.Blue&#39;s notes" href="https://memoex.github.io">
+            <img class="avatar-img" src="https://memoex.github.io/img/avatar-icon.png" alt="Mr.Blue&#39;s notes" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="note-heading">
+              <h1>Hugo</h1>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Hugo releated notes. Current take some notes when reading official docuemts</p>
+
+<p></p>
+
+<h2 id="reading-documents">Reading documents</h2>
+
+<h3 id="目录结构">目录结构</h3>
+
+<pre><code>.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre>
+
+<p><code>archetypes</code>: 用于<code>hugo new</code>，Lookup Order for Archetypes：</p>
+
+<ol>
+<li>archetypes/posts.md</li>
+<li>archetypes/default.md</li>
+<li>themes//archetypes/posts.md</li>
+<li>themes//archetypes/default.md (Auto-generated with hugo new site)</li>
+</ol>
+
+<h3 id="配置">配置</h3>
+
+<ul>
+<li>Configuration Lookup Order:
+
+<ul>
+<li>./config.toml</li>
+<li>./config.yaml</li>
+<li>./config.json</li>
+</ul></li>
+<li>All Configuration (TOML)：<a href="https://gohugo.io/getting-started/configuration/#toml-configuration">config.toml</a></li>
+<li>The values under <code>[params]</code> will populate the <code>.Site.Params</code> variable for use in templates.</li>
+<li>官方文档里面的toml配置有点过时了，不少配置项在新版本的hugo中已经废弃了。下面的是beautifulhugo主体里面示例网站的配置：<a href="https://raw.githubusercontent.com/halogenica/beautifulhugo/master/exampleSite/config.toml">config.toml</a></li>
+<li><a href="https://github.com/russross/blackfriday">Blackfriday</a> is Hugo’s built-in Markdown rendering engine. 看起来是个不错的东西。
+
+<ul>
+<li><a href="https://github.com/miekg/mmark">Mmark</a>: fork from blackfriday
+
+<ul>
+<li>不支持shortcodes等feature，放弃</li>
+</ul></li>
+<li>对嵌套列表有一点问题，用<a href="http://markdown.xiaoshujiang.com/">小书匠</a>默认的Tab设置似乎正常：<a href="https://github.com/russross/blackfriday/issues/329">Deep nested lists don&rsquo;t output correctly</a></li>
+<li><a href="https://gohugo.io/content-management/formats/#blackfriday-options">Blackfriday Options &amp; extensions</a></li>
+<li><a href="https://gohugo.io/content-management/formats/#extend-markdown">Awesome mardown extended features</a>:
+
+<ul>
+<li>Github-styled task lists (TODO lists)</li>
+<li>emojis</li>
+<li><a href="https://gohugo.io/content-management/shortcodes/">shortcodes</a>: if you find yourself frequently embedding your content with raw HTML</li>
+</ul></li>
+<li>MathJax似乎有坑 <a href="https://gohugo.io/content-management/formats/#mathjax-with-hugo">MathJax with Hugo</a></li>
+</ul></li>
+</ul>
+
+<h3 id="文档组织">文档组织</h3>
+
+<blockquote>
+<p>Hugo believes that you organize your content with a purpose. The same structure that works to organize your source content is used to organize the rendered site.</p>
+</blockquote>
+
+<ul>
+<li><code>content/[section]/[post-title.md]</code> 对应 <code>[website-url]/[section]/[post-title]/</code></li>
+<li>每个section都可以有一个<code>_index.md</code>，不是十分明白，似乎可以自定义section主页的内容？</li>
+<li>在<code>.md</code>头部添加 <code>slug: [new-title]</code> 可以定义新的链接地址，对应 <code>[website-url]/[section]/[new-title]/</code></li>
+<li><code>url: /new/url</code> 对应 <code>[website-url]/new/url</code></li>
+</ul>
+
+<h3 id="扉页-front-matter">扉页 - Front Matter</h3>
+
+<p><a href="https://gohugo.io/content-management/front-matter/#front-matter-variables">Front Matter Variables</a></p>
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://memoex.github.io/note/keras/" data-toggle="tooltip" data-placement="top" title="Keras">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "silverhugh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:silverhugh.77@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/xiaoshatong" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://memoex.github.io">Mr. Blue</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://memoex.github.io">Mr.Blue&#39;s notes</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.26</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://memoex.github.io/js/main.js"></script>
+<script src="https://memoex.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+<script src="https://memoex.github.io/js/load-photoswipe.js"></script>
+
+
+
+  </body>
+</html>
+
