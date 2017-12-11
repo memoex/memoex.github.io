@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Math &middot; Mr. Blue</title>
+        <meta name="description" content="记录一些数学知识。
+
+">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.26" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://memoex.github.iocss/normalize.css">
+        <link rel="stylesheet" href="https://memoex.github.iocss/highlight.css">
+        <link rel="stylesheet" href="https://memoex.github.iocss/style.css">
+        <link rel="stylesheet" href="https://memoex.github.iocss/overrides.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans+Condensed:300">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        <ul class="site-nav">
+                            <li class="site-nav-item">
+    <a title="Mr.Blue&#39;s notes" href="https://memoex.github.io">Home</a>
+</li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Note" href="note/">Note</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Tags" href="tags">Tags</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="page/about/">About</a>
+    </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Math</h1>
+    
+    <p class="post-date">
+        <span>Published <time datetime="2017-12-06" itemprop="datePublished">Dec 6, 2017</time></span>
+    </p>
+</header>
+
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>记录一些数学知识。</p>
+
+<p></p>
+
+<h2 id="线性代数">线性代数</h2>
+
+<h3 id="矩阵乘法">矩阵乘法</h3>
+
+<p><strong>参考：<a href="https://www.zhihu.com/question/19919917/answer/270694029">数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎</a></strong></p>
+
+<p>最初目的：解线性方程组</p>
+
+<p><strong>举例：\(YC_rC_b \to RGB\)</strong></p>
+
+<ul>
+<li>黑白电视到彩色电视
+
+<ul>
+<li>兼容问题</li>
+<li>\(Y\): 灰度图</li>
+</ul></li>
+</ul>
+
+<div>
+$$
+\begin{cases}
+0.299R + 0.587G + 0.114B = Y \\
+0.500R - 0.419G - 0.081B + 128 = C_r \\
+-0.169R - 0.331G + 0.500B + 128 = C_b
+\end{cases}
+$$
+</div>
+
+<p><strong>演变过程：</strong></p>
+
+<ul>
+<li>解方程方法：
+
+<ul>
+<li>高斯消元法
+
+<ul>
+<li>初中？小学？解方程的方法，逐个元素消除</li>
+</ul></li>
+<li>凯莱的高斯消元法
+
+<ul>
+<li>用<code>数块</code>表示线性方程组</li>
+<li>变换写在横线上很不数学</li>
+<li><code>数块</code>乘法</li>
+<li>数块被命名为<code>矩阵</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>高斯消元法到数块乘法的对应：</p>
+
+<div>
+
+$$
+A \impliedby b
+$$
+$\require{AMScd}$
+\begin{CD}
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 3 & 4 & 5 \\
+ \end{pmatrix}
+ @>{r^{'}_2 = r_2 - 3r_1}>>
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 0 & -2 & -4 \\
+ \end{pmatrix}
+\end{CD}
+
+</div>
+
+<p>对应</p>
+
+<div>
+
+$$
+ \begin{pmatrix}
+ 1 & 0 \\
+ -3 & 1 
+ \end{pmatrix}
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 3 & 4 & 5 
+ \end{pmatrix} =
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 0 & -2 & -4 
+ \end{pmatrix} 
+$$
+
+</div>
+
+<p>高斯消元法完全用数块乘法表示：</p>
+
+<div>
+
+$$
+ \begin{pmatrix}
+ 1 & -2 \\
+ 0 & 1
+ \end{pmatrix}
+\begin{pmatrix}
+ 1 & 0 \\
+ 0 & -\frac{1}{2}
+ \end{pmatrix}
+ \begin{pmatrix}
+ 1 & 0 \\
+ -3 & 1
+ \end{pmatrix}
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 3 & 4 & 5 
+ \end{pmatrix} =
+ \begin{pmatrix}
+ 1 & 0 & -1 \\
+ 0 & 1 & 2 
+ \end{pmatrix} 
+$$
+
+</div>
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        <a class="icon-twitter" href="https://twitter.com/share?text=Math&url=https%3a%2f%2fmemoex.github.io%2fpost%2fmath%2f"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <i class="fa fa-twitter"></i>
+            <span class="hidden">Twitter</span>
+        </a>
+
+        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fmemoex.github.io%2fpost%2fmath%2f"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <i class="fa fa-facebook"></i>
+            <span class="hidden">Facebook</span>
+        </a>
+
+        <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fmemoex.github.io%2fpost%2fmath%2f"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+           <i class="fa fa-google-plus"></i>
+            <span class="hidden">Google+</span>
+        </a>
+    </div>
+</footer>
+
+        
+    <div class="comments">
+        <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "silverhugh" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Mr.Blue&#39;s notes" href="https://memoex.github.io">Mr.Blue&#39;s notes</a>
+                    </h1>
+                    <a class="button-square button-jump-top js-jump-top" href="#">
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+                    <a class="button-square" href="https://memoex.github.ioindex.xml"><i class="fa fa-rss"></i></a>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+
+                <p class="footer-copyright">
+                <span>&copy; 2017  / Powered by <a href="https://gohugo.io/">Hugo</a></span>
+                </p>
+                <p class="footer-copyright">
+                    <span>Modified <a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
+                    <span>/ <a href="https://github.com/jbub/ghostwriter">Ported</a> to Hugo By <a href="https://github.com/jbub">jbub</a></span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://memoex.github.iojs/jquery-1.11.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+        <script src="https://memoex.github.iojs/jquery.fitvids.js"></script>
+        <script src="https://memoex.github.iojs/scripts.js"></script>
+
+        <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          messageStyle: 'none',
+          tex2jax: {
+            preview: 'none',
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            displayMath: [['$$','$$'], ['\[','\]']],
+            processEscapes: true,
+            processEnvironments: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            TeX: { equationNumbers: { autoNumber: "AMS" },
+                 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+          }
+        });
+        </script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Queue(function() {
+            // Fix <code> tags after MathJax finishes running. This is a
+            // hack to overcome a shortcoming of Markdown. Discussion at
+            // https://github.com/mojombo/jekyll/issues/199
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i = 0; i &lt; all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+        </script>
+
+        <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/knsv/mermaid/6.0.0/dist/mermaid.css">
+        <script>
+            mermaid.initialize({startOnLoad:true});
+        </script>
+    </body>
+</html>
+
