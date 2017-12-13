@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+
+
+    </head>
+<body>
+    <section id="wrapper">
+        <div class="post">
+  <h1>Git</h1>
+  <span class="post-date">Dec 11nd, 2017</span>
+  
+
+<p>Some git notes.</p>
+
+<!-- more -->
+
+<h2 id="基本配置">基本配置</h2>
+
+<p><strong><code>git config</code></strong></p>
+
+<pre><code class="language-sh"># List configuration
+git config -l
+git config --global -l
+
+# Config user's info
+git config --global user.name &quot;Mr.Blue&quot;
+git config --global user.email &quot;silverhugh.77@gmail.com&quot;
+
+# Delete config
+git config --global --unset user.username
+
+# Config editor for git, use vim, nano or so on
+git config --global core.editor &quot;vim&quot;
+# True way to Commit
+#   `git commit` will open an vim editor (set by command before)
+#   write the commit message in it and `:x` to commit
+</code></pre>
+
+<p>See also: <a href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a></p>
+
+<p><strong><code>git alias</code></strong></p>
+
+<pre><code class="language-sh">git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.us 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.ls 'log --oneline -20'
+</code></pre>
+
+<h2 id="远程分支的那点事儿">远程分支的那点事儿</h2>
+
+<p><strong>如何添加一个远程分支</strong></p>
+
+<ul>
+<li>常规操作， <code>git remote add origin git@githubo.com:[username]/[reponame].git</code>
+
+<ul>
+<li><code>github.com</code> 这里可以做一点文章</li>
+<li>对ssh进行一些配置，可以实现不同仓库使用不同的私钥进行推送</li>
+</ul></li>
+<li>添加一个自己用<code>git init --bare</code>创建的仓库时
+
+<ul>
+<li><code>git remote add origin ssh://git@example.com:[port]/~/example.git</code></li>
+</ul></li>
+</ul>
+
+<p><strong>设置<code>upstream</code></strong></p>
+
+<pre><code class="language-sh">#  -u to set upstream, next time you can run only `git push` or `git pull`
+git push -u origin master
+</code></pre>
+
+<p><strong>强行覆盖</strong></p>
+
+<ul>
+<li>本地覆盖远程：<code>git push -f origin master</code></li>
+<li>远程覆盖本地
+
+<ol>
+<li><code>git fetch --all</code></li>
+<li><code>git reset --hard origin/master</code></li>
+</ol></li>
+</ul>
+
+<h2 id="如何吃好后悔药">如何吃好后悔药</h2>
+
+<h3 id="修改commit作者-author-信息和提交信息-commit-message">修改commit作者(author)信息和提交信息(commit message)</h3>
+
+<p><strong>修改最后一次提交</strong></p>
+
+<ul>
+<li><code>git commit --amend --reset-author</code> This will user your author information in <code>git config -l</code>.</li>
+<li><code>git commit --amend --author=&quot;Mr.Blue &lt;silverhugh.77@gmail.com&gt;&quot;</code></li>
+<li><code>--no-edit</code> will keep old commit message.</li>
+<li>Without it, it will open an editor which is configured by <code>git config core.editor=nvim</code></li>
+</ul>
+
+<p>修改任意个提交</p>
+
+<ul>
+<li><code>git rebase -i &lt;commit-ID&gt;</code> Modify commits after <code>&lt;commit-ID&gt;</code>
+
+<ul>
+<li>or just <code>git rebase -i --root</code> from start.</li>
+</ul></li>
+<li>It will open an editor. There are enough information in opened editor.</li>
+<li>If you want to modify some commits, just change <code>pick</code> of that line to <code>edit</code>
+
+<ul>
+<li>Just <code>remove</code> that line if you want remove a commit.</li>
+</ul></li>
+<li>Save and exit the editor.</li>
+<li>Then your next step is to modify those chosen commits one by one.</li>
+<li>Treat them with the method showed in the previous part.</li>
+</ul>
+
+</div>
+    </section>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
+<script>
+    renderMathInElement(document.body);
+</script>
+
+
+</body>
+</html>
