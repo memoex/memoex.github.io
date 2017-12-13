@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-gist.min.css">
+
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -153,7 +155,7 @@ model.compile(loss='binary_crossentropy',
     
     inputs = Input(shape=input_shape)
     
-    c_out = Conv2D(filters=kernel_num, kernel_size=(3, 3), activation='relu', \
+    c_out = Conv2D(filters=kernel_num, kernel_size=(3, 3), activation='relu',
                    use_bias=True, padding='same')(inputs)
     p_out = MaxPooling2D((2, 2), padding='same')(c_out)
     flat  = Flatten()(p_out)
@@ -161,7 +163,8 @@ model.compile(loss='binary_crossentropy',
     
     model = Model(inputs, d_out)
     opt = Adam()
-    model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['acc'])
+    model.compile(optimizer=opt, loss='categorical_crossentropy', 
+                  metrics=['acc'])
     
     return model
 </code></pre>
@@ -169,10 +172,13 @@ model.compile(loss='binary_crossentropy',
 <pre><code class="language-python">def train_model(model, batch_size=32):
     
     model_path = 'model.h5'
-    model_checkpoint = ModelCheckpoint(model_path, monitor='val_acc', save_best_only=True, save_weights_only=True)
+    model_checkpoint = ModelCheckpoint(model_path, monitor='val_acc',
+                                       save_best_only=True, 
+                                       save_weights_only=True)
     early_stopping = EarlyStopping(patience=5, monitor='val_acc')
-    hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=100, \
-                     validation_data=[X_test, y_test], callbacks=[model_checkpoint, early_stopping])
+    hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=100,
+                     validation_data=[X_test, y_test], 
+                     callbacks=[model_checkpoint, early_stopping])
     
     model.load_weights(model_path)
     
@@ -184,11 +190,12 @@ model.compile(loss='binary_crossentropy',
     return model
 </code></pre>
 
-<pre><code class="language-python">def get_p_out(model_trained, input_data, input_shape=(64, 64, 3), kernel_num=64):
+<pre><code class="language-python">def get_p_out(model_trained, input_data, 
+              input_shape=(64, 64, 3), kernel_num=64):
     
     inputs = Input(shape=input_shape)
     
-    c_out = Conv2D(filters=kernel_num, kernel_size=(3, 3), activation='relu', \
+    c_out = Conv2D(filters=kernel_num, kernel_size=(3, 3), activation='relu',
                    use_bias=True, padding='same', )(inputs)
     p_out = MaxPooling2D((2, 2), padding='same')(c_out)
     flat  = Flatten()(p_out)
@@ -196,7 +203,8 @@ model.compile(loss='binary_crossentropy',
     
     model = Model(inputs, p_out)
     opt = Adam()
-    model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['acc'])
+    model.compile(optimizer=opt, loss='categorical_crossentropy',
+                  metrics=['acc'])
     
     model.set_weights(model_trained.get_weights())
     
@@ -211,16 +219,20 @@ model.compile(loss='binary_crossentropy',
 
 
 
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js"></script>
 <script>
     renderMathInElement(document.body);
 </script>
-
-
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 
     </div>
