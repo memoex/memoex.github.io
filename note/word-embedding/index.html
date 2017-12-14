@@ -15,17 +15,57 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+<link rel="stylesheet" href="https://memoex.github.iocss/blue.css">
+
     </head>
 <body>
     <div class="container">
+        <div id="site-title" class="my-5 py-3 row justify-content-center">
+            <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
+        </div>
+        <div id="site-nav" class="my-4 py-2 row justify-content-center">
+            <nav>
+    <ul class="nav">
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io"><span>Blog</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
+            </li>
+        
+    </ul>
+</nav>
+
+        </div>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="post">
-  <h1>Word embedding</h1>
-  <span class="post-date">Dec 4nd, 2017</span>
-  <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
-
-<p></p>
+                <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-4 font-weight-bold">Word embedding</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-secondary">
+            <p>Dec 4, 2017</p>
+        </div>
+    </div>
+    <div class="row my-4 mx-1">
+        <div class="col">
+            <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
 
 <h2 id="拟合目标">拟合目标</h2>
 
@@ -41,6 +81,8 @@ $$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
 <p>如果两个词语义无关，分布独立，互信息为0：
 $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
 
+<p></p>
+
 <h2 id="参考">参考</h2>
 
 <ul>
@@ -52,10 +94,13 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 <li><a href="https://arxiv.org/pdf/1301.3781.pdf">Efficient Estimation of Word Representations in Vector Space</a></li>
 </ul></li>
 </ul>
+        </div>
+    </div>
 </div>
             </div>
         </div>
-        
+        <div class="row">
+            
 
 
 
@@ -75,6 +120,7 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 </script>
 
 
+        </div>
     </div>
 </body>
 </html>

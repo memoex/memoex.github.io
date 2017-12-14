@@ -15,17 +15,57 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+<link rel="stylesheet" href="https://memoex.github.iocss/blue.css">
+
     </head>
 <body>
     <div class="container">
+        <div id="site-title" class="my-5 py-3 row justify-content-center">
+            <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
+        </div>
+        <div id="site-nav" class="my-4 py-2 row justify-content-center">
+            <nav>
+    <ul class="nav">
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io"><span>Blog</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
+            </li>
+        
+    </ul>
+</nav>
+
+        </div>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="post">
-  <h1>Keras</h1>
-  <span class="post-date">Dec 4nd, 2017</span>
-  <p>Record the problems encountered while using Keras and their solutions. The version of Keras I used is <code>2.0.8</code>.</p>
-
-<p></p>
+                <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-4 font-weight-bold">Keras</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-secondary">
+            <p>Dec 4, 2017</p>
+        </div>
+    </div>
+    <div class="row my-4 mx-1">
+        <div class="col">
+            <p>Record the problems encountered while using Keras and their solutions. The version of Keras I used is <code>2.0.8</code>.</p>
 
 <h2 id="basic">Basic</h2>
 
@@ -34,6 +74,8 @@
 <p>As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.</p>
 
 <p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
+
+<p></p>
 
 <pre><code class="language-python">from keras import backend as K
 
@@ -212,10 +254,13 @@ model.compile(loss='binary_crossentropy',
     
     return pred
 </code></pre>
+        </div>
+    </div>
 </div>
             </div>
         </div>
-        
+        <div class="row">
+            
 
 
 
@@ -235,6 +280,7 @@ model.compile(loss='binary_crossentropy',
 </script>
 
 
+        </div>
     </div>
 </body>
 </html>

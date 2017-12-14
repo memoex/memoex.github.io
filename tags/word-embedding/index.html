@@ -15,24 +15,111 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+<link rel="stylesheet" href="https://memoex.github.iocss/blue.css">
+
     </head>
 <body>
     <div class="container">
+        <div id="site-title" class="my-5 py-3 row justify-content-center">
+            <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
+        </div>
+        <div id="site-nav" class="my-4 py-2 row justify-content-center">
+            <nav>
+    <ul class="nav">
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io"><span>Blog</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
+            </li>
+        
+    </ul>
+</nav>
+
+        </div>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <h1>Word Embedding</h1>
+                <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="font-weight-bold">Word Embedding</h1>
+        </div>
+        <div class="row">
+            <div class="container">
+    <div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/word-embedding/">Word embedding</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 4, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
 
-<ul class="posts">
-<li>
-    <span>
-        <time>2017-17-04</time>
-        <a href="https://memoex.github.io/note/word-embedding/">Word embedding</a>
-    </span>
-  </li>
-</ul>
+<h2 id="拟合目标">拟合目标</h2>
+
+<p>条件概率：
+$$P(w_j|w_i)$$</p>
+
+<p>二元词概率：
+$$P(w_i, w_j)$$</p>
+
+<p>互信息：
+$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+
+<p>如果两个词语义无关，分布独立，互信息为0：
+$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/word-embedding">word embedding</a>
+                                </li>
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/nlp">NLP</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/word-embedding/">→</a>
+                    </div>
+                </div>
             </div>
         </div>
-        
+</div>
+
+        </div>
+    </div>
+            </div>
+        </div>
+        <div class="row">
+            
 
 
 
@@ -52,6 +139,7 @@
 </script>
 
 
+        </div>
     </div>
 </body>
 </html>

@@ -16,49 +16,496 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+<link rel="stylesheet" href="https://memoex.github.iocss/blue.css">
+
     </head>
 <body>
     <div class="container">
+        <div id="site-title" class="my-5 py-3 row justify-content-center">
+            <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
+        </div>
+        <div id="site-nav" class="my-4 py-2 row justify-content-center">
+            <nav>
+    <ul class="nav">
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io"><span>Blog</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
+            </li>
+        
+    </ul>
+</nav>
+
+        </div>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <h1>Mr.Blue&#39;s notes</h1>
+                <div class="container">
+    <div class="row">
+        <div class="container">
+    <div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/git/">Git</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 11, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>Some git notes.</p>
 
-<ul class="posts">
-<li>
-    <span>
-        <time>2017-17-11</time>
-        <a href="https://memoex.github.io/note/git/">Git</a>
-    </span>
-  </li><li>
-    <span>
-        <time>2017-17-10</time>
-        <a href="https://memoex.github.io/note/python/">Python</a>
-    </span>
-  </li><li>
-    <span>
-        <time>2017-17-06</time>
-        <a href="https://memoex.github.io/note/math/">Math</a>
-    </span>
-  </li><li>
-    <span>
-        <time>2017-17-04</time>
-        <a href="https://memoex.github.io/note/hugo/">Hugo</a>
-    </span>
-  </li><li>
-    <span>
-        <time>2017-17-04</time>
-        <a href="https://memoex.github.io/note/keras/">Keras</a>
-    </span>
-  </li><li>
-    <span>
-        <time>2017-17-04</time>
-        <a href="https://memoex.github.io/note/word-embedding/">Word embedding</a>
-    </span>
-  </li>
+<h2 id="基本配置">基本配置</h2>
+
+<p><strong><code>git config</code></strong></p>
+
+<pre><code class="language-sh"># List configuration
+git config -l
+git config --global -l
+
+# Config user's info
+git config --global user.name &quot;Mr.Blue&quot;
+git config --global user.email &quot;silverhugh.77@gmail.com&quot;
+
+# Delete config
+git config --global --unset user.username
+
+# Config editor for git, use vim, nano or so on
+git config --global core.editor &quot;vim&quot;
+# True way to Commit
+#   `git commit` will open an vim editor (set by command before)
+#   write the commit message in it and `:x` to commit
+</code></pre>
+
+<p>See also: <a href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a></p>
+
+<p><strong><code>git alias</code></strong></p>
+
+<pre><code class="language-sh">git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.us 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.ls 'log --oneline -20'
+</code></pre>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/git/">→</a>
+                    </div>
+                </div>
+            </div>
+        </div><div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/python/">Python</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 10, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>Some python notes.</p>
+
+<h2 id="quick-notes">Quick notes</h2>
+
+<p><code>enumerate</code>.</p>
+
+<pre><code class="language-python">colors = ['red', 'green', 'blue', 'yellow']
+
+for i, color in enumerate(colors):
+    print i, '--&gt;', color
+</code></pre>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/python/">→</a>
+                    </div>
+                </div>
+            </div>
+        </div><div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/math/">Math</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 6, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>记录一些数学知识。</p>
+
+<h2 id="线性代数">线性代数</h2>
+
+<h3 id="矩阵乘法">矩阵乘法</h3>
+
+<p><strong>参考：<a href="https://www.zhihu.com/question/19919917/answer/270694029">数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎</a></strong></p>
+
+<p>最初目的：解线性方程组</p>
+
+<p><strong>举例：\(YC_rC_b \to RGB\)</strong></p>
+
+<ul>
+<li>黑白电视到彩色电视
+
+<ul>
+<li>兼容问题</li>
+<li>\(Y\): 灰度图</li>
+</ul></li>
 </ul>
+
+<div>
+$$
+\begin{cases}
+0.299R + 0.587G + 0.114B = Y \\
+0.500R - 0.419G - 0.081B + 128 = C_r \\
+-0.169R - 0.331G + 0.500B + 128 = C_b
+\end{cases}
+$$
+</div>
+
+<p><strong>演变过程：</strong></p>
+
+<ul>
+<li>解方程方法：
+
+<ul>
+<li>高斯消元法
+
+<ul>
+<li>初中？小学？解方程的方法，逐个元素消除</li>
+</ul></li>
+<li>凯莱的高斯消元法
+
+<ul>
+<li>用<code>数块</code>表示线性方程组</li>
+<li>变换写在横线上很不数学</li>
+<li><code>数块</code>乘法</li>
+<li>数块被命名为<code>矩阵</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>高斯消元法到数块乘法的对应：</p>
+
+<div>
+ $$
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 3 & 4 & 5
+ \end{pmatrix}
+ \xrightarrow{r^{'}_2 = r_2 - 3r_1}
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 0 & -2 & -4
+ \end{pmatrix}
+ $$
+</div>
+
+<p>对应</p>
+
+<div>
+
+$$
+ \begin{pmatrix}
+ 1 & 0 \\
+ -3 & 1 
+ \end{pmatrix}
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 3 & 4 & 5 
+ \end{pmatrix} =
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 0 & -2 & -4 
+ \end{pmatrix} 
+$$
+
+</div>
+
+<p>高斯消元法完全用数块乘法表示：</p>
+
+<div>
+
+$$
+ \begin{pmatrix}
+ 1 & -2 \\
+ 0 & 1
+ \end{pmatrix}
+\begin{pmatrix}
+ 1 & 0 \\
+ 0 & -\frac{1}{2}
+ \end{pmatrix}
+ \begin{pmatrix}
+ 1 & 0 \\
+ -3 & 1
+ \end{pmatrix}
+ \begin{pmatrix}
+ 1 & 2 & 3 \\
+ 3 & 4 & 5 
+ \end{pmatrix} =
+ \begin{pmatrix}
+ 1 & 0 & -1 \\
+ 0 & 1 & 2 
+ \end{pmatrix} 
+$$
+
+</div>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/math/">→</a>
+                    </div>
+                </div>
+            </div>
+        </div><div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/hugo/">Hugo</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 4, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>Hugo releated notes. Current take some notes when reading official docuemts</p>
+
+<h2 id="reading-documents">Reading documents</h2>
+
+<h3 id="目录结构">目录结构</h3>
+
+<pre><code>.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre>
+
+<p><code>archetypes</code>: 用于<code>hugo new</code>，Lookup Order for Archetypes：</p>
+
+<ul>
+<li><code>archetypes/posts.md</code></li>
+<li><code>archetypes/default.md</code></li>
+<li><code>themes//archetypes/posts.md</code></li>
+<li><code>themes//archetypes/default.md (Auto-generated with hugo new site)</code></li>
+</ul>
+
+<h3 id="配置">配置</h3>
+
+<ul>
+<li>Configuration Lookup Order:
+
+<ul>
+<li>./config.toml</li>
+<li>./config.yaml</li>
+<li>./config.json</li>
+</ul></li>
+<li>All Configuration (TOML)：<a href="https://gohugo.io/getting-started/configuration/#toml-configuration">config.toml</a></li>
+<li>The values under <code>[params]</code> will populate the <code>.Site.Params</code> variable for use in templates.</li>
+<li>官方文档里面的toml配置有点过时了，不少配置项在新版本的hugo中已经废弃了。下面的是beautifulhugo主体里面示例网站的配置：<a href="https://raw.githubusercontent.com/halogenica/beautifulhugo/master/exampleSite/config.toml">config.toml</a></li>
+<li><a href="https://github.com/russross/blackfriday">Blackfriday</a> is Hugo’s built-in Markdown rendering engine. 看起来是个不错的东西。
+
+<ul>
+<li><a href="https://github.com/miekg/mmark">Mmark</a>: fork from blackfriday</li>
+<li>不支持shortcodes等feature，放弃</li>
+<li>对嵌套列表有一点问题，用<a href="http://markdown.xiaoshujiang.com/">小书匠</a>默认的Tab设置似乎正常：<a href="https://github.com/russross/blackfriday/issues/329">Deep nested lists don&rsquo;t output correctly</a></li>
+<li><a href="https://gohugo.io/content-management/formats/#blackfriday-options">Blackfriday Options &amp; extensions</a></li>
+<li><a href="https://gohugo.io/content-management/formats/#extend-markdown">Awesome mardown extended features</a>:</li>
+<li>Github-styled task lists (TODO lists)</li>
+<li>emojis</li>
+<li><a href="https://gohugo.io/content-management/shortcodes/">shortcodes</a>: if you find yourself frequently embedding your content with raw HTML</li>
+<li>MathJax似乎有坑 <a href="https://gohugo.io/content-management/formats/#mathjax-with-hugo">MathJax with Hugo</a></li>
+</ul></li>
+</ul>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/hugo">Hugo</a>
+                                </li>
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/blog">blog</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/hugo/">→</a>
+                    </div>
+                </div>
+            </div>
+        </div><div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/keras/">Keras</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 4, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>Record the problems encountered while using Keras and their solutions. The version of Keras I used is <code>2.0.8</code>.</p>
+
+<h2 id="basic">Basic</h2>
+
+<h3 id="metric">Metric</h3>
+
+<p>As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.</p>
+
+<p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/keras">keras</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/keras/">→</a>
+                    </div>
+                </div>
+            </div>
+        </div><div class="row mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="font-weight-bold"><a class="text-dark" href="https://memoex.github.io/note/word-embedding/">Word embedding</a></h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <time class="text-secondary">Dec 4, 2017</time>
+                    </div>
+                </div>
+                <div class="row mx-1 my-3">
+                    <div class="col">
+                        <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
+
+<h2 id="拟合目标">拟合目标</h2>
+
+<p>条件概率：
+$$P(w_j|w_i)$$</p>
+
+<p>二元词概率：
+$$P(w_i, w_j)$$</p>
+
+<p>互信息：
+$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+
+<p>如果两个词语义无关，分布独立，互信息为0：
+$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border border-light"></div>
+                <div class="row justify-content-end my-3">
+                    <div class="col align-item-start">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/word-embedding">word embedding</a>
+                                </li>
+                            
+                                <li class="nav-item">
+                                    <a class="btn btn-light mx-2" href="/tags/nlp">NLP</a>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <a class="text-dark" href="https://memoex.github.io/note/word-embedding/">→</a>
+                    </div>
+                </div>
             </div>
         </div>
-        
+</div>
+
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="row">
+            
 
 
 
@@ -78,6 +525,7 @@
 </script>
 
 
+        </div>
     </div>
 </body>
 </html>

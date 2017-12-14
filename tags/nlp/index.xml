@@ -20,6 +20,20 @@
       <guid>https://memoex.github.io/note/word-embedding/</guid>
       <description>&lt;p&gt;在使用Keras的Embedding层的时候，遇到困惑，学习一下。&lt;/p&gt;
 
+&lt;h2 id=&#34;拟合目标&#34;&gt;拟合目标&lt;/h2&gt;
+
+&lt;p&gt;条件概率：
+$$P(w_j|w_i)$$&lt;/p&gt;
+
+&lt;p&gt;二元词概率：
+$$P(w_i, w_j)$$&lt;/p&gt;
+
+&lt;p&gt;互信息：
+$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$&lt;/p&gt;
+
+&lt;p&gt;如果两个词语义无关，分布独立，互信息为0：
+$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     

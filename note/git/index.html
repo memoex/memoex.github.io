@@ -15,19 +15,57 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+<link rel="stylesheet" href="https://memoex.github.iocss/blue.css">
+
     </head>
 <body>
     <div class="container">
+        <div id="site-title" class="my-5 py-3 row justify-content-center">
+            <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
+        </div>
+        <div id="site-nav" class="my-4 py-2 row justify-content-center">
+            <nav>
+    <ul class="nav">
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io"><span>Blog</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
+            </li>
+        
+            <li class="nav-item mx-3">
+                <a class="nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
+            </li>
+        
+    </ul>
+</nav>
+
+        </div>
+    </div>
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="post">
-  <h1>Git</h1>
-  <span class="post-date">Dec 11nd, 2017</span>
-  
-
-<p>Some git notes.</p>
-
-<!-- more -->
+                <div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="mt-4 font-weight-bold">Git</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-secondary">
+            <p>Dec 11, 2017</p>
+        </div>
+    </div>
+    <div class="row my-4 mx-1">
+        <div class="col">
+            <p>Some git notes.</p>
 
 <h2 id="基本配置">基本配置</h2>
 
@@ -63,6 +101,8 @@ git config --global alias.us 'reset HEAD --'
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.ls 'log --oneline -20'
 </code></pre>
+
+<p></p>
 
 <h2 id="远程分支的那点事儿">远程分支的那点事儿</h2>
 
@@ -152,11 +192,13 @@ git push -u origin master
 <p><strong>推送标签</strong></p>
 
 <p><code>git push origin &lt;tag-name&gt;</code></p>
-
+        </div>
+    </div>
 </div>
             </div>
         </div>
-        
+        <div class="row">
+            
 
 
 
@@ -176,6 +218,7 @@ git push -u origin master
 </script>
 
 
+        </div>
     </div>
 </body>
 </html>
