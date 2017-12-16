@@ -25,57 +25,51 @@
     </head>
 <body class="mdl-color--grey-50">
     <div class="container">
-        <div id="site-title" class="my-5 py-3 row justify-content-center">
+        <div id="site-title" class="py-3 row justify-content-center">
             <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
         </div>
-        <div id="site-nav" class="mdl-shadow--2dp mdl-color--white my-4 row justify-content-center">
-            <nav>
-    <ul class="nav">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="container mdl-color--white">
+    <ul class="row nav justify-content-around">
         
-            <li class="nav-item">
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect my-2 px-5 nav-link text-muted" href="https://memoex.github.io/"><span>Blog</span></a>
-            </li>
+            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/"><span>Blog</span></a>
         
-            <li class="nav-item">
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect my-2 px-5 nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
-            </li>
+            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
         
-            <li class="nav-item">
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect my-2 px-5 nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
-            </li>
+            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
         
-            <li class="nav-item">
-                <a class="mdl-button mdl-js-button mdl-js-ripple-effect my-2 px-5 nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
-            </li>
+            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
         
     </ul>
-</nav>
+</div>
 
+            </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-9">
+            <div class="col-12 col-lg-8">
                 <div class="container">
         <div class="row justify-content-center">
             <h1 class="font-weight-bold">Nlp</h1>
         </div>
         <div class="row">
             <div class="container">
-    <div class="row mt-4">
-            <div class="container px-5 mdl-color--white mdl-shadow--2dp">
+    <div class="row mb-5">
+            <div class="container mdl-color--white">
                 <div class="row">
                     <div class="col">
                         <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/word-embedding/">Word embedding</a></h1>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <time class="text-secondary">Dec 4, 2017</time>
+                    <div class="col mdl-color-text--blue-grey">
+                        <time>Dec 4, 2017</time>
                     </div>
                 </div>
-                <div class="row mx-1 my-3">
-                    <div class="col">
+                <div class="row">
+                    <div class="col mt-5">
                         <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
 
 <h2 id="拟合目标">拟合目标</h2>
@@ -95,26 +89,27 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 <p></p>
                     </div>
                 </div>
-                <div class="row border border-light"></div>
-                <div class="row justify-content-end my-3">
-                    <div class="col align-item-start">
-                        <ul class="nav">
+                <div class="row my-2">
+                    <div class="col">
+                        <ul class="nav justify-content-end">
                             
                                 <li class="nav-item">
-                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mx-2" onclick="location.href='\/tags\/word-embedding'">word embedding</button>
+                                    <button type="button" class="mdl-button mdl-js-button  mdl-js-ripple-effect mx-2" onclick="location.href='\/tags\/word-embedding'">word embedding</button>
                                 </li>
                             
                                 <li class="nav-item">
-                                    <button type="button" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mx-2" onclick="location.href='\/tags\/nlp'">NLP</button>
+                                    <button type="button" class="mdl-button mdl-js-button  mdl-js-ripple-effect mx-2" onclick="location.href='\/tags\/nlp'">NLP</button>
                                 </li>
                             
                         </ul>
                     </div>
-                    <div class="col-1">
-                        <a class="mdl-button mdl-js-button mdl-js-ripple-effect text-dark" href="https://memoex.github.io/note/word-embedding/">
-                            <i class="material-icons md-24">arrow_forward</i>
-                        </a>
-                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/word-embedding\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="material-icons md-24">arrow_forward</i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -129,12 +124,12 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 
 
 
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
