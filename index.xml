@@ -76,6 +76,25 @@ for i, color in enumerate(colors):
     print i, &#39;--&amp;gt;&#39;, color
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;range&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xrange&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;zip&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;izip&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;zip&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; x = [1, 2, 3]
+&amp;gt;&amp;gt;&amp;gt; y = [4, 5, 6]
+&amp;gt;&amp;gt;&amp;gt; zipped = zip(x, y)
+&amp;gt;&amp;gt;&amp;gt; zipped
+[(1, 4), (2, 5), (3, 6)]
+&amp;gt;&amp;gt;&amp;gt; x2, y2 = zip(*zipped)
+&amp;gt;&amp;gt;&amp;gt; x == list(x2) and y == list(y2)
+True
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     

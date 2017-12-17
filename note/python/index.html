@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
@@ -23,23 +26,25 @@
 <link rel="stylesheet" href="https://memoex.github.io/css/blue.css">
 
     </head>
-<body class="mdl-color--grey-50">
+<body class="colorful">
     <div class="container">
-        <div id="site-title" class="py-3 row justify-content-center">
-            <h1 class="font-weight-bold">Mr.Blue&#39;s notes</h1>
-        </div>
-        <div class="row justify-content-center">
+        <div id="site-title" class="mt-4 row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="container mdl-color--white">
+                <h1 class="rounded-top my-0 py-5 font-weight-bold mdl-color--white text-center mdl-shadow--8dp">Mr.Blue&#39;s notes</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <div class="col-12 col-lg-8">
+                <div class="container mdl-color--white mdl-shadow--2dp rounded-bottom">
     <ul class="row nav justify-content-around">
         
-            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/"><span>Blog</span></a>
+            <a class="nav-item col px-3 mdl-button mdl-js-button mdl-button--primary nav-link" href="https://memoex.github.io/"><span>Blog</span></a>
         
-            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/note/"><span>Note</span></a>
+            <a class="nav-item col px-3 mdl-button mdl-js-button mdl-button--primary nav-link" href="https://memoex.github.io/note/"><span>Note</span></a>
         
-            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/tags"><span>Tags</span></a>
+            <a class="nav-item col px-3 mdl-button mdl-js-button mdl-button--primary nav-link" href="https://memoex.github.io/tags"><span>Tags</span></a>
         
-            <a class="nav-item col px-3 mdl-button mdl-js-button nav-link text-muted" href="https://memoex.github.io/page/about/"><span>About</span></a>
+            <a class="nav-item col px-3 mdl-button mdl-js-button mdl-button--primary nav-link" href="https://memoex.github.io/page/about/"><span>About</span></a>
         
     </ul>
 </div>
@@ -50,15 +55,22 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-                <div class="container mdl-color--white">
+                <div class="rounded container mdl-color--white">
     <div class="row">
         <div class="col">
             <h1 class="font-weight-bold">Python</h1>
         </div>
     </div>
     <div class="row">
-        <div class="col mdl-color-text--blue-grey">
-            <time>Dec 10, 2017</time>
+        <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+        <div class="align-self-center col-auto mdl-color-text--primary">
+            <time class="font-weight-bold">Dec 10, 2017</time>
+        </div>
+        
+        <div class="col pl-1">
+            <ul class="nav">
+                
+            </ul>
         </div>
     </div>
     <div class="row mt-5">
@@ -73,6 +85,25 @@
 
 for i, color in enumerate(colors):
     print i, '--&gt;', color
+</code></pre>
+
+<ul>
+<li><code>range</code></li>
+<li><code>xrange</code></li>
+<li><code>zip</code></li>
+<li><code>izip</code></li>
+</ul>
+
+<p><code>zip</code>.</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; x = [1, 2, 3]
+&gt;&gt;&gt; y = [4, 5, 6]
+&gt;&gt;&gt; zipped = zip(x, y)
+&gt;&gt;&gt; zipped
+[(1, 4), (2, 5), (3, 6)]
+&gt;&gt;&gt; x2, y2 = zip(*zipped)
+&gt;&gt;&gt; x == list(x2) and y == list(y2)
+True
 </code></pre>
 
 <p></p>
