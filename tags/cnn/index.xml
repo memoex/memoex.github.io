@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cnn on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/cnn/</link>
+    <description>Recent content in Cnn on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Mon, 18 Dec 2017 19:01:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/cnn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Forward Learning</title>
+      <link>https://memoex.github.io/note/paper/forward/</link>
+      <pubDate>Mon, 18 Dec 2017 19:01:49 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/paper/forward/</guid>
+      <description>&lt;p&gt;Papers read during research &lt;strong&gt;forward deep learning&lt;/strong&gt; algorithm.&lt;/p&gt;
+
+&lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Can OBV construct a middle target for CNN?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A kind of target representation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;conventional
+
+&lt;ul&gt;
+&lt;li&gt;BNV - binary: \((0, 0, 1, 0, 0)\)&lt;/li&gt;
+&lt;li&gt;BPV - bipolar?: \((-1, -1, 1, -1, -1)\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OBV - orthogonal bipolar vectors&lt;/li&gt;
+&lt;li&gt;NOV - Non-Orthogonal Vecotrs
+
+&lt;ul&gt;
+&lt;li&gt;For fail comparision&lt;/li&gt;
+&lt;li&gt;\(V_i=(\overbrace{-1 , \cdots , -1}^{i-1}, 1, \overbrace{-1 , \cdots , -1}^{n-i})\)&lt;/li&gt;
+&lt;li&gt;\(cos \theta = \frac{n-2}{n}\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;degraded characters?
+
+&lt;ul&gt;
+&lt;li&gt;They use degraded license plate images as expirement data. (车牌号)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How to generate OBV from conventional target?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

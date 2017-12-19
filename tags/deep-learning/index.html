@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    
+
+
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-gist.min.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link rel="stylesheet" href="https://memoex.github.io/css/blue.css">
+
+    </head>
+<body class="colorful">
+    <div class="container">
+        <div class="mt-4 row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h1 id="site-title" class="display-2 mdl-color-text--grey-800 mdl-HH rounded-top my-0 py-5 font-weight-bold text-center">Mr.Blue&#39;s notes</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <div class="col-12 col-lg-8">
+                <div class="container mdl-color--white mdl-shadow--2dp rounded">
+    <div class="row justify-content-around">
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/"><span>Blog</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/note/"><span>Note</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/tags"><span>Tags</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/page/about/"><span>About</span></a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+        <div class="col col-lg-8">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h1 id="section-title" class="display-4 mb-4 font-weight-bold">Deep Learning</h1>
+                </div>
+                <div class="row">
+                    <div class="container">
+    <div class="row">
+            <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
+                <div class="row">
+                    <div class="col">
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/paper/forward/">Forward Learning</a></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                    <div class="align-self-center col-auto mdl-color-text--primary">
+                        <time class="font-weight-bold">Dec 18, 2017</time>
+                    </div>
+                    
+                        <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                    
+                    <div class="col pl-1">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/deep-learning'">deep learning</button>
+                                </li>
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/cnn'">CNN</button>
+                                </li>
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/obv'">OBV</button>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-5">
+                        <p>Papers read during research <strong>forward deep learning</strong> algorithm.</p>
+
+<h2 id="orthogonal-bipolar-target-vectors-1">Orthogonal Bipolar Target Vectors<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></h2>
+
+<p><strong>Can OBV construct a middle target for CNN?</strong></p>
+
+<p>A kind of target representation.</p>
+
+<ul>
+<li>conventional
+
+<ul>
+<li>BNV - binary: \((0, 0, 1, 0, 0)\)</li>
+<li>BPV - bipolar?: \((-1, -1, 1, -1, -1)\)</li>
+</ul></li>
+<li>OBV - orthogonal bipolar vectors</li>
+<li>NOV - Non-Orthogonal Vecotrs
+
+<ul>
+<li>For fail comparision</li>
+<li>\(V_i=(\overbrace{-1 , \cdots , -1}^{i-1}, 1, \overbrace{-1 , \cdots , -1}^{n-i})\)</li>
+<li>\(cos \theta = \frac{n-2}{n}\)</li>
+</ul></li>
+<li>degraded characters?
+
+<ul>
+<li>They use degraded license plate images as expirement data. (车牌号)</li>
+</ul></li>
+</ul>
+
+<p><strong>How to generate OBV from conventional target?</strong></p>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/paper\/forward\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div><div class="row">
+            <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
+                <div class="row">
+                    <div class="col">
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/hinton/">Hinton - Neural Networks for Machine Learning</a></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                    <div class="align-self-center col-auto mdl-color-text--primary">
+                        <time class="font-weight-bold">Dec 18, 2017</time>
+                    </div>
+                    
+                        <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                    
+                    <div class="col pl-1">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/deep-learning'">deep learning</button>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-5">
+                        <p>Learning notes of Hinton&rsquo;s <a href="https://www.coursera.org/learn/neural-networks/home/info">Neural Networks for Machine Learning</a> in Coursera.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p><strong>What, Why</strong></p>
+
+<ul>
+<li>We don&rsquo;t know how to program to solve some problems or the program might be very complicated.</li>
+<li>Rules may need to change frequently, like recognizing fraud.</li>
+<li>Cheap computation</li>
+</ul>
+
+<p><strong>How</strong></p>
+
+<ul>
+<li>Collect lots of cases with inputs and correct outputs.</li>
+<li>ML algorithms takes examples and produces a program to do the job.</li>
+</ul>
+
+<p><strong>Good at</strong></p>
+
+<ul>
+<li>Recognizing patterns
+
+<ul>
+<li>Objects</li>
+<li>Face</li>
+<li>Spoken words</li>
+</ul></li>
+<li>Recognizing anomalies (unusual)
+
+<ul>
+<li>Transactions</li>
+<li>Sensor readings in a nuclear power plant</li>
+</ul></li>
+<li>Prediction
+
+<ul>
+<li>Stock prices, exchange rates</li>
+<li>Movie recommendations</li>
+</ul></li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+<li>Handwriting, hard to find a template.</li>
+<li>MNIST</li>
+<li>Imagenet</li>
+<li>Top-k error</li>
+</ul>
+
+<p><strong>Speech Recognition Task</strong></p>
+
+<ul>
+<li>(wave to vector) wave into a vector of acoustic coefficients (声学系数？), 10ms/vector</li>
+<li>(find phoneme) adjacent vectors, which part of which phoneme (音素) is being spoken</li>
+<li>(to sentence) decoding, fintting acoustic data and human habit</li>
+<li>Phone recognition on the TIMIT benchmark<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
+</ul>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/hinton\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            
+
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -54,55 +54,147 @@
         <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-weight-bold">Python</h1>
+                    <h1 class="font-weight-bold">Forward Learning</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
                 <div class="align-self-center col-auto mdl-color-text--primary">
-                    <time class="font-weight-bold">Dec 10, 2017</time>
+                    <time class="font-weight-bold">Dec 18, 2017</time>
                 </div>
+                
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
                 
                 <div class="col pl-1">
                     <ul class="nav">
+                        
+                            <li class="nav-item">
+                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                    onclick="location.href='\/tags\/deep-learning'">deep learning</button>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                    onclick="location.href='\/tags\/cnn'">CNN</button>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                    onclick="location.href='\/tags\/obv'">OBV</button>
+                            </li>
                         
                     </ul>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <p>Some python notes.</p>
+                    <p>Papers read during research <strong>forward deep learning</strong> algorithm.</p>
 
-<h2 id="quick-notes">Quick notes</h2>
+<h2 id="orthogonal-bipolar-target-vectors-1">Orthogonal Bipolar Target Vectors<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></h2>
 
-<p><code>enumerate</code>.</p>
+<p><strong>Can OBV construct a middle target for CNN?</strong></p>
 
-<pre><code class="language-python">colors = ['red', 'green', 'blue', 'yellow']
-
-for i, color in enumerate(colors):
-    print i, '--&gt;', color
-</code></pre>
+<p>A kind of target representation.</p>
 
 <ul>
-<li><code>range</code></li>
-<li><code>xrange</code></li>
-<li><code>zip</code></li>
-<li><code>izip</code></li>
+<li>conventional
+
+<ul>
+<li>BNV - binary: \((0, 0, 1, 0, 0)\)</li>
+<li>BPV - bipolar?: \((-1, -1, 1, -1, -1)\)</li>
+</ul></li>
+<li>OBV - orthogonal bipolar vectors</li>
+<li>NOV - Non-Orthogonal Vecotrs
+
+<ul>
+<li>For fail comparision</li>
+<li>\(V_i=(\overbrace{-1 , \cdots , -1}^{i-1}, 1, \overbrace{-1 , \cdots , -1}^{n-i})\)</li>
+<li>\(cos \theta = \frac{n-2}{n}\)</li>
+</ul></li>
+<li>degraded characters?
+
+<ul>
+<li>They use degraded license plate images as expirement data. (车牌号)</li>
+</ul></li>
 </ul>
 
-<p><code>zip</code>.</p>
-
-<pre><code class="language-python">&gt;&gt;&gt; x = [1, 2, 3]
-&gt;&gt;&gt; y = [4, 5, 6]
-&gt;&gt;&gt; zipped = zip(x, y)
-&gt;&gt;&gt; zipped
-[(1, 4), (2, 5), (3, 6)]
-&gt;&gt;&gt; x2, y2 = zip(*zipped)
-&gt;&gt;&gt; x == list(x2) and y == list(y2)
-True
-</code></pre>
+<p><strong>How to generate OBV from conventional target?</strong></p>
 
 <p></p>
+
+<hr />
+
+<p><strong>OBV (Orthogonal Bipolar Vector)</strong></p>
+
+<ul>
+<li>Bipolar: \(0 \to -1 \)</li>
+<li>Orthogonal: \( V_{2^k}^{i} \cdot  V_{2^k}^{j} = 0 \)</li>
+<li>\(V_{2^k}^m\)
+
+<ul>
+<li>\(2^k\) - Can be used to represent \(2^k\) classed</li>
+<li>\(k\) - Can be constructed in k steps (裂变)</li>
+<li>\(m\) - \(m_{th}\) vector</li>
+</ul></li>
+</ul>
+
+<p>Number of components in an OBV:</p>
+
+<p>$$
+n=2^km \\<br />
+V_{m}^{0} = (\overbrace{1, 1, \cdots , 1}^{m})^T
+$$</p>
+
+<p><strong>Example of generating OBVs</strong></p>
+
+<p>Take four classes classification for example. Let&rsquo;s say four labels are 1, 2, 3, 4. <br></p>
+
+<p><strong>Step.1</strong> Initialize parameters.</p>
+
+<p>$$
+m=1, k=2
+$$</p>
+
+<ul>
+<li>\(m\) can be set to 1, 2, 3, 4, &hellip;</li>
+<li>\(k\) should satisfy \(2^k \ge 4\)</li>
+</ul>
+
+<p><strong>Step.2</strong> Initialize \(V_1^0 = (1)^T\) <br>
+<strong>Step.3</strong>
+$$
+\begin{align}
+&amp; V_2^1 = ({V_1^0}^T, {V_1^0}^T) = (1, 1)^T \\<br />
+&amp; V_2^2 = ({V_1^0}^T, -{V_1^0}^T) = (1, -1)^T
+\end{align}
+$$</p>
+
+<ul>
+<li>Obviously, \(V_2^1 \cdot V_2^2 = 0\)</li>
+</ul>
+
+<p><strong>Step.4</strong>
+$$
+\begin{align}
+&amp; V_4^1 = ({V_2^1}^T, {V_2^1}^T) = (1, 1, 1, 1)^T \\<br />
+&amp; V_4^2 = ({V_2^1}^T, -{V_2^1}^T) = (1, 1, -1, -1)^T \\<br />
+&amp; V_4^3 = ({V_2^2}^T, {V_2^2}^T) = (1, -1, 1, -1)^T \\<br />
+&amp; V_4^4 = ({V_2^2}^T, -{V_2^2}^T) = (1, -1, -1, 1)^T \\<br />
+\end{align}
+$$</p>
+
+<ul>
+<li>We can use these four vectors to represent 1, 2, 3, 4</li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Improved MLP Learning via Orthogonal Bipolar Target Vectors
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+</ol>
+</div>
                 </div>
             </div>
         </div>

@@ -54,13 +54,13 @@
         <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-weight-bold">Word embedding</h1>
+                    <h1 class="font-weight-bold">Hinton - Neural Networks for Machine Learning</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
                 <div class="align-self-center col-auto mdl-color-text--primary">
-                    <time class="font-weight-bold">Dec 4, 2017</time>
+                    <time class="font-weight-bold">Dec 18, 2017</time>
                 </div>
                 
                     <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
@@ -70,12 +70,7 @@
                         
                             <li class="nav-item">
                                 <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
-                                    onclick="location.href='\/tags\/word-embedding'">word embedding</button>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
-                                    onclick="location.href='\/tags\/nlp'">NLP</button>
+                                    onclick="location.href='\/tags\/deep-learning'">deep learning</button>
                             </li>
                         
                     </ul>
@@ -83,35 +78,147 @@
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
+                    <p>Learning notes of Hinton&rsquo;s <a href="https://www.coursera.org/learn/neural-networks/home/info">Neural Networks for Machine Learning</a> in Coursera.</p>
 
-<h2 id="拟合目标">拟合目标</h2>
+<h2 id="introduction">Introduction</h2>
 
-<p>条件概率：
-$$P(w_j|w_i)$$</p>
+<p><strong>What, Why</strong></p>
 
-<p>二元词概率：
-$$P(w_i, w_j)$$</p>
+<ul>
+<li>We don&rsquo;t know how to program to solve some problems or the program might be very complicated.</li>
+<li>Rules may need to change frequently, like recognizing fraud.</li>
+<li>Cheap computation</li>
+</ul>
 
-<p>互信息：
-$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+<p><strong>How</strong></p>
 
-<p>如果两个词语义无关，分布独立，互信息为0：
-$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+<ul>
+<li>Collect lots of cases with inputs and correct outputs.</li>
+<li>ML algorithms takes examples and produces a program to do the job.</li>
+</ul>
+
+<p><strong>Good at</strong></p>
+
+<ul>
+<li>Recognizing patterns
+
+<ul>
+<li>Objects</li>
+<li>Face</li>
+<li>Spoken words</li>
+</ul></li>
+<li>Recognizing anomalies (unusual)
+
+<ul>
+<li>Transactions</li>
+<li>Sensor readings in a nuclear power plant</li>
+</ul></li>
+<li>Prediction
+
+<ul>
+<li>Stock prices, exchange rates</li>
+<li>Movie recommendations</li>
+</ul></li>
+</ul>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+<li>Handwriting, hard to find a template.</li>
+<li>MNIST</li>
+<li>Imagenet</li>
+<li>Top-k error</li>
+</ul>
+
+<p><strong>Speech Recognition Task</strong></p>
+
+<ul>
+<li>(wave to vector) wave into a vector of acoustic coefficients (声学系数？), 10ms/vector</li>
+<li>(find phoneme) adjacent vectors, which part of which phoneme (音素) is being spoken</li>
+<li>(to sentence) decoding, fintting acoustic data and human habit</li>
+<li>Phone recognition on the TIMIT benchmark<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
+</ul>
 
 <p></p>
 
-<h2 id="参考">参考</h2>
+<p><strong>Word error rates from MSR, IBM, &amp; Google</strong><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
+
+<table>
+<thead>
+<tr>
+<th>The task</th>
+<th>Hours of training data</th>
+<th>Deep neural network</th>
+<th align="center">Gaussian Mixture Model</th>
+<th>GMM with more data</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Switchboard (MicrosoftResearch)</td>
+<td>309</td>
+<td>18.5%</td>
+<td align="center">27.4%</td>
+<td>18.6%</td>
+</tr>
+
+<tr>
+<td>English broadcastnews  (IBM)</td>
+<td>50</td>
+<td>17.5%</td>
+<td align="center">18.8%</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Google voice search (android 4.1)</td>
+<td>5,870</td>
+<td>12.3% (and falling)</td>
+<td align="center"></td>
+<td>16.0% (&gt;&gt;5,870 hrs)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="quiz-notes">Quiz notes</h3>
 
 <ul>
-<li>有谁可以解释下word embedding? - 李韶华的回答 - 知乎: <a href="https://www.zhihu.com/question/32275069/answer/109446135">https://www.zhihu.com/question/32275069/answer/109446135</a></li>
-<li>Mikolov的word2vec —第一个现代的词嵌入生成方法
+<li>Data change and old relationship not. How can we prevent a neural network from forgetting old data?
 
 <ul>
-<li><a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">Distributed Representations of Words and Phrases and their Compositionality</a></li>
-<li><a href="https://arxiv.org/pdf/1301.3781.pdf">Efficient Estimation of Word Representations in Vector Space</a></li>
+<li>True
+
+<ul>
+<li>Prevent the system form changing the weights too much</li>
+<li>Train on a mix of old and new data</li>
+</ul></li>
+<li>False
+
+<ul>
+<li>Ignore</li>
+<li>Train two networks. (We don&rsquo;t know use which one for test data)</li>
+</ul></li>
+</ul></li>
+<li>Theory: local neural circuits in most parts of the cortex all use the same general purpose learning algorithm
+
+<ul>
+<li>If part of the cortex is removed early in life, the function that it would have served often gets relocated to another part of cortex.</li>
+<li>The fine-scale anatomy of the cortex looks pretty much the same all over.</li>
+<li>If the visual input is sent to the auditory cortex of a newborn ferret, the &ldquo;auditory&rdquo; cells learn to do vision.</li>
 </ul></li>
 </ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Mohamed, Dahl, &amp; Hinton, 2012
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">Hinton et. al. IEEE Signal Processing Magazine, Nov 2012
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
                 </div>
             </div>
         </div>

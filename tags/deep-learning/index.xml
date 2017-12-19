@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/deep-learning/</link>
+    <description>Recent content in Deep Learning on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Mon, 18 Dec 2017 19:01:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Forward Learning</title>
+      <link>https://memoex.github.io/note/paper/forward/</link>
+      <pubDate>Mon, 18 Dec 2017 19:01:49 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/paper/forward/</guid>
+      <description>&lt;p&gt;Papers read during research &lt;strong&gt;forward deep learning&lt;/strong&gt; algorithm.&lt;/p&gt;
+
+&lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Can OBV construct a middle target for CNN?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A kind of target representation.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;conventional
+
+&lt;ul&gt;
+&lt;li&gt;BNV - binary: \((0, 0, 1, 0, 0)\)&lt;/li&gt;
+&lt;li&gt;BPV - bipolar?: \((-1, -1, 1, -1, -1)\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;OBV - orthogonal bipolar vectors&lt;/li&gt;
+&lt;li&gt;NOV - Non-Orthogonal Vecotrs
+
+&lt;ul&gt;
+&lt;li&gt;For fail comparision&lt;/li&gt;
+&lt;li&gt;\(V_i=(\overbrace{-1 , \cdots , -1}^{i-1}, 1, \overbrace{-1 , \cdots , -1}^{n-i})\)&lt;/li&gt;
+&lt;li&gt;\(cos \theta = \frac{n-2}{n}\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;degraded characters?
+
+&lt;ul&gt;
+&lt;li&gt;They use degraded license plate images as expirement data. (车牌号)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How to generate OBV from conventional target?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hinton - Neural Networks for Machine Learning</title>
+      <link>https://memoex.github.io/note/hinton/</link>
+      <pubDate>Mon, 18 Dec 2017 09:32:46 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/hinton/</guid>
+      <description>&lt;p&gt;Learning notes of Hinton&amp;rsquo;s &lt;a href=&#34;https://www.coursera.org/learn/neural-networks/home/info&#34;&gt;Neural Networks for Machine Learning&lt;/a&gt; in Coursera.&lt;/p&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;What, Why&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;We don&amp;rsquo;t know how to program to solve some problems or the program might be very complicated.&lt;/li&gt;
+&lt;li&gt;Rules may need to change frequently, like recognizing fraud.&lt;/li&gt;
+&lt;li&gt;Cheap computation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Collect lots of cases with inputs and correct outputs.&lt;/li&gt;
+&lt;li&gt;ML algorithms takes examples and produces a program to do the job.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Good at&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Recognizing patterns
+
+&lt;ul&gt;
+&lt;li&gt;Objects&lt;/li&gt;
+&lt;li&gt;Face&lt;/li&gt;
+&lt;li&gt;Spoken words&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Recognizing anomalies (unusual)
+
+&lt;ul&gt;
+&lt;li&gt;Transactions&lt;/li&gt;
+&lt;li&gt;Sensor readings in a nuclear power plant&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Prediction
+
+&lt;ul&gt;
+&lt;li&gt;Stock prices, exchange rates&lt;/li&gt;
+&lt;li&gt;Movie recommendations&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Handwriting, hard to find a template.&lt;/li&gt;
+&lt;li&gt;MNIST&lt;/li&gt;
+&lt;li&gt;Imagenet&lt;/li&gt;
+&lt;li&gt;Top-k error&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Speech Recognition Task&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(wave to vector) wave into a vector of acoustic coefficients (声学系数？), 10ms/vector&lt;/li&gt;
+&lt;li&gt;(find phoneme) adjacent vectors, which part of which phoneme (音素) is being spoken&lt;/li&gt;
+&lt;li&gt;(to sentence) decoding, fintting acoustic data and human habit&lt;/li&gt;
+&lt;li&gt;Phone recognition on the TIMIT benchmark&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
