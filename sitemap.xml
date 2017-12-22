@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://memoex.github.io/note/2017-12-18-vim/</loc>
+    <loc>https://memoex.github.io/note/vim/</loc>
     <lastmod>2017-12-18T19:09:53+08:00</lastmod>
   </url>
   
@@ -71,6 +71,12 @@
   </url>
   
   <url>
+    <loc>https://memoex.github.io/tags/git/</loc>
+    <lastmod>2017-12-11T10:41:22+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/tags/hugo/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -79,6 +85,12 @@
   <url>
     <loc>https://memoex.github.io/tags/keras/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/tags/linear-algebra/</loc>
+    <lastmod>2017-12-06T11:58:54+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,6 +121,12 @@
   <url>
     <loc>https://memoex.github.io/tags/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/tags/vim/</loc>
+    <lastmod>2017-12-18T19:09:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   

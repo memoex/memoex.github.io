@@ -4,6 +4,9 @@
     
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+
+
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
 
@@ -80,7 +83,9 @@
                 <div class="col">
                     <p>Learning notes of Hinton&rsquo;s <a href="https://www.coursera.org/learn/neural-networks/home/info">Neural Networks for Machine Learning</a> in Coursera.</p>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="1-introduction">1. Introduction</h2>
+
+<h3 id="1a-why-do-we-need-machine-learning">1a. Why do we need machine learning</h3>
 
 <p><strong>What, Why</strong></p>
 
@@ -121,6 +126,8 @@
 </ul></li>
 </ul>
 
+<p></p>
+
 <p><strong>Examples</strong></p>
 
 <ul>
@@ -138,8 +145,6 @@
 <li>(to sentence) decoding, fintting acoustic data and human habit</li>
 <li>Phone recognition on the TIMIT benchmark<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
 </ul>
-
-<p></p>
 
 <p><strong>Word error rates from MSR, IBM, &amp; Google</strong><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
 
@@ -208,6 +213,185 @@
 <li>If the visual input is sent to the auditory cortex of a newborn ferret, the &ldquo;auditory&rdquo; cells learn to do vision.</li>
 </ul></li>
 </ul>
+
+<h3 id="1b-what-are-neural-netowrks">1b. What are neural netowrks</h3>
+
+<p>Hinton seems have a biological background.</p>
+
+<ul>
+<li>neural computation
+
+<ul>
+<li>understant brain</li>
+<li>understand parallel computation inspired by neurons and their adaptive? connections
+
+<ul>
+<li>vision, math(\(23 \times 71\))</li>
+</ul></li>
+<li>solution to practical problemsinspired by brain(neural networks)</li>
+</ul></li>
+<li>cortical neuron (皮层神经元)
+
+<ul>
+<li>axon 轴突</li>
+<li>dendritic tree 树突树</li>
+<li>axon hillock 轴突丘</li>
+<li>spike 单神经元发的信号</li>
+</ul></li>
+<li>synapses (突触)
+
+<ul>
+<li>vesicles 囊泡</li>
+<li>transmitter chemical released</li>
+<li>传送的化学分子扩散到突触间隙，与突触后神经细胞膜上的受体分子结合，来改变它们的形状
+
+<ul>
+<li>打开了特定的进或者出的离子通道</li>
+</ul></li>
+</ul></li>
+<li>synapses adapt
+
+<ul>
+<li>effectiveness
+
+<ul>
+<li>number of veicles of transmitter</li>
+<li>number of receptor molecules</li>
+</ul></li>
+<li>slow, over RAM
+
+<ul>
+<li>low power</li>
+<li>using locally avaailable signals
+
+<ul>
+<li>rules of changing ?</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>\(10^{11}\) neurons each with about \(1^4\) weights</li>
+<li>modularity
+
+<ul>
+<li>early brain damage makes functions relocate</li>
+<li>cortex 皮质
+
+<ul>
+<li>general purpose, turn into special prupose in response to experience
+
+<ul>
+<li>parallel, flexibility</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Idealized neurons
+
+<ul>
+<li>Linear: \(y=b+ \sum_{i}x_i w_i\)</li>
+<li>Binary threshold neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\begin{cases}1 &amp; \text{if} \quad z \ge 0 \\\ 0 &amp; \text{otherwise} \end{cases}\)</li>
+</ul></li>
+<li>Rectified Linear Neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\begin{cases}z &amp; \text{if} \quad z \ge 0 \\\ 0 &amp; \text{otherwise} \end{cases}\)</li>
+</ul></li>
+<li>Sigmoid neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\frac{1}{1+e^{-z}}\)</li>
+</ul></li>
+<li>Stochastic binary neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\frac{1}{1+e^{-z}}\)</li>
+<li>same but treat output as <strong>probability</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="1d-a-simple-example-of-learning">1d. A simple example of learning</h3>
+
+<ul>
+<li>display weights</li>
+<li>Why simple algorithm is insufficient
+
+<ul>
+<li>equivalent to a rigid template, biggest overlap with the ink</li>
+<li>we need to learn features</li>
+</ul></li>
+</ul>
+
+<h3 id="1e-three-types-of-learning">1e. Three types of learning</h3>
+
+<ul>
+<li>Supervised learning
+
+<ul>
+<li>Learn to predict an output when given an input vector</li>
+<li>Two types
+
+<ul>
+<li>Regression, target is real number or a vector of real numbers</li>
+<li>Classifcation, target output is a class label</li>
+</ul></li>
+<li>How
+
+<ul>
+<li>\(y=f(x; W)\)</li>
+<li>descrepancy 差异
+
+<ul>
+<li>regression: \( \frac{1}{2}(y-t)^2\)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Reinforcement learning
+
+<ul>
+<li>Learn to select an action to maximize payoff</li>
+<li>output: an action or sequence of actions</li>
+<li>reward: occasional sclar is the only supervisory signal</li>
+<li>goal: selecting each action to maximize the sum of the future rewards</li>
+<li>discount factor for delayed rewards</li>
+<li>difficult
+
+<ul>
+<li>rewards are delayed, when went wrong ?</li>
+<li>scalar reward does not give too much information</li>
+</ul></li>
+</ul></li>
+<li>Unsupervised learning
+
+<ul>
+<li>Discover a good internal representation of the input</li>
+<li>ignored for about 40 years
+
+<ul>
+<li>many thought clustering was the only form</li>
+</ul></li>
+<li>hard to say the prupose
+
+<ul>
+<li>one major aim is internal representation of the input</li>
+<li>You can compute the distance to a surface by using the disparity between two images. But you don’t want to learn to compute disparities by stubbing your toe thousands of times.?</li>
+<li>compress, PCA</li>
+<li>find sensible clusters in the input</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="the-perceptron-learning-procedure">The Perceptron learning procedure</h2>
+
+<h3 id="2a-an-overview-of-the-main-types-of-neural-network-architecture">2a. An overview of the main types of neural network architecture</h3>
+
+<h2 id="references">References</h2>
 <div class="footnotes">
 
 <hr />
@@ -223,7 +407,7 @@
             </div>
         </div>
     </div>
-    <div class="col-0 col-lg-2">
+    <div id="toc" class="col-0 col-lg-2">
     </div>
 </div>
         <div class="row">
@@ -246,6 +430,14 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+
+$(function(){
+    $("#toc").tocify();
+});
 
 
         </div>

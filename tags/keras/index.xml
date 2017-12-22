@@ -18,15 +18,17 @@
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/keras/</guid>
-      <description>&lt;p&gt;Record the problems encountered while using Keras and their solutions. The version of Keras I used is &lt;code&gt;2.0.8&lt;/code&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keras version: &lt;code&gt;2.0.8&lt;/code&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://faroit.github.io/keras-docs/2.0.8/&#34;&gt;Keras 2.0.8 Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;basic&#34;&gt;Basic&lt;/h2&gt;
-
-&lt;h3 id=&#34;metric&#34;&gt;Metric&lt;/h3&gt;
-
-&lt;p&gt;As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/fchollet/keras/issues/5400&#34;&gt;issue #5400&lt;/a&gt; or &lt;a href=&#34;https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7&#34;&gt;Removed batchwise metrics&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

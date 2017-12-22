@@ -56,7 +56,7 @@
         <div class="col col-lg-8">
             <div class="container">
                 <div class="row justify-content-center">
-                    <h1 id="section-title" class="display-4 mb-4 font-weight-bold">Word Embedding</h1>
+                    <h1 id="section-title" class="display-4 mb-4 font-weight-bold">Vim</h1>
                 </div>
                 <div class="row">
                     <div class="container">
@@ -64,13 +64,13 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
-                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/word-embedding/">Word embedding</a></h1>
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/vim/">Vim</a></h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
                     <div class="align-self-center col-auto mdl-color-text--primary">
-                        <time class="font-weight-bold">Dec 4, 2017</time>
+                        <time class="font-weight-bold">Dec 18, 2017</time>
                     </div>
                     
                         <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
@@ -80,12 +80,7 @@
                             
                                 <li class="nav-item">
                                     <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
-                                        onclick="location.href='\/tags\/word-embedding'">word embedding</button>
-                                </li>
-                            
-                                <li class="nav-item">
-                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
-                                        onclick="location.href='\/tags\/nlp'">NLP</button>
+                                        onclick="location.href='\/tags\/vim'">vim</button>
                                 </li>
                             
                         </ul>
@@ -93,28 +88,62 @@
                 </div>
                 <div class="row">
                     <div class="col mt-5">
-                        <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
+                        <p>This notes contains useful tips for using Vim or editing and I use <a href="http://vim.spf13.com/">spf13-vim</a>.</p>
 
-<h2 id="拟合目标">拟合目标</h2>
+<ul>
+<li>spf13-vim is a distribution of vim plugins and resources for Vim.</li>
+<li>Install spf13-vim: <code>curl http://j.mp/spf13-vim3 -L -o - | sh</code></li>
+</ul>
 
-<p>条件概率：
-$$P(w_j|w_i)$$</p>
+<h2 id="plugins">Plugins</h2>
 
-<p>二元词概率：
-$$P(w_i, w_j)$$</p>
+<h3 id="surround">Surround</h3>
 
-<p>互信息：
-$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+<p>Managing all the &lsquo;&rdquo;[{}]&ldquo;&rsquo; etc.</p>
 
-<p>如果两个词语义无关，分布独立，互信息为0：
-$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+<ul>
+<li>Characters meaning
+
+<ul>
+<li>operations
+
+<ul>
+<li><code>d</code> delete</li>
+<li><code>c</code> change</li>
+<li><code>y</code> add?</li>
+</ul></li>
+<li><code>s</code> represents <code>surrounding</code></li>
+<li><code>S</code> for visual mode surroundings</li>
+<li><strong>text object</strong> (vim editing)
+
+<ul>
+<li><code>w</code> word</li>
+<li><code>iw</code> in word</li>
+<li><code>aw</code> all word, including space(s)</li>
+</ul></li>
+<li>surroundings
+
+<ul>
+<li><code>(</code> left bracket will give a space between it and content</li>
+<li><code>)</code> right won&rsquo;t</li>
+<li><code>b</code> = <code>)</code></li>
+</ul></li>
+</ul></li>
+<li>Examples
+
+<ul>
+<li><code>yss)</code> surround a line of content with <code>()</code></li>
+<li><code>ysiw&lt;div&gt;</code> surround a word like this <code>&lt;div&gt;nice&lt;/div&gt;</code></li>
+<li><code>VS&lt;div&gt;</code> surround a line with <code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ul></li>
+</ul>
 
 <p></p>
                     </div>
                 </div>
                 <div class="row border mdl-color-grey-50"></div>
                 <div class="row">
-                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/word-embedding\/'"
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/vim\/'"
                         class="mdl-button mdl-js-button col align-items-end">
                         <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                     </button>

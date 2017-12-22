@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/git/</link>
+    <description>Recent content in Git on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Mon, 11 Dec 2017 10:41:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git</title>
+      <link>https://memoex.github.io/note/git/</link>
+      <pubDate>Mon, 11 Dec 2017 10:41:22 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/git/</guid>
+      <description>&lt;p&gt;Some git notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;基本配置&#34;&gt;基本配置&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;git config&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List configuration
+git config -l
+git config --global -l
+
+# Config user&#39;s info
+git config --global user.name &amp;quot;Mr.Blue&amp;quot;
+git config --global user.email &amp;quot;silverhugh.77@gmail.com&amp;quot;
+
+# Delete config
+git config --global --unset user.username
+
+# Config editor for git, use vim, nano or so on
+git config --global core.editor &amp;quot;vim&amp;quot;
+# True way to Commit
+#   `git commit` will open an vim editor (set by command before)
+#   write the commit message in it and `:x` to commit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See also: &lt;a href=&#34;https://chris.beams.io/posts/git-commit/&#34;&gt;https://chris.beams.io/posts/git-commit/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;git alias&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.us &#39;reset HEAD --&#39;
+git config --global alias.last &#39;log -1 HEAD&#39;
+git config --global alias.ls &#39;log --oneline -20&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

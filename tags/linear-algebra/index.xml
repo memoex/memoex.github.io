@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear Algebra on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/linear-algebra/</link>
+    <description>Recent content in Linear Algebra on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Wed, 06 Dec 2017 11:58:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Math</title>
+      <link>https://memoex.github.io/note/math/</link>
+      <pubDate>Wed, 06 Dec 2017 11:58:54 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/</guid>
+      <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
+
+&lt;h2 id=&#34;线性代数&#34;&gt;线性代数&lt;/h2&gt;
+
+&lt;h3 id=&#34;矩阵乘法&#34;&gt;矩阵乘法&lt;/h3&gt;
+
+&lt;h4 id=&#34;矩阵乘法的由来&#34;&gt;矩阵乘法的由来&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黑白电视到彩色电视
+
+&lt;ul&gt;
+&lt;li&gt;兼容问题&lt;/li&gt;
+&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+$$
+\begin{cases}
+0.299R + 0.587G + 0.114B = Y \\
+0.500R - 0.419G - 0.081B + 128 = C_r \\
+-0.169R - 0.331G + 0.500B + 128 = C_b
+\end{cases}
+$$
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;演变过程：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;解方程方法：
+
+&lt;ul&gt;
+&lt;li&gt;高斯消元法
+
+&lt;ul&gt;
+&lt;li&gt;初中？小学？解方程的方法，逐个元素消除&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;凯莱的高斯消元法
+
+&lt;ul&gt;
+&lt;li&gt;用&lt;code&gt;数块&lt;/code&gt;表示线性方程组&lt;/li&gt;
+&lt;li&gt;变换写在横线上很不数学&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;数块&lt;/code&gt;乘法&lt;/li&gt;
+&lt;li&gt;数块被命名为&lt;code&gt;矩阵&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

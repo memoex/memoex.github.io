@@ -4,6 +4,9 @@
     
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+
+
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
 
@@ -85,15 +88,17 @@
                 </div>
                 <div class="row">
                     <div class="col mt-5">
-                        <p>Record the problems encountered while using Keras and their solutions. The version of Keras I used is <code>2.0.8</code>.</p>
+                        <p>Notes about Keras.</p>
+
+<ul>
+<li>Keras version: <code>2.0.8</code>.
+
+<ul>
+<li><a href="https://faroit.github.io/keras-docs/2.0.8/">Keras 2.0.8 Documentation</a></li>
+</ul></li>
+</ul>
 
 <h2 id="basic">Basic</h2>
-
-<h3 id="metric">Metric</h3>
-
-<p>As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.</p>
-
-<p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
 
 <p></p>
                     </div>
@@ -133,6 +138,14 @@
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+
+$(function(){
+    $("#toc").tocify();
+});
 
 
         </div>

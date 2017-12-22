@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/vim/</link>
+    <description>Recent content in Vim on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Mon, 18 Dec 2017 19:09:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim</title>
+      <link>https://memoex.github.io/note/vim/</link>
+      <pubDate>Mon, 18 Dec 2017 19:09:53 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/vim/</guid>
+      <description>&lt;p&gt;This notes contains useful tips for using Vim or editing and I use &lt;a href=&#34;http://vim.spf13.com/&#34;&gt;spf13-vim&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;spf13-vim is a distribution of vim plugins and resources for Vim.&lt;/li&gt;
+&lt;li&gt;Install spf13-vim: &lt;code&gt;curl http://j.mp/spf13-vim3 -L -o - | sh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
+
+&lt;h3 id=&#34;surround&#34;&gt;Surround&lt;/h3&gt;
+
+&lt;p&gt;Managing all the &amp;lsquo;&amp;rdquo;[{}]&amp;ldquo;&amp;rsquo; etc.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Characters meaning
+
+&lt;ul&gt;
+&lt;li&gt;operations
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; delete&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; change&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; add?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; represents &lt;code&gt;surrounding&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S&lt;/code&gt; for visual mode surroundings&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;text object&lt;/strong&gt; (vim editing)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt; word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iw&lt;/code&gt; in word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aw&lt;/code&gt; all word, including space(s)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;surroundings
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(&lt;/code&gt; left bracket will give a space between it and content&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;)&lt;/code&gt; right won&amp;rsquo;t&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; = &lt;code&gt;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Examples
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yss)&lt;/code&gt; surround a line of content with &lt;code&gt;()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ysiw&amp;lt;div&amp;gt;&lt;/code&gt; surround a word like this &lt;code&gt;&amp;lt;div&amp;gt;nice&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;VS&amp;lt;div&amp;gt;&lt;/code&gt; surround a line with &lt;code&gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,6 +4,9 @@
     
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+
+
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
 
@@ -61,7 +64,7 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
-                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/2017-12-18-vim/">Vim</a></h1>
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/vim/">Vim</a></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -70,28 +73,77 @@
                         <time class="font-weight-bold">Dec 18, 2017</time>
                     </div>
                     
+                        <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                    
                     <div class="col pl-1">
                         <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/vim'">vim</button>
+                                </li>
                             
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mt-5">
-                        <p>This notes contains useful tips for using Vim or editing.</p>
+                        <p>This notes contains useful tips for using Vim or editing and I use <a href="http://vim.spf13.com/">spf13-vim</a>.</p>
 
-<h2 id="emmet">Emmet</h2>
+<ul>
+<li>spf13-vim is a distribution of vim plugins and resources for Vim.</li>
+<li>Install spf13-vim: <code>curl http://j.mp/spf13-vim3 -L -o - | sh</code></li>
+</ul>
 
-<p>Emmet is a plugin for many popular text editors which greatly improves HTML &amp; CSS workflow.</p>
+<h2 id="plugins">Plugins</h2>
 
-<p><a href="https://github.com/mattn/emmet-vim/blob/master/TUTORIAL.mkd">Tutorial for Emmet.vim</a></p>
+<h3 id="surround">Surround</h3>
+
+<p>Managing all the &lsquo;&rdquo;[{}]&ldquo;&rsquo; etc.</p>
+
+<ul>
+<li>Characters meaning
+
+<ul>
+<li>operations
+
+<ul>
+<li><code>d</code> delete</li>
+<li><code>c</code> change</li>
+<li><code>y</code> add?</li>
+</ul></li>
+<li><code>s</code> represents <code>surrounding</code></li>
+<li><code>S</code> for visual mode surroundings</li>
+<li><strong>text object</strong> (vim editing)
+
+<ul>
+<li><code>w</code> word</li>
+<li><code>iw</code> in word</li>
+<li><code>aw</code> all word, including space(s)</li>
+</ul></li>
+<li>surroundings
+
+<ul>
+<li><code>(</code> left bracket will give a space between it and content</li>
+<li><code>)</code> right won&rsquo;t</li>
+<li><code>b</code> = <code>)</code></li>
+</ul></li>
+</ul></li>
+<li>Examples
+
+<ul>
+<li><code>yss)</code> surround a line of content with <code>()</code></li>
+<li><code>ysiw&lt;div&gt;</code> surround a word like this <code>&lt;div&gt;nice&lt;/div&gt;</code></li>
+<li><code>VS&lt;div&gt;</code> surround a line with <code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ul></li>
+</ul>
 
 <p></p>
                     </div>
                 </div>
                 <div class="row border mdl-color-grey-50"></div>
                 <div class="row">
-                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/2017-12-18-vim\/'"
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/vim\/'"
                         class="mdl-button mdl-js-button col align-items-end">
                         <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                     </button>
@@ -208,7 +260,9 @@
                     <div class="col mt-5">
                         <p>Learning notes of Hinton&rsquo;s <a href="https://www.coursera.org/learn/neural-networks/home/info">Neural Networks for Machine Learning</a> in Coursera.</p>
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="1-introduction">1. Introduction</h2>
+
+<h3 id="1a-why-do-we-need-machine-learning">1a. Why do we need machine learning</h3>
 
 <p><strong>What, Why</strong></p>
 
@@ -249,24 +303,6 @@
 </ul></li>
 </ul>
 
-<p><strong>Examples</strong></p>
-
-<ul>
-<li>Handwriting, hard to find a template.</li>
-<li>MNIST</li>
-<li>Imagenet</li>
-<li>Top-k error</li>
-</ul>
-
-<p><strong>Speech Recognition Task</strong></p>
-
-<ul>
-<li>(wave to vector) wave into a vector of acoustic coefficients (声学系数？), 10ms/vector</li>
-<li>(find phoneme) adjacent vectors, which part of which phoneme (音素) is being spoken</li>
-<li>(to sentence) decoding, fintting acoustic data and human habit</li>
-<li>Phone recognition on the TIMIT benchmark<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
-</ul>
-
 <p></p>
                     </div>
                 </div>
@@ -291,8 +327,15 @@
                         <time class="font-weight-bold">Dec 11, 2017</time>
                     </div>
                     
+                        <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                    
                     <div class="col pl-1">
                         <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/git'">git</button>
+                                </li>
                             
                         </ul>
                     </div>
@@ -370,6 +413,12 @@ git config --global alias.ls 'log --oneline -20'
                     <div class="col mt-5">
                         <p>Some python notes.</p>
 
+<h2 id="package-notes">Package notes</h2>
+
+<ul>
+<li><a href="/note/keras">Keras</a></li>
+</ul>
+
 <h2 id="quick-notes">Quick notes</h2>
 
 <p><code>enumerate</code>.</p>
@@ -389,14 +438,14 @@ for i, color in enumerate(colors):
 
 <p><code>zip</code>.</p>
 
-<pre><code class="language-python">&gt;&gt;&gt; x = [1, 2, 3]
-&gt;&gt;&gt; y = [4, 5, 6]
-&gt;&gt;&gt; zipped = zip(x, y)
-&gt;&gt;&gt; zipped
-[(1, 4), (2, 5), (3, 6)]
-&gt;&gt;&gt; x2, y2 = zip(*zipped)
-&gt;&gt;&gt; x == list(x2) and y == list(y2)
-True
+<pre><code class="language-python">x = [1, 2, 3]
+y = [4, 5, 6]
+zipped = zip(x, y)
+zipped
+# [(1, 4), (2, 5), (3, 6)]
+x2, y2 = zip(*zipped)
+x == list(x2) and y == list(y2)
+# True
 </code></pre>
 
 <p></p>
@@ -423,8 +472,15 @@ True
                         <time class="font-weight-bold">Dec 6, 2017</time>
                     </div>
                     
+                        <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                    
                     <div class="col pl-1">
                         <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/linear-algebra'">linear algebra</button>
+                                </li>
                             
                         </ul>
                     </div>
@@ -628,15 +684,17 @@ $$
                 </div>
                 <div class="row">
                     <div class="col mt-5">
-                        <p>Record the problems encountered while using Keras and their solutions. The version of Keras I used is <code>2.0.8</code>.</p>
+                        <p>Notes about Keras.</p>
+
+<ul>
+<li>Keras version: <code>2.0.8</code>.
+
+<ul>
+<li><a href="https://faroit.github.io/keras-docs/2.0.8/">Keras 2.0.8 Documentation</a></li>
+</ul></li>
+</ul>
 
 <h2 id="basic">Basic</h2>
-
-<h3 id="metric">Metric</h3>
-
-<p>As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.</p>
-
-<p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
 
 <p></p>
                     </div>
@@ -736,6 +794,14 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+
+$(function(){
+    $("#toc").tocify();
+});
 
 
         </div>

@@ -14,17 +14,59 @@
     
     <item>
       <title>Vim</title>
-      <link>https://memoex.github.io/note/2017-12-18-vim/</link>
+      <link>https://memoex.github.io/note/vim/</link>
       <pubDate>Mon, 18 Dec 2017 19:09:53 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/2017-12-18-vim/</guid>
-      <description>&lt;p&gt;This notes contains useful tips for using Vim or editing.&lt;/p&gt;
+      <guid>https://memoex.github.io/note/vim/</guid>
+      <description>&lt;p&gt;This notes contains useful tips for using Vim or editing and I use &lt;a href=&#34;http://vim.spf13.com/&#34;&gt;spf13-vim&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;emmet&#34;&gt;Emmet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;spf13-vim is a distribution of vim plugins and resources for Vim.&lt;/li&gt;
+&lt;li&gt;Install spf13-vim: &lt;code&gt;curl http://j.mp/spf13-vim3 -L -o - | sh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Emmet is a plugin for many popular text editors which greatly improves HTML &amp;amp; CSS workflow.&lt;/p&gt;
+&lt;h2 id=&#34;plugins&#34;&gt;Plugins&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/mattn/emmet-vim/blob/master/TUTORIAL.mkd&#34;&gt;Tutorial for Emmet.vim&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;surround&#34;&gt;Surround&lt;/h3&gt;
+
+&lt;p&gt;Managing all the &amp;lsquo;&amp;rdquo;[{}]&amp;ldquo;&amp;rsquo; etc.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Characters meaning
+
+&lt;ul&gt;
+&lt;li&gt;operations
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;d&lt;/code&gt; delete&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; change&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;y&lt;/code&gt; add?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;s&lt;/code&gt; represents &lt;code&gt;surrounding&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;S&lt;/code&gt; for visual mode surroundings&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;text object&lt;/strong&gt; (vim editing)
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt; word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iw&lt;/code&gt; in word&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aw&lt;/code&gt; all word, including space(s)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;surroundings
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(&lt;/code&gt; left bracket will give a space between it and content&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;)&lt;/code&gt; right won&amp;rsquo;t&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;b&lt;/code&gt; = &lt;code&gt;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Examples
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;yss)&lt;/code&gt; surround a line of content with &lt;code&gt;()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ysiw&amp;lt;div&amp;gt;&lt;/code&gt; surround a word like this &lt;code&gt;&amp;lt;div&amp;gt;nice&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;VS&amp;lt;div&amp;gt;&lt;/code&gt; surround a line with &lt;code&gt;&amp;lt;div&amp;gt;&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -78,7 +120,9 @@
       <guid>https://memoex.github.io/note/hinton/</guid>
       <description>&lt;p&gt;Learning notes of Hinton&amp;rsquo;s &lt;a href=&#34;https://www.coursera.org/learn/neural-networks/home/info&#34;&gt;Neural Networks for Machine Learning&lt;/a&gt; in Coursera.&lt;/p&gt;
 
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;h2 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h2&gt;
+
+&lt;h3 id=&#34;1a-why-do-we-need-machine-learning&#34;&gt;1a. Why do we need machine learning&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;What, Why&lt;/strong&gt;&lt;/p&gt;
 
@@ -117,24 +161,6 @@
 &lt;li&gt;Stock prices, exchange rates&lt;/li&gt;
 &lt;li&gt;Movie recommendations&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Examples&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Handwriting, hard to find a template.&lt;/li&gt;
-&lt;li&gt;MNIST&lt;/li&gt;
-&lt;li&gt;Imagenet&lt;/li&gt;
-&lt;li&gt;Top-k error&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Speech Recognition Task&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(wave to vector) wave into a vector of acoustic coefficients (声学系数？), 10ms/vector&lt;/li&gt;
-&lt;li&gt;(find phoneme) adjacent vectors, which part of which phoneme (音素) is being spoken&lt;/li&gt;
-&lt;li&gt;(to sentence) decoding, fintting acoustic data and human habit&lt;/li&gt;
-&lt;li&gt;Phone recognition on the TIMIT benchmark&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -194,6 +220,12 @@ git config --global alias.ls &#39;log --oneline -20&#39;
       <guid>https://memoex.github.io/note/python/</guid>
       <description>&lt;p&gt;Some python notes.&lt;/p&gt;
 
+&lt;h2 id=&#34;package-notes&#34;&gt;Package notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/keras&#34;&gt;Keras&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;enumerate&lt;/code&gt;.&lt;/p&gt;
@@ -213,14 +245,14 @@ for i, color in enumerate(colors):
 
 &lt;p&gt;&lt;code&gt;zip&lt;/code&gt;.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;&amp;gt;&amp;gt;&amp;gt; x = [1, 2, 3]
-&amp;gt;&amp;gt;&amp;gt; y = [4, 5, 6]
-&amp;gt;&amp;gt;&amp;gt; zipped = zip(x, y)
-&amp;gt;&amp;gt;&amp;gt; zipped
-[(1, 4), (2, 5), (3, 6)]
-&amp;gt;&amp;gt;&amp;gt; x2, y2 = zip(*zipped)
-&amp;gt;&amp;gt;&amp;gt; x == list(x2) and y == list(y2)
-True
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = [1, 2, 3]
+y = [4, 5, 6]
+zipped = zip(x, y)
+zipped
+# [(1, 4), (2, 5), (3, 6)]
+x2, y2 = zip(*zipped)
+x == list(x2) and y == list(y2)
+# True
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -364,15 +396,17 @@ $$
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/keras/</guid>
-      <description>&lt;p&gt;Record the problems encountered while using Keras and their solutions. The version of Keras I used is &lt;code&gt;2.0.8&lt;/code&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keras version: &lt;code&gt;2.0.8&lt;/code&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://faroit.github.io/keras-docs/2.0.8/&#34;&gt;Keras 2.0.8 Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;basic&#34;&gt;Basic&lt;/h2&gt;
-
-&lt;h3 id=&#34;metric&#34;&gt;Metric&lt;/h3&gt;
-
-&lt;p&gt;As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/fchollet/keras/issues/5400&#34;&gt;issue #5400&lt;/a&gt; or &lt;a href=&#34;https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7&#34;&gt;Removed batchwise metrics&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
