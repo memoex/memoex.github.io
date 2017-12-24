@@ -5,7 +5,7 @@
     
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.css">
 
 
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -59,6 +59,97 @@
             <div class="row">
                 <div class="container">
     <div class="row">
+            <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
+                <div class="row">
+                    <div class="col">
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/course/2017-12-24-cs231n/">CS231n - Convolutional Neural Networks for Visual Recognition</a></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                    <div class="align-self-center col-auto mdl-color-text--primary">
+                        <time class="font-weight-bold">Dec 24, 2017</time>
+                    </div>
+                    
+                    <div class="col pl-1">
+                        <ul class="nav">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-5">
+                        Course notes of CS231n.
+Image Classification pipeline  Challenges  Viewpoint variation 多视角 Illumination 光线 Deformation 变形 Occlusion 遮挡 Background Clutter 杂乱的背景 Intraclass variation 内类多样性  Nearest Neighbor  Compute the distances of testing images and training images \(L_n\) norm  \((\sum_{i}{|X^i|^n})^{\frac{1}{n}}\)  \(L_n\) distance  \((\sum_{i}{|X_1^i - X_2^i|^n})^{\frac{1}{n}}\)  method  For each testing image, find the nearest training image Use the label of finding training image as the prediction  complexity  Training: \(O(1)\) Testing: \(O(n)\)   K-Nearest Neighbor  Find k nearest t raining images to the testing image Use the most voted label Demo: http://vision.
+                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/course\/2017-12-24-cs231n\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div><div class="row">
+            <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
+                <div class="row">
+                    <div class="col">
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/matlab/">2017 12 12 Matlab</a></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                    <div class="align-self-center col-auto mdl-color-text--primary">
+                        <time class="font-weight-bold">Dec 23, 2017</time>
+                    </div>
+                    
+                        <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                    
+                    <div class="col pl-1">
+                        <ul class="nav">
+                            
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/matlab'">matlab</button>
+                                </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-5">
+                        <h2 id="quick-notes">Quick notes</h2>
+
+<ul>
+<li><code>permute</code> - Rearrange dimensions of N-D array</li>
+<li><code>squeeze</code> - Remove singleton dimensions</li>
+<li><code>switch</code></li>
+</ul>
+
+<pre><code class="language-matlab">    dataset = 'minist';
+    switch(dataset):
+        case 'cifar-10'
+            code;
+        case 'minist'
+            code;
+        otherwise
+            error('Unrecognized dataset!')
+    end
+</code></pre>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/matlab\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div><div class="row">
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
@@ -180,6 +271,11 @@
                                         onclick="location.href='\/tags\/obv'">OBV</button>
                                 </li>
                             
+                                <li class="nav-item">
+                                    <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                        onclick="location.href='\/tags\/elm'">ELM</button>
+                                </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -232,7 +328,7 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
-                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/hinton/">Hinton - Neural Networks for Machine Learning</a></h1>
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/course/hinton/">Hinton - Neural Networks for Machine Learning</a></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -306,7 +402,7 @@
                 </div>
                 <div class="row border mdl-color-grey-50"></div>
                 <div class="row">
-                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/hinton\/'"
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/course\/hinton\/'"
                         class="mdl-button mdl-js-button col align-items-end">
                         <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                     </button>
@@ -444,6 +540,12 @@ zipped
 x2, y2 = zip(*zipped)
 x == list(x2) and y == list(y2)
 # True
+</code></pre>
+
+<p><strong><code>self(x)</code></strong>.</p>
+
+<pre><code>def __call__(self, x):
+    pass
 </code></pre>
 
 <p></p>
@@ -780,7 +882,7 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
@@ -794,12 +896,23 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
 
+
+<script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
+
+<script>
 $(function(){
-    $("#toc").tocify();
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.content',
+      
+      headingSelector: 'h1, h2, h3, h4',
+    });
 });
+</script>
 
 
         </div>

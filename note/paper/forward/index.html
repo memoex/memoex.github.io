@@ -4,7 +4,7 @@
     
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.css">
 
 
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -54,7 +54,7 @@
     <div class="container my-5">
         <div class="row justify-content-end">
     <div class="col col-lg-8">
-        <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white">
+        <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white content">
             <div class="row">
                 <div class="col">
                     <h1 class="font-weight-bold">Forward Learning</h1>
@@ -84,6 +84,11 @@
                             <li class="nav-item">
                                 <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
                                     onclick="location.href='\/tags\/obv'">OBV</button>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                    onclick="location.href='\/tags\/elm'">ELM</button>
                             </li>
                         
                     </ul>
@@ -190,6 +195,25 @@ $$</p>
 <li>We can use these four vectors to represent 1, 2, 3, 4</li>
 </ul>
 
+<h2 id="elm">ELM</h2>
+
+<h3 id="batch-mode-elm">Batch mode ELM</h3>
+
+<p><strong>Batch ELM Algorithm</strong> <sup class="footnote-ref" id="fnref:os-elm"><a rel="footnote" href="#fn:os-elm">2</a></sup></p>
+
+<p>$$
+\begin{aligned}
+&amp; \text{Given a training set $\mathcal{\aleph} = \{(\mathbf x_i, \mathbf t_i) | \mathbf x_i \in \mathbf R^n, \mathbf t_i \in \mathbf R^m, i=1, &hellip;,N\}$,} \\<br />
+&amp; \qquad \text{activation function $g$ or kernel function $\phi$ } \\<br />
+&amp; \qquad \text{and hidden neuron or kernel number $\tilde{N}$}  \\<br />
+\\<br />
+&amp; step 1. \quad \text{Assign arbitrary input weight $\mathbf{w}_i$ and bias $b_i$ or} \\<br />
+&amp; \qquad \text{center $\mu_i$ and impact width $\sigma_i,i=1,\cdots,\tilde N$.} \\<br />
+&amp; step 2. \quad\text{Calculate the hidden layer output matrix $\mathbf H$} \\<br />
+&amp; step3. \quad\text{Estimate the output weight $\beta: \hat \beta = \mathbf H^\dagger \mathbf T$}
+\end{aligned}
+$$</p>
+
 <h2 id="references">References</h2>
 <div class="footnotes">
 
@@ -198,13 +222,20 @@ $$</p>
 <ol>
 <li id="fn:1">Improved MLP Learning via Orthogonal Bipolar Target Vectors
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:os-elm">On-Line Sequential Extreme Learning Machine
+ <a class="footnote-return" href="#fnref:os-elm"><sup>[return]</sup></a></li>
 </ol>
 </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="toc" class="col-0 col-lg-2">
+    <div class="col-0 col-lg-2">
+        <div class="container">
+            <div class="row">
+                <div class="toc col"></div>
+            </div>
+        </div>
     </div>
 </div>
         <div class="row">
@@ -215,7 +246,7 @@ $$</p>
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
@@ -229,12 +260,23 @@ $$</p>
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
 
+
+<script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
+
+<script>
 $(function(){
-    $("#toc").tocify();
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.content',
+      
+      headingSelector: 'h1, h2, h3, h4',
+    });
 });
+</script>
 
 
         </div>

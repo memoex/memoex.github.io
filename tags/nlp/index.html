@@ -4,7 +4,7 @@
     
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/stylesheets/jquery.tocify.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.css">
 
 
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
@@ -135,7 +135,7 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
@@ -149,12 +149,23 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
 
+
+<script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
+
+<script>
 $(function(){
-    $("#toc").tocify();
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.content',
+      
+      headingSelector: 'h1, h2, h3, h4',
+    });
 });
+</script>
 
 
         </div>

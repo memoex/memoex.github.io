@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.css">
+
+
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-gist.min.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link rel="stylesheet" href="https://memoex.github.io/css/blue.css">
+
+    </head>
+<body class="colorful">
+    <div class="container">
+        <div class="mt-4 row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h1 id="site-title" class="display-2 mdl-color-text--grey-800 mdl-HH rounded-top my-0 py-5 font-weight-bold text-center">Mr.Blue&#39;s notes</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <div class="col-12 col-lg-8">
+                <div class="container mdl-color--white mdl-shadow--2dp rounded">
+    <div class="row justify-content-around">
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/"><span>Blog</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/note/"><span>Note</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/tags"><span>Tags</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/page/about/"><span>About</span></a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row justify-content-end">
+    <div class="col col-lg-8">
+        <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white content">
+            <div class="row">
+                <div class="col">
+                    <h1 class="font-weight-bold">Hinton - Neural Networks for Machine Learning</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                <div class="align-self-center col-auto mdl-color-text--primary">
+                    <time class="font-weight-bold">Dec 18, 2017</time>
+                </div>
+                
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
+                
+                <div class="col pl-1">
+                    <ul class="nav">
+                        
+                            <li class="nav-item">
+                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                    onclick="location.href='\/tags\/deep-learning'">deep learning</button>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <p>Learning notes of Hinton&rsquo;s <a href="https://www.coursera.org/learn/neural-networks/home/info">Neural Networks for Machine Learning</a> in Coursera.</p>
+
+<h2 id="1-introduction">1. Introduction</h2>
+
+<h3 id="1a-why-do-we-need-machine-learning">1a. Why do we need machine learning</h3>
+
+<p><strong>What, Why</strong></p>
+
+<ul>
+<li>We don&rsquo;t know how to program to solve some problems or the program might be very complicated.</li>
+<li>Rules may need to change frequently, like recognizing fraud.</li>
+<li>Cheap computation</li>
+</ul>
+
+<p><strong>How</strong></p>
+
+<ul>
+<li>Collect lots of cases with inputs and correct outputs.</li>
+<li>ML algorithms takes examples and produces a program to do the job.</li>
+</ul>
+
+<p><strong>Good at</strong></p>
+
+<ul>
+<li>Recognizing patterns
+
+<ul>
+<li>Objects</li>
+<li>Face</li>
+<li>Spoken words</li>
+</ul></li>
+<li>Recognizing anomalies (unusual)
+
+<ul>
+<li>Transactions</li>
+<li>Sensor readings in a nuclear power plant</li>
+</ul></li>
+<li>Prediction
+
+<ul>
+<li>Stock prices, exchange rates</li>
+<li>Movie recommendations</li>
+</ul></li>
+</ul>
+
+<p></p>
+
+<p><strong>Examples</strong></p>
+
+<ul>
+<li>Handwriting, hard to find a template.</li>
+<li>MNIST</li>
+<li>Imagenet</li>
+<li>Top-k error</li>
+</ul>
+
+<p><strong>Speech Recognition Task</strong></p>
+
+<ul>
+<li>(wave to vector) wave into a vector of acoustic coefficients (声学系数？), 10ms/vector</li>
+<li>(find phoneme) adjacent vectors, which part of which phoneme (音素) is being spoken</li>
+<li>(to sentence) decoding, fintting acoustic data and human habit</li>
+<li>Phone recognition on the TIMIT benchmark<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></li>
+</ul>
+
+<p><strong>Word error rates from MSR, IBM, &amp; Google</strong><sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup></p>
+
+<table>
+<thead>
+<tr>
+<th>The task</th>
+<th>Hours of training data</th>
+<th>Deep neural network</th>
+<th align="center">Gaussian Mixture Model</th>
+<th>GMM with more data</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Switchboard (MicrosoftResearch)</td>
+<td>309</td>
+<td>18.5%</td>
+<td align="center">27.4%</td>
+<td>18.6%</td>
+</tr>
+
+<tr>
+<td>English broadcastnews  (IBM)</td>
+<td>50</td>
+<td>17.5%</td>
+<td align="center">18.8%</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Google voice search (android 4.1)</td>
+<td>5,870</td>
+<td>12.3% (and falling)</td>
+<td align="center"></td>
+<td>16.0% (&gt;&gt;5,870 hrs)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="quiz-notes">Quiz notes</h3>
+
+<ul>
+<li>Data change and old relationship not. How can we prevent a neural network from forgetting old data?
+
+<ul>
+<li>True
+
+<ul>
+<li>Prevent the system form changing the weights too much</li>
+<li>Train on a mix of old and new data</li>
+</ul></li>
+<li>False
+
+<ul>
+<li>Ignore</li>
+<li>Train two networks. (We don&rsquo;t know use which one for test data)</li>
+</ul></li>
+</ul></li>
+<li>Theory: local neural circuits in most parts of the cortex all use the same general purpose learning algorithm
+
+<ul>
+<li>If part of the cortex is removed early in life, the function that it would have served often gets relocated to another part of cortex.</li>
+<li>The fine-scale anatomy of the cortex looks pretty much the same all over.</li>
+<li>If the visual input is sent to the auditory cortex of a newborn ferret, the &ldquo;auditory&rdquo; cells learn to do vision.</li>
+</ul></li>
+</ul>
+
+<h3 id="1b-what-are-neural-netowrks">1b. What are neural netowrks</h3>
+
+<p>Hinton seems have a biological background.</p>
+
+<ul>
+<li>neural computation
+
+<ul>
+<li>understant brain</li>
+<li>understand parallel computation inspired by neurons and their adaptive? connections
+
+<ul>
+<li>vision, math(\(23 \times 71\))</li>
+</ul></li>
+<li>solution to practical problemsinspired by brain(neural networks)</li>
+</ul></li>
+<li>cortical neuron (皮层神经元)
+
+<ul>
+<li>axon 轴突</li>
+<li>dendritic tree 树突树</li>
+<li>axon hillock 轴突丘</li>
+<li>spike 单神经元发的信号</li>
+</ul></li>
+<li>synapses (突触)
+
+<ul>
+<li>vesicles 囊泡</li>
+<li>transmitter chemical released</li>
+<li>传送的化学分子扩散到突触间隙，与突触后神经细胞膜上的受体分子结合，来改变它们的形状
+
+<ul>
+<li>打开了特定的进或者出的离子通道</li>
+</ul></li>
+</ul></li>
+<li>synapses adapt
+
+<ul>
+<li>effectiveness
+
+<ul>
+<li>number of veicles of transmitter</li>
+<li>number of receptor molecules</li>
+</ul></li>
+<li>slow, over RAM
+
+<ul>
+<li>low power</li>
+<li>using locally avaailable signals
+
+<ul>
+<li>rules of changing ?</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>\(10^{11}\) neurons each with about \(1^4\) weights</li>
+<li>modularity
+
+<ul>
+<li>early brain damage makes functions relocate</li>
+<li>cortex 皮质
+
+<ul>
+<li>general purpose, turn into special prupose in response to experience
+
+<ul>
+<li>parallel, flexibility</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Idealized neurons
+
+<ul>
+<li>Linear: \(y=b+ \sum_{i}x_i w_i\)</li>
+<li>Binary threshold neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\begin{cases}1 &amp; \text{if} \quad z \ge 0 \\\ 0 &amp; \text{otherwise} \end{cases}\)</li>
+</ul></li>
+<li>Rectified Linear Neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\begin{cases}z &amp; \text{if} \quad z \ge 0 \\\ 0 &amp; \text{otherwise} \end{cases}\)</li>
+</ul></li>
+<li>Sigmoid neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\frac{1}{1+e^{-z}}\)</li>
+</ul></li>
+<li>Stochastic binary neurons
+
+<ul>
+<li>\(z=b+ \sum_{i}x_i w_i\)</li>
+<li>\(y=\frac{1}{1+e^{-z}}\)</li>
+<li>same but treat output as <strong>probability</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="1d-a-simple-example-of-learning">1d. A simple example of learning</h3>
+
+<ul>
+<li>display weights</li>
+<li>Why simple algorithm is insufficient
+
+<ul>
+<li>equivalent to a rigid template, biggest overlap with the ink</li>
+<li>we need to learn features</li>
+</ul></li>
+</ul>
+
+<h3 id="1e-three-types-of-learning">1e. Three types of learning</h3>
+
+<ul>
+<li>Supervised learning
+
+<ul>
+<li>Learn to predict an output when given an input vector</li>
+<li>Two types
+
+<ul>
+<li>Regression, target is real number or a vector of real numbers</li>
+<li>Classifcation, target output is a class label</li>
+</ul></li>
+<li>How
+
+<ul>
+<li>\(y=f(x; W)\)</li>
+<li>descrepancy 差异
+
+<ul>
+<li>regression: \( \frac{1}{2}(y-t)^2\)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Reinforcement learning
+
+<ul>
+<li>Learn to select an action to maximize payoff</li>
+<li>output: an action or sequence of actions</li>
+<li>reward: occasional sclar is the only supervisory signal</li>
+<li>goal: selecting each action to maximize the sum of the future rewards</li>
+<li>discount factor for delayed rewards</li>
+<li>difficult
+
+<ul>
+<li>rewards are delayed, when went wrong ?</li>
+<li>scalar reward does not give too much information</li>
+</ul></li>
+</ul></li>
+<li>Unsupervised learning
+
+<ul>
+<li>Discover a good internal representation of the input</li>
+<li>ignored for about 40 years
+
+<ul>
+<li>many thought clustering was the only form</li>
+</ul></li>
+<li>hard to say the prupose
+
+<ul>
+<li>one major aim is internal representation of the input</li>
+<li>You can compute the distance to a surface by using the disparity between two images. But you don’t want to learn to compute disparities by stubbing your toe thousands of times.?</li>
+<li>compress, PCA</li>
+<li>find sensible clusters in the input</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2 id="the-perceptron-learning-procedure">The Perceptron learning procedure</h2>
+
+<h3 id="2a-an-overview-of-the-main-types-of-neural-network-architecture">2a. An overview of the main types of neural network architecture</h3>
+
+<h2 id="references">References</h2>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Mohamed, Dahl, &amp; Hinton, 2012
+ <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
+<li id="fn:2">Hinton et. al. IEEE Signal Processing Magazine, Nov 2012
+ <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
+</ol>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-0 col-lg-2">
+        <div class="container">
+            <div class="row">
+                <div class="toc col"></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            
+
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
+
+
+<script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
+
+<script>
+$(function(){
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.content',
+      
+      headingSelector: 'h1, h2, h3, h4',
+    });
+});
+</script>
+
+
+        </div>
+    </div>
+</body>
+</html>
