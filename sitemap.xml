@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://memoex.github.io/note/course/2017-12-24-cs231n/</loc>
+    <loc>https://memoex.github.io/note/2017-12-25-tensorflow/</loc>
+    <lastmod>2017-12-25T14:46:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/course/cnn/</loc>
     <lastmod>2017-12-24T16:35:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/course/brain/</loc>
+    <lastmod>2017-12-23T21:33:30+08:00</lastmod>
   </url>
   
   <url>
@@ -117,8 +127,20 @@
   </url>
   
   <url>
+    <loc>https://memoex.github.io/tags/mcb80x/</loc>
+    <lastmod>2017-12-23T21:33:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/</loc>
-    <lastmod>2017-12-24T16:35:25+08:00</lastmod>
+    <lastmod>2017-12-25T14:46:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/tags/neuroscience/</loc>
+    <lastmod>2017-12-23T21:33:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -130,7 +152,7 @@
   
   <url>
     <loc>https://memoex.github.io/note/</loc>
-    <lastmod>2017-12-24T16:35:25+08:00</lastmod>
+    <lastmod>2017-12-25T14:46:16+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -13,29 +13,57 @@
     
     
     <item>
-      <title>2017 12 12 Matlab</title>
+      <title>Matlab</title>
       <link>https://memoex.github.io/note/matlab/</link>
       <pubDate>Sat, 23 Dec 2017 16:02:19 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/matlab/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
+&lt;p&gt;&lt;strong&gt;! Matlab start from 1, not 0 !&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;switch&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;dataset = &#39;minist&#39;;
+switch(dataset):
+    case &#39;cifar-10&#39;
+        code;
+    case &#39;minist&#39;
+        code;
+    otherwise
+        error(&#39;Unrecognized dataset!&#39;)
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;permute&lt;/code&gt; - Rearrange dimensions of N-D array&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permute&lt;/code&gt; - Rearrange dimensions of N-D array
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;permute(A, [4, 3, 2, 1])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;size change: [3, 28, 28, 1000] =&amp;gt; [1000, 28, 28, 3]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;squeeze&lt;/code&gt; - Remove singleton dimensions&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;switch&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;    dataset = &#39;minist&#39;;
-    switch(dataset):
-        case &#39;cifar-10&#39;
-            code;
-        case &#39;minist&#39;
-            code;
-        otherwise
-            error(&#39;Unrecognized dataset!&#39;)
-    end
+&lt;p&gt;&lt;strong&gt;One Hot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;labels = [0; 1; 2; 1];
+one_hot = full(ind2vec(labels&#39;+1))&#39;
+
+[~, indices] = max(one_hot, [], 2);
+labels = indices - 1
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Max and min&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;largest column numbers in each row: &lt;code&gt;[~, indices] = max(A, [], 2)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;largest in a matrix: &lt;code&gt;max(A(:))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Data type&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;class(1)&lt;/code&gt; =&amp;gt; &lt;code&gt;&#39;double&#39;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

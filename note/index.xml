@@ -7,45 +7,243 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Sun, 24 Dec 2017 16:35:25 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Dec 2017 14:46:16 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>CS231n - Convolutional Neural Networks for Visual Recognition</title>
-      <link>https://memoex.github.io/note/course/2017-12-24-cs231n/</link>
-      <pubDate>Sun, 24 Dec 2017 16:35:25 +0800</pubDate>
+      <title>Tensorflow</title>
+      <link>https://memoex.github.io/note/2017-12-25-tensorflow/</link>
+      <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/course/2017-12-24-cs231n/</guid>
-      <description>Course notes of CS231n.
-Image Classification pipeline  Challenges  Viewpoint variation 多视角 Illumination 光线 Deformation 变形 Occlusion 遮挡 Background Clutter 杂乱的背景 Intraclass variation 内类多样性  Nearest Neighbor  Compute the distances of testing images and training images \(L_n\) norm  \((\sum_{i}{|X^i|^n})^{\frac{1}{n}}\)  \(L_n\) distance  \((\sum_{i}{|X_1^i - X_2^i|^n})^{\frac{1}{n}}\)  method  For each testing image, find the nearest training image Use the label of finding training image as the prediction  complexity  Training: \(O(1)\) Testing: \(O(n)\)   K-Nearest Neighbor  Find k nearest t raining images to the testing image Use the most voted label Demo: http://vision.</description>
+      <guid>https://memoex.github.io/note/2017-12-25-tensorflow/</guid>
+      <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>2017 12 12 Matlab</title>
+      <title>CS231n - Convolutional Neural Networks for Visual Recognition</title>
+      <link>https://memoex.github.io/note/course/cnn/</link>
+      <pubDate>Sun, 24 Dec 2017 16:35:25 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/course/cnn/</guid>
+      <description>&lt;p&gt;Course notes of CS231n.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-image-classification-pipeline&#34;&gt;2. Image Classification pipeline&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Challenges
+
+&lt;ul&gt;
+&lt;li&gt;Viewpoint variation 多视角&lt;/li&gt;
+&lt;li&gt;Illumination 光线&lt;/li&gt;
+&lt;li&gt;Deformation 变形&lt;/li&gt;
+&lt;li&gt;Occlusion 遮挡&lt;/li&gt;
+&lt;li&gt;Background Clutter 杂乱的背景&lt;/li&gt;
+&lt;li&gt;Intraclass variation 内类多样性&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Nearest Neighbor
+
+&lt;ul&gt;
+&lt;li&gt;Compute the distances of testing images and training images&lt;/li&gt;
+&lt;li&gt;\(L_n\) norm
+
+&lt;ul&gt;
+&lt;li&gt;\((\sum_{i}{|X^i|^n})^{\frac{1}{n}}\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;\(L_n\) distance
+
+&lt;ul&gt;
+&lt;li&gt;\((\sum_{i}{|X_1^i - X_2^i|^n})^{\frac{1}{n}}\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;method
+
+&lt;ul&gt;
+&lt;li&gt;For each testing image, find the nearest training image&lt;/li&gt;
+&lt;li&gt;Use the label of finding training image as the prediction&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;complexity
+
+&lt;ul&gt;
+&lt;li&gt;Training: \(O(1)\)&lt;/li&gt;
+&lt;li&gt;Testing: \(O(n)\)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;K-Nearest Neighbor
+
+&lt;ul&gt;
+&lt;li&gt;Find k nearest t raining images to the testing image&lt;/li&gt;
+&lt;li&gt;Use the most voted label&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Demo: &lt;a href=&#34;http://vision.stanford.edu/teaching/cs231n-demos/knn/&#34;&gt;http://vision.stanford.edu/teaching/cs231n-demos/knn/&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Never used on images
+
+&lt;ul&gt;
+&lt;li&gt;very slow when testing&lt;/li&gt;
+&lt;li&gt;Distance metrics on pixels are not infomative&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Dataset spliting
+
+&lt;ul&gt;
+&lt;li&gt;train, test&lt;/li&gt;
+&lt;li&gt;train, validation, test&lt;/li&gt;
+&lt;li&gt;Cross-Validation
+
+&lt;ul&gt;
+&lt;li&gt;folds&lt;/li&gt;
+&lt;li&gt;each fold as validation and average the results&lt;/li&gt;
+&lt;li&gt;Useful for small datasets, but not used too frequently in deep learning&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;errorbar, violin plot &lt;a href=&#34;https://matplotlib.org/gallery/index.html#statistics&#34;&gt;https://matplotlib.org/gallery/index.html#statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Linear Classifier
+
+&lt;ul&gt;
+&lt;li&gt;\(f(\mathbf x, W) = W\mathbf x+b\)&lt;/li&gt;
+&lt;li&gt;have hard cases
+
+&lt;ul&gt;
+&lt;li&gt;xor&lt;/li&gt;
+&lt;li&gt;circles</description>
+    </item>
+    
+    <item>
+      <title>MCB80x - The fundamental of neuroscience</title>
+      <link>https://memoex.github.io/note/course/brain/</link>
+      <pubDate>Sat, 23 Dec 2017 21:33:30 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/course/brain/</guid>
+      <description>&lt;p&gt;MCB80x is a free, open, online Neuroscience course from HarvardX led by Professor David Cox. Animation by Daniela Sherer + Music by Dan Deacon.  Edited by Alex Auriema.&lt;/p&gt;
+
+&lt;h2 id=&#34;welcome&#34;&gt;Welcome&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Harvard&lt;/li&gt;
+&lt;li&gt;brain&lt;/li&gt;
+&lt;li&gt;Three parts
+
+&lt;ul&gt;
+&lt;li&gt;explore science in Harvard and Boston&lt;/li&gt;
+&lt;li&gt;guided interactivity&lt;/li&gt;
+&lt;li&gt;DIY science&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Modules
+
+&lt;ul&gt;
+&lt;li&gt;THE ELECTRICAL PROPERTIES OF THE NEURON
+
+&lt;ul&gt;
+&lt;li&gt;signal generating, transfering&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;NEURONS AND NETWORKS
+
+&lt;ul&gt;
+&lt;li&gt;groups of neurons&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;THE BRAIN
+
+&lt;ul&gt;
+&lt;li&gt;society, intelligence&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Basics
+
+&lt;ul&gt;
+&lt;li&gt;1.3 million named and catalogued species on earth, and scientists estimate there are over 7 million no&lt;/li&gt;
+&lt;li&gt;Why human distinct ?
+
+&lt;ul&gt;
+&lt;li&gt;human behavior, 30~300 thousand years ago, when our ancestor&amp;rsquo;s brains began to structurally and functionally resemble our own&lt;/li&gt;
+&lt;li&gt;think symbolically
+
+&lt;ul&gt;
+&lt;li&gt;raise language, art, music, religion, philosophy, science&lt;/li&gt;
+&lt;li&gt;circumvent (规避) evolutionary and environment constraints&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;brain is the key
+
+&lt;ul&gt;
+&lt;li&gt;not size, whale, elephant, dolphin&lt;/li&gt;
+&lt;li&gt;but inner wiring&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;CNS, central nervous system
+
+&lt;ul&gt;
+&lt;li&gt;brain&lt;/li&gt;
+&lt;li&gt;spinal cord 脊髓&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;PNS, peripheral nervous system 周围神经系统&lt;/li&gt;
+&lt;li&gt;specialized cells&lt;/li&gt;
+&lt;li&gt;brain, made up of some 100 billion neurons, plus a myriad (无数的) of other cell types&lt;/li&gt;
+&lt;li&gt;Networks of neurons exchange information among dozens of brain areas specialized for different tasks&lt;/li&gt;
+&lt;li&gt;and researchers suspect that it is something about the organization and function of these networks that may hold the key to our uniquely human brain.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matlab</title>
       <link>https://memoex.github.io/note/matlab/</link>
       <pubDate>Sat, 23 Dec 2017 16:02:19 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/matlab/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
+&lt;p&gt;&lt;strong&gt;! Matlab start from 1, not 0 !&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;switch&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;dataset = &#39;minist&#39;;
+switch(dataset):
+    case &#39;cifar-10&#39;
+        code;
+    case &#39;minist&#39;
+        code;
+    otherwise
+        error(&#39;Unrecognized dataset!&#39;)
+end
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;permute&lt;/code&gt; - Rearrange dimensions of N-D array&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;permute&lt;/code&gt; - Rearrange dimensions of N-D array
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;permute(A, [4, 3, 2, 1])&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;size change: [3, 28, 28, 1000] =&amp;gt; [1000, 28, 28, 3]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;squeeze&lt;/code&gt; - Remove singleton dimensions&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;switch&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;    dataset = &#39;minist&#39;;
-    switch(dataset):
-        case &#39;cifar-10&#39;
-            code;
-        case &#39;minist&#39;
-            code;
-        otherwise
-            error(&#39;Unrecognized dataset!&#39;)
-    end
+&lt;p&gt;&lt;strong&gt;One Hot&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;labels = [0; 1; 2; 1];
+one_hot = full(ind2vec(labels&#39;+1))&#39;
+
+[~, indices] = max(one_hot, [], 2);
+labels = indices - 1
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Max and min&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;largest column numbers in each row: &lt;code&gt;[~, indices] = max(A, [], 2)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;largest in a matrix: &lt;code&gt;max(A(:))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Data type&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;class(1)&lt;/code&gt; =&amp;gt; &lt;code&gt;&#39;double&#39;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

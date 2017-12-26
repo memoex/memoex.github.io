@@ -64,7 +64,7 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
-                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/matlab/">2017 12 12 Matlab</a></h1>
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/matlab/">Matlab</a></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -90,22 +90,50 @@
                     <div class="col mt-5">
                         <h2 id="quick-notes">Quick notes</h2>
 
+<p><strong>! Matlab start from 1, not 0 !</strong></p>
+
+<p><strong><code>switch</code></strong></p>
+
+<pre><code class="language-matlab">dataset = 'minist';
+switch(dataset):
+    case 'cifar-10'
+        code;
+    case 'minist'
+        code;
+    otherwise
+        error('Unrecognized dataset!')
+end
+</code></pre>
+
 <ul>
-<li><code>permute</code> - Rearrange dimensions of N-D array</li>
+<li><code>permute</code> - Rearrange dimensions of N-D array
+
+<ul>
+<li><code>permute(A, [4, 3, 2, 1])</code></li>
+<li>size change: [3, 28, 28, 1000] =&gt; [1000, 28, 28, 3]</li>
+</ul></li>
 <li><code>squeeze</code> - Remove singleton dimensions</li>
-<li><code>switch</code></li>
 </ul>
 
-<pre><code class="language-matlab">    dataset = 'minist';
-    switch(dataset):
-        case 'cifar-10'
-            code;
-        case 'minist'
-            code;
-        otherwise
-            error('Unrecognized dataset!')
-    end
+<p><strong>One Hot</strong></p>
+
+<pre><code class="language-matlab">labels = [0; 1; 2; 1];
+one_hot = full(ind2vec(labels'+1))'
+
+[~, indices] = max(one_hot, [], 2);
+labels = indices - 1
 </code></pre>
+
+<p><strong>Max and min</strong></p>
+
+<ul>
+<li>largest column numbers in each row: <code>[~, indices] = max(A, [], 2)</code></li>
+<li>largest in a matrix: <code>max(A(:))</code></li>
+</ul>
+
+<p><strong>Data type</strong></p>
+
+<p><code>class(1)</code> =&gt; <code>'double'</code></p>
 
 <p></p>
                     </div>
@@ -138,7 +166,8 @@
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js" integrity="sha256-HHSLUGB2us1mDkYuEDaK0mDZ6T/ugh5qqtGynscVWHU=" crossorigin="anonymous"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 
