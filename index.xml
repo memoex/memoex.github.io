@@ -222,7 +222,11 @@ end
 &lt;li&gt;&lt;code&gt;permute(A, [4, 3, 2, 1])&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;size change: [3, 28, 28, 1000] =&amp;gt; [1000, 28, 28, 3]&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;squeeze&lt;/code&gt; - Remove singleton dimensions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;squeeze&lt;/code&gt; - Remove singleton dimensions
+
+&lt;ul&gt;
+&lt;li&gt;size change: [1, 28, 28] =&amp;gt; [28, 28]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;One Hot&lt;/strong&gt;&lt;/p&gt;
@@ -244,6 +248,31 @@ labels = indices - 1
 &lt;p&gt;&lt;strong&gt;Data type&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;class(1)&lt;/code&gt; =&amp;gt; &lt;code&gt;&#39;double&#39;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Rouding (取整)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;floor&lt;/code&gt; rounds a number to the next smaller integer. (朝负无穷取整)
+
+&lt;ul&gt;
+&lt;li&gt;3.5 =&amp;gt; 3, -3.5 =&amp;gt; -4&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ceil&lt;/code&gt; rounds a number to the next larger integer. (朝正无穷取整)
+
+&lt;ul&gt;
+&lt;li&gt;3.5 =&amp;gt; 4, -3.5 =&amp;gt; -3&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;round&lt;/code&gt; rounds a number to the nearest decimal or integer. (四舍五入)
+
+&lt;ul&gt;
+&lt;li&gt;3.5 =&amp;gt; 4, -3.5 =&amp;gt; -4&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fix&lt;/code&gt; rounds a number toward zero. (取整, 朝零取整)
+
+&lt;ul&gt;
+&lt;li&gt;3.5 =&amp;gt; 3, -3.5 =&amp;gt; -3&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

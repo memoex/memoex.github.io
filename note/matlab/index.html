@@ -105,7 +105,11 @@ end
 <li><code>permute(A, [4, 3, 2, 1])</code></li>
 <li>size change: [3, 28, 28, 1000] =&gt; [1000, 28, 28, 3]</li>
 </ul></li>
-<li><code>squeeze</code> - Remove singleton dimensions</li>
+<li><code>squeeze</code> - Remove singleton dimensions
+
+<ul>
+<li>size change: [1, 28, 28] =&gt; [28, 28]</li>
+</ul></li>
 </ul>
 
 <p><strong>One Hot</strong></p>
@@ -127,6 +131,31 @@ labels = indices - 1
 <p><strong>Data type</strong></p>
 
 <p><code>class(1)</code> =&gt; <code>'double'</code></p>
+
+<p><strong>Rouding (取整)</strong></p>
+
+<ul>
+<li><code>floor</code> rounds a number to the next smaller integer. (朝负无穷取整)
+
+<ul>
+<li>3.5 =&gt; 3, -3.5 =&gt; -4</li>
+</ul></li>
+<li><code>ceil</code> rounds a number to the next larger integer. (朝正无穷取整)
+
+<ul>
+<li>3.5 =&gt; 4, -3.5 =&gt; -3</li>
+</ul></li>
+<li><code>round</code> rounds a number to the nearest decimal or integer. (四舍五入)
+
+<ul>
+<li>3.5 =&gt; 4, -3.5 =&gt; -4</li>
+</ul></li>
+<li><code>fix</code> rounds a number toward zero. (取整, 朝零取整)
+
+<ul>
+<li>3.5 =&gt; 3, -3.5 =&gt; -3</li>
+</ul></li>
+</ul>
 
 <p></p>
 
