@@ -274,6 +274,64 @@ labels = indices - 1
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;strong&gt;下三角置零&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tril&lt;/code&gt; 下三角矩阵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;triu&lt;/code&gt; 上山脚矩阵&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;a = [1 2; 3 4];
+a - tril(a)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://memoex.github.io/note/shell/</link>
+      <pubDate>Wed, 20 Dec 2017 17:00:24 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/shell/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Check states&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;neofetch&lt;/code&gt;, system info&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;du -sh &amp;lt;file&amp;gt;/&amp;lt;directory&amp;gt;&lt;/code&gt;, check the size of file or directory&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df -h&lt;/code&gt;, display free disk space
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-h&lt;/code&gt;, 1k = 1024 byte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-H&lt;/code&gt;, 1k = 1000 byte&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt;&lt;/strong&gt; - &lt;code&gt;CentOS 7&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tmpwatch&lt;/code&gt; - removes files which haven&amp;rsquo;t been accessed for a period of time
+
+&lt;ul&gt;
+&lt;li&gt;install: &lt;code&gt;yum install -y tmpwatch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;delete files not accessed in 7 days: &lt;code&gt;tmpwatch 7d /tmp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cron&lt;/code&gt; 定期执行指定程序
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;crond&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;crontab -e&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0 0 * * * tmpwatch 7d /tmp&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Funny commands&lt;/strong&gt;&lt;/p&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -525,6 +583,8 @@ x == list(x2) and y == list(y2)
 &lt;pre&gt;&lt;code&gt;def __call__(self, x):
     pass
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;pip frreze &amp;gt; requirements.txt&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

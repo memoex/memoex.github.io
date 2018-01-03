@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://memoex.github.io/note/shell/</loc>
+    <lastmod>2017-12-20T17:00:24+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/note/vim/</loc>
     <lastmod>2017-12-18T19:09:53+08:00</lastmod>
   </url>
@@ -159,6 +164,12 @@
   <url>
     <loc>https://memoex.github.io/tags/obv/</loc>
     <lastmod>2017-12-18T19:01:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/tags/shell/</loc>
+    <lastmod>2017-12-20T17:00:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   

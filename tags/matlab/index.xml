@@ -94,6 +94,17 @@ labels = indices - 1
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;strong&gt;下三角置零&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;tril&lt;/code&gt; 下三角矩阵&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;triu&lt;/code&gt; 上山脚矩阵&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;a = [1 2; 3 4];
+a - tril(a)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     

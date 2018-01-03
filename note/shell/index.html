@@ -57,67 +57,67 @@
         <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white content">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-weight-bold">Python</h1>
+                    <h1 class="font-weight-bold">Shell</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
                 <div class="align-self-center col-auto mdl-color-text--primary">
-                    <time class="font-weight-bold">Dec 10, 2017</time>
+                    <time class="font-weight-bold">Dec 20, 2017</time>
                 </div>
+                
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
                 
                 <div class="col pl-1">
                     <ul class="nav">
+                        
+                            <li class="nav-item">
+                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
+                                    onclick="location.href='\/tags\/shell'">shell</button>
+                            </li>
                         
                     </ul>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <p>Some python notes.</p>
+                    <h2 id="quick-notes">Quick notes</h2>
 
-<h2 id="package-notes">Package notes</h2>
-
-<ul>
-<li><a href="/note/keras">Keras</a></li>
-</ul>
-
-<h2 id="quick-notes">Quick notes</h2>
-
-<p><code>enumerate</code>.</p>
-
-<pre><code class="language-python">colors = ['red', 'green', 'blue', 'yellow']
-
-for i, color in enumerate(colors):
-    print i, '--&gt;', color
-</code></pre>
+<p><strong>Check states</strong></p>
 
 <ul>
-<li><code>range</code></li>
-<li><code>xrange</code></li>
-<li><code>zip</code></li>
-<li><code>izip</code></li>
+<li><code>neofetch</code>, system info</li>
+<li><code>du -sh &lt;file&gt;/&lt;directory&gt;</code>, check the size of file or directory</li>
+<li><code>df -h</code>, display free disk space
+
+<ul>
+<li><code>-h</code>, 1k = 1024 byte</li>
+<li><code>-H</code>, 1k = 1000 byte</li>
+</ul></li>
 </ul>
 
-<p><code>zip</code>.</p>
+<p><strong>Auto delete files in <code>tmp</code></strong> - <code>CentOS 7</code></p>
 
-<pre><code class="language-python">x = [1, 2, 3]
-y = [4, 5, 6]
-zipped = zip(x, y)
-zipped
-# [(1, 4), (2, 5), (3, 6)]
-x2, y2 = zip(*zipped)
-x == list(x2) and y == list(y2)
-# True
-</code></pre>
+<ul>
+<li><code>tmpwatch</code> - removes files which haven&rsquo;t been accessed for a period of time
 
-<p><strong><code>self(x)</code></strong>.</p>
+<ul>
+<li>install: <code>yum install -y tmpwatch</code></li>
+<li>delete files not accessed in 7 days: <code>tmpwatch 7d /tmp</code></li>
+</ul></li>
+<li><code>cron</code> 定期执行指定程序
 
-<pre><code>def __call__(self, x):
-    pass
-</code></pre>
+<ul>
+<li><code>crond</code></li>
+<li><code>crontab -e</code>
 
-<p><code>pip frreze &gt; requirements.txt</code></p>
+<ul>
+<li><code>0 0 * * * tmpwatch 7d /tmp</code></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><strong>Funny commands</strong></p>
 
 <p></p>
                 </div>
