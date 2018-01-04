@@ -22,8 +22,11 @@
 
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
+&lt;p&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/p&gt;
+
 &lt;ul&gt;
-&lt;li&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tf.reset_default_graph()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;writer = tf.summary.FileWriter(&#39;&amp;lt;path&amp;gt;&#39;, sess.graph)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -214,6 +217,8 @@ switch(dataset):
         error(&#39;Unrecognized dataset!&#39;)
 end
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;h5read&lt;/code&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;permute&lt;/code&gt; - Rearrange dimensions of N-D array

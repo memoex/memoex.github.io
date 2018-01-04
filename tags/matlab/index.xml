@@ -35,6 +35,8 @@ switch(dataset):
 end
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;code&gt;h5read&lt;/code&gt;&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;permute&lt;/code&gt; - Rearrange dimensions of N-D array
 

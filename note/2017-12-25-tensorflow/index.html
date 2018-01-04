@@ -78,8 +78,11 @@
 
 <h2 id="quick-notes">Quick notes</h2>
 
+<p>trainable: If <code>True</code>, the default, also adds the variable to the graph collection <code>GraphKeys.TRAINABLE_VARIABLES</code>. This collection is used as the default list of variables to use by the <code>Optimizer</code> classes.</p>
+
 <ul>
-<li>trainable: If <code>True</code>, the default, also adds the variable to the graph collection <code>GraphKeys.TRAINABLE_VARIABLES</code>. This collection is used as the default list of variables to use by the <code>Optimizer</code> classes.</li>
+<li><code>tf.reset_default_graph()</code></li>
+<li><code>writer = tf.summary.FileWriter('&lt;path&gt;', sess.graph)</code></li>
 </ul>
 
 <p></p>
