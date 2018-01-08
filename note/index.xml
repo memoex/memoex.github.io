@@ -34,10 +34,10 @@
     
     <item>
       <title>CS231n - Convolutional Neural Networks for Visual Recognition</title>
-      <link>https://memoex.github.io/note/course/cnn/</link>
+      <link>https://memoex.github.io/note/course/cs231n/</link>
       <pubDate>Sun, 24 Dec 2017 16:35:25 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/course/cnn/</guid>
+      <guid>https://memoex.github.io/note/course/cs231n/</guid>
       <description>&lt;p&gt;Course notes of CS231n.&lt;/p&gt;
 
 &lt;h2 id=&#34;2-image-classification-pipeline&#34;&gt;2. Image Classification pipeline&lt;/h2&gt;

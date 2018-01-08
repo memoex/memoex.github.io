@@ -57,13 +57,13 @@
         <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white content">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-weight-bold">Python</h1>
+                    <h1 class="font-weight-bold">CS231n - Convolutional Neural Networks for Visual Recognition</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
                 <div class="align-self-center col-auto mdl-color-text--primary">
-                    <time class="font-weight-bold">Dec 10, 2017</time>
+                    <time class="font-weight-bold">Dec 24, 2017</time>
                 </div>
                 
                 <div class="col pl-1">
@@ -74,85 +74,86 @@
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <p>Some python notes.</p>
+                    <p>Course notes of CS231n.</p>
 
-<h2 id="package-notes">Package notes</h2>
-
-<ul>
-<li><a href="/note/keras">Keras</a></li>
-</ul>
-
-<h2 id="quick-notes">Quick notes</h2>
-
-<p><code>enumerate</code>.</p>
-
-<pre><code class="language-python">colors = ['red', 'green', 'blue', 'yellow']
-
-for i, color in enumerate(colors):
-    print i, '--&gt;', color
-</code></pre>
+<h2 id="2-image-classification-pipeline">2. Image Classification pipeline</h2>
 
 <ul>
-<li><code>range</code></li>
-<li><code>xrange</code></li>
-<li><code>zip</code></li>
-<li><code>izip</code></li>
-</ul>
-
-<p><code>zip</code>.</p>
-
-<pre><code class="language-python">x = [1, 2, 3]
-y = [4, 5, 6]
-zipped = zip(x, y)
-zipped
-# [(1, 4), (2, 5), (3, 6)]
-x2, y2 = zip(*zipped)
-x == list(x2) and y == list(y2)
-# True
-</code></pre>
-
-<p><strong><code>self(x)</code></strong>.</p>
-
-<pre><code>def __call__(self, x):
-    pass
-</code></pre>
-
-<p><code>pip frreze &gt; requirements.txt</code></p>
-
-<p></p>
-
-<p><strong>hashable</strong>: <code>object.__hash__()</code>, the key of dict must be hasable</p>
-
-<p><strong>Auto reload external python modules</strong></p>
-
-<p><a href="https://ipython.org/ipython-doc/3/config/extensions/autoreload.html">https://ipython.org/ipython-doc/3/config/extensions/autoreload.html</a></p>
-
-<pre><code class="language-py">%load_ext autoreload
-%autoreload 2
-</code></pre>
+<li>Challenges
 
 <ul>
-<li><code>np.linalg.norm(X, ord=np.inf, axis=1)</code></li>
-<li><code>np.power(X, 2)</code></li>
-<li><code>np.matmul(A, B)</code></li>
-<li><code>np.array(np.array_split(&lt;array&gt;))</code></li>
-<li><code>np.concatenate()</code></li>
-<li><code>np.argsort(X)[:k]</code>, indices of top k min value</li>
-<li><code>np.bincount(X)</code>, <code>cnt[X[i]]+=1</code></li>
-<li><code>np.argmax()</code></li>
-</ul>
-
-<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+<li>Viewpoint variation 多视角</li>
+<li>Illumination 光线</li>
+<li>Deformation 变形</li>
+<li>Occlusion 遮挡</li>
+<li>Background Clutter 杂乱的背景</li>
+<li>Intraclass variation 内类多样性</li>
+</ul></li>
+<li>Nearest Neighbor
 
 <ul>
-<li>Links
+<li>Compute the distances of testing images and training images</li>
+<li>\(L_n\) norm
 
 <ul>
-<li><a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html">Running a notebook server</a></li>
-<li><a href="http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Installing jupyter_contrib_nbextensions</a></li>
-<li><a href="https://github.com/lambdalisue/jupyter-vim-binding">jupyter-vim-binding</a></li>
-<li><a href="https://stackoverflow.com/a/29916445">line number</a></li>
-<li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
+<li>\((\sum_{i}{|X^i|^n})^{\frac{1}{n}}\)</li>
+</ul></li>
+<li>\(L_n\) distance
+
+<ul>
+<li>\((\sum_{i}{|X_1^i - X_2^i|^n})^{\frac{1}{n}}\)</li>
+</ul></li>
+<li>method
+
+<ul>
+<li>For each testing image, find the nearest training image</li>
+<li>Use the label of finding training image as the prediction</li>
+</ul></li>
+<li>complexity
+
+<ul>
+<li>Training: \(O(1)\)</li>
+<li>Testing: \(O(n)\)</li>
+</ul></li>
+</ul></li>
+<li>K-Nearest Neighbor
+
+<ul>
+<li>Find k nearest t raining images to the testing image</li>
+<li>Use the most voted label</li>
+<li><strong>Demo: <a href="http://vision.stanford.edu/teaching/cs231n-demos/knn/">http://vision.stanford.edu/teaching/cs231n-demos/knn/</a></strong></li>
+<li>Never used on images
+
+<ul>
+<li>very slow when testing</li>
+<li>Distance metrics on pixels are not infomative</li>
+</ul></li>
+</ul></li>
+<li>Dataset spliting
+
+<ul>
+<li>train, test</li>
+<li>train, validation, test</li>
+<li>Cross-Validation
+
+<ul>
+<li>folds</li>
+<li>each fold as validation and average the results</li>
+<li>Useful for small datasets, but not used too frequently in deep learning</li>
+</ul></li>
+<li>errorbar, violin plot <a href="https://matplotlib.org/gallery/index.html#statistics">https://matplotlib.org/gallery/index.html#statistics</a></li>
+</ul></li>
+<li>Linear Classifier
+
+<ul>
+<li>\(f(\mathbf x, W) = W\mathbf x+b\)</li>
+<li>have hard cases
+
+<ul>
+<li>xor</li>
+<li>circles
+</li>
+</ul></li>
 </ul></li>
 </ul>
                 </div>
