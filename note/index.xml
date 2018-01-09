@@ -7,10 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Mon, 25 Dec 2017 14:46:16 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jan 2018 23:04:47 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>文化</title>
+      <link>https://memoex.github.io/note/2018-01-08-culture/</link>
+      <pubDate>Mon, 08 Jan 2018 23:04:47 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/2018-01-08-culture/</guid>
+      <description>&lt;h2 id=&#34;速记&#34;&gt;速记&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;龙之九子&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - 豆子的回答 - 知乎
+&lt;a href=&#34;https://www.zhihu.com/question/23759686/answer/41997389&#34;&gt;https://www.zhihu.com/question/23759686/answer/41997389&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;囚牛 x 母龙&lt;/li&gt;
+&lt;li&gt;睚眦 x 狼&lt;/li&gt;
+&lt;li&gt;嘲风 x 凤凰&lt;/li&gt;
+&lt;li&gt;蒲牢 x 蛤蟆&lt;/li&gt;
+&lt;li&gt;狻猊（suān ní） x 狮子&lt;/li&gt;
+&lt;li&gt;霸下、赑屃（bì xì） x 王八&lt;/li&gt;
+&lt;li&gt;狴犴（bì àn） x 老虎&lt;/li&gt;
+&lt;li&gt;负屃（fù xì） x 王八&lt;/li&gt;
+&lt;li&gt;螭吻、鸱吻、鸱尾（chī） x 鱼&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Tensorflow</title>
@@ -601,6 +629,16 @@ x == list(x2) and y == list(y2)
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/math/</guid>
       <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;沿梯度方向\(\nabla f \text{,} f\)增长最快
+
+&lt;ul&gt;
+&lt;li&gt;\(\nabla\) nabla [&amp;lsquo;næblə]&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;线性代数&#34;&gt;线性代数&lt;/h2&gt;
 
