@@ -117,19 +117,14 @@ x == list(x2) and y == list(y2)
     pass
 </code></pre>
 
-<p><code>pip frreze &gt; requirements.txt</code></p>
+<ul>
+<li><code>pip frreze &gt; requirements.txt</code></li>
+<li><code>pip install -r requirements.txt</code></li>
+</ul>
 
 <p></p>
 
 <p><strong>hashable</strong>: <code>object.__hash__()</code>, the key of dict must be hasable</p>
-
-<p><strong>Auto reload external python modules</strong></p>
-
-<p><a href="https://ipython.org/ipython-doc/3/config/extensions/autoreload.html">https://ipython.org/ipython-doc/3/config/extensions/autoreload.html</a></p>
-
-<pre><code class="language-py">%load_ext autoreload
-%autoreload 2
-</code></pre>
 
 <ul>
 <li>knn
@@ -137,7 +132,11 @@ x == list(x2) and y == list(y2)
 <ul>
 <li><code>np.linalg.norm(X, ord=np.inf, axis=1)</code></li>
 <li><code>np.power(X, 2)</code></li>
-<li><code>np.matmul(A, B)</code></li>
+<li><code>np.matmul(A, B)</code>, matrix multiplication
+
+<ul>
+<li><code>np.multip</code></li>
+</ul></li>
 <li><code>np.array(np.array_split(&lt;array&gt;))</code></li>
 <li><code>np.concatenate()</code></li>
 <li><code>np.argsort(X)[:k]</code>, indices of top k min value</li>
@@ -153,13 +152,24 @@ x == list(x2) and y == list(y2)
 <li><code>np.stack((a, b), axis=0)</code>, (2, 3) + (2, 3) =&gt; (2, 2, 3)</li>
 <li><code>np.vstack((a, b))</code></li>
 </ul></li>
+<li><code>np.dot()</code>
+
+<ol>
+<li>2-D array, matrix multiplication</li>
+<li>1-D arrays, inner product</li>
+</ol></li>
+<li><a href="http://www.scipy-lectures.org/intro/numpy/operations.html">http://www.scipy-lectures.org/intro/numpy/operations.html</a>
+
+<ul>
+<li><code>np.allclose()</code>?</li>
+<li><code>np.any()</code>, <code>np.all()</code></li>
+</ul></li>
 </ul></li>
 </ul>
 
 <h2 id="jupyter-notebook">Jupyter Notebook</h2>
 
-<ul>
-<li>Links
+<h3 id="links">Links</h3>
 
 <ul>
 <li><a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html">Running a notebook server</a></li>
@@ -167,8 +177,22 @@ x == list(x2) and y == list(y2)
 <li><a href="https://github.com/lambdalisue/jupyter-vim-binding">jupyter-vim-binding</a></li>
 <li><a href="https://stackoverflow.com/a/29916445">line number</a></li>
 <li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
-</ul></li>
 </ul>
+
+<h3 id="tips">Tips</h3>
+
+<ul>
+<li><code>!pwd</code></li>
+<li><code>np.dot??</code></li>
+</ul>
+
+<p><strong>Auto reload external python modules</strong></p>
+
+<p><a href="https://ipython.org/ipython-doc/3/config/extensions/autoreload.html">https://ipython.org/ipython-doc/3/config/extensions/autoreload.html</a></p>
+
+<pre><code class="language-py">%load_ext autoreload
+%autoreload 2
+</code></pre>
                 </div>
             </div>
         </div>
