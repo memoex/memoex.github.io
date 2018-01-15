@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.css">
+
+
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js/styles/github-gist.min.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link rel="stylesheet" href="https://memoex.github.io/css/blue.css">
+
+    </head>
+<body class="colorful">
+    <div class="container">
+        <div class="mt-4 row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h1 id="site-title" class="display-2 mdl-color-text--grey-800 mdl-HH rounded-top my-0 py-5 font-weight-bold text-center">Mr.Blue&#39;s notes</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1">
+            <div class="col-12 col-lg-8">
+                <div class="container mdl-color--white mdl-shadow--2dp rounded">
+    <div class="row justify-content-around">
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/"><span>Blog</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/note/"><span>Note</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/tags"><span>Tags</span></a>
+        
+            <a class="col px-3 mdl-button mdl-js-button mdl-button--primary" href="https://memoex.github.io/page/about/"><span>About</span></a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="row justify-content-end">
+    <div class="col col-lg-8">
+        <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white content">
+            <div class="row">
+                <div class="col">
+                    <h1 class="font-weight-bold">Tensorflow</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                <div class="align-self-center col-auto mdl-color-text--primary">
+                    <time class="font-weight-bold">Dec 25, 2017</time>
+                </div>
+                
+                <div class="col pl-1">
+                    <ul class="nav">
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <p>Notes about using Tensorflow</p>
+
+<h2 id="quick-notes">Quick notes</h2>
+
+<p>trainable: If <code>True</code>, the default, also adds the variable to the graph collection <code>GraphKeys.TRAINABLE_VARIABLES</code>. This collection is used as the default list of variables to use by the <code>Optimizer</code> classes.</p>
+
+<p><strong>Tensorflow gpu auto growth</strong></p>
+
+<pre><code class="language-py">config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+</code></pre>
+
+<p><strong>Reset default graph</strong></p>
+
+<p><code>tf.reset_default_graph()</code></p>
+
+<p><strong>Tensorboard</strong></p>
+
+<pre><code class="language-py">with tf.Session(config=config) as sess:
+
+    # ...
+
+    writer = tf.summary.FileWriter('./graphs/test', sess.graph)
+    writer.flush()
+    writer.close()
+</code></pre>
+
+<p>Startup tensorboard:</p>
+
+<p><code>tensorboasrd --logdir=&quot;&lt;path&gt;&quot; --port 6006 --reload_interval=5</code></p>
+
+<p></p>
+
+<h2 id="cs-20si-tensorflow-for-deep-learning-research">CS 20SI: Tensorflow for Deep Learning Research</h2>
+
+<h3 id="1-overview-of-tensorflow">1. Overview of Tensorflow</h3>
+
+<ul>
+<li>Why TensorFlow ?
+
+<ul>
+<li>Python API</li>
+<li>Portability: deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API</li>
+<li>Flexibility: from Raspberry Pi, Android, Windows, iOS, Linux to server farms</li>
+<li>Visualization (TensorBoard is da bomb)</li>
+<li>Checkpoints (for managing experiments)</li>
+<li>Auto-differentiation autodiff (no more taking derivatives by hand. Yay)</li>
+<li>Large community (&gt; 10,000 commits and &gt; 3000 TF-related repos in 1 year)</li>
+<li>Awesome projects already using TensorFlow</li>
+</ul></li>
+<li>Simplified TensorFlow ?
+
+<ul>
+<li>TF Learn (tf.contrib.learn): simplified interface that helps users transition from the the world of one-liner such as scikit-learn</li>
+<li>TF Slim (tf.contrib.slim): lightweight library for defining, training and evaluating complex models in TensorFlow.</li>
+<li>High level API: Keras, TFLearn, Pretty Tensor</li>
+</ul></li>
+<li>Tensor
+
+<ul>
+<li>An n-dimensional array</li>
+</ul></li>
+<li>Session
+
+<ul>
+<li>A Session object encapsulates the environment in which Operation objects are executed, and Tensor objects are evaluated.</li>
+</ul></li>
+<li>No more than one graph, use subgraph
+
+<ul>
+<li>Multiple graphs require multiple sessions, each will try to use all available resources by default</li>
+<li>Can&rsquo;t pass data between them without passing them through python/numpy, which doesn&rsquo;t work in distributed</li>
+<li>It’s better to have disconnected subgraphs within one graph</li>
+</ul></li>
+<li>Why graphs
+
+<ul>
+<li><strong>Save computation</strong> (only run subgraphs that lead to the values you want to fetch)</li>
+<li>Break computation into small, differential pieces to <strong>facilitates auto-differentiation</strong></li>
+<li><strong>Facilitate distributed computation</strong>, spread the work across multiple CPUs, GPUs, or devices</li>
+<li>Many common machine learning models are commonly taught and visualized as directed graphs already</li>
+</ul></li>
+</ul>
+
+<h3 id="2-tensorflow-ops">2. TensorFlow Ops</h3>
+
+<p><strong>Tensorboard</strong></p>
+
+<pre><code class="language-py">import tensorflow as tf
+
+a = tf.constant(2, name=&quot;a&quot;)
+b = tf.constant(3, name=&quot;b&quot;)
+x = tf.add(a, b, name=&quot;add&quot;)
+
+with tf.Session() as sess:
+
+    writer = tf.summary.FileWriter(&quot;./graphs&quot;, sess.graph)
+    print sess.run(x)
+</code></pre>
+
+<p>In shell:</p>
+
+<pre><code class="language-sh">tensorboard --logdir=&quot;./graphs&quot; --port 6006
+</code></pre>
+
+<p>Then open your browser and go to <code>http://localhost:6006/</code></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-0 col-lg-2">
+        <div class="container">
+            <div class="row">
+                <div class="toc col"></div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            
+
+
+
+<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js" integrity="sha256-HHSLUGB2us1mDkYuEDaK0mDZ6T/ugh5qqtGynscVWHU=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
+
+
+<script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
+
+<script>
+$(function(){
+    tocbot.init({
+      
+      tocSelector: '.toc',
+      
+      contentSelector: '.content',
+      
+      headingSelector: 'h1, h2, h3, h4',
+    });
+});
+</script>
+
+
+        </div>
+    </div>
+</body>
+</html>

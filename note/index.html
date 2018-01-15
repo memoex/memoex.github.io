@@ -64,6 +64,43 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/2018-01-11-walk/">走</a></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                    <div class="align-self-center col-auto mdl-color-text--primary">
+                        <time class="font-weight-bold">Jan 11, 2018</time>
+                    </div>
+                    
+                    <div class="col pl-1">
+                        <ul class="nav">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-5">
+                        <ul>
+<li>2018-01-07 大钟寺博物馆-中华民族园博物馆-中国动物博物馆</li>
+<li>2018-01-14 清华大学艺术博物馆-香巴拉户外用品专卖店-中国人民大学</li>
+</ul>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/2018-01-11-walk\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div><div class="row">
+            <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
+                <div class="row">
+                    <div class="col">
                         <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/2018-01-08-culture/">文化</a></h1>
                     </div>
                 </div>
@@ -131,7 +168,7 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
-                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/2017-12-25-tensorflow/">Tensorflow</a></h1>
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/tensorflow/">Tensorflow</a></h1>
                     </div>
                 </div>
                 <div class="row">
@@ -154,17 +191,37 @@
 
 <p>trainable: If <code>True</code>, the default, also adds the variable to the graph collection <code>GraphKeys.TRAINABLE_VARIABLES</code>. This collection is used as the default list of variables to use by the <code>Optimizer</code> classes.</p>
 
-<ul>
-<li><code>tf.reset_default_graph()</code></li>
-<li><code>writer = tf.summary.FileWriter('&lt;path&gt;', sess.graph)</code></li>
-</ul>
+<p><strong>Tensorflow gpu auto growth</strong></p>
+
+<pre><code class="language-py">config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+</code></pre>
+
+<p><strong>Reset default graph</strong></p>
+
+<p><code>tf.reset_default_graph()</code></p>
+
+<p><strong>Tensorboard</strong></p>
+
+<pre><code class="language-py">with tf.Session(config=config) as sess:
+
+    # ...
+
+    writer = tf.summary.FileWriter('./graphs/test', sess.graph)
+    writer.flush()
+    writer.close()
+</code></pre>
+
+<p>Startup tensorboard:</p>
+
+<p><code>tensorboasrd --logdir=&quot;&lt;path&gt;&quot; --port 6006 --reload_interval=5</code></p>
 
 <p></p>
                     </div>
                 </div>
                 <div class="row border mdl-color-grey-50"></div>
                 <div class="row">
-                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/2017-12-25-tensorflow\/'"
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/tensorflow\/'"
                         class="mdl-button mdl-js-button col align-items-end">
                         <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                     </button>
