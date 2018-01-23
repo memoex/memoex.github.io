@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Mr.Blue&#39;s notes</title>
+    <link>https://memoex.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Mr.Blue&#39;s notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
+    <lastBuildDate>Mon, 15 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker</title>
+      <link>https://memoex.github.io/note/docker/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/docker/</guid>
+      <description>&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/wsargent/docker-cheat-sheet/tree/master/zh-cn&#34;&gt;Docker cheat sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/veggiemonk/awesome-docker&#34;&gt;Awesome docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker images&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker run -it ubuntu&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker exec -it &amp;lt;container_name&amp;gt; bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker history &amp;lt;image&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;自下而上构建镜像层的缓存，&lt;code&gt;&amp;lt;...&amp;gt;: Already existes&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

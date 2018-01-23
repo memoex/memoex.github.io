@@ -105,7 +105,89 @@ config.gpu_options.allow_growth = True
 
 <p><code>tensorboasrd --logdir=&quot;&lt;path&gt;&quot; --port 6006 --reload_interval=5</code></p>
 
-<p></p>
+<h2 id="hugomore42"></h2>
+
+<h3 id="reuse-name-scope">Reuse <code>name_scope</code></h3>
+
+<pre><code class="language-py">with tf.name_scope('variable') as var_scope:
+    # ...
+# ...
+with tf.name_scope(var_scope):
+    # ...
+
+</code></pre>
+
+<h3 id="notes-of-kernel-extractor">Notes of Kernel extractor</h3>
+
+<ul>
+<li>Add a new axis, [10] =&gt; [10, 1], <code>tf.expand_dims(a, 1)</code></li>
+<li>Filter with boolean, <code>tf.boolean_mask(a, mask)</code></li>
+<li><code>tf.matrix_band_part(input, num_lower, num_upper)</code> WTF
+
+<ul>
+<li><code>(0, -1)</code> Upper triangular part</li>
+<li><code>(-1, 0)</code> Lower triangular part</li>
+<li><code>(0, 0)</code> Diagonal</li>
+</ul></li>
+<li><a href="https://www.tensorflow.org/versions/r0.12/api_docs/python/math_ops/matrix_math_functions">Matrix Math Functions</a></li>
+<li>Assign zeors to diagonal, <code>tf.matrix_set_diag(a, tf.zeros_like(tf.diag_part(a)))</code></li>
+<li>Bool Variable, <code>tf.Variable(tf.cast(tf.ones([2, 2]), tf.bool))</code></li>
+<li>Get variables under <code>name_scope</code>, <code>tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='&lt;scope_name&gt;')</code></li>
+</ul>
+
+<hr />
+
+<h3 id="tensorflow-assignment">Tensorflow Assignment</h3>
+
+<p>一个重要的观念或者是习惯上的转变是</p>
+
+<ol>
+<li>Variable</li>
+<li>Operation</li>
+<li>用操作去修改变量</li>
+</ol>
+
+<p>Operation 一旦定义好了，是可以反复使用的，像optimizer。这其中的关键是，operation包含了把结果存储到变量的操作。</p>
+
+<p>另外一个观念上的转变是，Graph和Session的分离</p>
+
+<ol>
+<li>构建Graph，包括Variable和Operation</li>
+<li>用Session去运行Operation</li>
+<li>不可以在run的过程中构建新的Operation，会出错, device error?</li>
+</ol>
+
+<h4 id="usage-of-tf-scatter-update">Usage of <code>tf.scatter_update</code></h4>
+
+<pre><code class="language-py">tf.scatter_update(selection, index, False)
+</code></pre>
+
+<h4 id="usage-of-tf-scatter-nd-update">Usage of <code>tf.scatter_nd_update</code></h4>
+
+<p>Change the value of <code>x[1,:]</code> and <code>x[:,1]</code> simultaneously.</p>
+
+<pre><code class="language-py">tf.reset_default_graph()
+with tf.Session() as sess:
+    n = 3
+    k = 1
+    x = tf.Variable(tf.zeros([n, n]))
+    indices = zip([k]*n + range(n), range(n) + [k]*n) # [[1,0], [1,1], ...]
+    updates = -1 * tf.ones([len(indices)])
+    update_op = tf.scatter_nd_update(x, indices, updates)
+
+    sess.run(tf.global_variable_initializer())
+    sess.run(update_op)
+    print sess.run(x)
+'''
+[[0, 0, 0],
+ [0, 0, 0],
+ [0, 0, 0]]
+=&gt;
+[[0, -1, 0],
+ [-1, -1, -1],
+ [0, -1, 0]]
+'''
+</code></pre>
 
 <h2 id="cs-20si-tensorflow-for-deep-learning-research">CS 20SI: Tensorflow for Deep Learning Research</h2>
 
