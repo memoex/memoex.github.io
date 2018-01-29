@@ -98,12 +98,21 @@
 <h2 id="quick-notes">Quick notes</h2>
 
 <ul>
-<li><code>docker run</code></li>
 <li><code>docker images</code></li>
-<li><code>docker run -it ubuntu</code></li>
+<li><code>docker run -it ubuntu &lt;shell&gt;</code>
+
+<ul>
+<li><code>-v &lt;host_dir&gt;/&lt;container_dir&gt;</code></li>
+<li><code>-p</code></li>
+</ul></li>
 <li><code>docker exec -it &lt;container_name&gt; bash</code></li>
 <li><code>docker history &lt;image&gt;</code></li>
 <li>自下而上构建镜像层的缓存，<code>&lt;...&gt;: Already existes</code></li>
+<li><code>docker ps</code>
+
+<ul>
+<li><code>-a</code> for all</li>
+</ul></li>
 </ul>
 
 <p></p>

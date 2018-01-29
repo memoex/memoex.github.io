@@ -28,12 +28,21 @@
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;docker run&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker images&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;docker run -it ubuntu&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker run -it ubuntu &amp;lt;shell&amp;gt;&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-v &amp;lt;host_dir&amp;gt;/&amp;lt;container_dir&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker exec -it &amp;lt;container_name&amp;gt; bash&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker history &amp;lt;image&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;自下而上构建镜像层的缓存，&lt;code&gt;&amp;lt;...&amp;gt;: Already existes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker ps&lt;/code&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;/code&gt; for all&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>

@@ -117,9 +117,97 @@
 </ul></li>
 </ul>
 
-<p><strong>Funny commands</strong></p>
-
 <p></p>
+
+<h3 id="sed">sed</h3>
+
+<p>Sed is the ultimate stream editor.</p>
+
+<ul>
+<li>Sed: <a href="http://www.grymoire.com/Unix/Sed.html">http://www.grymoire.com/Unix/Sed.html</a></li>
+<li>Regular Expression: <a href="http://www.grymoire.com/Unix/Regular.html">http://www.grymoire.com/Unix/Regular.html</a></li>
+</ul>
+
+<p>Some examples:</p>
+
+<ul>
+<li><code>sed s/spaceship/honukai/g &lt;old.file &gt;new.file</code></li>
+<li>change <key> = &ldquo;<value>&ldquo;
+
+<ul>
+<li><code>sed -i.bak '/ZSH_THEME/s/&quot;.*&quot;/&quot;honukai&quot;/'</code>
+
+<ul>
+<li>backup old file to <filename>.bak</li>
+<li><code>ZSH_THEME=&quot;robbyrussell&quot;</code> =&gt; <code>ZSH_THEME=&quot;honukai&quot;</code></li>
+</ul></li>
+</ul></li>
+<li>change <key> = <value>
+
+<ul>
+<li><code>sed -i.bak 's/^key\s*=.*/key = value/'</code></li>
+<li><code>^</code>, start with</li>
+<li><code>\s</code>, space, tag, &hellip;</li>
+</ul></li>
+</ul>
+
+<h3 id="timezone">timezone</h3>
+
+<pre><code class="language-sh">apt-get install tzdata
+ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre>
+
+<h3 id="file-exist">file exist</h3>
+
+<pre><code class="language-sh">file=data
+if [ -f ${file} ]
+then
+    echo &quot;$file found&quot;
+else
+    echo &quot;$file not found&quot;
+fi
+</code></pre>
+
+<ul>
+<li><code>-d</code> exists and is a directory</li>
+<li><code>-e</code> exists</li>
+<li><code>-f</code> exists and is a regular file</li>
+<li><code>-h</code> exists and is a symbolic link</li>
+</ul>
+
+<h3 id="uid">UID</h3>
+
+<p><code>id</code>, return user identity</p>
+
+<ul>
+<li>When we use file in host machine as volumem it&rsquo;s important to set the <strong>SAME UID</strong>.
+
+<ul>
+<li>Refer to <a href="https://denibertovic.com/posts/handling-permissions-with-docker-volumes/">HANDLING PERMISSIONS WITH DOCKER VOLUMES</a></li>
+</ul></li>
+<li>Another way is mount your <code>/etc/group</code> and <code>/etc/passwd</code> to your container.
+
+<ul>
+<li>This method is post in the cooments under the post referenced above.</li>
+</ul></li>
+</ul>
+
+<h3 id="symbol-link">Symbol link</h3>
+
+<p><code>ln -sf &lt;target&gt; &lt;symlink&gt;</code></p>
+
+<p>Example for glibc:</p>
+
+<pre><code class="language-sh">ln -sf libstdc++.so.6.0.21 libstdc++.so.6
+strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX
+</code></pre>
+
+<h3 id="open-port-in-centos-7">Open port in CentOS 7</h3>
+
+<pre><code class="language-sh">firewall-cmd --permanent --add-port=8888/tcp
+firewall-cmd --reload
+firewall-cmd --list-ports
+</code></pre>
                 </div>
             </div>
         </div>
