@@ -57,64 +57,135 @@
         <div class="mdl-shadow--2dp py-4 rounded container mdl-color--white content">
             <div class="row">
                 <div class="col">
-                    <h1 class="font-weight-bold">Word embedding</h1>
+                    <h1 class="font-weight-bold">Image - Reading</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
                 <div class="align-self-center col-auto mdl-color-text--primary">
-                    <time class="font-weight-bold">Dec 4, 2017</time>
+                    <time class="font-weight-bold">Jan 31, 2018</time>
                 </div>
-                
-                    <div class="align-self-center col-auto pr-0"><i class="fa fa-tags fa-lg" aria-hidden="true"></i></div>
                 
                 <div class="col pl-1">
                     <ul class="nav">
-                        
-                            <li class="nav-item">
-                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
-                                    onclick="location.href='\/tags\/word-embedding'">word embedding</button>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <button class="px-1 mdl-button mdl-js-button mdl-button--primary"
-                                    onclick="location.href='\/tags\/nlp'">NLP</button>
-                            </li>
                         
                     </ul>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col">
-                    <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
+                    <h2 id="quick-notes">Quick notes</h2>
 
-<h2 id="拟合目标">拟合目标</h2>
+<ul>
+<li><a href="http://blog.csdn.net/zhcheng26/article/details/51375135">图像识别中的深度学习</a>
 
-<p>条件概率：
-$$P(w_j|w_i)$$</p>
+<ul>
+<li>LFW, Labeled Faces in the Wild
 
-<p>二元词概率：
-$$P(w_i, w_j)$$</p>
+<ul>
+<li>人眼，中心区域：97.53%</li>
+<li>人眼，整张图像：99.15%</li>
+<li>Eigenface：60%</li>
+<li>非深度学习最高识别率：96.33%</li>
+<li>深度学习：99.47%</li>
+</ul></li>
+<li>ImageNet, PSACAL VOC</li>
+<li>深度学习将各种复杂的因素通过非线性方式进行分离</li>
+<li>浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本</li>
+<li>GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类</li>
+</ul></li>
+</ul>
 
-<p>互信息：
-$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+<hr />
 
-<p>如果两个词语义无关，分布独立，互信息为0：
-$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
+<ul>
+<li><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/">Transposed Convolution, Fractionally Strided Convolution or Deconvolution</a>
+
+<ul>
+<li>文章结构非常清晰，博客排版的样式也很值得学习</li>
+<li>开篇声明文章解决了什么问题，很重要！</li>
+<li>我们很容易得到卷积层的反向传播就是和CC的转置相乘。？</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><img src="https://culurciello.github.io/assets/unsup/gan_simple.svg" width="600em"></p>
+
+<ul>
+<li><a href="https://buptldy.github.io/2016/11/27/2016-11-27-gans/">Generative Adversarial Networks</a>
+
+<ul>
+<li><em>&ldquo;What I cannot create, I do not understand.&rdquo; —Richard Feynman</em></li>
+<li>生成模型由一个参数数量比训练数据少的多神经网络构成，所以生成模型为了能够产生和训练数据相似的输出就会迫使自己去发现数据中内在的本质内容。</li>
+<li><code>GAN</code>优化目标：</li>
+</ul></li>
+</ul>
+
+<div>
+$$
+\min_G \max_D {\mathbb E}_{x\sim p_{\rm data}} \log D(x)+{\mathbb E}_{z\sim p_z}[\log (1-D(G(z)))]
+$$
+</div>
+
+<hr />
+
+<ul>
+<li>GoogLeNets</li>
+</ul>
 
 <p></p>
 
-<h2 id="参考">参考</h2>
+<h2 id="卷积">卷积</h2>
+
+<h3 id="卷积的实现">卷积的实现</h3>
 
 <ul>
-<li>有谁可以解释下word embedding? - 李韶华的回答 - 知乎: <a href="https://www.zhihu.com/question/32275069/answer/109446135">https://www.zhihu.com/question/32275069/answer/109446135</a></li>
-<li>Mikolov的word2vec —第一个现代的词嵌入生成方法
-
-<ul>
-<li><a href="http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf">Distributed Representations of Words and Phrases and their Compositionality</a></li>
-<li><a href="https://arxiv.org/pdf/1301.3781.pdf">Efficient Estimation of Word Representations in Vector Space</a></li>
-</ul></li>
+<li><a href="https://buptldy.github.io/2016/10/01/2016-10-01-im2col/">Implementing convolution as a matrix multiplication</a></li>
 </ul>
+
+<p>提取灰度特征和边缘特征的卷积核：</p>
+
+<pre><code class="language-py"># Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+</code></pre>
+
+<p><code>im2col</code></p>
+
+<p><img src="http://7xritj.com1.z0.glb.clouddn.com/16-10-1/690672.jpg" width="700em"></p>
+
+<h3 id="deconvolution">Deconvolution</h3>
+
+<ul>
+<li>Visualizing and Understanding Convolutional Networks <a href="https://arxiv.org/pdf/1311.2901.pdf">arXiv</a></li>
+</ul>
+
+<h2 id="face-recognition">Face recognition</h2>
+
+<h3 id="eigenfaces">Eigenfaces</h3>
+
+<blockquote>
+<ol>
+<li>Projecting all training samples into the PCA subspace.</li>
+<li>Projecting the query image into the PCA subspace.</li>
+<li>Finding the nearest neighbor between the projected training images and the projected query image.</li>
+</ol>
+
+<p><a href="https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html#eigenfaces-in-opencv">Eigenfaces in OpenCV</a></p>
+</blockquote>
+
+<p>Question: From your linear algebra lessons you know that a M \times N matrix with M &gt; N can only have N - 1 non-zero eigenvalues.</p>
+
+<p><a href="https://github.com/bytefish/facerecognition_guide/blob/master/facerec_python.pdf">Face recognition with Python</a></p>
                 </div>
             </div>
         </div>

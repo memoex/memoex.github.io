@@ -20,6 +20,28 @@
       <guid>https://memoex.github.io/note/paper/forward/</guid>
       <description>&lt;p&gt;Papers read during research &lt;strong&gt;forward deep learning&lt;/strong&gt; algorithm.&lt;/p&gt;
 
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;正推，逆推
+
+&lt;ul&gt;
+&lt;li&gt;底层精度高=&amp;gt; 高层精度高&lt;/li&gt;
+&lt;li&gt;相同结构网络，精度高的网络，从中间截取进行分类是否精度也高？&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;不同粒度特征提取的结合
+
+&lt;ul&gt;
+&lt;li&gt;粒度，卷积层数？ 层数不同的实质是什么不同？&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;在调整了一些Hyper-paramenter后，大致上可以发现影响更大的参数，比如卷积核数
+
+&lt;ul&gt;
+&lt;li&gt;调整优先级：欠拟合 &amp;gt; 过拟合&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;用CIFAR-10训练时，测试集上的loss会在某次迭代中突然丢失，然后又恢复，形成一个尖刺？&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Can OBV construct a middle target for CNN?&lt;/strong&gt;&lt;/p&gt;

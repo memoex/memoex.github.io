@@ -83,7 +83,7 @@
                 <div class="col">
                     <h2 id="quick-notes">Quick notes</h2>
 
-<p><strong>Check states</strong></p>
+<h3 id="system-information">System information</h3>
 
 <ul>
 <li><code>neofetch</code>, system info</li>
@@ -94,9 +94,19 @@
 <li><code>-h</code>, 1k = 1024 byte</li>
 <li><code>-H</code>, 1k = 1000 byte</li>
 </ul></li>
+<li><code>uname -s</code>, print kernel name
+
+<ul>
+<li>Linux</li>
+<li>Darwin</li>
+</ul></li>
+<li><code>uname -r</code>, linux release number</li>
+<li><code>last -n 50</code>, check last logged in users</li>
+<li><code>lastb -n 50</code>,</li>
+<li><code>pstree -p</code>, process tree</li>
 </ul>
 
-<p><strong>Auto delete files in <code>tmp</code></strong> - <code>CentOS 7</code></p>
+<h3 id="auto-delete-files-in-tmp-centos-7">Auto delete files in <code>tmp</code> (CentOS 7)</h3>
 
 <ul>
 <li><code>tmpwatch</code> - removes files which haven&rsquo;t been accessed for a period of time
@@ -208,6 +218,42 @@ strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX
 firewall-cmd --reload
 firewall-cmd --list-ports
 </code></pre>
+
+<h3 id="create-and-delete-user">Create and delete user</h3>
+
+<p>Create user:</p>
+
+<pre><code class="language-sh">useradd &lt;username&gt; -b &lt;base_dir&gt; -e &lt;expire_date&gt;
+echo &lt;passwd&gt; | passwd --stdin &lt;username&gt;
+</code></pre>
+
+<ul>
+<li><code>-b</code>, <code>--base-dir</code>, HOME_DIR=${BASE_DIR}/${USERNAME}</li>
+<li><code>-d</code>, <code>--home-dir</code></li>
+<li><code>-e</code>, example: <code>2018-01-30</code></li>
+</ul>
+
+<p>Delete user:</p>
+
+<pre><code class="language-sh">userdel -r &lt;username&gt;
+</code></pre>
+
+<ul>
+<li><code>-f</code>, force remove, even if the user is still logged in. Dangerous!</li>
+<li><code>-r</code>, remove user&rsquo;s home directory</li>
+</ul>
+
+<h3 id="the-art-of-command-line">The art of command line</h3>
+
+<p><a href="https://github.com/jlevy/the-art-of-command-line">https://github.com/jlevy/the-art-of-command-line</a></p>
+
+<p><strong>AMAZING!</strong></p>
+
+<ul>
+<li><code>set -o vi</code>, vi style command line</li>
+<li><code>!!</code>, last command</li>
+<li><code>jq</code>, JSON processor</li>
+</ul>
                 </div>
             </div>
         </div>
@@ -239,7 +285,7 @@ firewall-cmd --list-ports
 
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 

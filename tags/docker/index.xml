@@ -34,6 +34,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-v &amp;lt;host_dir&amp;gt;/&amp;lt;container_dir&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--rm&lt;/code&gt;, automatically aremove the container when it exists&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker exec -it &amp;lt;container_name&amp;gt; bash&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker history &amp;lt;image&amp;gt;&lt;/code&gt;&lt;/li&gt;

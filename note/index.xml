@@ -7,10 +7,79 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Mon, 15 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2018 20:25:38 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Image - Reading</title>
+      <link>https://memoex.github.io/note/paper/2018-01-31-image/</link>
+      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/paper/2018-01-31-image/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/zhcheng26/article/details/51375135&#34;&gt;图像识别中的深度学习&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LFW, Labeled Faces in the Wild
+
+&lt;ul&gt;
+&lt;li&gt;人眼，中心区域：97.53%&lt;/li&gt;
+&lt;li&gt;人眼，整张图像：99.15%&lt;/li&gt;
+&lt;li&gt;Eigenface：60%&lt;/li&gt;
+&lt;li&gt;非深度学习最高识别率：96.33%&lt;/li&gt;
+&lt;li&gt;深度学习：99.47%&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ImageNet, PSACAL VOC&lt;/li&gt;
+&lt;li&gt;深度学习将各种复杂的因素通过非线性方式进行分离&lt;/li&gt;
+&lt;li&gt;浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本&lt;/li&gt;
+&lt;li&gt;GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/29/2016-10-29-deconv/&#34;&gt;Transposed Convolution, Fractionally Strided Convolution or Deconvolution&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;文章结构非常清晰，博客排版的样式也很值得学习&lt;/li&gt;
+&lt;li&gt;开篇声明文章解决了什么问题，很重要！&lt;/li&gt;
+&lt;li&gt;我们很容易得到卷积层的反向传播就是和CC的转置相乘。？&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://culurciello.github.io/assets/unsup/gan_simple.svg&#34; width=&#34;600em&#34;&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/11/27/2016-11-27-gans/&#34;&gt;Generative Adversarial Networks&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;What I cannot create, I do not understand.&amp;rdquo; —Richard Feynman&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;生成模型由一个参数数量比训练数据少的多神经网络构成，所以生成模型为了能够产生和训练数据相似的输出就会迫使自己去发现数据中内在的本质内容。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;GAN&lt;/code&gt;优化目标：&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+$$
+\min_G \max_D {\mathbb E}_{x\sim p_{\rm data}} \log D(x)+{\mathbb E}_{z\sim p_z}[\log (1-D(G(z)))]
+$$
+&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GoogLeNets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Docker</title>
@@ -34,6 +103,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;-v &amp;lt;host_dir&amp;gt;/&amp;lt;container_dir&amp;gt;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-p&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--rm&lt;/code&gt;, automatically aremove the container when it exists&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker exec -it &amp;lt;container_name&amp;gt; bash&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;docker history &amp;lt;image&amp;gt;&lt;/code&gt;&lt;/li&gt;
@@ -520,7 +590,7 @@ a - tril(a)
       <guid>https://memoex.github.io/note/shell/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Check states&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;system-information&#34;&gt;System information&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;neofetch&lt;/code&gt;, system info&lt;/li&gt;
@@ -531,9 +601,19 @@ a - tril(a)
 &lt;li&gt;&lt;code&gt;-h&lt;/code&gt;, 1k = 1024 byte&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-H&lt;/code&gt;, 1k = 1000 byte&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -s&lt;/code&gt;, print kernel name
+
+&lt;ul&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;li&gt;Darwin&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -r&lt;/code&gt;, linux release number&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last -n 50&lt;/code&gt;, check last logged in users&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lastb -n 50&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pstree -p&lt;/code&gt;, process tree&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt;&lt;/strong&gt; - &lt;code&gt;CentOS 7&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;auto-delete-files-in-tmp-centos-7&#34;&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt; (CentOS 7)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;tmpwatch&lt;/code&gt; - removes files which haven&amp;rsquo;t been accessed for a period of time
@@ -623,6 +703,28 @@ a - tril(a)
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/paper/forward/</guid>
       <description>&lt;p&gt;Papers read during research &lt;strong&gt;forward deep learning&lt;/strong&gt; algorithm.&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;正推，逆推
+
+&lt;ul&gt;
+&lt;li&gt;底层精度高=&amp;gt; 高层精度高&lt;/li&gt;
+&lt;li&gt;相同结构网络，精度高的网络，从中间截取进行分类是否精度也高？&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;不同粒度特征提取的结合
+
+&lt;ul&gt;
+&lt;li&gt;粒度，卷积层数？ 层数不同的实质是什么不同？&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;在调整了一些Hyper-paramenter后，大致上可以发现影响更大的参数，比如卷积核数
+
+&lt;ul&gt;
+&lt;li&gt;调整优先级：欠拟合 &amp;gt; 过拟合&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;用CIFAR-10训练时，测试集上的loss会在某次迭代中突然丢失，然后又恢复，形成一个尖刺？&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 
@@ -972,7 +1074,7 @@ $$
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;basic&#34;&gt;Basic&lt;/h2&gt;
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

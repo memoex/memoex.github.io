@@ -91,7 +91,7 @@
 </ul></li>
 </ul>
 
-<h2 id="basic">Basic</h2>
+<h2 id="quick-notes">Quick notes</h2>
 
 <p></p>
 
@@ -101,87 +101,19 @@
 
 <p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
 
-<pre><code class="language-python">from keras import backend as K
+<p><a href="https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe">Code in gist</a></p>
 
- def mcor(y_true, y_pred):
-     #matthews_correlation
-     y_pred_pos = K.round(K.clip(y_pred, 0, 1))
-     y_pred_neg = 1 - y_pred_pos
- 
-     y_pos = K.round(K.clip(y_true, 0, 1))
-     y_neg = 1 - y_pos
+<h3 id="tensorboard">Tensorboard</h3>
 
-     tp = K.sum(y_pos * y_pred_pos)
-     tn = K.sum(y_neg * y_pred_neg)
+<pre><code class="language-sh">from datetime import datetime
+from keras.callbacks import TensorBoard
 
-     fp = K.sum(y_neg * y_pred_pos)
-     fn = K.sum(y_pos * y_pred_neg)
+def get_log_path(key):
+    name = datetime.now().strftime(&quot;%Y-%m-%d-%H-%M-%S&quot;)
+    return './graphs/' + key + '-' + name
 
-     numerator = (tp * tn - fp * fn)
-     denominator = K.sqrt((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn))
-
-     return numerator / (denominator + K.epsilon())
-
-def precision(y_true, y_pred):
-    &quot;&quot;&quot;Precision metric.
-
-    Only computes a batch-wise average of precision.
-
-    Computes the precision, a metric for multi-label classification of
-    how many selected items are relevant.
-    &quot;&quot;&quot;
-    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
-    predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
-    precision = true_positives / (predicted_positives + K.epsilon())
-    return precision
-
-def recall(y_true, y_pred):
-    &quot;&quot;&quot;Recall metric.
-
-    Only computes a batch-wise average of recall.
-
-    Computes the recall, a metric for multi-label classification of
-    how many relevant items are selected.
-    &quot;&quot;&quot;
-    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
-    possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
-    recall = true_positives / (possible_positives + K.epsilon())
-    return recall
-
-def f1(y_true, y_pred):
-    def recall(y_true, y_pred):
-        &quot;&quot;&quot;Recall metric.
-
-        Only computes a batch-wise average of recall.
-
-        Computes the recall, a metric for multi-label classification of
-        how many relevant items are selected.
-        &quot;&quot;&quot;
-        true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
-        possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
-        recall = true_positives / (possible_positives + K.epsilon())
-        return recall
-
-    def precision(y_true, y_pred):
-        &quot;&quot;&quot;Precision metric.
-
-        Only computes a batch-wise average of precision.
-
-        Computes the precision, a metric for multi-label classification of
-        how many selected items are relevant.
-        &quot;&quot;&quot;
-        true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
-        predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
-        precision = true_positives / (predicted_positives + K.epsilon())
-        return precision
-    precision = precision(y_true, y_pred)
-    recall = recall(y_true, y_pred)
-    return 2*((precision*recall)/(precision+recall))
-
-#you can use it like this
-model.compile(loss='binary_crossentropy',
-              optimizer= &quot;adam&quot;,
-              metrics=[mcor, recall, f1])
+tensorboard = TensorBoard(log_dir=get_log_path('res_net'))
+model.fit(..., callbacks=[tensorboard])
 </code></pre>
 
 <h2 id="problems-encountered">Problems encountered</h2>
@@ -215,67 +147,7 @@ model.compile(loss='binary_crossentropy',
 </ul></li>
 </ul>
 
-<pre><code class="language-python">def get_model(input_shape=(64, 64, 3), kernel_num=64):
-    
-    inputs = Input(shape=input_shape)
-    
-    c_out = Conv2D(filters=kernel_num, kernel_size=(3, 3), activation='relu',
-                   use_bias=True, padding='same')(inputs)
-    p_out = MaxPooling2D((2, 2), padding='same')(c_out)
-    flat  = Flatten()(p_out)
-    d_out = Dense(class_cnt, activation='softmax')(flat)
-    
-    model = Model(inputs, d_out)
-    opt = Adam()
-    model.compile(optimizer=opt, loss='categorical_crossentropy', 
-                  metrics=['acc'])
-    
-    return model
-</code></pre>
-
-<pre><code class="language-python">def train_model(model, batch_size=32):
-    
-    model_path = 'model.h5'
-    model_checkpoint = ModelCheckpoint(model_path, monitor='val_acc',
-                                       save_best_only=True, 
-                                       save_weights_only=True)
-    early_stopping = EarlyStopping(patience=5, monitor='val_acc')
-    hist = model.fit(X_train, y_train, batch_size=batch_size, epochs=100,
-                     validation_data=[X_test, y_test], 
-                     callbacks=[model_checkpoint, early_stopping])
-    
-    model.load_weights(model_path)
-    
-    preds = model.evaluate(X_test, y_test)
-    
-    print 'Test loss:', preds[0]
-    print 'Test accuracy:', preds[1]
-    
-    return model
-</code></pre>
-
-<pre><code class="language-python">def get_p_out(model_trained, input_data, 
-              input_shape=(64, 64, 3), kernel_num=64):
-    
-    inputs = Input(shape=input_shape)
-    
-    c_out = Conv2D(filters=kernel_num, kernel_size=(3, 3), activation='relu',
-                   use_bias=True, padding='same', )(inputs)
-    p_out = MaxPooling2D((2, 2), padding='same')(c_out)
-    flat  = Flatten()(p_out)
-    d_out = Dense(class_cnt, activation='softmax')(flat)
-    
-    model = Model(inputs, p_out)
-    opt = Adam()
-    model.compile(optimizer=opt, loss='categorical_crossentropy',
-                  metrics=['acc'])
-    
-    model.set_weights(model_trained.get_weights())
-    
-    pred = model.predict(input_data, batch_size=32)
-    
-    return pred
-</code></pre>
+<p><a href="https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc">Code in gist</a></p>
                 </div>
             </div>
         </div>
@@ -307,7 +179,7 @@ model.compile(loss='binary_crossentropy',
 
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 

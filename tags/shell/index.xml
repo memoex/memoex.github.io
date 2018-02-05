@@ -20,7 +20,7 @@
       <guid>https://memoex.github.io/note/shell/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;Check states&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;system-information&#34;&gt;System information&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;neofetch&lt;/code&gt;, system info&lt;/li&gt;
@@ -31,9 +31,19 @@
 &lt;li&gt;&lt;code&gt;-h&lt;/code&gt;, 1k = 1024 byte&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-H&lt;/code&gt;, 1k = 1000 byte&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -s&lt;/code&gt;, print kernel name
+
+&lt;ul&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;li&gt;Darwin&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -r&lt;/code&gt;, linux release number&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last -n 50&lt;/code&gt;, check last logged in users&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lastb -n 50&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pstree -p&lt;/code&gt;, process tree&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt;&lt;/strong&gt; - &lt;code&gt;CentOS 7&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;auto-delete-files-in-tmp-centos-7&#34;&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt; (CentOS 7)&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;tmpwatch&lt;/code&gt; - removes files which haven&amp;rsquo;t been accessed for a period of time

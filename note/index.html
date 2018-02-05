@@ -64,6 +64,98 @@
             <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
                 <div class="row">
                     <div class="col">
+                        <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/paper/2018-01-31-image/">Image - Reading</a></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="align-self-center col-auto pr-0"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i></div>
+                    <div class="align-self-center col-auto mdl-color-text--primary">
+                        <time class="font-weight-bold">Jan 31, 2018</time>
+                    </div>
+                    
+                    <div class="col pl-1">
+                        <ul class="nav">
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mt-5">
+                        <h2 id="quick-notes">Quick notes</h2>
+
+<ul>
+<li><a href="http://blog.csdn.net/zhcheng26/article/details/51375135">图像识别中的深度学习</a>
+
+<ul>
+<li>LFW, Labeled Faces in the Wild
+
+<ul>
+<li>人眼，中心区域：97.53%</li>
+<li>人眼，整张图像：99.15%</li>
+<li>Eigenface：60%</li>
+<li>非深度学习最高识别率：96.33%</li>
+<li>深度学习：99.47%</li>
+</ul></li>
+<li>ImageNet, PSACAL VOC</li>
+<li>深度学习将各种复杂的因素通过非线性方式进行分离</li>
+<li>浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本</li>
+<li>GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<ul>
+<li><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/">Transposed Convolution, Fractionally Strided Convolution or Deconvolution</a>
+
+<ul>
+<li>文章结构非常清晰，博客排版的样式也很值得学习</li>
+<li>开篇声明文章解决了什么问题，很重要！</li>
+<li>我们很容易得到卷积层的反向传播就是和CC的转置相乘。？</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<p><img src="https://culurciello.github.io/assets/unsup/gan_simple.svg" width="600em"></p>
+
+<ul>
+<li><a href="https://buptldy.github.io/2016/11/27/2016-11-27-gans/">Generative Adversarial Networks</a>
+
+<ul>
+<li><em>&ldquo;What I cannot create, I do not understand.&rdquo; —Richard Feynman</em></li>
+<li>生成模型由一个参数数量比训练数据少的多神经网络构成，所以生成模型为了能够产生和训练数据相似的输出就会迫使自己去发现数据中内在的本质内容。</li>
+<li><code>GAN</code>优化目标：</li>
+</ul></li>
+</ul>
+
+<div>
+$$
+\min_G \max_D {\mathbb E}_{x\sim p_{\rm data}} \log D(x)+{\mathbb E}_{z\sim p_z}[\log (1-D(G(z)))]
+$$
+</div>
+
+<hr />
+
+<ul>
+<li>GoogLeNets</li>
+</ul>
+
+<p></p>
+                    </div>
+                </div>
+                <div class="row border mdl-color-grey-50"></div>
+                <div class="row">
+                    <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/paper\/2018-01-31-image\/'"
+                        class="mdl-button mdl-js-button col align-items-end">
+                        <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div><div class="row">
+            <div class="pt-4 mb-5 container mdl-color--white rounded mdl-shadow--4dp">
+                <div class="row">
+                    <div class="col">
                         <h1><a class="text-dark font-weight-bold" href="https://memoex.github.io/note/docker/">Docker</a></h1>
                     </div>
                 </div>
@@ -104,6 +196,7 @@
 <ul>
 <li><code>-v &lt;host_dir&gt;/&lt;container_dir&gt;</code></li>
 <li><code>-p</code></li>
+<li><code>--rm</code>, automatically aremove the container when it exists</li>
 </ul></li>
 <li><code>docker exec -it &lt;container_name&gt; bash</code></li>
 <li><code>docker history &lt;image&gt;</code></li>
@@ -777,7 +870,7 @@ a - tril(a)
                     <div class="col mt-5">
                         <h2 id="quick-notes">Quick notes</h2>
 
-<p><strong>Check states</strong></p>
+<h3 id="system-information">System information</h3>
 
 <ul>
 <li><code>neofetch</code>, system info</li>
@@ -788,9 +881,19 @@ a - tril(a)
 <li><code>-h</code>, 1k = 1024 byte</li>
 <li><code>-H</code>, 1k = 1000 byte</li>
 </ul></li>
+<li><code>uname -s</code>, print kernel name
+
+<ul>
+<li>Linux</li>
+<li>Darwin</li>
+</ul></li>
+<li><code>uname -r</code>, linux release number</li>
+<li><code>last -n 50</code>, check last logged in users</li>
+<li><code>lastb -n 50</code>,</li>
+<li><code>pstree -p</code>, process tree</li>
 </ul>
 
-<p><strong>Auto delete files in <code>tmp</code></strong> - <code>CentOS 7</code></p>
+<h3 id="auto-delete-files-in-tmp-centos-7">Auto delete files in <code>tmp</code> (CentOS 7)</h3>
 
 <ul>
 <li><code>tmpwatch</code> - removes files which haven&rsquo;t been accessed for a period of time
@@ -955,6 +1058,28 @@ a - tril(a)
                 <div class="row">
                     <div class="col mt-5">
                         <p>Papers read during research <strong>forward deep learning</strong> algorithm.</p>
+
+<h2 id="quick-notes">Quick notes</h2>
+
+<ul>
+<li>正推，逆推
+
+<ul>
+<li>底层精度高=&gt; 高层精度高</li>
+<li>相同结构网络，精度高的网络，从中间截取进行分类是否精度也高？</li>
+</ul></li>
+<li>不同粒度特征提取的结合
+
+<ul>
+<li>粒度，卷积层数？ 层数不同的实质是什么不同？</li>
+</ul></li>
+<li>在调整了一些Hyper-paramenter后，大致上可以发现影响更大的参数，比如卷积核数
+
+<ul>
+<li>调整优先级：欠拟合 &gt; 过拟合</li>
+</ul></li>
+<li>用CIFAR-10训练时，测试集上的loss会在某次迭代中突然丢失，然后又恢复，形成一个尖刺？</li>
+</ul>
 
 <h2 id="orthogonal-bipolar-target-vectors-1">Orthogonal Bipolar Target Vectors<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup></h2>
 
@@ -1482,7 +1607,7 @@ $$
 </ul></li>
 </ul>
 
-<h2 id="basic">Basic</h2>
+<h2 id="quick-notes">Quick notes</h2>
 
 <p></p>
                     </div>
@@ -1561,7 +1686,7 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
                 </div>
             </div>
         </div>
-    </div>
+   </div>
         <div class="row">
             
 
@@ -1581,7 +1706,7 @@ $$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 
 
 
 <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
