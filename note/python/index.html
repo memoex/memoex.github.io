@@ -216,14 +216,14 @@ x == list(x2) and y == list(y2)
 <li><code>y, x = x, y</code></li>
 <li><code>result = 1 &lt; n &lt; 10</code></li>
 <li><code>x = (classA if y == 1 else classB)(param1, param2)</code></li>
-<li><code>_</code></li>
-<li><code>pdb.set_trace()</code></li>
-<li><code>python -m http.server</code>
+<li><code>_</code>, equal with &lsquo;ANS&rsquo; in calculator</li>
+<li><code>pdb.set_trace()</code>, insert a debug point</li>
+<li><code>python -m http.server</code> (python3), start a file server in current path
 
 <ul>
-<li><code>python -m SimpleHTTPServer</code></li>
+<li><code>python -m SimpleHTTPServer</code> (python2)</li>
 </ul></li>
-<li><code>[1, 2, 3][::-1]</code> =&gt; <code>[3, 2, 1]</code></li>
+<li><code>[1, 2, 3][::-1]</code> =&gt; <code>[3, 2, 1]</code>, inverse order</li>
 <li>Unpack
 
 <ul>
@@ -303,6 +303,37 @@ bin(~False) # '-0b1'
 
 <p><a href="https://github.com/satwikkansal/wtfpython">https://github.com/satwikkansal/wtfpython</a></p>
 
+<h3 id="python-3-awesome-features">Python 3 awesome features</h3>
+
+<p><a href="http://www.asmeurer.com/python3-presentation/slides.html">10 awesome features of Python that you can&rsquo;t use because you refuse to upgrade to Python 3</a></p>
+
+<h4 id="unpacking">Unpacking</h4>
+
+<pre><code class="language-py">&gt;&gt;&gt; a, *rest, b = range(10)
+&gt;&gt;&gt; a
+0
+&gt;&gt;&gt; b
+9
+&gt;&gt;&gt; rest
+[1, 2, 3, 4, 5, 6, 7, 8]
+</code></pre>
+
+<h4 id="keyword-only-arguments">Keyword only arguments</h4>
+
+<p>Avoid passing too many arguments to the function.</p>
+
+<pre><code class="language-py">def sum(a, b, *, biteme=False):
+    if biteme:
+        shutil.rmtree('/')
+    else:
+        return a + b
+
+&gt;&gt;&gt; sum(1, 2, 3)
+Traceback (most recent call last):
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+TypeError: sum() takes 2 positional arguments but 3 were given
+</code></pre>
+
 <h2 id="jupyter-notebook">Jupyter Notebook</h2>
 
 <h3 id="links">Links</h3>
@@ -318,7 +349,7 @@ bin(~False) # '-0b1'
 <h3 id="tips">Tips</h3>
 
 <ul>
-<li><code>!pwd</code></li>
+<li><code>!pwd</code>, 执行</li>
 <li><code>np.dot??</code></li>
 </ul>
 

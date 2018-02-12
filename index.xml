@@ -190,7 +190,8 @@ $$
 &lt;li&gt;2018-01-07 大钟寺博物馆-中华民族园博物馆-中国动物博物馆&lt;/li&gt;
 &lt;li&gt;2018-01-14 清华大学艺术博物馆-香巴拉户外用品专卖店-中国人民大学&lt;/li&gt;
 &lt;li&gt;2018-01-21 惠新西街南口-天坛&lt;/li&gt;
-&lt;li&gt;2018-01-28 石刻艺术博物馆-古代钱币展览馆(德胜门箭楼)</description>
+&lt;li&gt;2018-01-28 石刻艺术博物馆-古代钱币展览馆(德胜门箭楼)&lt;/li&gt;
+&lt;li&gt;2018-02-05 西直门-阜成门-宣武门-中国铁道博物馆正阳门展馆-正阳门城楼</description>
     </item>
     
     <item>
@@ -786,6 +787,7 @@ a - tril(a)
 &lt;li&gt;调整优先级：欠拟合 &amp;gt; 过拟合&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;用CIFAR-10训练时，测试集上的loss会在某次迭代中突然丢失，然后又恢复，形成一个尖刺？&lt;/li&gt;
+&lt;li&gt;将问题分割成子问题，但试图用深度学习解决的问题，都不太好分割成子问题&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
