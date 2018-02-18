@@ -82,6 +82,68 @@ $$
     </item>
     
     <item>
+      <title>Bootstrap</title>
+      <link>https://memoex.github.io/note/bootstrap/</link>
+      <pubDate>Mon, 29 Jan 2018 22:19:05 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/bootstrap/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.d-none&lt;/code&gt;, hide elements
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.d-{sm,md,lg,xl}-none&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Tips: use &lt;code&gt;d-none&lt;/code&gt; first, and specify screen display mode to cover it.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;container-fluid&lt;/code&gt;, full width container&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;responsive-breakpoints&#34;&gt;Responsive breakpoints&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/twbs/bootstrap/issues/14894&#34;&gt;Github issue: Bootstrap default breakpoints&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Viewport dimensions.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;xs&lt;/code&gt;, extra small
+
+&lt;ul&gt;
+&lt;li&gt;\( xs \le 575.98px \)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sm&lt;/code&gt;, small
+
+&lt;ul&gt;
+&lt;li&gt;\( 576px \le sm \le 767.98px \)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;md&lt;/code&gt;, medium
+
+&lt;ul&gt;
+&lt;li&gt;\( 768px \le md \le 991.98px \)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lg&lt;/code&gt;, large
+
+&lt;ul&gt;
+&lt;li&gt;\( 992px \le lg \le 1199.98px \)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xl&lt;/code&gt;, extra large
+
+&lt;ul&gt;
+&lt;li&gt;\( xl \ge 1200px  \)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Take control over the viewport:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://memoex.github.io/note/docker/</link>
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
