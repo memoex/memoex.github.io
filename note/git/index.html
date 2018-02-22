@@ -69,25 +69,24 @@
 
 
 
+
+
+
+
+
 <nav id="bd-docs-nav" class="collapse bd-links">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
             
             <li>
-                <a href="https://memoex.github.io/note/alcohol/">
-                酒
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/paper/image/">
-                Image - Reading
-                </a>
-            </li>
-            
-            <li>
                 <a href="https://memoex.github.io/note/bootstrap/">
                 Bootstrap
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/course/cs231n/">
+                CS231n
                 </a>
             </li>
             
@@ -98,62 +97,8 @@
             </li>
             
             <li>
-                <a href="https://memoex.github.io/note/2018-01-11-walk/">
-                走
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/culture/">
-                文化
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/tensorflow/">
-                Tensorflow
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/course/cs231n/">
-                CS231n - Convolutional Neural Networks for Visual Recognition
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/course/brain/">
-                MCB80x - The fundamental of neuroscience
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/matlab/">
-                Matlab
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/shell/">
-                Shell
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/vim/">
-                Vim
-                </a>
-            </li>
-            
-            <li>
                 <a href="https://memoex.github.io/note/paper/forward/">
                 Forward Learning
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/course/hinton/">
-                Hinton - Neural Networks for Machine Learning
                 </a>
             </li>
             
@@ -164,14 +109,8 @@
             </li>
             
             <li>
-                <a href="https://memoex.github.io/note/python/">
-                Python
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/math/">
-                Math
+                <a href="https://memoex.github.io/note/course/hinton/">
+                Hinton Course
                 </a>
             </li>
             
@@ -182,14 +121,80 @@
             </li>
             
             <li>
+                <a href="https://memoex.github.io/note/paper/image/">
+                Image - Reading
+                </a>
+            </li>
+            
+            <li>
                 <a href="https://memoex.github.io/note/keras/">
                 Keras
                 </a>
             </li>
             
             <li>
+                <a href="https://memoex.github.io/note/course/brain/">
+                MCB80x
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/math/">
+                Math
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/matlab/">
+                Matlab
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/python/">
+                Python
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/shell/">
+                Shell
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/tensorflow/">
+                Tensorflow
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/vim/">
+                Vim
+                </a>
+            </li>
+            
+            <li>
                 <a href="https://memoex.github.io/note/word-embedding/">
                 Word embedding
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/culture/">
+                文化
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/road/">
+                路
+                </a>
+            </li>
+            
+            <li>
+                <a href="https://memoex.github.io/note/alcohol/">
+                酒
                 </a>
             </li>
             
@@ -398,7 +403,7 @@ git push -u origin master
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
 
 
 <script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
@@ -406,12 +411,17 @@ git push -u origin master
 <script>
 $(function(){
     tocbot.init({
-      
-      tocSelector: '.toc',
-      
-      contentSelector: '.content',
-      
-      headingSelector: 'h1, h2, h3, h4',
+        
+        tocSelector: '.bd-toc',
+        
+        contentSelector: 'main',
+        
+        headingSelector: 'h2, h3, h4',
+        listClass: 'toc-list',
+        listItemClass: 'toc-entry',
+        linkClass: 'font-weight-normal',
+        activeLinkClass: 'active',
+        collapseDepth: 6,
     });
 });
 </script>

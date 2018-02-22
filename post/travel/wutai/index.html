@@ -309,7 +309,7 @@
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
 
 
 <script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
@@ -317,12 +317,17 @@
 <script>
 $(function(){
     tocbot.init({
-      
-      tocSelector: '.toc',
-      
-      contentSelector: '.content',
-      
-      headingSelector: 'h1, h2, h3, h4',
+        
+        tocSelector: '.bd-toc',
+        
+        contentSelector: 'main',
+        
+        headingSelector: 'h2, h3, h4',
+        listClass: 'toc-list',
+        listItemClass: 'toc-entry',
+        linkClass: 'font-weight-normal',
+        activeLinkClass: 'active',
+        collapseDepth: 6,
     });
 });
 </script>

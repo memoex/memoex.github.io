@@ -69,6 +69,9 @@
 
 
 
+
+
+
 <nav id="bd-docs-nav" class="collapse bd-links">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
@@ -81,7 +84,7 @@
             
             <li>
                 <a href="https://memoex.github.io/note/course/hinton/">
-                Hinton - Neural Networks for Machine Learning
+                Hinton Course
                 </a>
             </li>
             
@@ -195,7 +198,7 @@
             </button>
         </div><div class="col-12 mb-5">
             <h1 class="bd-title">
-                <a class="text-dark bd-title" href="https://memoex.github.io/note/course/hinton/">Hinton - Neural Networks for Machine Learning</a>
+                <a class="text-dark bd-title" href="https://memoex.github.io/note/course/hinton/">Hinton Course</a>
             </h1>
             <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
@@ -297,7 +300,7 @@
 </script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
 
 
 <script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
@@ -305,12 +308,17 @@
 <script>
 $(function(){
     tocbot.init({
-      
-      tocSelector: '.toc',
-      
-      contentSelector: '.content',
-      
-      headingSelector: 'h1, h2, h3, h4',
+        
+        tocSelector: '.bd-toc',
+        
+        contentSelector: 'main',
+        
+        headingSelector: 'h2, h3, h4',
+        listClass: 'toc-list',
+        listItemClass: 'toc-entry',
+        linkClass: 'font-weight-normal',
+        activeLinkClass: 'active',
+        collapseDepth: 6,
     });
 });
 </script>
