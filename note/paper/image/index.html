@@ -122,7 +122,7 @@
             
             <li>
                 <a href="https://memoex.github.io/note/paper/image/">
-                Image - Reading
+                Image
                 </a>
             </li>
             
@@ -181,12 +181,6 @@
             </li>
             
             <li>
-                <a href="https://memoex.github.io/note/word-embedding/">
-                Word embedding
-                </a>
-            </li>
-            
-            <li>
                 <a href="https://memoex.github.io/note/culture/">
                 文化
                 </a>
@@ -217,7 +211,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="bd-title">Image - Reading</h1>
+                            <h1 class="bd-title">Image</h1>
                             <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
     <time class="font-weight-bold align-self-center mdl-color-text--primary">Jan 31, 2018</time>
@@ -225,7 +219,62 @@
 </div>
 
                             <div class="bd-content">
-                                <h2 id="quick-notes">Quick notes</h2>
+                                <p>Notes about image processing.</p>
+
+<h2 id="convolution">Convolution</h2>
+
+<h3 id="implementation-of-convolution">Implementation of convolution</h3>
+
+<ul>
+<li><a href="https://buptldy.github.io/2016/10/01/2016-10-01-im2col/">Implementing convolution as a matrix multiplication</a></li>
+</ul>
+
+<p>提取灰度特征和边缘特征的卷积核：</p>
+
+<pre><code class="language-py"># Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+</code></pre>
+
+<p><code>im2col</code></p>
+
+<p><img src="http://7xritj.com1.z0.glb.clouddn.com/16-10-1/690672.jpg" width="700em"></p>
+
+<p></p>
+
+<h3 id="deconvolution">Deconvolution</h3>
+
+<ul>
+<li>Visualizing and Understanding Convolutional Networks <a href="https://arxiv.org/pdf/1311.2901.pdf">arXiv</a></li>
+</ul>
+
+<h2 id="face-recognition">Face recognition</h2>
+
+<h3 id="eigenfaces">Eigenfaces</h3>
+
+<blockquote>
+<ol>
+<li>Projecting all training samples into the PCA subspace.</li>
+<li>Projecting the query image into the PCA subspace.</li>
+<li>Finding the nearest neighbor between the projected training images and the projected query image.</li>
+</ol>
+
+<p><a href="https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html#eigenfaces-in-opencv">Eigenfaces in OpenCV</a></p>
+</blockquote>
+
+<p>Question: From your linear algebra lessons you know that a M \times N matrix with M &gt; N can only have N - 1 non-zero eigenvalues.</p>
+
+<p><a href="https://github.com/bytefish/facerecognition_guide/blob/master/facerec_python.pdf">Face recognition with Python</a></p>
+
+<h2 id="quick-notes">Quick notes</h2>
 
 <ul>
 <li><a href="http://blog.csdn.net/zhcheng26/article/details/51375135">图像识别中的深度学习</a>
@@ -246,8 +295,6 @@
 <li>GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类</li>
 </ul></li>
 </ul>
-
-<p></p>
 
 <hr />
 
@@ -283,6 +330,8 @@ $$
 
 <hr />
 
+<h3 id="googlenet-and-inception-module">GoogLeNet and Inception Module</h3>
+
 <ul>
 <li>GoogLeNets</li>
 <li>Inception Module 的发展历程
@@ -291,8 +340,6 @@ $$
 <li>Inception architecture: <a href="https://nicolovaligi.com/history-inception-deep-learning-architecture.html">Short history of the Inception deep learning architecture</a></li>
 </ul></li>
 </ul>
-
-<h3 id="inception-module">Inception Module</h3>
 
 <p><a href="https://www.jiqizhixin.com/articles/2017-08-19-4">无需数学背景，读懂 ResNet、Inception 和 Xception 三大变革性架构</a></p>
 
@@ -318,11 +365,16 @@ $$
 <li>color jittering</li>
 <li>fancy PCA?</li>
 </ul></li>
-<li>Pre-processing
+<li>Pre-processing, not used with CNN
 
 <ul>
 <li>zero-center, normalize (not necessary, already [0~255])</li>
-<li></li>
+<li>PCA Whitening?</li>
+</ul></li>
+<li>Initializations
+
+<ul>
+<li>small random numbers, like \(weights \sim 0.001 \times N(0,1) \)</li>
 </ul></li>
 </ol>
 
@@ -330,7 +382,17 @@ $$
 
 <h3 id="batch-normalization">Batch normalization</h3>
 
-<p>covariance shift</p>
+<p>Internal covariance shift.</p>
+
+<p>Batch normalization has a slight regularization effect. Larger mini-batch size will have little regularization effect.</p>
+
+<p>解决梯度问题（梯度爆炸或梯度消失）。</p>
+
+<ol>
+<li><a href="https://www.youtube.com/watch?v=nUUqwaxLnWs">Deeplearning.ai: Why Does Batch Norm Work?</a></li>
+<li>深度学习中 Batch Normalization为什么效果好？ - 知乎 <a href="https://www.zhihu.com/question/38102762">https://www.zhihu.com/question/38102762</a></li>
+<li><a href="https://arxiv.org/abs/1502.03167">Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift</a></li>
+</ol>
 
 <h2 id="walking-through-networks">Walking through networks</h2>
 
@@ -355,56 +417,12 @@ $$
 
 <p>$$f(x) + x \approx y$$</p>
 
-<h2 id="卷积">卷积</h2>
-
-<h3 id="卷积的实现">卷积的实现</h3>
+<h3 id="baselines">Baselines</h3>
 
 <ul>
-<li><a href="https://buptldy.github.io/2016/10/01/2016-10-01-im2col/">Implementing convolution as a matrix multiplication</a></li>
+<li><a href="http://rodrigob.github.io/are_we_there_yet/build/">Who is the best at X ?</a></li>
+<li><a href="https://discuss.gluon.ai/t/topic/1545">CIFAR-10</a></li>
 </ul>
-
-<p>提取灰度特征和边缘特征的卷积核：</p>
-
-<pre><code class="language-py"># Set up a convolutional weights holding 2 filters, each 3x3
-w = np.zeros((2, 3, 3, 3))
-
-# The first filter converts the image to grayscale.
-# Set up the red, green, and blue channels of the filter.
-w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
-w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
-w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
-
-# Second filter detects horizontal edges in the blue channel.
-w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
-</code></pre>
-
-<p><code>im2col</code></p>
-
-<p><img src="http://7xritj.com1.z0.glb.clouddn.com/16-10-1/690672.jpg" width="700em"></p>
-
-<h3 id="deconvolution">Deconvolution</h3>
-
-<ul>
-<li>Visualizing and Understanding Convolutional Networks <a href="https://arxiv.org/pdf/1311.2901.pdf">arXiv</a></li>
-</ul>
-
-<h2 id="face-recognition">Face recognition</h2>
-
-<h3 id="eigenfaces">Eigenfaces</h3>
-
-<blockquote>
-<ol>
-<li>Projecting all training samples into the PCA subspace.</li>
-<li>Projecting the query image into the PCA subspace.</li>
-<li>Finding the nearest neighbor between the projected training images and the projected query image.</li>
-</ol>
-
-<p><a href="https://docs.opencv.org/2.4/modules/contrib/doc/facerec/facerec_tutorial.html#eigenfaces-in-opencv">Eigenfaces in OpenCV</a></p>
-</blockquote>
-
-<p>Question: From your linear algebra lessons you know that a M \times N matrix with M &gt; N can only have N - 1 non-zero eigenvalues.</p>
-
-<p><a href="https://github.com/bytefish/facerecognition_guide/blob/master/facerec_python.pdf">Face recognition with Python</a></p>
                             </div>
                         </div>
                     </div>

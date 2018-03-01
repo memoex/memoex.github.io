@@ -122,7 +122,7 @@
             
             <li>
                 <a href="https://memoex.github.io/note/paper/image/">
-                Image - Reading
+                Image
                 </a>
             </li>
             
@@ -177,12 +177,6 @@
             <li>
                 <a href="https://memoex.github.io/note/vim/">
                 Vim
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/word-embedding/">
-                Word embedding
                 </a>
             </li>
             
@@ -340,6 +334,8 @@ with tf.Session() as sess:
 '''
 </code></pre>
 
+<hr />
+
 <h3 id="tensorboard">Tensorboard</h3>
 
 <pre><code class="language-py">tf.summary.scalar('accuracy', accuracy) # accuracy is a Tensor
@@ -359,79 +355,33 @@ def get_log_path(model_name):
     return './graphs/' + model_name + '-' + t
 </code></pre>
 
-<h2 id="cs-20si-tensorflow-for-deep-learning-research">CS 20SI: Tensorflow for Deep Learning Research</h2>
+<hr />
 
-<h3 id="1-overview-of-tensorflow">1. Overview of Tensorflow</h3>
+<h3 id="padding-mode">Padding mode</h3>
 
-<ul>
-<li>Why TensorFlow ?
-
-<ul>
-<li>Python API</li>
-<li>Portability: deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API</li>
-<li>Flexibility: from Raspberry Pi, Android, Windows, iOS, Linux to server farms</li>
-<li>Visualization (TensorBoard is da bomb)</li>
-<li>Checkpoints (for managing experiments)</li>
-<li>Auto-differentiation autodiff (no more taking derivatives by hand. Yay)</li>
-<li>Large community (&gt; 10,000 commits and &gt; 3000 TF-related repos in 1 year)</li>
-<li>Awesome projects already using TensorFlow</li>
-</ul></li>
-<li>Simplified TensorFlow ?
+<p><a href="https://stackoverflow.com/a/39371113">What is the difference between &lsquo;SAME&rsquo; and &lsquo;VALID&rsquo; padding in tf.nn.max_pool of tensorflow?</a></p>
 
 <ul>
-<li>TF Learn (tf.contrib.learn): simplified interface that helps users transition from the the world of one-liner such as scikit-learn</li>
-<li>TF Slim (tf.contrib.slim): lightweight library for defining, training and evaluating complex models in TensorFlow.</li>
-<li>High level API: Keras, TFLearn, Pretty Tensor</li>
-</ul></li>
-<li>Tensor
-
-<ul>
-<li>An n-dimensional array</li>
-</ul></li>
-<li>Session
-
-<ul>
-<li>A Session object encapsulates the environment in which Operation objects are executed, and Tensor objects are evaluated.</li>
-</ul></li>
-<li>No more than one graph, use subgraph
-
-<ul>
-<li>Multiple graphs require multiple sessions, each will try to use all available resources by default</li>
-<li>Can&rsquo;t pass data between them without passing them through python/numpy, which doesn&rsquo;t work in distributed</li>
-<li>It’s better to have disconnected subgraphs within one graph</li>
-</ul></li>
-<li>Why graphs
-
-<ul>
-<li><strong>Save computation</strong> (only run subgraphs that lead to the values you want to fetch)</li>
-<li>Break computation into small, differential pieces to <strong>facilitates auto-differentiation</strong></li>
-<li><strong>Facilitate distributed computation</strong>, spread the work across multiple CPUs, GPUs, or devices</li>
-<li>Many common machine learning models are commonly taught and visualized as directed graphs already</li>
-</ul></li>
+<li>Input width = 13</li>
+<li>Filter width = 6</li>
+<li>Stride = 5</li>
 </ul>
 
-<h3 id="2-tensorflow-ops">2. TensorFlow Ops</h3>
+<p><code>padding='valid'</code>:</p>
 
-<p><strong>Tensorboard</strong></p>
-
-<pre><code class="language-py">import tensorflow as tf
-
-a = tf.constant(2, name=&quot;a&quot;)
-b = tf.constant(3, name=&quot;b&quot;)
-x = tf.add(a, b, name=&quot;add&quot;)
-
-with tf.Session() as sess:
-
-    writer = tf.summary.FileWriter(&quot;./graphs&quot;, sess.graph)
-    print sess.run(x)
+<pre><code class="language-py">inputs:         1  2  3  4  5  6  7  8  9  10 11 (12 13)
+              |________________|                dropped
+                             |_________________|
 </code></pre>
 
-<p>In shell:</p>
+<p><code>padding='same'</code>:</p>
 
-<pre><code class="language-sh">tensorboard --logdir=&quot;./graphs&quot; --port 6006
+<pre><code class="language-py">           pad|                                      |pad
+inputs:      0 |1  2  3  4  5  6  7  8  9  10 11 12 13|0  0
+           |________________|
+                          |_________________|
+                                         |________________|
 </code></pre>
-
-<p>Then open your browser and go to <code>http://localhost:6006/</code></p>
                             </div>
                         </div>
                     </div>

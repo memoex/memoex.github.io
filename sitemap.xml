@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://memoex.github.io/project/2018-03-01-hanzi/</loc>
+    <lastmod>2018-03-01T17:13:30+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/note/js/</loc>
     <lastmod>2018-02-26T15:14:41+08:00</lastmod>
   </url>
@@ -108,11 +113,6 @@
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/word-embedding/</loc>
-    <lastmod>2017-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://memoex.github.io/tags/blog/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -185,19 +185,13 @@
   
   <url>
     <loc>https://memoex.github.io/</loc>
-    <lastmod>2018-02-26T15:14:41+08:00</lastmod>
+    <lastmod>2018-03-01T17:13:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://memoex.github.io/tags/neuroscience/</loc>
     <lastmod>2017-12-23T21:33:30+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/tags/nlp/</loc>
-    <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -216,6 +210,12 @@
   <url>
     <loc>https://memoex.github.io/post/</loc>
     <lastmod>2018-01-02T11:23:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/project/</loc>
+    <lastmod>2018-03-01T17:13:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -240,12 +240,6 @@
   <url>
     <loc>https://memoex.github.io/tags/vim/</loc>
     <lastmod>2017-12-18T19:09:53+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/tags/word-embedding/</loc>
-    <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

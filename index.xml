@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Mon, 26 Feb 2018 15:14:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Mar 2018 17:13:30 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>古汉字识别</title>
+      <link>https://memoex.github.io/project/2018-03-01-hanzi/</link>
+      <pubDate>Thu, 01 Mar 2018 17:13:30 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/project/2018-03-01-hanzi/</guid>
+      <description> 动机 中华文字源远流长，从甲骨到金文，从大篆到小篆，从隶书到草书，文字在不断演变。在游荡各种名胜古迹的时候，常常会被石碑上的刻字，古钟上的铭文，悬挂的对联和牌匾所吸引，却常常因为对古汉字的不熟悉而错失诸多精彩。
+于是希望有一个小工具能够辅助认字，我设想了以下两个情景：
+ 拍摄一张碑文的照片，将整个碑文转化为简体字。 使用扫一扫功能，将字移动到指定框内，进行识别。  有点类似于有道词典app的拍照翻译功能。
+目前尚未发现有这样的app存在，遂想动手弄一个。
+相关技术  How to use the tools provided to train Tesseract 4.00  </description>
+    </item>
     
     <item>
       <title>JavaScript</title>
@@ -112,32 +125,39 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
     </item>
     
     <item>
-      <title>Image - Reading</title>
+      <title>Image</title>
       <link>https://memoex.github.io/note/paper/image/</link>
       <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/paper/image/</guid>
-      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
+
+&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
+
+&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.csdn.net/zhcheng26/article/details/51375135&#34;&gt;图像识别中的深度学习&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;LFW, Labeled Faces in the Wild
-
-&lt;ul&gt;
-&lt;li&gt;人眼，中心区域：97.53%&lt;/li&gt;
-&lt;li&gt;人眼，整张图像：99.15%&lt;/li&gt;
-&lt;li&gt;Eigenface：60%&lt;/li&gt;
-&lt;li&gt;非深度学习最高识别率：96.33%&lt;/li&gt;
-&lt;li&gt;深度学习：99.47%&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ImageNet, PSACAL VOC&lt;/li&gt;
-&lt;li&gt;深度学习将各种复杂的因素通过非线性方式进行分离&lt;/li&gt;
-&lt;li&gt;浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本&lt;/li&gt;
-&lt;li&gt;GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://7xritj.com1.z0.glb.clouddn.com/16-10-1/690672.jpg&#34; width=&#34;700em&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -415,7 +435,7 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
       <pubDate>Tue, 02 Jan 2018 11:23:17 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/post/travel/wutai/</guid>
-      <description>&lt;h2 id=&#34;初&#34;&gt;初&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;出发&#34;&gt;出发&lt;/h2&gt;
 
 &lt;p&gt;旧岁之末，新年伊始，我们来到了五台山。&lt;/p&gt;
 
@@ -1018,13 +1038,35 @@ git config --global alias.ls &#39;log --oneline -20&#39;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/keras&#34;&gt;Keras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/tensorflow&#34;&gt;Tensorflow&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+&lt;h2 id=&#34;jupyter-notebook&#34;&gt;Jupyter Notebook&lt;/h2&gt;
 
-&lt;h3 id=&#34;some-links&#34;&gt;Some links&lt;/h3&gt;
+&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://docs.python-guide.org/en/latest/&#34;&gt;http://docs.python-guide.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jupyter-notebook.readthedocs.io/en/stable/public_server.html&#34;&gt;Running a notebook server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html&#34;&gt;Installing jupyter_contrib_nbextensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lambdalisue/jupyter-vim-binding&#34;&gt;jupyter-vim-binding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/29916445&#34;&gt;line number&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments&#34;&gt;Kernels for different environments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;tricks&#34;&gt;Tricks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!pwd&lt;/code&gt;, 执行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;np.dot??&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;auto-reload-external-python-modules&#34;&gt;Auto reload external python modules&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html&#34;&gt;IPython extension to reload modules before executing user code.&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;%load_ext autoreload
+%autoreload 2
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1189,6 +1231,64 @@ $$
 
 &lt;hr /&gt;
 
+&lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
+
+&lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem description: I want to get the value of a variable in the model.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;How can I get hidden layer representation of the given data? #41&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The simplest way is using the same code of the original model, and&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;replace the output with the variable you want&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;new_model.set_weights(trained_model.get_weights())&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;new_model.predict(input_data, batch_size=32)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example case: I want to get the output value of pooling layer.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_model()&lt;/code&gt; function return a model for training&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;train_model()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_p_out()&lt;/code&gt; function almost have the same code with &lt;code&gt;get_model()&lt;/code&gt; except
+
+&lt;ul&gt;
+&lt;li&gt;the input parameters&lt;/li&gt;
+&lt;li&gt;the &lt;code&gt;Model()&lt;/code&gt;&amp;rsquo;s output parameter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;set_weights()&lt;/code&gt; from trained model&lt;/li&gt;
+&lt;li&gt;use the new model to predict value&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc&#34;&gt;Code in gist&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;2018-02-27-training-using-large-dataset&#34;&gt;2018-02-27 · Training using large dataset&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem description: Sometimes we need to use large dataset to train our model, but large dataset can&amp;rsquo;t fit into memory.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/keras-team/keras/issues/2708&#34;&gt;For large datasets, which to use: fit or train_on_batch?&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def generate_arrays_from_file(path):
+    while 1:
+        f = open(path)
+        for line in f:
+            # create numpy arrays of input data
+            # and labels, from each line in the file
+            x, y = process_line(line)
+            img = load_images(x)
+            yield (img, y)
+        f.close()
+
+model.fit_generator(generate_arrays_from_file(&#39;/my_file.txt&#39;),
+        samples_per_epoch=10000, nb_epoch=10)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;fit_generator&lt;/code&gt;: The generator is run in parallel to the model, for efficiency. For instance, this allows you to do &lt;strong&gt;real-time data augmentation&lt;/strong&gt; on images on CPU in parallel to training your model on GPU.&lt;/p&gt;
+
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;h3 id=&#34;metric&#34;&gt;Metric&lt;/h3&gt;
@@ -1198,31 +1298,6 @@ $$
 &lt;p&gt;&lt;a href=&#34;https://github.com/fchollet/keras/issues/5400&#34;&gt;issue #5400&lt;/a&gt; or &lt;a href=&#34;https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7&#34;&gt;Removed batchwise metrics&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe&#34;&gt;Code in gist&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Word embedding</title>
-      <link>https://memoex.github.io/note/word-embedding/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/word-embedding/</guid>
-      <description>&lt;p&gt;在使用Keras的Embedding层的时候，遇到困惑，学习一下。&lt;/p&gt;
-
-&lt;h2 id=&#34;拟合目标&#34;&gt;拟合目标&lt;/h2&gt;
-
-&lt;p&gt;条件概率：
-$$P(w_j|w_i)$$&lt;/p&gt;
-
-&lt;p&gt;二元词概率：
-$$P(w_i, w_j)$$&lt;/p&gt;
-
-&lt;p&gt;互信息：
-$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$&lt;/p&gt;
-
-&lt;p&gt;如果两个词语义无关，分布独立，互信息为0：
-$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

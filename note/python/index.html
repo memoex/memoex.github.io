@@ -122,7 +122,7 @@
             
             <li>
                 <a href="https://memoex.github.io/note/paper/image/">
-                Image - Reading
+                Image
                 </a>
             </li>
             
@@ -181,12 +181,6 @@
             </li>
             
             <li>
-                <a href="https://memoex.github.io/note/word-embedding/">
-                Word embedding
-                </a>
-            </li>
-            
-            <li>
                 <a href="https://memoex.github.io/note/culture/">
                 文化
                 </a>
@@ -231,19 +225,41 @@
 
 <ul>
 <li><a href="/note/keras">Keras</a></li>
+<li><a href="/note/tensorflow">Tensorflow</a></li>
 </ul>
 
-<h2 id="quick-notes">Quick notes</h2>
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
 
-<h3 id="some-links">Some links</h3>
+<h3 id="links">Links</h3>
 
-<p><a href="http://docs.python-guide.org/en/latest/">http://docs.python-guide.org/en/latest/</a></p>
+<ul>
+<li><a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html">Running a notebook server</a></li>
+<li><a href="http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Installing jupyter_contrib_nbextensions</a></li>
+<li><a href="https://github.com/lambdalisue/jupyter-vim-binding">jupyter-vim-binding</a></li>
+<li><a href="https://stackoverflow.com/a/29916445">line number</a></li>
+<li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
+</ul>
+
+<h3 id="tricks">Tricks</h3>
+
+<ul>
+<li><code>!pwd</code>, 执行</li>
+<li><code>np.dot??</code></li>
+</ul>
+
+<h3 id="auto-reload-external-python-modules">Auto reload external python modules</h3>
+
+<p><a href="http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html">IPython extension to reload modules before executing user code.</a></p>
+
+<pre><code class="language-py">%load_ext autoreload
+%autoreload 2
+</code></pre>
 
 <p></p>
 
-<hr />
+<h2 id="quick-notes">Quick notes</h2>
 
-<p><code>enumerate</code>.</p>
+<h3 id="enumerate">enumerate</h3>
 
 <pre><code class="language-python">colors = ['red', 'green', 'blue', 'yellow']
 
@@ -258,7 +274,7 @@ for i, color in enumerate(colors):
 <li><code>izip</code></li>
 </ul>
 
-<p><code>zip</code>.</p>
+<h3 id="zip">zip</h3>
 
 <pre><code class="language-python">x = [1, 2, 3]
 y = [4, 5, 6]
@@ -270,18 +286,24 @@ x == list(x2) and y == list(y2)
 # True
 </code></pre>
 
-<p><strong><code>self(x)</code></strong>.</p>
+<h3 id="self-x">self(x)</h3>
 
 <pre><code>def __call__(self, x):
     pass
 </code></pre>
+
+<h3 id="requirements-txt">requirements.txt</h3>
 
 <ul>
 <li><code>pip frreze &gt; requirements.txt</code></li>
 <li><code>pip install -r requirements.txt</code></li>
 </ul>
 
+<h3 id="hashable">hashable</h3>
+
 <p><strong>hashable</strong>: <code>object.__hash__()</code>, the key of dict must be hasable</p>
+
+<h3 id="numpy-tips">Numpy tips</h3>
 
 <ul>
 <li>knn
@@ -367,7 +389,9 @@ x == list(x2) and y == list(y2)
 <li><code>np.lookfor()</code>*</li>
 </ul></li>
 </ul></li>
-<li>tricks
+</ul>
+
+<h3 id="tricks-1">Tricks</h3>
 
 <ul>
 <li><code>y, x = x, y</code></li>
@@ -430,10 +454,9 @@ x == list(x2) and y == list(y2)
 <li><code>sys.getrecursionlimint()</code></li>
 <li><code>sys.getsizeof(x)</code>, object size</li>
 <li><code>dict(zip(keys, values))</code>, two arrays to a dict</li>
-</ul></li>
 </ul>
 
-<p><strong>Multiply/Add all items in an array</strong></p>
+<h3 id="multiply-add-all-items-in-an-array">Multiply / Add all items in an array</h3>
 
 <ul>
 <li><code>np.prod([2, 3, 4])</code> =&gt; <code>24</code></li>
@@ -663,33 +686,6 @@ class Vehicle(object):
 <p>So <code>Concatenate(axis=-1)([a, b])</code> is equal with <code>concatenate([a, b], axis=-1)</code></p>
 
 <p>Just guess, haven&rsquo;t checked the source code.</p>
-
-<h2 id="jupyter-notebook">Jupyter Notebook</h2>
-
-<h3 id="links">Links</h3>
-
-<ul>
-<li><a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html">Running a notebook server</a></li>
-<li><a href="http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Installing jupyter_contrib_nbextensions</a></li>
-<li><a href="https://github.com/lambdalisue/jupyter-vim-binding">jupyter-vim-binding</a></li>
-<li><a href="https://stackoverflow.com/a/29916445">line number</a></li>
-<li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
-</ul>
-
-<h3 id="tips-1">Tips</h3>
-
-<ul>
-<li><code>!pwd</code>, 执行</li>
-<li><code>np.dot??</code></li>
-</ul>
-
-<p><strong>Auto reload external python modules</strong></p>
-
-<p><a href="https://ipython.org/ipython-doc/3/config/extensions/autoreload.html">https://ipython.org/ipython-doc/3/config/extensions/autoreload.html</a></p>
-
-<pre><code class="language-py">%load_ext autoreload
-%autoreload 2
-</code></pre>
                             </div>
                         </div>
                     </div>

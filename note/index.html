@@ -122,7 +122,7 @@
             
             <li>
                 <a href="https://memoex.github.io/note/paper/image/">
-                Image - Reading
+                Image
                 </a>
             </li>
             
@@ -177,12 +177,6 @@
             <li>
                 <a href="https://memoex.github.io/note/vim/">
                 Vim
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/word-embedding/">
-                Word embedding
                 </a>
             </li>
             
@@ -337,7 +331,7 @@ axios.get('https://something.com/foo', { httpsAgent: agent });
             </button>
         </div><div class="col-12 mb-5">
             <h1 class="bd-title">
-                <a class="text-dark bd-title" href="https://memoex.github.io/note/paper/image/">Image - Reading</a>
+                <a class="text-dark bd-title" href="https://memoex.github.io/note/paper/image/">Image</a>
             </h1>
             <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
@@ -346,27 +340,34 @@ axios.get('https://something.com/foo', { httpsAgent: agent });
 </div>
 
             <div class="bd-content">
-                <h2 id="quick-notes">Quick notes</h2>
+                <p>Notes about image processing.</p>
+
+<h2 id="convolution">Convolution</h2>
+
+<h3 id="implementation-of-convolution">Implementation of convolution</h3>
 
 <ul>
-<li><a href="http://blog.csdn.net/zhcheng26/article/details/51375135">图像识别中的深度学习</a>
-
-<ul>
-<li>LFW, Labeled Faces in the Wild
-
-<ul>
-<li>人眼，中心区域：97.53%</li>
-<li>人眼，整张图像：99.15%</li>
-<li>Eigenface：60%</li>
-<li>非深度学习最高识别率：96.33%</li>
-<li>深度学习：99.47%</li>
-</ul></li>
-<li>ImageNet, PSACAL VOC</li>
-<li>深度学习将各种复杂的因素通过非线性方式进行分离</li>
-<li>浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本</li>
-<li>GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类</li>
-</ul></li>
+<li><a href="https://buptldy.github.io/2016/10/01/2016-10-01-im2col/">Implementing convolution as a matrix multiplication</a></li>
 </ul>
+
+<p>提取灰度特征和边缘特征的卷积核：</p>
+
+<pre><code class="language-py"># Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+</code></pre>
+
+<p><code>im2col</code></p>
+
+<p><img src="http://7xritj.com1.z0.glb.clouddn.com/16-10-1/690672.jpg" width="700em"></p>
 
 <p></p>
             </div>
@@ -1440,13 +1441,35 @@ git config --global alias.ls 'log --oneline -20'
 
 <ul>
 <li><a href="/note/keras">Keras</a></li>
+<li><a href="/note/tensorflow">Tensorflow</a></li>
 </ul>
 
-<h2 id="quick-notes">Quick notes</h2>
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
 
-<h3 id="some-links">Some links</h3>
+<h3 id="links">Links</h3>
 
-<p><a href="http://docs.python-guide.org/en/latest/">http://docs.python-guide.org/en/latest/</a></p>
+<ul>
+<li><a href="http://jupyter-notebook.readthedocs.io/en/stable/public_server.html">Running a notebook server</a></li>
+<li><a href="http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">Installing jupyter_contrib_nbextensions</a></li>
+<li><a href="https://github.com/lambdalisue/jupyter-vim-binding">jupyter-vim-binding</a></li>
+<li><a href="https://stackoverflow.com/a/29916445">line number</a></li>
+<li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
+</ul>
+
+<h3 id="tricks">Tricks</h3>
+
+<ul>
+<li><code>!pwd</code>, 执行</li>
+<li><code>np.dot??</code></li>
+</ul>
+
+<h3 id="auto-reload-external-python-modules">Auto reload external python modules</h3>
+
+<p><a href="http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html">IPython extension to reload modules before executing user code.</a></p>
+
+<pre><code class="language-py">%load_ext autoreload
+%autoreload 2
+</code></pre>
 
 <p></p>
             </div>
@@ -1673,6 +1696,64 @@ $$
 
 <hr />
 
+<h2 id="problems-encountered">Problems encountered</h2>
+
+<h3 id="2017-12-04-get-variable-s-value-in-middle-layer">2017-12-04 · Get variable&rsquo;s value in middle layer</h3>
+
+<p><strong>Problem description: I want to get the value of a variable in the model.</strong></p>
+
+<p>Reference: <a href="https://github.com/fchollet/keras/issues/41">How can I get hidden layer representation of the given data? #41</a></p>
+
+<p>The simplest way is using the same code of the original model, and</p>
+
+<ol>
+<li>replace the output with the variable you want</li>
+<li><code>new_model.set_weights(trained_model.get_weights())</code></li>
+<li><code>new_model.predict(input_data, batch_size=32)</code></li>
+</ol>
+
+<p>Note the <code>batch_size</code> is import for large amount of samples. The <code>K.function()</code> mentioned in the <a href="https://github.com/fchollet/keras/issues/41">issue #41</a> raised <code>OOM exception</code>. Of course you can split data into batches by yourself and use the <code>K.function()</code> method, but the method showed above is more convinient for me in my case.</p>
+
+<p><strong>Example case: I want to get the output value of pooling layer.</strong></p>
+
+<ul>
+<li><code>get_model()</code> function return a model for training</li>
+<li><code>train_model()</code></li>
+<li><code>get_p_out()</code> function almost have the same code with <code>get_model()</code> except
+
+<ul>
+<li>the input parameters</li>
+<li>the <code>Model()</code>&rsquo;s output parameter</li>
+<li><code>set_weights()</code> from trained model</li>
+<li>use the new model to predict value</li>
+</ul></li>
+</ul>
+
+<p><a href="https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc">Code in gist</a></p>
+
+<h3 id="2018-02-27-training-using-large-dataset">2018-02-27 · Training using large dataset</h3>
+
+<p><strong>Problem description: Sometimes we need to use large dataset to train our model, but large dataset can&rsquo;t fit into memory.</strong></p>
+
+<p>Reference: <a href="https://github.com/keras-team/keras/issues/2708">For large datasets, which to use: fit or train_on_batch?</a></p>
+
+<pre><code class="language-py">def generate_arrays_from_file(path):
+    while 1:
+        f = open(path)
+        for line in f:
+            # create numpy arrays of input data
+            # and labels, from each line in the file
+            x, y = process_line(line)
+            img = load_images(x)
+            yield (img, y)
+        f.close()
+
+model.fit_generator(generate_arrays_from_file('/my_file.txt'),
+        samples_per_epoch=10000, nb_epoch=10)
+</code></pre>
+
+<p><code>fit_generator</code>: The generator is run in parallel to the model, for efficiency. For instance, this allows you to do <strong>real-time data augmentation</strong> on images on CPU in parallel to training your model on GPU.</p>
+
 <h2 id="quick-notes">Quick notes</h2>
 
 <h3 id="metric">Metric</h3>
@@ -1687,53 +1768,6 @@ $$
             </div>
 
             <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/keras\/'"
-                class="mdl-button mdl-js-button col align-items-end border">
-                <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-            </button>
-        </div><div class="col-12 mb-5">
-            <h1 class="bd-title">
-                <a class="text-dark bd-title" href="https://memoex.github.io/note/word-embedding/">Word embedding</a>
-            </h1>
-            <div class="mb-5">
-    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="font-weight-bold align-self-center mdl-color-text--primary">Dec 4, 2017</time>
-    
-        <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/word-embedding'>word embedding</a>
-                </li>
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/nlp'>NLP</a>
-                </li>
-            
-        </ul>
-    
-</div>
-
-            <div class="bd-content">
-                <p>在使用Keras的Embedding层的时候，遇到困惑，学习一下。</p>
-
-<h2 id="拟合目标">拟合目标</h2>
-
-<p>条件概率：
-$$P(w_j|w_i)$$</p>
-
-<p>二元词概率：
-$$P(w_i, w_j)$$</p>
-
-<p>互信息：
-$$log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
-
-<p>如果两个词语义无关，分布独立，互信息为0：
-$$P(w_j,w_i) \approx P(w_i)P(w_j) \to \frac{P(w_i,w_j)}{P(w_i)P(w_j)} \approx 1 \to log \frac{P(w_i,w_j)}{P(w_i)P(w_j)}$$</p>
-
-<p></p>
-            </div>
-
-            <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/word-embedding\/'"
                 class="mdl-button mdl-js-button col align-items-end border">
                 <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
             </button>

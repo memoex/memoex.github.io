@@ -122,7 +122,7 @@
             
             <li>
                 <a href="https://memoex.github.io/note/paper/image/">
-                Image - Reading
+                Image
                 </a>
             </li>
             
@@ -177,12 +177,6 @@
             <li>
                 <a href="https://memoex.github.io/note/vim/">
                 Vim
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://memoex.github.io/note/word-embedding/">
-                Word embedding
                 </a>
             </li>
             
@@ -250,6 +244,64 @@
 
 <hr />
 
+<h2 id="problems-encountered">Problems encountered</h2>
+
+<h3 id="2017-12-04-get-variable-s-value-in-middle-layer">2017-12-04 · Get variable&rsquo;s value in middle layer</h3>
+
+<p><strong>Problem description: I want to get the value of a variable in the model.</strong></p>
+
+<p>Reference: <a href="https://github.com/fchollet/keras/issues/41">How can I get hidden layer representation of the given data? #41</a></p>
+
+<p>The simplest way is using the same code of the original model, and</p>
+
+<ol>
+<li>replace the output with the variable you want</li>
+<li><code>new_model.set_weights(trained_model.get_weights())</code></li>
+<li><code>new_model.predict(input_data, batch_size=32)</code></li>
+</ol>
+
+<p>Note the <code>batch_size</code> is import for large amount of samples. The <code>K.function()</code> mentioned in the <a href="https://github.com/fchollet/keras/issues/41">issue #41</a> raised <code>OOM exception</code>. Of course you can split data into batches by yourself and use the <code>K.function()</code> method, but the method showed above is more convinient for me in my case.</p>
+
+<p><strong>Example case: I want to get the output value of pooling layer.</strong></p>
+
+<ul>
+<li><code>get_model()</code> function return a model for training</li>
+<li><code>train_model()</code></li>
+<li><code>get_p_out()</code> function almost have the same code with <code>get_model()</code> except
+
+<ul>
+<li>the input parameters</li>
+<li>the <code>Model()</code>&rsquo;s output parameter</li>
+<li><code>set_weights()</code> from trained model</li>
+<li>use the new model to predict value</li>
+</ul></li>
+</ul>
+
+<p><a href="https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc">Code in gist</a></p>
+
+<h3 id="2018-02-27-training-using-large-dataset">2018-02-27 · Training using large dataset</h3>
+
+<p><strong>Problem description: Sometimes we need to use large dataset to train our model, but large dataset can&rsquo;t fit into memory.</strong></p>
+
+<p>Reference: <a href="https://github.com/keras-team/keras/issues/2708">For large datasets, which to use: fit or train_on_batch?</a></p>
+
+<pre><code class="language-py">def generate_arrays_from_file(path):
+    while 1:
+        f = open(path)
+        for line in f:
+            # create numpy arrays of input data
+            # and labels, from each line in the file
+            x, y = process_line(line)
+            img = load_images(x)
+            yield (img, y)
+        f.close()
+
+model.fit_generator(generate_arrays_from_file('/my_file.txt'),
+        samples_per_epoch=10000, nb_epoch=10)
+</code></pre>
+
+<p><code>fit_generator</code>: The generator is run in parallel to the model, for efficiency. For instance, this allows you to do <strong>real-time data augmentation</strong> on images on CPU in parallel to training your model on GPU.</p>
+
 <h2 id="quick-notes">Quick notes</h2>
 
 <h3 id="metric">Metric</h3>
@@ -297,63 +349,9 @@ tensorboard = TensorBoard(log_dir=get_log_path('res_net'))
 model.fit(..., callbacks=[tensorboard])
 </code></pre>
 
-<h2 id="problems-encountered">Problems encountered</h2>
+<h3 id="deep-learning-models-in-keras">Deep learning models in Keras</h3>
 
-<h3 id="2017-12-04-get-variable-s-value-in-middle-layer">2017-12-04 · Get variable&rsquo;s value in middle layer</h3>
-
-<p>Problem description: I want to get the value of a variable in the model.</p>
-
-<p>Reference: <a href="https://github.com/fchollet/keras/issues/41">How can I get hidden layer representation of the given data? #41</a></p>
-
-<p>The simplest way is using the same code of the original model, and</p>
-
-<ol>
-<li>replace the output with the variable you want</li>
-<li><code>new_model.set_weights(trained_model.get_weights())</code></li>
-<li><code>new_model.predict(input_data, batch_size=32)</code></li>
-</ol>
-
-<p>Note the <code>batch_size</code> is import for large amount of samples. The <code>K.function()</code> mentioned in the <a href="https://github.com/fchollet/keras/issues/41">issue #41</a> raised <code>OOM exception</code>. Of course you can split data into batches by yourself and use the <code>K.function()</code> method, but the method showed above is more convinient for me in my case.</p>
-
-<p><strong>Example case: I want to get the output value of pooling layer.</strong></p>
-
-<ul>
-<li><code>get_model()</code> function return a model for training</li>
-<li><code>train_model()</code></li>
-<li><code>get_p_out()</code> function almost have the same code with <code>get_model()</code> except
-
-<ul>
-<li>the input parameters</li>
-<li>the <code>Model()</code>&rsquo;s output parameter</li>
-<li><code>set_weights()</code> from trained model</li>
-<li>use the new model to predict value</li>
-</ul></li>
-</ul>
-
-<p><a href="https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc">Code in gist</a></p>
-
-<h3 id="2018-02-27-training-using-large-dataset">2018-02-27 · Training using large dataset</h3>
-
-<p>Porblem description: larget dataset can&rsquo;t fit into memory, but I want to use this large dataset to train our model.</p>
-
-<p>Reference: <a href="https://github.com/keras-team/keras/issues/2708">For large datasets, which to use: fit or train_on_batch?</a></p>
-
-<pre><code class="language-py">def generate_arrays_from_file(path):
-    while 1:
-        f = open(path)
-        for line in f:
-            # create numpy arrays of input data
-            # and labels, from each line in the file
-            x, y = process_line(line)
-            img = load_images(x)
-            yield (img, y)
-        f.close()
-
-model.fit_generator(generate_arrays_from_file('/my_file.txt'),
-        samples_per_epoch=10000, nb_epoch=10)
-</code></pre>
-
-<p><code>fit_generator</code>: The generator is run in parallel to the model, for efficiency. For instance, this allows you to do <strong>real-time data augmentation</strong> on images on CPU in parallel to training your model on GPU.</p>
+<p><a href="https://github.com/fchollet/deep-learning-models">Trained image classification models for Keras</a></p>
                             </div>
                         </div>
                     </div>
