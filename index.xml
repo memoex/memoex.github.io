@@ -7,10 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Sun, 18 Feb 2018 15:12:01 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 26 Feb 2018 15:14:41 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://memoex.github.io/note/js/</link>
+      <pubDate>Mon, 26 Feb 2018 15:14:41 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/js/</guid>
+      <description>&lt;p&gt;This is a note about JavaScript.&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;ignore-ssl-issue&#34;&gt;Ignore SSL issue&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Error:&lt;/strong&gt; (node:99469) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 4): Error: Hostname/IP doesn&amp;rsquo;t match certificate&amp;rsquo;s altnames: &amp;ldquo;IP: &amp;lt;ip&amp;gt; is not in the cert&amp;rsquo;s list: &amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/axios/axios/issues/535&#34;&gt;https://github.com/axios/axios/issues/535&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;https = require(&#39;https&#39;)
+axios = require(&#39;axios&#39;)
+
+// At instance level
+const instance = axios.create({
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false
+  })
+});
+instance.get(&#39;https://something.com/foo&#39;);
+
+// At request level
+const agent = new https.Agent({  
+  rejectUnauthorized: false
+});
+axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hugomore42&#34;&gt;</description>
+    </item>
     
     <item>
       <title>酒</title>
@@ -100,44 +137,6 @@
 &lt;li&gt;浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本&lt;/li&gt;
 &lt;li&gt;GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/29/2016-10-29-deconv/&#34;&gt;Transposed Convolution, Fractionally Strided Convolution or Deconvolution&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;文章结构非常清晰，博客排版的样式也很值得学习&lt;/li&gt;
-&lt;li&gt;开篇声明文章解决了什么问题，很重要！&lt;/li&gt;
-&lt;li&gt;我们很容易得到卷积层的反向传播就是和CC的转置相乘。？&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;img class=&#39;col-12&#39; src=&#34;https://culurciello.github.io/assets/unsup/gan_simple.svg&#34; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/11/27/2016-11-27-gans/&#34;&gt;Generative Adversarial Networks&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&amp;ldquo;What I cannot create, I do not understand.&amp;rdquo; —Richard Feynman&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;生成模型由一个参数数量比训练数据少的多神经网络构成，所以生成模型为了能够产生和训练数据相似的输出就会迫使自己去发现数据中内在的本质内容。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;GAN&lt;/code&gt;优化目标：&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div&gt;
-$$
-\min_G \max_D {\mathbb E}_{x\sim p_{\rm data}} \log D(x)+{\mathbb E}_{z\sim p_z}[\log (1-D(G(z)))]
-$$
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GoogLeNets&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -757,6 +756,7 @@ a - tril(a)
 &lt;li&gt;&lt;code&gt;last -n 50&lt;/code&gt;, check last logged in users&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;lastb -n 50&lt;/code&gt;,&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pstree -p&lt;/code&gt;, process tree&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt;, show who is logged on and what they are doing&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;auto-delete-files-in-tmp-centos-7&#34;&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt; (CentOS 7)&lt;/h3&gt;
@@ -1022,43 +1022,9 @@ git config --global alias.ls &#39;log --oneline -20&#39;
 
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
-&lt;p&gt;&lt;code&gt;enumerate&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;some-links&#34;&gt;Some links&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;colors = [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;, &#39;yellow&#39;]
-
-for i, color in enumerate(colors):
-    print i, &#39;--&amp;gt;&#39;, color
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;range&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;xrange&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;zip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;izip&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;zip&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;x = [1, 2, 3]
-y = [4, 5, 6]
-zipped = zip(x, y)
-zipped
-# [(1, 4), (2, 5), (3, 6)]
-x2, y2 = zip(*zipped)
-x == list(x2) and y == list(y2)
-# True
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;self(x)&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;def __call__(self, x):
-    pass
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pip frreze &amp;gt; requirements.txt&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.python-guide.org/en/latest/&#34;&gt;http://docs.python-guide.org/en/latest/&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1221,7 +1187,17 @@ $$
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;metric&#34;&gt;Metric&lt;/h3&gt;
+
+&lt;p&gt;As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/fchollet/keras/issues/5400&#34;&gt;issue #5400&lt;/a&gt; or &lt;a href=&#34;https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7&#34;&gt;Removed batchwise metrics&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe&#34;&gt;Code in gist&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

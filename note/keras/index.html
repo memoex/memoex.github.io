@@ -127,6 +127,12 @@
             </li>
             
             <li>
+                <a href="https://memoex.github.io/note/js/">
+                JavaScript
+                </a>
+            </li>
+            
+            <li>
                 <a href="https://memoex.github.io/note/keras/">
                 Keras
                 </a>
@@ -223,6 +229,10 @@
                     <a class="text-capitalize" href='/tags/keras'>keras</a>
                 </li>
             
+                <li class="nav-item d-inline">
+                    <a class="text-capitalize" href='/tags/python'>python</a>
+                </li>
+            
         </ul>
     
 </div>
@@ -238,9 +248,9 @@
 </ul></li>
 </ul>
 
-<h2 id="quick-notes">Quick notes</h2>
+<hr />
 
-<p></p>
+<h2 id="quick-notes">Quick notes</h2>
 
 <h3 id="metric">Metric</h3>
 
@@ -249,6 +259,30 @@
 <p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
 
 <p><a href="https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe">Code in gist</a></p>
+
+<p></p>
+
+<h3 id="keras-syntax">Keras Syntax</h3>
+
+<p>The syntax shown below is very common used in Keras. We can use it in this way the usage of <strong>Python&rsquo;s functional programming</strong>.</p>
+
+<pre><code class="language-py">from keras.layers import Input, Dense
+
+inputs = Input(shape=(784,))
+x = Dense(64, activation='relu')(inputs)
+</code></pre>
+
+<p>Take <code>keras.layers.merge.Concatenate</code> as example, the code behind may be like this.</p>
+
+<pre><code class="language-py">def Concatenate(axis=-1):
+    def afunc(x):
+        return concatenate(x, axis=-1)
+    return afunc
+</code></pre>
+
+<p>So <code>Concatenate(axis=-1)([a, b])</code> is equal with <code>concatenate([a, b], axis=-1)</code>.</p>
+
+<p>Just guess, haven&rsquo;t checked the source code.</p>
 
 <h3 id="tensorboard">Tensorboard</h3>
 
@@ -266,6 +300,8 @@ model.fit(..., callbacks=[tensorboard])
 <h2 id="problems-encountered">Problems encountered</h2>
 
 <h3 id="2017-12-04-get-variable-s-value-in-middle-layer">2017-12-04 · Get variable&rsquo;s value in middle layer</h3>
+
+<p>Problem description: I want to get the value of a variable in the model.</p>
 
 <p>Reference: <a href="https://github.com/fchollet/keras/issues/41">How can I get hidden layer representation of the given data? #41</a></p>
 
@@ -295,6 +331,29 @@ model.fit(..., callbacks=[tensorboard])
 </ul>
 
 <p><a href="https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc">Code in gist</a></p>
+
+<h3 id="2018-02-27-training-using-large-dataset">2018-02-27 · Training using large dataset</h3>
+
+<p>Porblem description: larget dataset can&rsquo;t fit into memory, but I want to use this large dataset to train our model.</p>
+
+<p>Reference: <a href="https://github.com/keras-team/keras/issues/2708">For large datasets, which to use: fit or train_on_batch?</a></p>
+
+<pre><code class="language-py">def generate_arrays_from_file(path):
+    while 1:
+        f = open(path)
+        for line in f:
+            # create numpy arrays of input data
+            # and labels, from each line in the file
+            x, y = process_line(line)
+            img = load_images(x)
+            yield (img, y)
+        f.close()
+
+model.fit_generator(generate_arrays_from_file('/my_file.txt'),
+        samples_per_epoch=10000, nb_epoch=10)
+</code></pre>
+
+<p><code>fit_generator</code>: The generator is run in parallel to the model, for efficiency. For instance, this allows you to do <strong>real-time data augmentation</strong> on images on CPU in parallel to training your model on GPU.</p>
                             </div>
                         </div>
                     </div>

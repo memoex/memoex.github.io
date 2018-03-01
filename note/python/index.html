@@ -127,6 +127,12 @@
             </li>
             
             <li>
+                <a href="https://memoex.github.io/note/js/">
+                JavaScript
+                </a>
+            </li>
+            
+            <li>
                 <a href="https://memoex.github.io/note/keras/">
                 Keras
                 </a>
@@ -229,6 +235,14 @@
 
 <h2 id="quick-notes">Quick notes</h2>
 
+<h3 id="some-links">Some links</h3>
+
+<p><a href="http://docs.python-guide.org/en/latest/">http://docs.python-guide.org/en/latest/</a></p>
+
+<p></p>
+
+<hr />
+
 <p><code>enumerate</code>.</p>
 
 <pre><code class="language-python">colors = ['red', 'green', 'blue', 'yellow']
@@ -266,8 +280,6 @@ x == list(x2) and y == list(y2)
 <li><code>pip frreze &gt; requirements.txt</code></li>
 <li><code>pip install -r requirements.txt</code></li>
 </ul>
-
-<p></p>
 
 <p><strong>hashable</strong>: <code>object.__hash__()</code>, the key of dict must be hasable</p>
 
@@ -479,6 +491,179 @@ File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 TypeError: sum() takes 2 positional arguments but 3 were given
 </code></pre>
 
+<h3 id="scopes">Scopes</h3>
+
+<p><code>nonlocal</code>, <code>global</code></p>
+
+<pre><code class="language-py">def scope_test():
+    def do_local():
+        spam = &quot;local spam&quot;
+
+    def do_nonlocal():
+        nonlocal spam
+        spam = &quot;nonlocal spam&quot;
+
+    def do_global():
+        global spam
+        spam = &quot;global spam&quot;
+
+    spam = &quot;test spam&quot;
+    do_local()
+    print(&quot;After local assignment:&quot;, spam)
+    do_nonlocal()
+    print(&quot;After nonlocal assignment:&quot;, spam)
+    do_global()
+    print(&quot;After global assignment:&quot;, spam)
+
+scope_test()
+print(&quot;In global scope:&quot;, spam)
+</code></pre>
+
+<p>Results:</p>
+
+<pre><code class="language-py">After local assignment: test spam
+After nonlocal assignment: nonlocal spam
+After global assignment: nonlocal spam
+In global scope: global spam
+</code></pre>
+
+<hr />
+
+<h3 id="class">Class</h3>
+
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/classes.html#class-objects">https://docs.python.org/3/tutorial/classes.html#class-objects</a></li>
+<li><a href="https://jeffknupp.com/blog/2014/06/18/improve-your-python-python-classes-and-object-oriented-programming/">Improve Your Python: Python Classes and Object Oriented Programming</a></li>
+</ul>
+
+<h4 id="basic-class">Basic Class</h4>
+
+<pre><code class="language-py">class Customer(object):
+    &quot;&quot;&quot;A customer of ABC Bank with a checking account. Customers have the
+    following properties:
+
+    Attributes:
+        name: A string representing the customer's name.
+        balance: A float tracking the current balance of the customer's account.
+    &quot;&quot;&quot;
+
+    def __init__(self, name, balance=0.0):
+        &quot;&quot;&quot;Return a Customer object whose name is *name* and starting
+        balance is *balance*.&quot;&quot;&quot;
+        self.name = name
+        self.balance = balance
+
+    def withdraw(self, amount):
+        &quot;&quot;&quot;Return the balance remaining after withdrawing *amount*
+        dollars.&quot;&quot;&quot;
+        if amount &gt; self.balance:
+            raise RuntimeError('Amount greater than available balance.')
+        self.balance -= amount
+        return self.balance
+
+    def deposit(self, amount):
+        &quot;&quot;&quot;Return the balance remaining after depositing *amount*
+        dollars.&quot;&quot;&quot;
+        self.balance += amount
+        return self.balance
+</code></pre>
+
+<h4 id="static-variables-and-methods">Static variables and methods</h4>
+
+<pre><code class="language-py">class Car(object):
+
+    # Static variable
+    wheels = 4
+
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    # Static method
+    @staticmethod
+    def make_car_sound():
+        print('VRooooommmm!')
+</code></pre>
+
+<h4 id="abstract-base-class">Abstract Base Class</h4>
+
+<pre><code class="language-py">from abc import ABCMeta, abstractmethod
+
+class Vehicle(object):
+    &quot;&quot;&quot;A vehicle for sale by Jeffco Car Dealership.
+
+
+    Attributes:
+        wheels: An integer representing the number of wheels the vehicle has.
+        miles: The integral number of miles driven on the vehicle.
+        make: The make of the vehicle as a string.
+        model: The model of the vehicle as a string.
+        year: The integral year the vehicle was built.
+        sold_on: The date the vehicle was sold.
+    &quot;&quot;&quot;
+
+    __metaclass__ = ABCMeta
+
+    base_sale_price = 0
+
+    def sale_price(self):
+        &quot;&quot;&quot;Return the sale price for this vehicle as a float amount.&quot;&quot;&quot;
+        if self.sold_on is not None:
+            return 0.0  # Already sold
+        return 5000.0 * self.wheels
+
+    def purchase_price(self):
+        &quot;&quot;&quot;Return the price for which we would pay to purchase the vehicle.&quot;&quot;&quot;
+        if self.sold_on is None:
+            return 0.0  # Not yet sold
+        return self.base_sale_price - (.10 * self.miles)
+
+    @abstractmethod
+    def vehicle_type():
+        &quot;&quot;&quot;&quot;Return a string representing the type of vehicle this is.&quot;&quot;&quot;
+        pass
+</code></pre>
+
+<h4 id="tips">Tips</h4>
+
+<ol>
+<li>Try not to ntroduce a new attribute outside of the <strong>init</strong> method</li>
+</ol>
+
+<hr />
+
+<h3 id="line-break">Line break</h3>
+
+<pre><code class="language-py">('hello '
+'world')
+
+=&gt; 'hello world'
+</code></pre>
+
+<p>Use it in <code>assert</code>: <a href="https://stackoverflow.com/questions/16065482/how-to-format-a-python-assert-statement-that-complies-with-pep8">How to format a python assert statement that complies with PEP8?</a></p>
+
+<pre><code class="language-py">def afunc(some_param_name):
+    assert isinstance(some_param_name, SomeClassName), ( 
+           'some_param_name must be an instance of SomeClassName, '
+           'silly goose!')
+</code></pre>
+
+<hr />
+
+<h3 id="functional-programming">Functional programming</h3>
+
+<p>Take <code>keras.layers.merge.Concatenate</code> as example.</p>
+
+<pre><code class="language-py">def Concatenate(axis=-1):
+    def afunc(x):
+        return concatenate(x, axis=-1)
+    return afunc
+</code></pre>
+
+<p>So <code>Concatenate(axis=-1)([a, b])</code> is equal with <code>concatenate([a, b], axis=-1)</code></p>
+
+<p>Just guess, haven&rsquo;t checked the source code.</p>
+
 <h2 id="jupyter-notebook">Jupyter Notebook</h2>
 
 <h3 id="links">Links</h3>
@@ -491,7 +676,7 @@ TypeError: sum() takes 2 positional arguments but 3 were given
 <li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
 </ul>
 
-<h3 id="tips">Tips</h3>
+<h3 id="tips-1">Tips</h3>
 
 <ul>
 <li><code>!pwd</code>, 执行</li>

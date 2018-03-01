@@ -127,6 +127,12 @@
             </li>
             
             <li>
+                <a href="https://memoex.github.io/note/js/">
+                JavaScript
+                </a>
+            </li>
+            
+            <li>
                 <a href="https://memoex.github.io/note/keras/">
                 Keras
                 </a>
@@ -241,6 +247,8 @@
 </ul></li>
 </ul>
 
+<p></p>
+
 <hr />
 
 <ul>
@@ -277,9 +285,75 @@ $$
 
 <ul>
 <li>GoogLeNets</li>
+<li>Inception Module 的发展历程
+
+<ul>
+<li>Inception architecture: <a href="https://nicolovaligi.com/history-inception-deep-learning-architecture.html">Short history of the Inception deep learning architecture</a></li>
+</ul></li>
 </ul>
 
-<p></p>
+<h3 id="inception-module">Inception Module</h3>
+
+<p><a href="https://www.jiqizhixin.com/articles/2017-08-19-4">无需数学背景，读懂 ResNet、Inception 和 Xception 三大变革性架构</a></p>
+
+<ol>
+<li>GoogLeNet: <a href="https://arxiv.org/abs/1409.4842">Going Deeper with Convolutions</a></li>
+<li>Inception v2, v3: <a href="https://arxiv.org/abs/1512.00567">Rethinking the Inception Architecture for Computer Vision</a></li>
+<li>Inception v4: <a href="https://arxiv.org/abs/1602.07261">Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning</a></li>
+<li>Xception: <a href="https://arxiv.org/abs/1610.02357">Xception: Deep Learning with Depthwise Separable Convolutions</a></li>
+</ol>
+
+<hr />
+
+<h3 id="tips-and-tricks">Tips and tricks</h3>
+
+<p><a href="http://lamda.nju.edu.cn/weixs/project/CNNTricks/CNNTricks.html">Must Know Tips/Tricks in Deep Neural Networks (by Xiu-Shen Wei)</a></p>
+
+<ol>
+<li>Data Augmentation
+
+<ul>
+<li>horizontally fliping</li>
+<li>random crops</li>
+<li>color jittering</li>
+<li>fancy PCA?</li>
+</ul></li>
+<li>Pre-processing
+
+<ul>
+<li>zero-center, normalize (not necessary, already [0~255])</li>
+<li></li>
+</ul></li>
+</ol>
+
+<hr />
+
+<h3 id="batch-normalization">Batch normalization</h3>
+
+<p>covariance shift</p>
+
+<h2 id="walking-through-networks">Walking through networks</h2>
+
+<ul>
+<li><a href="https://www.jiqizhixin.com/articles/2017-08-11-5">10 大深度学习架构：计算机视觉优秀从业者必备（附代码实现）</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2017/08/10-advanced-deep-learning-architectures-data-scientists/">10 Advanced Deep Learning Architectures Data Scientists Should Know! - 2017.8.9</a></li>
+</ul>
+
+<h3 id="resnet">ResNet</h3>
+
+<ul>
+<li>\(x\): input</li>
+<li>\(f\): mapping function</li>
+<li>\(y\): target, the value we want</li>
+</ul>
+
+<p>For one certain layer, conventional method is to learn \(f\) to make:</p>
+
+<p>$$f(x) \approx y$$</p>
+
+<p>The resudial method is to learn \(f\) to make:</p>
+
+<p>$$f(x) + x \approx y$$</p>
 
 <h2 id="卷积">卷积</h2>
 

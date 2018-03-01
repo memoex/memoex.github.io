@@ -41,6 +41,7 @@
 &lt;li&gt;&lt;code&gt;last -n 50&lt;/code&gt;, check last logged in users&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;lastb -n 50&lt;/code&gt;,&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;pstree -p&lt;/code&gt;, process tree&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt;, show who is logged on and what they are doing&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&#34;auto-delete-files-in-tmp-centos-7&#34;&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt; (CentOS 7)&lt;/h3&gt;
