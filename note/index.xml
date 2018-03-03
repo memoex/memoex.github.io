@@ -546,7 +546,7 @@ config.gpu_options.allow_growth = True
 &lt;ul&gt;
 &lt;li&gt;Find k nearest t raining images to the testing image&lt;/li&gt;
 &lt;li&gt;Use the most voted label&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Demo: &lt;a href=&#34;http://vision.stanford.edu/teaching/cs231n-demos/knn/&#34;&gt;http://vision.stanford.edu/teaching/cs231n-demos/knn/&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;http://vision.stanford.edu/teaching/cs231n-demos/knn/&#34;&gt;K-Nearest Neighbors Demo&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Never used on images
 
 &lt;ul&gt;
