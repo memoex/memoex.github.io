@@ -22,7 +22,7 @@
 于是希望有一个小工具能够辅助认字，我设想了以下两个情景：
  拍摄一张碑文的照片，将整个碑文转化为简体字。 使用扫一扫功能，将字移动到指定框内，进行识别。  有点类似于有道词典app的拍照翻译功能。
 目前尚未发现有这样的app存在，遂想动手弄一个。
-相关技术  How to use the tools provided to train Tesseract 4.00  </description>
+相关技术  How to use the tools provided to train Tesseract 4.00 ICDAR - International Conference on Document Analysis and Recognition 108 * 108  问题描述 </description>
     </item>
     
   </channel>

@@ -20,16 +20,6 @@
       <guid>https://memoex.github.io/note/math/</guid>
       <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
 
-&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;沿梯度方向\(\nabla f \text{,} f\)增长最快
-
-&lt;ul&gt;
-&lt;li&gt;\(\nabla\) nabla [&amp;lsquo;næblə]&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h2 id=&#34;线性代数&#34;&gt;线性代数&lt;/h2&gt;
 
 &lt;h3 id=&#34;矩阵乘法&#34;&gt;矩阵乘法&lt;/h3&gt;
@@ -60,28 +50,6 @@ $$
 \end{cases}
 $$
 &lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;演变过程：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;解方程方法：
-
-&lt;ul&gt;
-&lt;li&gt;高斯消元法
-
-&lt;ul&gt;
-&lt;li&gt;初中？小学？解方程的方法，逐个元素消除&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;凯莱的高斯消元法
-
-&lt;ul&gt;
-&lt;li&gt;用&lt;code&gt;数块&lt;/code&gt;表示线性方程组&lt;/li&gt;
-&lt;li&gt;变换写在横线上很不数学&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;数块&lt;/code&gt;乘法&lt;/li&gt;
-&lt;li&gt;数块被命名为&lt;code&gt;矩阵&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

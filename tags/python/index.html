@@ -7,9 +7,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.0.1/tocbot.css">
 
 
-<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-
-
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
 
@@ -22,7 +19,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-<link rel="stylesheet" href="https://memoex.github.io/css/note.min.css">
+<link rel="stylesheet" href="https://memoex.github.io/css/bootstrap-docs.min.css">
+
+
+<link rel="stylesheet" href="https://memoex.github.io/css/material.min.css">
+
 
     </head>
     <body>
@@ -95,14 +96,15 @@
 
 
 
-<div class="p-0 container-fluid mdl-color--white rounded">
-    <div class="col-12 mb-5">
-            <h1 class="bd-title">
-                <a class="text-dark bd-title" href="https://memoex.github.io/note/keras/">Keras</a>
-            </h1>
-            <div class="mb-5">
+<main>
+    <div class="p-0 container-fluid rounded">
+        <div class="col-12">
+                <h1 class="bd-title">
+                    <a class="text-dark bd-title" href="https://memoex.github.io/note/keras/">Keras</a>
+                </h1>
+                <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="font-weight-bold align-self-center mdl-color-text--primary">Dec 4, 2017</time>
+    <time class="px-1 font-weight-bold indigo-text">Dec 4, 2017</time>
     
         <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
         <ul class="nav d-inline">
@@ -119,8 +121,8 @@
     
 </div>
 
-            <div class="bd-content">
-                <p>Notes about Keras.</p>
+                <div class="bd-content">
+                    <p>Notes about Keras.</p>
 
 <ul>
 <li>Keras version: <code>2.0.8</code>.
@@ -201,14 +203,16 @@ model.fit_generator(generate_arrays_from_file('/my_file.txt'),
 <p><a href="https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe">Code in gist</a></p>
 
 <p></p>
-            </div>
+                </div>
 
-            <button type="buttion" onclick="location.href='https:\/\/memoex.github.io\/note\/keras\/'"
-                class="mdl-button mdl-js-button col align-items-end border">
-                <i class="mdl-color-text--primary fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-            </button>
-        </div>
-</div>
+                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/keras\/'" >
+                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+
+                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
+            </div>
+    </div>
+</main>
 
         </div>
     </div>
@@ -219,9 +223,6 @@ model.fit_generator(generate_arrays_from_file('/my_file.txt'),
 
         
 
-
-
-<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
@@ -240,9 +241,6 @@ model.fit_generator(generate_arrays_from_file('/my_file.txt'),
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
-
-
-<script src="https://memoex.github.io/js/jquery.autofix_anything.min.js"></script>
 
 <script>
 $(function(){

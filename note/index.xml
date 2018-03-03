@@ -7,10 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Mon, 26 Feb 2018 15:14:41 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Mar 2018 19:51:40 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSS</title>
+      <link>https://memoex.github.io/note/2018-03-03-css/</link>
+      <pubDate>Sat, 03 Mar 2018 19:51:40 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/2018-03-03-css/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;safe-fonts&#34;&gt;Safe fonts&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.cssfontstack.com/&#34;&gt;A complete collection of web safe CSS font stacks.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Add two common fonts for Chinese characters: &lt;code&gt;PingFang SC&lt;/code&gt;, &lt;code&gt;Microsoft YaHei&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;$font-family-serif:           Palatino, Georgia, &amp;quot;Times New Roman&amp;quot;, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, serif !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot; !default;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;difference-between-serif-and-sans-serif&#34;&gt;Difference between Serif and Sans Serif&lt;/h3&gt;
+
+&lt;p&gt;See this great inforgraphic: &lt;a href=&#34;http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/&#34;&gt;The Difference Between Serif And Sans-Serif Explained In One Infographic&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-10 col-lg-10 container-fluid mx-0 px-0&#34;&gt;
+    &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/519YeM0.jpg&#34; /&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;Serif (left) and Sans Serif (right)&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>JavaScript</title>
@@ -144,7 +178,14 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 
 &lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://7xritj.com1.z0.glb.clouddn.com/16-10-1/690672.jpg&#34; width=&#34;700em&#34;&gt;&lt;/p&gt;
+&lt;div class=&#34;col-12 col-xl-10 col-lg-10 container-fluid mx-0 px-0&#34;&gt;
+    &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
+    
+&lt;/div&gt;
+
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -1045,16 +1086,6 @@ git config --global alias.ls &#39;log --oneline -20&#39;
       <guid>https://memoex.github.io/note/math/</guid>
       <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
 
-&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;沿梯度方向\(\nabla f \text{,} f\)增长最快
-
-&lt;ul&gt;
-&lt;li&gt;\(\nabla\) nabla [&amp;lsquo;næblə]&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h2 id=&#34;线性代数&#34;&gt;线性代数&lt;/h2&gt;
 
 &lt;h3 id=&#34;矩阵乘法&#34;&gt;矩阵乘法&lt;/h3&gt;
@@ -1085,28 +1116,6 @@ $$
 \end{cases}
 $$
 &lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;演变过程：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;解方程方法：
-
-&lt;ul&gt;
-&lt;li&gt;高斯消元法
-
-&lt;ul&gt;
-&lt;li&gt;初中？小学？解方程的方法，逐个元素消除&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;凯莱的高斯消元法
-
-&lt;ul&gt;
-&lt;li&gt;用&lt;code&gt;数块&lt;/code&gt;表示线性方程组&lt;/li&gt;
-&lt;li&gt;变换写在横线上很不数学&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;数块&lt;/code&gt;乘法&lt;/li&gt;
-&lt;li&gt;数块被命名为&lt;code&gt;矩阵&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
