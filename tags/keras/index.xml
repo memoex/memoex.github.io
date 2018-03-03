@@ -40,11 +40,12 @@
 
 &lt;p&gt;The simplest way is using the same code of the original model, and&lt;/p&gt;
 
-&lt;ol&gt;
-&lt;li&gt;replace the output with the variable you want&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;new_model.set_weights(trained_model.get_weights())&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;new_model.predict(input_data, batch_size=32)&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# replace the output with the variable you want
+# code ...
+
+new_model.set_weights(trained_model.get_weights())
+new_model.predict(input_data, batch_size=32)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
 

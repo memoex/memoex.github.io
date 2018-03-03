@@ -606,8 +606,8 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <h3 id="龙之九子">龙之九子</h3>
 
 <ul>
-<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - 豆子的回答 - 知乎 <a href="https://www.zhihu.com/question/23759686/answer/41997389">https://www.zhihu.com/question/23759686/answer/41997389</a></li>
-<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - 知乎 <a href="https://www.zhihu.com/question/23759686/answer/42089003">https://www.zhihu.com/question/23759686/answer/42089003</a></li>
+<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - <a href="https://www.zhihu.com/question/23759686/answer/41997389">豆子的回答 - 知乎</a></li>
+<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - <a href="https://www.zhihu.com/question/23759686/answer/42089003">知乎</a></li>
 </ul>
 
 <p>一说</p>
@@ -1752,11 +1752,12 @@ $$
 
 <p>The simplest way is using the same code of the original model, and</p>
 
-<ol>
-<li>replace the output with the variable you want</li>
-<li><code>new_model.set_weights(trained_model.get_weights())</code></li>
-<li><code>new_model.predict(input_data, batch_size=32)</code></li>
-</ol>
+<pre><code class="language-py"># replace the output with the variable you want
+# code ...
+
+new_model.set_weights(trained_model.get_weights())
+new_model.predict(input_data, batch_size=32)
+</code></pre>
 
 <p>Note the <code>batch_size</code> is import for large amount of samples. The <code>K.function()</code> mentioned in the <a href="https://github.com/fchollet/keras/issues/41">issue #41</a> raised <code>OOM exception</code>. Of course you can split data into batches by yourself and use the <code>K.function()</code> method, but the method showed above is more convinient for me in my case.</p>
 
