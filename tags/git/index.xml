@@ -42,19 +42,6 @@ git config --global core.editor &amp;quot;vim&amp;quot;
 #   write the commit message in it and `:x` to commit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;See also: &lt;a href=&#34;https://chris.beams.io/posts/git-commit/&#34;&gt;https://chris.beams.io/posts/git-commit/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;git alias&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.us &#39;reset HEAD --&#39;
-git config --global alias.last &#39;log -1 HEAD&#39;
-git config --global alias.ls &#39;log --oneline -20&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     

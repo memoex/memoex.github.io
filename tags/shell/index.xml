@@ -44,27 +44,6 @@
 &lt;li&gt;&lt;code&gt;w&lt;/code&gt;, show who is logged on and what they are doing&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;auto-delete-files-in-tmp-centos-7&#34;&gt;Auto delete files in &lt;code&gt;tmp&lt;/code&gt; (CentOS 7)&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;tmpwatch&lt;/code&gt; - removes files which haven&amp;rsquo;t been accessed for a period of time
-
-&lt;ul&gt;
-&lt;li&gt;install: &lt;code&gt;yum install -y tmpwatch&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;delete files not accessed in 7 days: &lt;code&gt;tmpwatch 7d /tmp&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cron&lt;/code&gt; 定期执行指定程序
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;crond&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;crontab -e&lt;/code&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;0 0 * * * tmpwatch 7d /tmp&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     

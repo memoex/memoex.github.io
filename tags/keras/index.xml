@@ -49,56 +49,6 @@ new_model.predict(input_data, batch_size=32)
 
 &lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example case: I want to get the output value of pooling layer.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;get_model()&lt;/code&gt; function return a model for training&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;train_model()&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;get_p_out()&lt;/code&gt; function almost have the same code with &lt;code&gt;get_model()&lt;/code&gt; except
-
-&lt;ul&gt;
-&lt;li&gt;the input parameters&lt;/li&gt;
-&lt;li&gt;the &lt;code&gt;Model()&lt;/code&gt;&amp;rsquo;s output parameter&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;set_weights()&lt;/code&gt; from trained model&lt;/li&gt;
-&lt;li&gt;use the new model to predict value&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/blue-fatty/b217689b5c9408e1e46a2c1e14be2fdc&#34;&gt;Code in gist&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2018-02-27-training-using-large-dataset&#34;&gt;2018-02-27 · Training using large dataset&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem description: Sometimes we need to use large dataset to train our model, but large dataset can&amp;rsquo;t fit into memory.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/keras-team/keras/issues/2708&#34;&gt;For large datasets, which to use: fit or train_on_batch?&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;def generate_arrays_from_file(path):
-    while 1:
-        f = open(path)
-        for line in f:
-            # create numpy arrays of input data
-            # and labels, from each line in the file
-            x, y = process_line(line)
-            img = load_images(x)
-            yield (img, y)
-        f.close()
-
-model.fit_generator(generate_arrays_from_file(&#39;/my_file.txt&#39;),
-        samples_per_epoch=10000, nb_epoch=10)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;fit_generator&lt;/code&gt;: The generator is run in parallel to the model, for efficiency. For instance, this allows you to do &lt;strong&gt;real-time data augmentation&lt;/strong&gt; on images on CPU in parallel to training your model on GPU.&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
-
-&lt;h3 id=&#34;metric&#34;&gt;Metric&lt;/h3&gt;
-
-&lt;p&gt;As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/fchollet/keras/issues/5400&#34;&gt;issue #5400&lt;/a&gt; or &lt;a href=&#34;https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7&#34;&gt;Removed batchwise metrics&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe&#34;&gt;Code in gist&lt;/a&gt;&lt;/p&gt;
-
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
