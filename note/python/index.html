@@ -39,7 +39,7 @@
                 
             
             
-            <li class="nav-item ">
+            <li class="px-1 nav-item ">
                 <a class="nav-link" href="https://memoex.github.io/"><span>Post</span></a>
             </li>
         
@@ -47,7 +47,7 @@
                 
             
             
-            <li class="nav-item active">
+            <li class="px-1 nav-item active">
                 <a class="nav-link" href="https://memoex.github.io/note/"><span>Note</span></a>
             </li>
         
@@ -55,7 +55,7 @@
                 
             
             
-            <li class="nav-item ">
+            <li class="px-1 nav-item ">
                 <a class="nav-link" href="https://memoex.github.io/tags/"><span>Tags</span></a>
             </li>
         
@@ -724,6 +724,17 @@ class Vehicle(object):
 <p>So <code>Concatenate(axis=-1)([a, b])</code> is equal with <code>concatenate([a, b], axis=-1)</code></p>
 
 <p>Just guess, haven&rsquo;t checked the source code.</p>
+
+<h3 id="switch-in-python">switch in Python</h3>
+
+<p><a href="https://stackoverflow.com/a/103081">Replacements for switch statement in Python?</a></p>
+
+<pre><code class="language-py">def f(x):
+    return {
+        'a': 1,
+        'b': 2
+    }.get(x, 9)    # 9 is default if x not found
+</code></pre>
                             </div>
                         </div>
                     </div>

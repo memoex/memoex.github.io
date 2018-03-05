@@ -18,11 +18,22 @@
       <pubDate>Thu, 01 Mar 2018 17:13:30 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/project/2018-03-01-hanzi/</guid>
-      <description> 动机 中华文字源远流长，从甲骨到金文，从大篆到小篆，从隶书到草书，文字在不断演变。在游荡各种名胜古迹的时候，常常会被石碑上的刻字，古钟上的铭文，悬挂的对联和牌匾所吸引，却常常因为对古汉字的不熟悉而错失诸多精彩。
-于是希望有一个小工具能够辅助认字，我设想了以下两个情景：
- 拍摄一张碑文的照片，将整个碑文转化为简体字。 使用扫一扫功能，将字移动到指定框内，进行识别。  有点类似于有道词典app的拍照翻译功能。
-目前尚未发现有这样的app存在，遂想动手弄一个。
-相关技术  How to use the tools provided to train Tesseract 4.00 ICDAR - International Conference on Document Analysis and Recognition 108 * 108  问题描述 </description>
+      <description>&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;
+
+&lt;p&gt;中华文字源远流长，从甲骨到金文，从大篆到小篆，从隶书到草书，文字在不断演变。在游荡各种名胜古迹的时候，常常会被石碑上的刻字，古钟上的铭文，悬挂的对联和牌匾所吸引，却常常因为对古汉字的不熟悉而错失诸多精彩。&lt;/p&gt;
+
+&lt;p&gt;于是希望有一个小工具能够辅助认字，我设想了以下两个情景：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;拍摄一张碑文的照片，将整个碑文转化为简体字。&lt;/li&gt;
+&lt;li&gt;使用扫一扫功能，将字移动到指定框内，进行识别。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;有点类似于有道词典app的拍照翻译功能。&lt;/p&gt;
+
+&lt;p&gt;目前尚未发现有这样的app存在，遂想动手弄一个。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
