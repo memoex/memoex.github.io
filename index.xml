@@ -7,10 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Sat, 03 Mar 2018 19:51:40 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Mar 2018 11:08:39 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Metrics</title>
+      <link>https://memoex.github.io/note/metrics/</link>
+      <pubDate>Tue, 06 Mar 2018 11:08:39 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/metrics/</guid>
+      <description>&lt;p&gt;When I see the terms such as &lt;code&gt;precision&lt;/code&gt;, &lt;code&gt;accuracy&lt;/code&gt;, &lt;code&gt;training error&lt;/code&gt; and so on, they often confused me a lot. To make myself clear, I put them together.&lt;/p&gt;
+
+&lt;h2 id=&#34;binary-classification&#34;&gt;Binary classification&lt;/h2&gt;
+
+&lt;p&gt;The following metircs for binary classification will be introduced:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;accuracy （精度）&lt;/li&gt;
+&lt;li&gt;error (rate) （错误率）&lt;/li&gt;
+&lt;li&gt;precision （准确率，查准率）&lt;/li&gt;
+&lt;li&gt;recall （召回率，查全率）&lt;/li&gt;
+&lt;li&gt;f1-score&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;p.
+* 中文名称参考了周志华老师的《机器学习》&lt;/p&gt;
+
+&lt;p&gt;First, we should know some terminologies with a table.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>CSS</title>
@@ -34,8 +62,10 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &amp;quot;Segoe
 
 &lt;p&gt;See this great inforgraphic: &lt;a href=&#34;http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/&#34;&gt;The Difference Between Serif And Sans-Serif Explained In One Infographic&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&#34;col-12 col-xl-10 col-lg-10 container-fluid mx-0 px-0&#34;&gt;
-    &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/519YeM0.jpg&#34; /&gt;
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0&#34;&gt;
+    &lt;a href=&#34;https://i.imgur.com/519YeM0.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Serif (left) and Sans Serif (right)&#34;&gt;
+        &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/519YeM0.jpg&#34; /&gt;
+    &lt;/a&gt;
 
     
     &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;Serif (left) and Sans Serif (right)&lt;/p&gt;
@@ -169,8 +199,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 
 &lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&#34;col-12 col-xl-10 col-lg-10 container-fluid mx-0 px-0&#34;&gt;
-    &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0&#34;&gt;
+    &lt;a href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
+        &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+    &lt;/a&gt;
 
     
     &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
@@ -290,8 +322,9 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 &lt;li&gt;2018-01-07 大钟寺博物馆-中华民族园博物馆-中国动物博物馆&lt;/li&gt;
 &lt;li&gt;2018-01-14 清华大学艺术博物馆-香巴拉户外用品专卖店-中国人民大学&lt;/li&gt;
 &lt;li&gt;2018-01-21 惠新西街南口-天坛&lt;/li&gt;
-&lt;li&gt;2018-01-28 石刻艺术博物馆-古代钱币展览馆(德胜门箭楼)&lt;/li&gt;
-&lt;li&gt;2018-02-05 西直门-阜成门-宣武门-中国铁道博物馆正阳门展馆-正阳门城楼</description>
+&lt;li&gt;2018-01-28 石刻艺术博物馆-古代钱币展览馆（德胜门箭楼）&lt;/li&gt;
+&lt;li&gt;2018-02-05 西直门-阜成门-宣武门-中国铁道博物馆正阳门展馆-正阳门城楼&lt;/li&gt;
+&lt;li&gt;2018-03-04 中国海关博物馆（雄关漫道：丝绸之路上的谷关）-北京古观象台</description>
     </item>
     
     <item>
@@ -730,7 +763,7 @@ end
 
 &lt;h2 id=&#34;基本配置&#34;&gt;基本配置&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;git config&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;git-config&#34;&gt;git config&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List configuration
 git config -l

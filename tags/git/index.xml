@@ -22,7 +22,7 @@
 
 &lt;h2 id=&#34;基本配置&#34;&gt;基本配置&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;&lt;code&gt;git config&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;git-config&#34;&gt;git config&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List configuration
 git config -l

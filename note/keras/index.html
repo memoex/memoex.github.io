@@ -25,10 +25,11 @@
 <link rel="stylesheet" href="https://memoex.github.io/css/material.min.css">
 
 
+<link rel="stylesheet" href="https://memoex.github.io/css/fancybox.min.css">
+
     </head>
     <body>
-
-        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <header class="z-depth-2 navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
     <a class="navbar-brand mr-0 mr-md-2" href="https://memoex.github.io//" aria-label="Mr.Blue">
         <span>Mr.Blue</span>
     </a>
@@ -68,7 +69,6 @@
         <div class="row flex-xl-nowrap">
             <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
                 
-
 <form class="bd-search d-flex align-items-center">
   <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
   <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
@@ -184,6 +184,13 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/matlab/">
                 Matlab
+                </a>
+            </li>
+            
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/metrics/">
+                Metrics
                 </a>
             </li>
             
@@ -349,9 +356,20 @@ model.fit_generator(generate_arrays_from_file('/my_file.txt'),
 
 <p>As of Keras 2.0, precision and recall were removed from the master branch. We need to implement them.</p>
 
-<p><a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
+<p>They are removed because they should be used with all results (globally) rather than one mini-batch:</p>
 
-<p><a href="https://gist.github.com/blue-fatty/5ac3d8be9509843dcbe20eed4b3dcbfe">Code in gist</a></p>
+<blockquote>
+<p>Basically these are all global metrics that were approximated
+batch-wise, which is more misleading than helpful. This was mentioned in
+the docs but it&rsquo;s much cleaner to remove them altogether. It was a mistake
+to merge them in the first place.</p>
+
+<p>@fachollet <a href="https://github.com/keras-team/keras/issues/5794#issuecomment-287641301">issue #5794</a></p>
+</blockquote>
+
+<p>Old code can be found in: <a href="https://github.com/fchollet/keras/issues/5400">issue #5400</a> or <a href="https://github.com/fchollet/keras/commit/a56b1a55182acf061b1eb2e2c86b48193a0e88f7">Removed batchwise metrics</a></p>
+
+<p><a href="https://gist.github.com/blue-fatty/8c4e0790a7ef38e0846521971f62444a">Code in my gist</a></p>
 
 <h3 id="keras-syntax">Keras Syntax</h3>
 
@@ -405,10 +423,54 @@ model.fit(..., callbacks=[tensorboard])
         
 
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" integrity="sha256-meF2HJJ2Tcruwz3z4XcxYDRMxKprjdruBHc3InmixCQ=" crossorigin="anonymous"></script>
+<script>
+
+
+function tooltip(obj, text){
+    obj.tooltip('dispose')
+    obj.tooltip({
+        title: text,
+        boundary: 'viewport',
+        trigger: 'hover'
+    })
+    return obj
+}
+
+ 
+$('pre').each(function(i, l){
+
+    var btn = $('\x3cbutton type=\x22button\x22 class=\x22btn btn-light btn-copycode\x22 data-toggle=\x22tooltip\x22\x3e\n    \x3ci class=\x22fa fa-paste\x22\x3e\x3c\/i\x3e\n\x3c\/button\x3e\n').hide()
+    l.prepend(btn[0])
+
+     
+    $(l).hover(function(){
+        btn.show()
+        tooltip(btn, 'Copy to clipboard')
+    }, function(){
+        btn.fadeOut(200)
+    })
+})
+
+
+ 
+var clipboard = new ClipboardJS('.btn-copycode', {
+    target: function(trigger) {
+        return trigger.nextElementSibling
+    }
+})
+
+ 
+clipboard.on('success', function(e){
+    e.clearSelection()
+    tooltip($(e.trigger), 'Copied').tooltip('show')
+})
+</script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
@@ -422,9 +484,7 @@ model.fit(..., callbacks=[tensorboard])
 
 
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
-
 <script>
 $(function(){
     tocbot.init({
@@ -444,6 +504,8 @@ $(function(){
 </script>
 
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
     </body>
 </html>

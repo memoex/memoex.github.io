@@ -26,10 +26,11 @@
 <link rel="stylesheet" href="https://memoex.github.io/css/material.min.css">
 
 
+<link rel="stylesheet" href="https://memoex.github.io/css/fancybox.min.css">
+
     </head>
     <body>
-
-        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <header class="z-depth-2 navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
     <a class="navbar-brand mr-0 mr-md-2" href="https://memoex.github.io//" aria-label="Mr.Blue">
         <span>Mr.Blue</span>
     </a>
@@ -103,7 +104,7 @@
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/post\/travel\/wutai\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/post\/travel\/wutai\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -126,10 +127,54 @@
         
 
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" integrity="sha256-meF2HJJ2Tcruwz3z4XcxYDRMxKprjdruBHc3InmixCQ=" crossorigin="anonymous"></script>
+<script>
+
+
+function tooltip(obj, text){
+    obj.tooltip('dispose')
+    obj.tooltip({
+        title: text,
+        boundary: 'viewport',
+        trigger: 'hover'
+    })
+    return obj
+}
+
+ 
+$('pre').each(function(i, l){
+
+    var btn = $('\x3cbutton type=\x22button\x22 class=\x22btn btn-light btn-copycode\x22 data-toggle=\x22tooltip\x22\x3e\n    \x3ci class=\x22fa fa-paste\x22\x3e\x3c\/i\x3e\n\x3c\/button\x3e\n').hide()
+    l.prepend(btn[0])
+
+     
+    $(l).hover(function(){
+        btn.show()
+        tooltip(btn, 'Copy to clipboard')
+    }, function(){
+        btn.fadeOut(200)
+    })
+})
+
+
+ 
+var clipboard = new ClipboardJS('.btn-copycode', {
+    target: function(trigger) {
+        return trigger.nextElementSibling
+    }
+})
+
+ 
+clipboard.on('success', function(e){
+    e.clearSelection()
+    tooltip($(e.trigger), 'Copied').tooltip('show')
+})
+</script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
@@ -142,6 +187,9 @@
 </script>
 
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
     </body>
 </html>

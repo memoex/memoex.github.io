@@ -25,10 +25,11 @@
 <link rel="stylesheet" href="https://memoex.github.io/css/material.min.css">
 
 
+<link rel="stylesheet" href="https://memoex.github.io/css/fancybox.min.css">
+
     </head>
     <body>
-
-        <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+        <header class="z-depth-2 navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
     <a class="navbar-brand mr-0 mr-md-2" href="https://memoex.github.io//" aria-label="Mr.Blue">
         <span>Mr.Blue</span>
     </a>
@@ -68,7 +69,6 @@
     <div class="row flex-xl-nowrap">
         <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
             
-
 <form class="bd-search d-flex align-items-center">
   <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; display: none; left: 0px; right: auto;"><div class="ds-dataset-1"></div></span></span>
   <button class="btn btn-link bd-search-docs-toggle d-md-none p-0 ml-3" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
@@ -189,6 +189,13 @@
             
             
             <li class="" >
+                <a href="https://memoex.github.io/note/metrics/">
+                Metrics
+                </a>
+            </li>
+            
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/python/">
                 Python
                 </a>
@@ -253,6 +260,44 @@
     <div class="p-0 container-fluid rounded">
         <div class="col-12">
                 <h1 class="bd-title">
+                    <a class="text-dark bd-title" href="https://memoex.github.io/note/metrics/">Metrics</a>
+                </h1>
+                <div class="mb-5">
+    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
+    <time class="px-1 font-weight-bold indigo-text">Mar 6, 2018</time>
+    
+</div>
+
+                <div class="bd-content">
+                    <p>When I see the terms such as <code>precision</code>, <code>accuracy</code>, <code>training error</code> and so on, they often confused me a lot. To make myself clear, I put them together.</p>
+
+<h2 id="binary-classification">Binary classification</h2>
+
+<p>The following metircs for binary classification will be introduced:</p>
+
+<ol>
+<li>accuracy （精度）</li>
+<li>error (rate) （错误率）</li>
+<li>precision （准确率，查准率）</li>
+<li>recall （召回率，查全率）</li>
+<li>f1-score</li>
+</ol>
+
+<p>p.
+* 中文名称参考了周志华老师的《机器学习》</p>
+
+<p>First, we should know some terminologies with a table.</p>
+
+<p></p>
+                </div>
+
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/metrics\/'" >
+                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+
+                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
+            </div><div class="col-12">
+                <h1 class="bd-title">
                     <a class="text-dark bd-title" href="https://memoex.github.io/note/2018-03-03-css/">CSS</a>
                 </h1>
                 <div class="mb-5">
@@ -278,8 +323,10 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&
 
 <p>See this great inforgraphic: <a href="http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/">The Difference Between Serif And Sans-Serif Explained In One Infographic</a></p>
 
-<div class="col-12 col-xl-10 col-lg-10 container-fluid mx-0 px-0">
-    <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/519YeM0.jpg" />
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/519YeM0.jpg" data-fancybox="gallery" data-caption="Serif (left) and Sans Serif (right)">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/519YeM0.jpg" />
+    </a>
 
     
     <p class='mb-5 mt-2 text-center font-weight-bold'>Serif (left) and Sans Serif (right)</p>
@@ -290,7 +337,7 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/2018-03-03-css\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/2018-03-03-css\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -337,7 +384,7 @@ axios.get('https://something.com/foo', { httpsAgent: agent });
 <h2 id="hugomore42">
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/js\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/js\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -376,7 +423,7 @@ axios.get('https://something.com/foo', { httpsAgent: agent });
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/alcohol\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/alcohol\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -419,8 +466,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 
 <p><code>im2col</code></p>
 
-<div class="col-12 col-xl-10 col-lg-10 container-fluid mx-0 px-0">
-    <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/gUZGkvi.png" />
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/gUZGkvi.png" data-fancybox="gallery" data-caption="An example for im2col">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/gUZGkvi.png" />
+    </a>
 
     
     <p class='mb-5 mt-2 text-center font-weight-bold'>An example for im2col</p>
@@ -431,7 +480,7 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/paper\/image\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/paper\/image\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -503,7 +552,7 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/bootstrap\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/bootstrap\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -559,7 +608,7 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/docker\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/docker\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -579,11 +628,12 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <li>2018-01-07 大钟寺博物馆-中华民族园博物馆-中国动物博物馆</li>
 <li>2018-01-14 清华大学艺术博物馆-香巴拉户外用品专卖店-中国人民大学</li>
 <li>2018-01-21 惠新西街南口-天坛</li>
-<li>2018-01-28 石刻艺术博物馆-古代钱币展览馆(德胜门箭楼)</li>
-<li>2018-02-05 西直门-阜成门-宣武门-中国铁道博物馆正阳门展馆-正阳门城楼
+<li>2018-01-28 石刻艺术博物馆-古代钱币展览馆（德胜门箭楼）</li>
+<li>2018-02-05 西直门-阜成门-宣武门-中国铁道博物馆正阳门展馆-正阳门城楼</li>
+<li>2018-03-04 中国海关博物馆（雄关漫道：丝绸之路上的谷关）-北京古观象台
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/road\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/road\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -627,7 +677,7 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <p></p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/culture\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/culture\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -673,70 +723,7 @@ config.gpu_options.allow_growth = True
 <p>Startup tensorboard:</p>
                 </div>
 
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tensorflow\/'" >
-                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                </button>
-
-                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
-            </div><div class="col-12">
-                <h1 class="bd-title">
-                    <a class="text-dark bd-title" href="https://memoex.github.io/note/course/cs231n/">CS231n</a>
-                </h1>
-                <div class="mb-5">
-    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 24, 2017</time>
-    
-</div>
-
-                <div class="bd-content">
-                    <p>Course notes of CS231n, Convolutional Neural Networks for Visual Recognition.</p>
-
-<h2 id="2-image-classification-pipeline">2. Image Classification pipeline</h2>
-
-<ul>
-<li>Challenges
-
-<ul>
-<li>Viewpoint variation 多视角</li>
-<li>Illumination 光线</li>
-<li>Deformation 变形</li>
-<li>Occlusion 遮挡</li>
-<li>Background Clutter 杂乱的背景</li>
-<li>Intraclass variation 内类多样性</li>
-</ul></li>
-<li>Nearest Neighbor
-
-<ul>
-<li>Compute the distances of testing images and training images</li>
-<li>\(L_n\) norm
-
-<ul>
-<li>\((\sum_{i}{|X^i|^n})^{\frac{1}{n}}\)</li>
-</ul></li>
-<li>\(L_n\) distance
-
-<ul>
-<li>\((\sum_{i}{|X_1^i - X_2^i|^n})^{\frac{1}{n}}\)</li>
-</ul></li>
-<li>method
-
-<ul>
-<li>For each testing image, find the nearest training image</li>
-<li>Use the label of finding training image as the prediction</li>
-</ul></li>
-<li>complexity
-
-<ul>
-<li>Training: \(O(1)\)</li>
-<li>Testing: \(O(n)\)</li>
-</ul></li>
-</ul></li>
-</ul>
-
-<p></p>
-                </div>
-
-                <button class="col btn btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/course\/cs231n\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tensorflow\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -792,10 +779,54 @@ config.gpu_options.allow_growth = True
         
 
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" integrity="sha256-pS96pU17yq+gVu4KBQJi38VpSuKN7otMrDQprzf/DWY=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" integrity="sha256-meF2HJJ2Tcruwz3z4XcxYDRMxKprjdruBHc3InmixCQ=" crossorigin="anonymous"></script>
+<script>
+
+
+function tooltip(obj, text){
+    obj.tooltip('dispose')
+    obj.tooltip({
+        title: text,
+        boundary: 'viewport',
+        trigger: 'hover'
+    })
+    return obj
+}
+
+ 
+$('pre').each(function(i, l){
+
+    var btn = $('\x3cbutton type=\x22button\x22 class=\x22btn btn-light btn-copycode\x22 data-toggle=\x22tooltip\x22\x3e\n    \x3ci class=\x22fa fa-paste\x22\x3e\x3c\/i\x3e\n\x3c\/button\x3e\n').hide()
+    l.prepend(btn[0])
+
+     
+    $(l).hover(function(){
+        btn.show()
+        tooltip(btn, 'Copy to clipboard')
+    }, function(){
+        btn.fadeOut(200)
+    })
+})
+
+
+ 
+var clipboard = new ClipboardJS('.btn-copycode', {
+    target: function(trigger) {
+        return trigger.nextElementSibling
+    }
+})
+
+ 
+clipboard.on('success', function(e){
+    e.clearSelection()
+    tooltip($(e.trigger), 'Copied').tooltip('show')
+})
+</script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
@@ -808,6 +839,9 @@ config.gpu_options.allow_growth = True
 </script>
 
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
 
     </body>
 </html>
