@@ -3,6 +3,7 @@
 	<head>
         
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
 
 
@@ -91,6 +92,13 @@
             
             
             <li class="" >
+                <a href="https://memoex.github.io/note/2018-03-09-adobe/">
+                Adobe
+                </a>
+            </li>
+            
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/bootstrap/">
                 Bootstrap
                 </a>
@@ -107,6 +115,13 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/2018-03-03-css/">
                 CSS
+                </a>
+            </li>
+            
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/augmentation/">
+                Data Augmentation
                 </a>
             </li>
             
@@ -275,11 +290,9 @@
                             <div class="bd-content">
                                 <p>记录一些数学知识。</p>
 
-<h2 id="线性代数">线性代数</h2>
+<h2 id="matrix-multiplication">Matrix multiplication</h2>
 
-<h3 id="矩阵乘法">矩阵乘法</h3>
-
-<h4 id="矩阵乘法的由来">矩阵乘法的由来</h4>
+<h3 id="the-origin-of-matrix-multiplication">The origin of matrix multiplication</h3>
 
 <p><strong>参考：<a href="https://www.zhihu.com/question/19919917/answer/270694029">数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎</a></strong></p>
 
@@ -396,31 +409,68 @@ $$
 
 </div>
 
-<h4 id="矩阵乘法的理解">矩阵乘法的理解</h4>
+<h2 id="pythagorean-means">Pythagorean means</h2>
 
-<p><strong>几个概念</strong></p>
-
-<ul>
-<li>内积</li>
-</ul>
-
-<h3 id="特征值和特征向量">特征值和特征向量</h3>
-
-<p><dev>
-$$ A \mathbf{x} = \lambda \mathbf{x}$$
-</dev></p>
-
-<p>But why this?</p>
-
-<p>一些阅读材料：</p>
+<p>Pythagorean means （毕达哥拉斯的平均数） include:</p>
 
 <ul>
-<li><a href="https://www.zhihu.com/question/21874816/answer/181864044">如何理解矩阵特征值？ - 马同学的回答 - 知乎</a></li>
+<li><code>arithmetic mean</code></li>
+<li><code>geometric mean</code></li>
+<li><code>harmonic mean</code></li>
 </ul>
+
+<h3 id="arithmetic-mean">Arithmetic mean</h3>
+
+<p>The definition of arithmetic mean （算术平均数） is:</p>
+
+<p>$$
+AM = \frac1n (x_1 + x_2 + \cdots + x_n)
+$$</p>
+
+<h3 id="geometric-mean">Geometric mean</h3>
+
+<p>The definition of geometric mean （几何平均数） is:</p>
+
+<p>$$
+GM = \sqrt[n]{|x_1 \cdot x_2 \cdot \cdots \cdot x_n|}
+$$</p>
+
+<h3 id="harmonic-mean">Harmonic mean</h3>
+
+<p>The definition of harmonic mean (调和平均数) is:</p>
+
+<div>
+$$
+H = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \cdots + \frac{1}{x_n}} = \frac{n}{\displaystyle\sum_{i=0}^{n} \frac{1}{x_i}}
+$$
+</div>
+
+<p>There are some <a href="https://www.zhihu.com/question/23096098">stories</a> about harmonic mean.</p>
+
+<p>We must encounter this problem about average speed before.</p>
+
+<blockquote>
+<p>There are two docks A and B. <br/>
+One boat go to A from B down the river, its speed is 30 km/h, <br/>
+And this boat go back B from A, its speed is 20 km/h. <br/>
+What is the average speed of this boat?</p>
+
+<p>The answer is the harmonic mean of 20 and 30, 24.</p>
+</blockquote>
+
+<p>Another story:</p>
+
+<blockquote>
+<p>There is a couple, they both go to work by subway everyday.
+But because the distance between their companies and home is different. <br/>
+With the same money in card, husband spend them all with 20 days, and wife with 30 days. <br/>
+For the convinence of recharge, they want to spend all the money simultaneously. <br/>
+So in which days they exchange their cards can achieve this?</p>
+</blockquote>
 
 <h2 id="quick-notes">Quick notes</h2>
 
-<h3 id="梯度">梯度</h3>
+<h3 id="gradient">Gradient</h3>
 
 <p>沿梯度方向\(\nabla f \text{,} \  f\)增长最快。\(\nabla\), nabla [&lsquo;næblə]</p>
 

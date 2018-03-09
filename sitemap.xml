@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://memoex.github.io/note/2018-03-09-adobe/</loc>
+    <lastmod>2018-03-09T16:54:35+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/augmentation/</loc>
+    <lastmod>2018-03-08T22:06:06+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/note/metrics/</loc>
     <lastmod>2018-03-06T11:08:39+08:00</lastmod>
   </url>
@@ -195,7 +205,7 @@
   
   <url>
     <loc>https://memoex.github.io/</loc>
-    <lastmod>2018-03-06T11:08:39+08:00</lastmod>
+    <lastmod>2018-03-09T16:54:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -207,7 +217,7 @@
   
   <url>
     <loc>https://memoex.github.io/note/</loc>
-    <lastmod>2018-03-06T11:08:39+08:00</lastmod>
+    <lastmod>2018-03-09T16:54:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   

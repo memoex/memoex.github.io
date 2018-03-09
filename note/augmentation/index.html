@@ -119,7 +119,7 @@
             </li>
             
             
-            <li class="" >
+            <li class="active" >
                 <a href="https://memoex.github.io/note/augmentation/">
                 Data Augmentation
                 </a>
@@ -168,7 +168,7 @@
             </li>
             
             
-            <li class="active" >
+            <li class="" >
                 <a href="https://memoex.github.io/note/js/">
                 JavaScript
                 </a>
@@ -271,43 +271,74 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="bd-title">JavaScript</h1>
+                            <h1 class="bd-title">Data Augmentation</h1>
                             <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Feb 26, 2018</time>
+    <time class="px-1 font-weight-bold indigo-text">Mar 8, 2018</time>
     
 </div>
 
                             <div class="bd-content">
-                                <p>This is a note about JavaScript.</p>
+                                
 
-<h2 id="quick-notes">Quick notes</h2>
+<p>After reanding this post, you will know:</p>
 
-<h3 id="ignore-ssl-issue">Ignore SSL issue</h3>
+<ul>
+<li>Common data augmentation methods</li>
+<li>Implementation with <code>ImageDataGenerator</code> in keras</li>
+<li>Popular tools for data augmentation</li>
+</ul>
 
-<p><strong>Error:</strong> (node:99469) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 4): Error: Hostname/IP doesn&rsquo;t match certificate&rsquo;s altnames: &ldquo;IP: &lt;ip&gt; is not in the cert&rsquo;s list: &ldquo;</p>
+<h2 id="methods">Methods</h2>
 
-<p><a href="https://github.com/axios/axios/issues/535">https://github.com/axios/axios/issues/535</a></p>
+<p>In this section, I will introduce these augmentation methods:</p>
 
-<pre><code class="language-js">https = require('https')
-axios = require('axios')
+<ol>
+<li>cropping</li>
+<li>rotating</li>
+<li>flipping</li>
+</ol>
 
-// At instance level
-const instance = axios.create({
-  httpsAgent: new https.Agent({  
-    rejectUnauthorized: false
-  })
-});
-instance.get('https://something.com/foo');
+<h3 id="cropping">cropping</h3>
 
-// At request level
-const agent = new https.Agent({  
-  rejectUnauthorized: false
-});
-axios.get('https://something.com/foo', { httpsAgent: agent });
+<h3 id="rotating">rotating</h3>
+
+<h3 id="flipping">flipping</h3>
+
+<h2 id="tools">Tools</h2>
+
+<h3 id="imgaug">imgaug</h3>
+
+<blockquote>
+<p><code>imgaug</code> is a library for image augmentation in machine learning experiments. It supports a wide range of augmentation techniques, allows to easily combine these, has a simple yet powerful stochastic interface, can augment images and keypoints/landmarks on these and offers augmentation in background processes for improved performance.
+<br/></p>
+
+<p><a href="https://github.com/aleju/imgaug">Github</a></p>
+</blockquote>
+
+<h4 id="a-standard-use-case">A standard use case</h4>
+
+<p>The following example shows a standard use case. An augmentation sequence (crop + horizontal flips + gaussian blur) is defined once at the start of the script. Then many batches are loaded and augmented before being used for training.</p>
+
+<pre><code class="language-py">from imgaug import augmenters as iaa
+
+seq = iaa.Sequential([
+    iaa.Crop(px=(0, 16)), # crop images from each side by 0 to 16px (randomly chosen)
+    iaa.Fliplr(0.5), # horizontally flip 50% of the images
+    iaa.GaussianBlur(sigma=(0, 3.0)) # blur images with a sigma of 0 to 3.0
+])
+
+for batch_idx in range(1000):
+    # 'images' should be either a 4D numpy array of shape (N, height, width, channels)
+    # or a list of 3D numpy arrays, each having shape (height, width, channels).
+    # Grayscale images must have shape (height, width, 1) each.
+    # All images must have numpy's dtype uint8. Values are expected to be in
+    # range 0-255.
+    images = load_batch(batch_idx)
+    images_aug = seq.augment_images(images)
+    train_on_images(images_aug)
 </code></pre>
 
-<h2 id="hugomore42"></h2>
                             </div>
                         </div>
                     </div>

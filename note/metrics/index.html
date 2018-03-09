@@ -3,6 +3,7 @@
 	<head>
         
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
 
 
@@ -91,6 +92,13 @@
             
             
             <li class="" >
+                <a href="https://memoex.github.io/note/2018-03-09-adobe/">
+                Adobe
+                </a>
+            </li>
+            
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/bootstrap/">
                 Bootstrap
                 </a>
@@ -107,6 +115,13 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/2018-03-03-css/">
                 CSS
+                </a>
+            </li>
+            
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/augmentation/">
+                Data Augmentation
                 </a>
             </li>
             
@@ -276,16 +291,193 @@
 <li>precision （准确率，查准率）</li>
 <li>recall （召回率，查全率）</li>
 <li>f1-score</li>
+<li>fn-score</li>
 </ol>
-
-<p>p.
-* 中文名称参考了周志华老师的《机器学习》</p>
-
-<p>First, we should know some terminologies with a table.</p>
 
 <p></p>
 
+<p>(中文名称参考《机器学习》，周志华著)<sup class="footnote-ref" id="fnref:zhou"><a rel="footnote" href="#fn:zhou">1</a></sup></p>
+
+<p>First, we should know some terminologies from a table.</p>
+
+<table class="table">
+  <tr>
+    <th></th>
+    <th></th>
+    <th colspan="2">Predictiton</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Positive</td>
+    <td>Negative</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Truth</td>
+    <td>Positive</td>
+    <td>True Positive</td>
+    <td>False Negative</td>
+  </tr>
+  <tr>
+    <td>Negative</td>
+    <td>False Positive</td>
+    <td>True Negative</td>
+  </tr>
+</table>
+
+<p>The table above is called as a 2x2 contingency table or <code>confusion matrix</code> (混淆矩阵). <sup class="footnote-ref" id="fnref:recall"><a rel="footnote" href="#fn:recall">2</a></sup></p>
+
+<ul>
+<li><code>True Positive (TP)</code>: We predict it is positive, and it&rsquo;s right.</li>
+<li><code>True Negative (TN)</code>: We predict it is negative, and it&rsquo;s right.</li>
+<li><code>False Positive (FP)</code>: We predict it is positive, but it&rsquo;s wrong. In fact, it&rsquo;s negative.</li>
+<li><code>False Negative (FN)</code>: We predict it is negative, but it&rsquo;s wrong. In fact, it&rsquo;s positive.</li>
+</ul>
+
 <h3 id="accuracy">Accuracy</h3>
+
+<p>Accuracy is <strong>the correctness rate of your prediction</strong>.</p>
+
+<p>The number of your prediction:</p>
+
+<p>$$TP+TN+FP+FN$$</p>
+
+<p>The number of your correct prediction:</p>
+
+<p>$$TP+TN$$</p>
+
+<p>So the accuracy is:</p>
+
+<p>$$ accuracy = \frac{TP+TN}{TP+TN+FP+FN} $$</p>
+
+<h3 id="error-rate">Error (rate)</h3>
+
+<p><code>Error</code> is <strong>the wrong rate of your prediction</strong>.</p>
+
+<p>So according to the formula of accuracy, we can get the error rate.</p>
+
+<p>$$
+error = 1 - accuracy = \frac{FP+FN}{TP+TN+FP+FN}
+$$</p>
+
+<h3 id="precision">Precision</h3>
+
+<p><code>Precision</code> is the <strong>correctness rate of your positive prediction</strong>.</p>
+
+<p>Try to understand it use this example from Zhou&rsquo;s Machine Learnig:</p>
+
+<blockquote>
+<p>Consider you have trained a model to help you choose good watermelons. <br/>
+You want to know that the ratio of really good ones in the watermelons choosen by your model. <br/>
+That is precision.</p>
+</blockquote>
+
+<p>So the number of positive prediction is:</p>
+
+<p>$$TP+FP$$</p>
+
+<p>The number of correct positive prediction is:</p>
+
+<p>$$TP$$</p>
+
+<p>We can get the precision with:</p>
+
+<p>$$ precision = \frac{TP}{TP+FP} $$</p>
+
+<h3 id="recall">Recall</h3>
+
+<p><code>Recall</code> is <strong>the correctness rate of real positive</strong>. The focus is not your prediction, is the cases.</p>
+
+<p>This time we try to understand it with an example I saw in <a href="http://qr.ae/TU86Dq">Quora</a>.</p>
+
+<blockquote>
+<p>Consider you have a girl friend and she gave you a birthday surprise ever year in last 10 years.<br/>
+However, one day, she asks you: sweetie, do you remember all birthday surprises from me?
+You need to recall all 10 surprises or you are in danger.</p>
+
+<p>In this situation, all you need is to remember all 10 surprises correctly, no matter how many times you guess.
+You may guess many times before you get the right one of one year
+so that you can&rsquo;t get 100% precision. <br/>
+But that&rsquo;s ok, finally, you remember all luckily and you get the recall of 100%.</p>
+</blockquote>
+
+<p>So the number of really positive cases is:</p>
+
+<p>$$TP+FN$$</p>
+
+<p>The number of correct ones among them is:</p>
+
+<p>$$TP$$</p>
+
+<p>The recall is:</p>
+
+<p>$$ recall = \frac{TP}{TP+FN} $$</p>
+
+<h3 id="f-1-score">\(F_1\) score</h3>
+
+<p>Usually, we can&rsquo;t get high precision and high recall simultaneously.</p>
+
+<blockquote>
+<p>Girl friend example again. <br/>
+Assume you can&rsquo;t remember all superises clearly.
+You need guess to get correct answer.
+You have two strategies immediately.</p>
+
+<ol>
+<li>Guess as much as you can to make every surprise coverd correctely.</li>
+<li>Only tell the surprises you remember and don&rsquo;t say anything more.</li>
+</ol>
+
+<p>But I think they will both make you in danger. <br/>
+The frist one get a high recall and the second get a high precision.
+In fact, you should find a middle point. <br/></p>
+</blockquote>
+
+<p><code>F1 score</code> is <strong>the <a href="/note/math/#harmonic-mean">harmonic mean</a> of precision and recall</strong>:</p>
+
+<p>$$
+F_1 = \frac{2 \cdot precision \cdot recall}{precision + recall}
+$$</p>
+
+<h3 id="f-n-score">\(F_n\) score</h3>
+
+<p>Sometimes we probably think precision is more important than recall or recall is more important.
+And \(F_1\) score doesn&rsquo;t satisfy us, so we need more general \(F_n\) socre.</p>
+
+<blockquote>
+<p>This could be understand with two examples. <br/></p>
+
+<ol>
+<li>Considering spam detecting. It&rsquo;s unberable for us that important mails are detected as spams.
+So we want all spams we detected are real spams. So get a high precision is more important.</li>
+<li>Considering criminal catching. Police officers won&rsquo;t let every suspicious people go.
+So get a high recall is more important.</li>
+</ol>
+</blockquote>
+
+<p>The definition of \(F_n\) score is:</p>
+
+<p>$$
+F_n = (1+\beta^2) \cdot \frac{precision \cdot recall}{\beta^2 \cdot precision + recall}
+$$</p>
+
+<p>Two commonly used F measures are the \(F_2\) measure, which weights recall higher than precision.
+(More emphasis on \(\frac1{recall}\)). <br/>
+And the \( F_{0.5} \) measure, which weighs precision higher than recall.
+(More emphasis on \(\frac1{precision}\))<sup class="footnote-ref" id="fnref:f1"><a rel="footnote" href="#fn:f1">3</a></sup></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:zhou"><a href="http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm">http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm</a>
+ <a class="footnote-return" href="#fnref:zhou"><sup>[return]</sup></a></li>
+<li id="fn:recall"><a href="https://en.wikipedia.org/wiki/Precision_and_recall">https://en.wikipedia.org/wiki/Precision_and_recall</a>
+ <a class="footnote-return" href="#fnref:recall"><sup>[return]</sup></a></li>
+<li id="fn:f1"><a href="https://en.wikipedia.org/wiki/F1_score">https://en.wikipedia.org/wiki/F1_score</a>
+ <a class="footnote-return" href="#fnref:f1"><sup>[return]</sup></a></li>
+</ol>
+</div>
                             </div>
                         </div>
                     </div>

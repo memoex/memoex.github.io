@@ -20,11 +20,9 @@
       <guid>https://memoex.github.io/note/math/</guid>
       <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
 
-&lt;h2 id=&#34;线性代数&#34;&gt;线性代数&lt;/h2&gt;
+&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
 
-&lt;h3 id=&#34;矩阵乘法&#34;&gt;矩阵乘法&lt;/h3&gt;
-
-&lt;h4 id=&#34;矩阵乘法的由来&#34;&gt;矩阵乘法的由来&lt;/h4&gt;
+&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 
