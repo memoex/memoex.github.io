@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Fri, 09 Mar 2018 16:54:35 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Mar 2018 20:02:23 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CSGO</title>
+      <link>https://memoex.github.io/note/2018-03-12-csgo/</link>
+      <pubDate>Mon, 12 Mar 2018 20:02:23 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/2018-03-12-csgo/</guid>
+      <description>&lt;p&gt;My favorite game - Counter Strike: Global Offensive.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Adobe</title>
@@ -38,9 +49,9 @@
       <description>&lt;p&gt;After reanding this post, you will know:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Common data augmentation methods&lt;/li&gt;
-&lt;li&gt;Implementation with &lt;code&gt;ImageDataGenerator&lt;/code&gt; in Keras&lt;/li&gt;
-&lt;li&gt;Popular tools for data augmentation&lt;/li&gt;
+&lt;li&gt;Common data augmentation methods.&lt;/li&gt;
+&lt;li&gt;Image augmentation with &lt;code&gt;imgaug&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Popular tools for data augmentation.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -948,6 +959,11 @@ $$
 &lt;/ul&gt;
 
 &lt;hr /&gt;
+
+&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
 

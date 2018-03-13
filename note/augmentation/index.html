@@ -113,6 +113,13 @@
             
             
             <li class="" >
+                <a href="https://memoex.github.io/note/2018-03-12-csgo/">
+                CSGO
+                </a>
+            </li>
+            
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/2018-03-03-css/">
                 CSS
                 </a>
@@ -282,9 +289,9 @@
                                 <p>After reanding this post, you will know:</p>
 
 <ul>
-<li>Common data augmentation methods</li>
-<li>Implementation with <code>ImageDataGenerator</code> in Keras</li>
-<li>Popular tools for data augmentation</li>
+<li>Common data augmentation methods.</li>
+<li>Image augmentation with <code>imgaug</code>.</li>
+<li>Popular tools for data augmentation.</li>
 </ul>
 
 <p></p>
@@ -295,15 +302,261 @@
 
 <ol>
 <li>cropping</li>
+<li>shifting</li>
 <li>rotating</li>
 <li>flipping</li>
+<li>shearing</li>
+<li>color jittering
+
+<ol>
+<li>brigheness</li>
+<li>contrast</li>
+<li>fancy PCA</li>
+</ol></li>
+<li>salt and pepper</li>
 </ol>
+
+<p>The original images get from cifar-10 is like this:</p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/2w0WeeM.png" data-fancybox="gallery" data-caption="original images">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/2w0WeeM.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>original images</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">from keras.datasets import cifar10
+
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import linalg as la
+
+from imgaug import augmenters as iaa
+import imgaug as ia
+
+%matplotlib inline
+
+(X_train, y_train), (X_test, y_test) = cifar10.load_data()
+X_train = X_train.astype('float32')
+y_train = y_train.astype('float32')
+
+def show9(imgs):
+    ''' Create a grid of 3x3 images
+    '''
+    if imgs.max() &gt; 1:
+        imgs = imgs / 255.
+
+    for i in range(0, 9):
+        plt.subplot(330 + 1 + i)
+        plt.imshow(imgs[i], cmap=plt.get_cmap())
+    plt.show()
+
+imgs = X_train[0:9]
+show9(imgs)
+</code></pre>
 
 <h3 id="cropping">cropping</h3>
 
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/bvkU57j.png" data-fancybox="gallery" data-caption="images with cropping">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/bvkU57j.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>images with cropping</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Crop(percent = (0, 0.3))
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<h3 id="shifting">shifting</h3>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/sFLIDvK.png" data-fancybox="gallery" data-caption="images with shifting">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/sFLIDvK.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>images with shifting</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Affine(translate_percent={'x':(-0.1,0.1), 'y':(-0.1,0.1)})
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
 <h3 id="rotating">rotating</h3>
 
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/f8rLLZn.png" data-fancybox="gallery" data-caption="images with rotating">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/f8rLLZn.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>images with rotating</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Affine(rotate=(-25, 25))
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
 <h3 id="flipping">flipping</h3>
+
+<p>Also called as reflection.</p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/UoyJQ3D.png" data-fancybox="gallery" data-caption="images with horizontal flipping">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/UoyJQ3D.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>images with horizontal flipping</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Fliplr(0.5)
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/bfH3ttq.png" data-fancybox="gallery" data-caption="images with vertical flipping">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/bfH3ttq.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>images with vertical flipping</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Flipud(0.5)
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<h3 id="shearing">shearing</h3>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/rZEzakR.png" data-fancybox="gallery" data-caption="images with shearing">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/rZEzakR.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>images with shearing</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Affine(shear=(-20, 20))
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<h3 id="color-jitter">color jitter</h3>
+
+<h4 id="brightness">brightness</h4>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/9gO6BJa.png" data-fancybox="gallery" data-caption="change the brightness of images">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/9gO6BJa.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>change the brightness of images</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.Multiply((0.1, 1.5))
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<h4 id="contrast">contrast</h4>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/Ef9no0K.png" data-fancybox="gallery" data-caption="change the contrast of images">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/Ef9no0K.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>change the contrast of images</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.ContrastNormalization((0.75, 1.5))
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<h4 id="fancy-pca">fancy PCA</h4>
+
+<h3 id="salt-and-pepper">salt and pepper</h3>
+
+<p>Add salt (white points) and pepper (black points) to images.</p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0">
+    <a href="https://i.imgur.com/HJ2VhEn.png" data-fancybox="gallery" data-caption="add salt and pepper to images">
+        <img class="col mt-5 px-0 rounded" src="https://i.imgur.com/HJ2VhEn.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>add salt and pepper to images</p>
+    
+</div>
+
+
+<p>Code for this:</p>
+
+<pre><code class="language-py">seq = iaa.Sequential([
+    iaa.SaltAndPepper(p=(0, 0.1))
+])
+show_img_augs(imgs, seq)
+</code></pre>
+
+<p>You can read <a href="https://github.com/aleju/imgaug">REDME.md of imgaug</a> for more augmentation methods.</p>
 
 <h2 id="tools">Tools</h2>
 
@@ -338,6 +591,14 @@ for batch_idx in range(1000):
     images_aug = seq.augment_images(images)
     train_on_images(images_aug)
 </code></pre>
+
+<h3 id="links">Links</h3>
+
+<ul>
+<li><a href="https://github.com/aleju/imgaug">Github homepage of imgaug</a></li>
+<li><a href="http://imgaug.readthedocs.io/en/latest/source/examples_basics.html">Brief and complex Examples</a></li>
+<li><a href="http://imgaug.readthedocs.io/en/latest/source/augmenters.html">Quick reference</a></li>
+</ul>
                             </div>
                         </div>
                     </div>
