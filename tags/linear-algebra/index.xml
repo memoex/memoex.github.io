@@ -14,42 +14,17 @@
     
     <item>
       <title>Math</title>
-      <link>https://memoex.github.io/note/math/</link>
+      <link>https://memoex.github.io/note/math/math/</link>
       <pubDate>Wed, 06 Dec 2017 11:58:54 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/math/</guid>
-      <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
-
-&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
-
-&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;黑白电视到彩色电视
-
-&lt;ul&gt;
-&lt;li&gt;兼容问题&lt;/li&gt;
-&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div&gt;
-$$
-\begin{cases}
-0.299R + 0.587G + 0.114B = Y \\
-0.500R - 0.419G - 0.081B + 128 = C_r \\
--0.169R - 0.331G + 0.500B + 128 = C_b
-\end{cases}
-$$
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://memoex.github.io/note/math/math/</guid>
+      <description>Math notes.
+ Linear Algebra  Pythagorean means Pythagorean means （毕达哥拉斯的平均数） include:
+ arithmetic mean geometric mean harmonic mean  Arithmetic mean The definition of arithmetic mean （算术平均数） is:
+$$ AM = \frac1n (x_1 + x_2 + \cdots + x_n) $$
+Geometric mean The definition of geometric mean （几何平均数） is:
+$$ GM = \sqrt[n]{|x_1 \cdot x_2 \cdot \cdots \cdot x_n|} $$
+Harmonic mean The definition of harmonic mean (调和平均数) is:</description>
     </item>
     
   </channel>

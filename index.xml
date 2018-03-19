@@ -7,17 +7,74 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Mon, 12 Mar 2018 20:02:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Mar 2018 15:47:18 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Linear Algebra</title>
+      <link>https://memoex.github.io/note/math/la/</link>
+      <pubDate>Wed, 14 Mar 2018 15:47:18 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/la/</guid>
+      <description>&lt;p&gt;Linear Algebra notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
+
+&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黑白电视到彩色电视
+
+&lt;ul&gt;
+&lt;li&gt;兼容问题&lt;/li&gt;
+&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+$$
+\begin{cases}
+0.299R + 0.587G + 0.114B = Y \\
+0.500R - 0.419G - 0.081B + 128 = C_r \\
+-0.169R - 0.331G + 0.500B + 128 = C_b
+\end{cases}
+$$
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Color</title>
+      <link>https://memoex.github.io/note/tech/color/</link>
+      <pubDate>Tue, 13 Mar 2018 20:29:11 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/color/</guid>
+      <description>&lt;p&gt;We live in a colorful world, but color isn&amp;rsquo;t that simple.
+This article will introduce some knowledges of color, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How does human recognize colors&lt;/li&gt;
+&lt;li&gt;Different color space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>CSGO</title>
-      <link>https://memoex.github.io/note/2018-03-12-csgo/</link>
+      <link>https://memoex.github.io/note/others/csgo/</link>
       <pubDate>Mon, 12 Mar 2018 20:02:23 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/2018-03-12-csgo/</guid>
+      <guid>https://memoex.github.io/note/others/csgo/</guid>
       <description>&lt;p&gt;My favorite game - Counter Strike: Global Offensive.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -25,10 +82,10 @@
     
     <item>
       <title>Adobe</title>
-      <link>https://memoex.github.io/note/2018-03-09-adobe/</link>
+      <link>https://memoex.github.io/note/tech/2018-03-09-adobe/</link>
       <pubDate>Fri, 09 Mar 2018 16:54:35 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/2018-03-09-adobe/</guid>
+      <guid>https://memoex.github.io/note/tech/2018-03-09-adobe/</guid>
       <description>&lt;p&gt;In this article, you will see:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -42,11 +99,14 @@
     
     <item>
       <title>Data Augmentation</title>
-      <link>https://memoex.github.io/note/augmentation/</link>
+      <link>https://memoex.github.io/note/tech/augmentation/</link>
       <pubDate>Thu, 08 Mar 2018 22:06:06 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/augmentation/</guid>
-      <description>&lt;p&gt;After reanding this post, you will know:&lt;/p&gt;
+      <guid>https://memoex.github.io/note/tech/augmentation/</guid>
+      <description>&lt;p&gt;Data augmentation is the process of increasing the size of a dataset by transforming it
+in ways that a neural network is unlikely to learn by itself.&lt;/p&gt;
+
+&lt;p&gt;After reanding this post, you will know:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Common data augmentation methods.&lt;/li&gt;
@@ -59,10 +119,10 @@
     
     <item>
       <title>Metrics</title>
-      <link>https://memoex.github.io/note/metrics/</link>
+      <link>https://memoex.github.io/note/tech/metrics/</link>
       <pubDate>Tue, 06 Mar 2018 11:08:39 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/metrics/</guid>
+      <guid>https://memoex.github.io/note/tech/metrics/</guid>
       <description>&lt;p&gt;Sometimes it&amp;rsquo;s hard to tell the differences between precision, accuracy, recall and so on especially for newbees like me.&lt;/p&gt;
 
 &lt;p&gt;But let&amp;rsquo;s try to distinguish them with stories.
@@ -77,10 +137,10 @@ In this article, you will see some common used metrics, including:&lt;/p&gt;
     
     <item>
       <title>CSS</title>
-      <link>https://memoex.github.io/note/2018-03-03-css/</link>
+      <link>https://memoex.github.io/note/tech/2018-03-03-css/</link>
       <pubDate>Sat, 03 Mar 2018 19:51:40 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/2018-03-03-css/</guid>
+      <guid>https://memoex.github.io/note/tech/2018-03-03-css/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;h3 id=&#34;safe-fonts&#34;&gt;Safe fonts&lt;/h3&gt;
@@ -137,10 +197,10 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &amp;quot;Segoe
     
     <item>
       <title>JavaScript</title>
-      <link>https://memoex.github.io/note/js/</link>
+      <link>https://memoex.github.io/note/tech/js/</link>
       <pubDate>Mon, 26 Feb 2018 15:14:41 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/js/</guid>
+      <guid>https://memoex.github.io/note/tech/js/</guid>
       <description>&lt;p&gt;This is a note about JavaScript.&lt;/p&gt;
 
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
@@ -174,10 +234,10 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
     
     <item>
       <title>酒</title>
-      <link>https://memoex.github.io/note/alcohol/</link>
+      <link>https://memoex.github.io/note/others/alcohol/</link>
       <pubDate>Sun, 18 Feb 2018 15:12:01 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/alcohol/</guid>
+      <guid>https://memoex.github.io/note/others/alcohol/</guid>
       <description>&lt;h2 id=&#34;黄酒&#34;&gt;黄酒&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5Mzc5NTk1OQ==&amp;amp;mid=2652992222&amp;amp;idx=1&amp;amp;sn=04702e402c61ed5e67b653292152c892&#34;&gt;我知道你为什么不喝黄酒&lt;/a&gt;&lt;/p&gt;
@@ -203,10 +263,10 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
     
     <item>
       <title>Image</title>
-      <link>https://memoex.github.io/note/paper/image/</link>
+      <link>https://memoex.github.io/note/tech/image/</link>
       <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/paper/image/</guid>
+      <guid>https://memoex.github.io/note/tech/image/</guid>
       <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
 
 &lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
@@ -250,10 +310,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     
     <item>
       <title>Bootstrap</title>
-      <link>https://memoex.github.io/note/bootstrap/</link>
+      <link>https://memoex.github.io/note/tech/bootstrap/</link>
       <pubDate>Mon, 29 Jan 2018 22:19:05 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/bootstrap/</guid>
+      <guid>https://memoex.github.io/note/tech/bootstrap/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -312,10 +372,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     
     <item>
       <title>Docker</title>
-      <link>https://memoex.github.io/note/docker/</link>
+      <link>https://memoex.github.io/note/tech/docker/</link>
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/docker/</guid>
+      <guid>https://memoex.github.io/note/tech/docker/</guid>
       <description>&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -351,25 +411,31 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     
     <item>
       <title>路</title>
-      <link>https://memoex.github.io/note/road/</link>
+      <link>https://memoex.github.io/note/tour/road/</link>
       <pubDate>Thu, 11 Jan 2018 22:43:06 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/road/</guid>
+      <guid>https://memoex.github.io/note/tour/road/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;2018-01-07 大钟寺博物馆-中华民族园博物馆-中国动物博物馆&lt;/li&gt;
 &lt;li&gt;2018-01-14 清华大学艺术博物馆-香巴拉户外用品专卖店-中国人民大学&lt;/li&gt;
 &lt;li&gt;2018-01-21 惠新西街南口-天坛&lt;/li&gt;
 &lt;li&gt;2018-01-28 石刻艺术博物馆-古代钱币展览馆（德胜门箭楼）&lt;/li&gt;
 &lt;li&gt;2018-02-05 西直门-阜成门-宣武门-中国铁道博物馆正阳门展馆-正阳门城楼&lt;/li&gt;
-&lt;li&gt;2018-03-04 中国海关博物馆（雄关漫道：丝绸之路上的谷关）-北京古观象台</description>
+&lt;li&gt;2018-03-04 中国海关博物馆（雄关漫道：丝绸之路上的谷关）-北京古观象台&lt;/li&gt;
+&lt;li&gt;2018-03-10 国家典籍博物馆-中国古动物馆-李大钊故居&lt;/li&gt;
+&lt;li&gt;2018-03-17 首都博物馆
+
+&lt;ol&gt;
+&lt;li&gt;天路文华，西藏历史文化展&lt;/li&gt;
+&lt;li&gt;读城，发现北京四合院之美</description>
     </item>
     
     <item>
       <title>文化</title>
-      <link>https://memoex.github.io/note/culture/</link>
+      <link>https://memoex.github.io/note/tour/culture/</link>
       <pubDate>Mon, 08 Jan 2018 23:04:47 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/culture/</guid>
+      <guid>https://memoex.github.io/note/tour/culture/</guid>
       <description>&lt;h2 id=&#34;速记&#34;&gt;速记&lt;/h2&gt;
 
 &lt;h3 id=&#34;龙之九子&#34;&gt;龙之九子&lt;/h3&gt;
@@ -400,10 +466,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     
     <item>
       <title>行于五台</title>
-      <link>https://memoex.github.io/post/travel/wutai/</link>
+      <link>https://memoex.github.io/note/tour/wutai/</link>
       <pubDate>Tue, 02 Jan 2018 11:23:17 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/post/travel/wutai/</guid>
+      <guid>https://memoex.github.io/note/tour/wutai/</guid>
       <description>&lt;h2 id=&#34;出发&#34;&gt;出发&lt;/h2&gt;
 
 &lt;p&gt;旧岁之末，新年伊始，我们来到了五台山。&lt;/p&gt;
@@ -421,10 +487,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     
     <item>
       <title>Tensorflow</title>
-      <link>https://memoex.github.io/note/tensorflow/</link>
+      <link>https://memoex.github.io/note/tech/tensorflow/</link>
       <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tensorflow/</guid>
+      <guid>https://memoex.github.io/note/tech/tensorflow/</guid>
       <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
 
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
@@ -554,10 +620,10 @@ config.gpu_options.allow_growth = True
     
     <item>
       <title>Matlab</title>
-      <link>https://memoex.github.io/note/matlab/</link>
+      <link>https://memoex.github.io/note/tech/matlab/</link>
       <pubDate>Sat, 23 Dec 2017 16:02:19 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/matlab/</guid>
+      <guid>https://memoex.github.io/note/tech/matlab/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;! Matlab start from 1, not 0 !&lt;/strong&gt;&lt;/p&gt;
@@ -580,10 +646,10 @@ end
     
     <item>
       <title>Shell</title>
-      <link>https://memoex.github.io/note/shell/</link>
+      <link>https://memoex.github.io/note/tech/shell/</link>
       <pubDate>Wed, 20 Dec 2017 17:00:24 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/shell/</guid>
+      <guid>https://memoex.github.io/note/tech/shell/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;h3 id=&#34;system-information&#34;&gt;System information&lt;/h3&gt;
@@ -615,10 +681,10 @@ end
     
     <item>
       <title>Vim</title>
-      <link>https://memoex.github.io/note/vim/</link>
+      <link>https://memoex.github.io/note/tech/vim/</link>
       <pubDate>Mon, 18 Dec 2017 19:09:53 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/vim/</guid>
+      <guid>https://memoex.github.io/note/tech/vim/</guid>
       <description>&lt;p&gt;This notes contains useful tips for using Vim or editing and I use &lt;a href=&#34;http://vim.spf13.com/&#34;&gt;spf13-vim&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -674,10 +740,10 @@ end
     
     <item>
       <title>Forward Learning</title>
-      <link>https://memoex.github.io/note/paper/forward/</link>
+      <link>https://memoex.github.io/note/tech/forward/</link>
       <pubDate>Mon, 18 Dec 2017 19:01:49 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/paper/forward/</guid>
+      <guid>https://memoex.github.io/note/tech/forward/</guid>
       <description>&lt;p&gt;Papers read during research &lt;strong&gt;forward deep learning&lt;/strong&gt; algorithm.&lt;/p&gt;
 
 &lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
@@ -703,7 +769,7 @@ end
 &lt;li&gt;将问题分割成子问题，但试图用深度学习解决的问题，都不太好分割成子问题&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Can OBV construct a middle target for CNN?&lt;/strong&gt;&lt;/p&gt;
 
@@ -792,10 +858,10 @@ end
     
     <item>
       <title>Git</title>
-      <link>https://memoex.github.io/note/git/</link>
+      <link>https://memoex.github.io/note/tech/git/</link>
       <pubDate>Mon, 11 Dec 2017 10:41:22 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/git/</guid>
+      <guid>https://memoex.github.io/note/tech/git/</guid>
       <description>&lt;p&gt;Some git notes.&lt;/p&gt;
 
 &lt;h2 id=&#34;基本配置&#34;&gt;基本配置&lt;/h2&gt;
@@ -825,10 +891,10 @@ git config --global core.editor &amp;quot;vim&amp;quot;
     
     <item>
       <title>Python</title>
-      <link>https://memoex.github.io/note/python/</link>
+      <link>https://memoex.github.io/note/tech/python/</link>
       <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/python/</guid>
+      <guid>https://memoex.github.io/note/tech/python/</guid>
       <description>&lt;p&gt;Some python notes.&lt;/p&gt;
 
 &lt;h2 id=&#34;package-notes&#34;&gt;Package notes&lt;/h2&gt;
@@ -870,50 +936,25 @@ git config --global core.editor &amp;quot;vim&amp;quot;
     
     <item>
       <title>Math</title>
-      <link>https://memoex.github.io/note/math/</link>
+      <link>https://memoex.github.io/note/math/math/</link>
       <pubDate>Wed, 06 Dec 2017 11:58:54 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/math/</guid>
-      <description>&lt;p&gt;记录一些数学知识。&lt;/p&gt;
-
-&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
-
-&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;黑白电视到彩色电视
-
-&lt;ul&gt;
-&lt;li&gt;兼容问题&lt;/li&gt;
-&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div&gt;
-$$
-\begin{cases}
-0.299R + 0.587G + 0.114B = Y \\
-0.500R - 0.419G - 0.081B + 128 = C_r \\
--0.169R - 0.331G + 0.500B + 128 = C_b
-\end{cases}
-$$
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://memoex.github.io/note/math/math/</guid>
+      <description>Math notes.
+ Linear Algebra  Pythagorean means Pythagorean means （毕达哥拉斯的平均数） include:
+ arithmetic mean geometric mean harmonic mean  Arithmetic mean The definition of arithmetic mean （算术平均数） is:
+$$ AM = \frac1n (x_1 + x_2 + \cdots + x_n) $$
+Geometric mean The definition of geometric mean （几何平均数） is:
+$$ GM = \sqrt[n]{|x_1 \cdot x_2 \cdot \cdots \cdot x_n|} $$
+Harmonic mean The definition of harmonic mean (调和平均数) is:</description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://memoex.github.io/note/hugo/</link>
+      <link>https://memoex.github.io/note/tech/hugo/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/hugo/</guid>
+      <guid>https://memoex.github.io/note/tech/hugo/</guid>
       <description>&lt;p&gt;Hugo releated notes. Current take some notes when reading official docuemts&lt;/p&gt;
 
 &lt;h2 id=&#34;reading-documents&#34;&gt;Reading documents&lt;/h2&gt;
@@ -944,10 +985,10 @@ $$
     
     <item>
       <title>Keras</title>
-      <link>https://memoex.github.io/note/keras/</link>
+      <link>https://memoex.github.io/note/tech/keras/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/keras/</guid>
+      <guid>https://memoex.github.io/note/tech/keras/</guid>
       <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
 
 &lt;ul&gt;

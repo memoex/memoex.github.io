@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://memoex.github.io/note/2018-03-12-csgo/</loc>
+    <loc>https://memoex.github.io/note/math/la/</loc>
+    <lastmod>2018-03-14T15:47:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/color/</loc>
+    <lastmod>2018-03-13T20:29:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/others/csgo/</loc>
     <lastmod>2018-03-12T20:02:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/2018-03-09-adobe/</loc>
+    <loc>https://memoex.github.io/note/tech/2018-03-09-adobe/</loc>
     <lastmod>2018-03-09T16:54:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/augmentation/</loc>
+    <loc>https://memoex.github.io/note/tech/augmentation/</loc>
     <lastmod>2018-03-08T22:06:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/metrics/</loc>
+    <loc>https://memoex.github.io/note/tech/metrics/</loc>
     <lastmod>2018-03-06T11:08:39+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/2018-03-03-css/</loc>
+    <loc>https://memoex.github.io/note/tech/2018-03-03-css/</loc>
     <lastmod>2018-03-03T19:51:40+08:00</lastmod>
   </url>
   
@@ -33,47 +43,47 @@
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/js/</loc>
+    <loc>https://memoex.github.io/note/tech/js/</loc>
     <lastmod>2018-02-26T15:14:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/alcohol/</loc>
+    <loc>https://memoex.github.io/note/others/alcohol/</loc>
     <lastmod>2018-02-18T15:12:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/paper/image/</loc>
+    <loc>https://memoex.github.io/note/tech/image/</loc>
     <lastmod>2018-01-31T20:25:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/bootstrap/</loc>
+    <loc>https://memoex.github.io/note/tech/bootstrap/</loc>
     <lastmod>2018-01-29T22:19:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/docker/</loc>
+    <loc>https://memoex.github.io/note/tech/docker/</loc>
     <lastmod>2018-01-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/road/</loc>
+    <loc>https://memoex.github.io/note/tour/road/</loc>
     <lastmod>2018-01-11T22:43:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/culture/</loc>
+    <loc>https://memoex.github.io/note/tour/culture/</loc>
     <lastmod>2018-01-08T23:04:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/post/travel/wutai/</loc>
+    <loc>https://memoex.github.io/note/tour/wutai/</loc>
     <lastmod>2018-01-02T11:23:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/tensorflow/</loc>
+    <loc>https://memoex.github.io/note/tech/tensorflow/</loc>
     <lastmod>2017-12-25T14:46:16+08:00</lastmod>
   </url>
   
@@ -88,22 +98,22 @@
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/matlab/</loc>
+    <loc>https://memoex.github.io/note/tech/matlab/</loc>
     <lastmod>2017-12-23T16:02:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/shell/</loc>
+    <loc>https://memoex.github.io/note/tech/shell/</loc>
     <lastmod>2017-12-20T17:00:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/vim/</loc>
+    <loc>https://memoex.github.io/note/tech/vim/</loc>
     <lastmod>2017-12-18T19:09:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/paper/forward/</loc>
+    <loc>https://memoex.github.io/note/tech/forward/</loc>
     <lastmod>2017-12-18T19:01:49+08:00</lastmod>
   </url>
   
@@ -113,27 +123,27 @@
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/git/</loc>
+    <loc>https://memoex.github.io/note/tech/git/</loc>
     <lastmod>2017-12-11T10:41:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/python/</loc>
+    <loc>https://memoex.github.io/note/tech/python/</loc>
     <lastmod>2017-12-10T21:05:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/math/</loc>
+    <loc>https://memoex.github.io/note/math/math/</loc>
     <lastmod>2017-12-06T11:58:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/hugo/</loc>
+    <loc>https://memoex.github.io/note/tech/hugo/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/keras/</loc>
+    <loc>https://memoex.github.io/note/tech/keras/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -152,6 +162,11 @@
     <loc>https://memoex.github.io/tags/cnn/</loc>
     <lastmod>2017-12-18T19:01:49+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/course/</loc>
+    <lastmod>2017-12-24T16:35:25+08:00</lastmod>
   </url>
   
   <url>
@@ -197,6 +212,11 @@
   </url>
   
   <url>
+    <loc>https://memoex.github.io/note/math/</loc>
+    <lastmod>2018-03-14T15:47:18+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/tags/matlab/</loc>
     <lastmod>2017-12-23T16:02:19+08:00</lastmod>
     <priority>0</priority>
@@ -210,7 +230,7 @@
   
   <url>
     <loc>https://memoex.github.io/</loc>
-    <lastmod>2018-03-12T20:02:23+08:00</lastmod>
+    <lastmod>2018-03-14T15:47:18+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,7 +242,6 @@
   
   <url>
     <loc>https://memoex.github.io/note/</loc>
-    <lastmod>2018-03-12T20:02:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -233,9 +252,8 @@
   </url>
   
   <url>
-    <loc>https://memoex.github.io/post/</loc>
-    <lastmod>2018-01-02T11:23:17+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://memoex.github.io/note/others/</loc>
+    <lastmod>2018-03-12T20:02:23+08:00</lastmod>
   </url>
   
   <url>
@@ -260,6 +278,16 @@
     <loc>https://memoex.github.io/tags/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/</loc>
+    <lastmod>2018-03-13T20:29:11+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tour/</loc>
+    <lastmod>2018-01-11T22:43:06+08:00</lastmod>
   </url>
   
   <url>

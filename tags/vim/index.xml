@@ -14,10 +14,10 @@
     
     <item>
       <title>Vim</title>
-      <link>https://memoex.github.io/note/vim/</link>
+      <link>https://memoex.github.io/note/tech/vim/</link>
       <pubDate>Mon, 18 Dec 2017 19:09:53 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/vim/</guid>
+      <guid>https://memoex.github.io/note/tech/vim/</guid>
       <description>&lt;p&gt;This notes contains useful tips for using Vim or editing and I use &lt;a href=&#34;http://vim.spf13.com/&#34;&gt;spf13-vim&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
