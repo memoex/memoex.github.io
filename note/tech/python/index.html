@@ -92,7 +92,7 @@
             
             
             <li class="" >
-                <a href="https://memoex.github.io/note/tech/2018-03-09-adobe/">
+                <a href="https://memoex.github.io/note/tech/adobe/">
                 Adobe
                 </a>
             </li>
@@ -122,6 +122,13 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/tech/2018-03-03-css/">
                 CSS
+                </a>
+            </li>
+            
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/math/calculus/">
+                Calculus
                 </a>
             </li>
             
@@ -327,6 +334,19 @@
 <li><a href="https://stackoverflow.com/a/29916445">line number</a></li>
 <li><a href="http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments">Kernels for different environments</a></li>
 </ul>
+
+<h3 id="jupyter-kernels">Jupyter kernels</h3>
+
+<pre><code class="language-sh"># List kernels
+jupyter kernelspec list
+
+# Add python kernel to jupyter
+# Name is like an id. This command can also be use to change dispaly name of an existed kernel.
+/path/to/kernel/env/bin/python -m ipykernel install --prefix=/path/to/jupyter/env --name 'python-my-env' --display-name 'Python x - Display name'
+
+# Remove kernels (Or just remove the whole directory listed with the command above)
+jupyter kernelspec remove &lt;jupyter-kernel-name&gt;
+</code></pre>
 
 <h3 id="tricks">Tricks</h3>
 

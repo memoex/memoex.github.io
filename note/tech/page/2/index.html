@@ -92,7 +92,7 @@
             
             
             <li class="" >
-                <a href="https://memoex.github.io/note/tech/2018-03-09-adobe/">
+                <a href="https://memoex.github.io/note/tech/adobe/">
                 Adobe
                 </a>
             </li>
@@ -122,6 +122,13 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/tech/2018-03-03-css/">
                 CSS
+                </a>
+            </li>
+            
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/math/calculus/">
+                Calculus
                 </a>
             </li>
             
@@ -302,6 +309,63 @@
 <main>
     <div class="p-0 container-fluid rounded">
         <div class="col-12">
+                <h1 class="bd-title">
+                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/image/">Image</a>
+                </h1>
+                <div class="mb-5">
+    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
+    <time class="px-1 font-weight-bold indigo-text">Jan 31, 2018</time>
+    
+</div>
+
+                <div class="bd-content">
+                    <p>Notes about image processing.</p>
+
+<h2 id="convolution">Convolution</h2>
+
+<h3 id="implementation-of-convolution">Implementation of convolution</h3>
+
+<ul>
+<li><a href="https://buptldy.github.io/2016/10/01/2016-10-01-im2col/">Implementing convolution as a matrix multiplication</a></li>
+</ul>
+
+<p>提取灰度特征和边缘特征的卷积核：</p>
+
+<pre><code class="language-py"># Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+</code></pre>
+
+<p><code>im2col</code></p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
+    <a class="d-block mx-auto" href="https://i.imgur.com/gUZGkvi.png" data-fancybox="gallery" data-caption="An example for im2col">
+        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/gUZGkvi.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>An example for im2col</p>
+    
+</div>
+
+
+<p></p>
+                </div>
+
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/image\/'" >
+                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+
+                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
+            </div><div class="col-12">
                 <h1 class="bd-title">
                     <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/bootstrap/">Bootstrap</a>
                 </h1>
@@ -754,60 +818,6 @@ end
                 </div>
 
                 <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/matlab\/'" >
-                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                </button>
-
-                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
-            </div><div class="col-12">
-                <h1 class="bd-title">
-                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/shell/">Shell</a>
-                </h1>
-                <div class="mb-5">
-    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 20, 2017</time>
-    
-        <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/shell'>shell</a>
-                </li>
-            
-        </ul>
-    
-</div>
-
-                <div class="bd-content">
-                    <h2 id="quick-notes">Quick notes</h2>
-
-<h3 id="system-information">System information</h3>
-
-<ul>
-<li><code>neofetch</code>, system info</li>
-<li><code>du -sh &lt;file&gt;/&lt;directory&gt;</code>, check the size of file or directory</li>
-<li><code>df -h</code>, display free disk space
-
-<ul>
-<li><code>-h</code>, 1k = 1024 byte</li>
-<li><code>-H</code>, 1k = 1000 byte</li>
-</ul></li>
-<li><code>uname -s</code>, print kernel name
-
-<ul>
-<li>Linux</li>
-<li>Darwin</li>
-</ul></li>
-<li><code>uname -r</code>, linux release number</li>
-<li><code>last -n 50</code>, check last logged in users</li>
-<li><code>lastb -n 50</code>,</li>
-<li><code>pstree -p</code>, process tree</li>
-<li><code>w</code>, show who is logged on and what they are doing</li>
-</ul>
-
-<p></p>
-                </div>
-
-                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/shell\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 

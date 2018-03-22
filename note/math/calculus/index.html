@@ -126,7 +126,7 @@
             </li>
             
             
-            <li class="" >
+            <li class="active" >
                 <a href="https://memoex.github.io/note/math/calculus/">
                 Calculus
                 </a>
@@ -252,7 +252,7 @@
             </li>
             
             
-            <li class="active" >
+            <li class="" >
                 <a href="https://memoex.github.io/note/tech/tensorflow/">
                 Tensorflow
                 </a>
@@ -306,177 +306,64 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="bd-title">Tensorflow</h1>
+                            <h1 class="bd-title">Calculus</h1>
                             <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 25, 2017</time>
+    <time class="px-1 font-weight-bold indigo-text">Mar 22, 2018</time>
     
 </div>
 
                             <div class="bd-content">
-                                <p>Notes about using Tensorflow</p>
+                                <p>I can&rsquo;t stand my poor math anymore, and start to re-learn math from calculus.</p>
 
-<h2 id="quick-notes">Quick notes</h2>
+<p>This notes will record some formulas and anything intersting about calculus.</p>
 
-<p>trainable: If <code>True</code>, the default, also adds the variable to the graph collection <code>GraphKeys.TRAINABLE_VARIABLES</code>. This collection is used as the default list of variables to use by the <code>Optimizer</code> classes.</p>
+<h2 id="trigonometry">Trigonometry</h2>
 
-<p><strong>Tensorflow gpu auto growth</strong></p>
+<h3 id="astc-method">ASTC method</h3>
 
-<pre><code class="language-py">config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-</code></pre>
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
+    <a class="d-block mx-auto" href="https://i.imgur.com/6gLcT4l.png" data-fancybox="gallery" data-caption="ASTC method">
+        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/6gLcT4l.png" />
+    </a>
 
-<p><strong>Reset default graph</strong></p>
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>ASTC method</p>
+    
+</div>
 
-<p><code>tf.reset_default_graph()</code></p>
 
-<p><strong>Tensorboard</strong></p>
+<h3 id="trig-identities">Trig Identities</h3>
 
-<pre><code class="language-py">with tf.Session(config=config) as sess:
+<p>$$
+\begin{array}{l}
+cos^2(x) + sin^2(x) =1 \\<br />
+1 + tan^2(x) = sec^2(x)
+\end{array}
+$$</p>
 
-    # ...
+<p>$$
+\begin{array}{ll}
+sin(A+B) &amp; = &amp; sin(A)cos(B) + cos(A)sin(B) \\<br />
+cos(A+B) &amp; = &amp; cos(A)cos(B) - sin(A)sin(B) \\<br />
+sin(2x)  &amp; = &amp; 2 sin(x) cos(x) \\<br />
+cos(2x)  &amp; = &amp; 2 cos^2(x) - 1  = 1 - 2 sin^2(x)
+\end{array}
+$$</p>
 
-    writer = tf.summary.FileWriter('./graphs/test', sess.graph)
-    writer.flush()
-    writer.close()
-</code></pre>
+<p></p>
 
-<p>Startup tensorboard:</p>
+<h3 id="tangent-half-angle-formula">Tangent half-angle formula</h3>
 
-<p><code>tensorboasrd --logdir=&quot;&lt;path&gt;&quot; --port 6006 --reload_interval=5</code></p>
+<p>又称为“万能公式”。</p>
 
-<h2 id="hugomore42"></h2>
-
-<h3 id="reuse-name-scope">Reuse <code>name_scope</code></h3>
-
-<pre><code class="language-py">with tf.name_scope('variable') as var_scope:
-    # ...
-# ...
-with tf.name_scope(var_scope):
-    # ...
-
-</code></pre>
-
-<h3 id="notes-of-kernel-extractor">Notes of Kernel extractor</h3>
-
-<ul>
-<li>Add a new axis, [10] =&gt; [10, 1], <code>tf.expand_dims(a, 1)</code></li>
-<li>Filter with boolean, <code>tf.boolean_mask(a, mask)</code></li>
-<li><code>tf.matrix_band_part(input, num_lower, num_upper)</code> WTF
-
-<ul>
-<li><code>(0, -1)</code> Upper triangular part</li>
-<li><code>(-1, 0)</code> Lower triangular part</li>
-<li><code>(0, 0)</code> Diagonal</li>
-</ul></li>
-<li><a href="https://www.tensorflow.org/versions/r0.12/api_docs/python/math_ops/matrix_math_functions">Matrix Math Functions</a></li>
-<li>Assign zeors to diagonal, <code>tf.matrix_set_diag(a, tf.zeros_like(tf.diag_part(a)))</code></li>
-<li>Bool Variable, <code>tf.Variable(tf.cast(tf.ones([2, 2]), tf.bool))</code></li>
-<li>Get variables under <code>name_scope</code>, <code>tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='&lt;scope_name&gt;')</code></li>
-</ul>
-
-<hr />
-
-<h3 id="tensorflow-assignment">Tensorflow Assignment</h3>
-
-<p>一个重要的观念或者是习惯上的转变是</p>
-
-<ol>
-<li>Variable</li>
-<li>Operation</li>
-<li>用操作去修改变量</li>
-</ol>
-
-<p>Operation 一旦定义好了，是可以反复使用的，像optimizer。这其中的关键是，operation包含了把结果存储到变量的操作。</p>
-
-<p>另外一个观念上的转变是，Graph和Session的分离</p>
-
-<ol>
-<li>构建Graph，包括Variable和Operation</li>
-<li>用Session去运行Operation</li>
-<li>不可以在run的过程中构建新的Operation，会出错, device error?</li>
-</ol>
-
-<h4 id="usage-of-tf-scatter-update">Usage of <code>tf.scatter_update</code></h4>
-
-<pre><code class="language-py">tf.scatter_update(selection, index, False)
-</code></pre>
-
-<h4 id="usage-of-tf-scatter-nd-update">Usage of <code>tf.scatter_nd_update</code></h4>
-
-<p>Change the value of <code>x[1,:]</code> and <code>x[:,1]</code> simultaneously.</p>
-
-<pre><code class="language-py">tf.reset_default_graph()
-with tf.Session() as sess:
-    n = 3
-    k = 1
-    x = tf.Variable(tf.zeros([n, n]))
-    indices = zip([k]*n + range(n), range(n) + [k]*n) # [[1,0], [1,1], ...]
-    updates = -1 * tf.ones([len(indices)])
-    update_op = tf.scatter_nd_update(x, indices, updates)
-
-    sess.run(tf.global_variable_initializer())
-    sess.run(update_op)
-    print sess.run(x)
-'''
-[[0, 0, 0],
- [0, 0, 0],
- [0, 0, 0]]
-=&gt;
-[[0, -1, 0],
- [-1, -1, -1],
- [0, -1, 0]]
-'''
-</code></pre>
-
-<hr />
-
-<h3 id="tensorboard">Tensorboard</h3>
-
-<pre><code class="language-py">tf.summary.scalar('accuracy', accuracy) # accuracy is a Tensor
-summary_op = tf.summary.merge_all()
-summary = sess.run(summary_op)
-writer = tf.summary.FileWriter('/graphs/sub_path', graph=sess.graph)
-writer.add_summary(summary, epoch) # epoch is an integer
-</code></pre>
-
-<p>The best practice is use different <code>sub_path</code> name for different training. So we can compare one spercific metric of each training in one grapph.</p>
-
-<p>For example, using:</p>
-
-<pre><code class="language-py">from datetime import datetime
-def get_log_path(model_name):
-    t = datetime.now().strftime(&quot;%Y-%m-%d-%H-%M-%S&quot;)
-    return './graphs/' + model_name + '-' + t
-</code></pre>
-
-<hr />
-
-<h3 id="padding-mode">Padding mode</h3>
-
-<p><a href="https://stackoverflow.com/a/39371113">What is the difference between &lsquo;SAME&rsquo; and &lsquo;VALID&rsquo; padding in tf.nn.max_pool of tensorflow?</a></p>
-
-<ul>
-<li>Input width = 13</li>
-<li>Filter width = 6</li>
-<li>Stride = 5</li>
-</ul>
-
-<p><code>padding='valid'</code>:</p>
-
-<pre><code class="language-py">inputs:         1  2  3  4  5  6  7  8  9  10 11 (12 13)
-              |________________|                dropped
-                             |_________________|
-</code></pre>
-
-<p><code>padding='same'</code>:</p>
-
-<pre><code class="language-py">           pad|                                      |pad
-inputs:      0 |1  2  3  4  5  6  7  8  9  10 11 12 13|0  0
-           |________________|
-                          |_________________|
-                                         |________________|
-</code></pre>
+<p>$$
+\begin{array}{ll}
+sin \alpha &amp; = &amp; \dfrac{2tan\dfrac{\alpha}{2}}{1+tan^2\dfrac{\alpha}{2}} \\<br />
+cos \alpha &amp; = &amp; \dfrac{1 - tan^2\dfrac{\alpha}{2}}{1+tan^2\dfrac{\alpha}{2}} \\<br />
+tan \alpha &amp; = &amp; \dfrac{2tan\dfrac{\alpha}{2}}{1-tan^2\dfrac{\alpha}{2}} \\<br />
+\end{array}
+$$</p>
                             </div>
                         </div>
                     </div>

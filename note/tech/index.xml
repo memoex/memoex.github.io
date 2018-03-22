@@ -31,10 +31,10 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
     
     <item>
       <title>Adobe</title>
-      <link>https://memoex.github.io/note/tech/2018-03-09-adobe/</link>
+      <link>https://memoex.github.io/note/tech/adobe/</link>
       <pubDate>Fri, 09 Mar 2018 16:54:35 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/2018-03-09-adobe/</guid>
+      <guid>https://memoex.github.io/note/tech/adobe/</guid>
       <description>&lt;p&gt;In this article, you will see:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -106,9 +106,9 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &amp;quot;Segoe
 
 &lt;p&gt;See this great inforgraphic: &lt;a href=&#34;http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/&#34;&gt;The Difference Between Serif And Sans-Serif Explained In One Infographic&lt;/a&gt;&lt;/p&gt;
 
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0&#34;&gt;
-    &lt;a href=&#34;https://i.imgur.com/519YeM0.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Serif (left) and Sans Serif (right)&#34;&gt;
-        &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/519YeM0.jpg&#34; /&gt;
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/519YeM0.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Serif (left) and Sans Serif (right)&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/519YeM0.jpg&#34; /&gt;
     &lt;/a&gt;
 
     
@@ -190,9 +190,9 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 
 &lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0&#34;&gt;
-    &lt;a href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
-        &lt;img class=&#34;col mt-5 px-0 rounded&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
     &lt;/a&gt;
 
     
@@ -584,6 +584,19 @@ git config --global core.editor &amp;quot;vim&amp;quot;
 &lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/29916445&#34;&gt;line number&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments&#34;&gt;Kernels for different environments&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&#34;jupyter-kernels&#34;&gt;Jupyter kernels&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List kernels
+jupyter kernelspec list
+
+# Add python kernel to jupyter
+# Name is like an id. This command can also be use to change dispaly name of an existed kernel.
+/path/to/kernel/env/bin/python -m ipykernel install --prefix=/path/to/jupyter/env --name &#39;python-my-env&#39; --display-name &#39;Python x - Display name&#39;
+
+# Remove kernels (Or just remove the whole directory listed with the command above)
+jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;tricks&#34;&gt;Tricks&lt;/h3&gt;
 

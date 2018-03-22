@@ -7,10 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Wed, 14 Mar 2018 15:47:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Mar 2018 15:29:35 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/math/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Calculus</title>
+      <link>https://memoex.github.io/note/math/calculus/</link>
+      <pubDate>Thu, 22 Mar 2018 15:29:35 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/calculus/</guid>
+      <description>&lt;p&gt;I can&amp;rsquo;t stand my poor math anymore, and start to re-learn math from calculus.&lt;/p&gt;
+
+&lt;p&gt;This notes will record some formulas and anything intersting about calculus.&lt;/p&gt;
+
+&lt;h2 id=&#34;trigonometry&#34;&gt;Trigonometry&lt;/h2&gt;
+
+&lt;h3 id=&#34;astc-method&#34;&gt;ASTC method&lt;/h3&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/6gLcT4l.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;ASTC method&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/6gLcT4l.png&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;ASTC method&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;trig-identities&#34;&gt;Trig Identities&lt;/h3&gt;
+
+&lt;p&gt;$$
+\begin{array}{l}
+cos^2(x) + sin^2(x) =1 \\&lt;br /&gt;
+1 + tan^2(x) = sec^2(x)
+\end{array}
+$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{array}{ll}
+sin(A+B) &amp;amp; = &amp;amp; sin(A)cos(B) + cos(A)sin(B) \\&lt;br /&gt;
+cos(A+B) &amp;amp; = &amp;amp; cos(A)cos(B) - sin(A)sin(B) \\&lt;br /&gt;
+sin(2x)  &amp;amp; = &amp;amp; 2 sin(x) cos(x) \\&lt;br /&gt;
+cos(2x)  &amp;amp; = &amp;amp; 2 cos^2(x) - 1  = 1 - 2 sin^2(x)
+\end{array}
+$$&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linear Algebra</title>
