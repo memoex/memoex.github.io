@@ -7,10 +7,320 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Thu, 22 Mar 2018 15:29:35 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2018 20:25:38 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Image</title>
+      <link>https://memoex.github.io/note/tech/image/</link>
+      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/</guid>
+      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
+
+&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
+
+&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>https://memoex.github.io/note/math/math/</link>
+      <pubDate>Wed, 06 Dec 2017 11:58:54 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/math/</guid>
+      <description>&lt;p&gt;Math notes.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/math/la&#34;&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;greek-alphabet&#34;&gt;Greek alphabet&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Lowercase&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Uppercase&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;alpha&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\alpha\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(A\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;beta&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\beta\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(B\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;gamma&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\gamma\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Gamma\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;delta&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\delta\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Delta\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;epsilon&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\epsilon\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(E\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;zeta&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\zeta\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(Z\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;eta&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\eta\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(H\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;theta&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\theta\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Theta\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;iota&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\iota\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(I\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;kappa&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\kappa\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(K\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;lambda&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\lambda\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Lambda\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;mu&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\mu\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(M\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;nu&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\nu\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(N\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;xi&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\xi\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Xi\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;omicron&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\omicron\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(O\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;pi&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\pi\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Pi\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;rho&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\rho\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(P\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;sigma&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\sigma\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Sigma\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;tau&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\tau\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(T\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;upsilon&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\upsilon\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Upsilon\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;phi&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\phi\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Phi\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;chi&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\chi\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(X\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;psi&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\psi\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Psi\)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;em&gt;omega&lt;/em&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\omega\)&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;\(\Omega\)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Loss Function</title>
+      <link>https://memoex.github.io/note/tech/loss/</link>
+      <pubDate>Mon, 19 Mar 2018 19:44:24 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/loss/</guid>
+      <description>This article introdcues some common loss function which also called as cost function in classification 1 2.
+Loss function in classification The goal of classification problem, or many machine learning porblem, is given training sets \(\{(x^{(i)}, y^{(i)}); i=1,\cdots,m\}\), to find a good predictor \(f\) so that \(f(x^{(i)})\) is a good estimate of \(y^{(i)}\).
+Why we need a loss function?
+To measure how &amp;ldquo;close&amp;rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\).</description>
+    </item>
+    
+    <item>
+      <title>Data Augmentation</title>
+      <link>https://memoex.github.io/note/tech/augmentation/</link>
+      <pubDate>Thu, 08 Mar 2018 22:06:06 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/augmentation/</guid>
+      <description>&lt;p&gt;Data augmentation is the process of increasing the size of a dataset by transforming it
+in ways that a neural network is unlikely to learn by itself.&lt;/p&gt;
+
+&lt;p&gt;After reanding this post, you will know:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Common data augmentation methods.&lt;/li&gt;
+&lt;li&gt;Image augmentation with &lt;code&gt;imgaug&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Popular tools for data augmentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Metrics</title>
+      <link>https://memoex.github.io/note/tech/metrics/</link>
+      <pubDate>Tue, 06 Mar 2018 11:08:39 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/metrics/</guid>
+      <description>&lt;p&gt;Sometimes it&amp;rsquo;s hard to tell the differences between precision, accuracy, recall and so on especially for newbees like me.&lt;/p&gt;
+
+&lt;p&gt;But let&amp;rsquo;s try to distinguish them with stories.
+In this article, you will see some common used metrics, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Metrics for binary classification: accuracy, precision, reacall, f1-score and so on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>https://memoex.github.io/note/math/la/</link>
+      <pubDate>Wed, 14 Mar 2018 15:47:18 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/la/</guid>
+      <description>&lt;p&gt;Linear Algebra notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
+
+&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黑白电视到彩色电视
+
+&lt;ul&gt;
+&lt;li&gt;兼容问题&lt;/li&gt;
+&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+$$
+\begin{cases}
+0.299R + 0.587G + 0.114B = Y \\
+0.500R - 0.419G - 0.081B + 128 = C_r \\
+-0.169R - 0.331G + 0.500B + 128 = C_b
+\end{cases}
+$$
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Calculus</title>
@@ -59,41 +369,140 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Linear Algebra</title>
-      <link>https://memoex.github.io/note/math/la/</link>
-      <pubDate>Wed, 14 Mar 2018 15:47:18 +0800</pubDate>
+      <title>Python</title>
+      <link>https://memoex.github.io/note/tech/python/</link>
+      <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/math/la/</guid>
-      <description>&lt;p&gt;Linear Algebra notes.&lt;/p&gt;
+      <guid>https://memoex.github.io/note/tech/python/</guid>
+      <description>&lt;p&gt;Some python notes.&lt;/p&gt;
 
-&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
-
-&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;package-notes&#34;&gt;Package notes&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;黑白电视到彩色电视
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/keras&#34;&gt;Keras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/tensorflow&#34;&gt;Tensorflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;jupyter-notebook&#34;&gt;Jupyter Notebook&lt;/h2&gt;
+
+&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;兼容问题&lt;/li&gt;
-&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jupyter-notebook.readthedocs.io/en/stable/public_server.html&#34;&gt;Running a notebook server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html&#34;&gt;Installing jupyter_contrib_nbextensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lambdalisue/jupyter-vim-binding&#34;&gt;jupyter-vim-binding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/29916445&#34;&gt;line number&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments&#34;&gt;Kernels for different environments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;jupyter-kernels&#34;&gt;Jupyter kernels&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List kernels
+jupyter kernelspec list
+
+# Add python kernel to jupyter
+# Name is like an id. This command can also be use to change dispaly name of an existed kernel.
+/path/to/kernel/env/bin/python -m ipykernel install --prefix=/path/to/jupyter/env --name &#39;python-my-env&#39; --display-name &#39;Python x - Display name&#39;
+
+# Remove kernels (Or just remove the whole directory listed with the command above)
+jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;tricks&#34;&gt;Tricks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!pwd&lt;/code&gt;, 执行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;np.dot??&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;auto-reload-external-python-modules&#34;&gt;Auto reload external python modules&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html&#34;&gt;IPython extension to reload modules before executing user code.&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;%load_ext autoreload
+%autoreload 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>https://memoex.github.io/note/tech/tensorflow/</link>
+      <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/tensorflow/</guid>
+      <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;p&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tensorflow gpu auto growth&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Reset default graph&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tf.reset_default_graph()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tensorboard&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;with tf.Session(config=config) as sess:
+
+    # ...
+
+    writer = tf.summary.FileWriter(&#39;./graphs/test&#39;, sess.graph)
+    writer.flush()
+    writer.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Startup tensorboard:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Keras</title>
+      <link>https://memoex.github.io/note/tech/keras/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/keras/</guid>
+      <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keras version: &lt;code&gt;2.0.8&lt;/code&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://faroit.github.io/keras-docs/2.0.8/&#34;&gt;Keras 2.0.8 Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div&gt;
-$$
-\begin{cases}
-0.299R + 0.587G + 0.114B = Y \\
-0.500R - 0.419G - 0.081B + 128 = C_r \\
--0.169R - 0.331G + 0.500B + 128 = C_b
-\end{cases}
-$$
-&lt;/div&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
+
+&lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem description: I want to get the value of a variable in the model.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;How can I get hidden layer representation of the given data? #41&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The simplest way is using the same code of the original model, and&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# replace the output with the variable you want
+# code ...
+
+new_model.set_weights(trained_model.get_weights())
+new_model.predict(input_data, batch_size=32)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -117,10 +526,10 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
     
     <item>
       <title>CSGO</title>
-      <link>https://memoex.github.io/note/others/csgo/</link>
+      <link>https://memoex.github.io/note/life/csgo/</link>
       <pubDate>Mon, 12 Mar 2018 20:02:23 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/others/csgo/</guid>
+      <guid>https://memoex.github.io/note/life/csgo/</guid>
       <description>&lt;p&gt;My favorite game - Counter Strike: Global Offensive.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -138,44 +547,6 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
 &lt;li&gt;Shortcuts of Photoshop and Illustrator&lt;/li&gt;
 &lt;li&gt;Some tricks&lt;/li&gt;
 &lt;li&gt;Highly recommended materials for learning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Data Augmentation</title>
-      <link>https://memoex.github.io/note/tech/augmentation/</link>
-      <pubDate>Thu, 08 Mar 2018 22:06:06 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/augmentation/</guid>
-      <description>&lt;p&gt;Data augmentation is the process of increasing the size of a dataset by transforming it
-in ways that a neural network is unlikely to learn by itself.&lt;/p&gt;
-
-&lt;p&gt;After reanding this post, you will know:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Common data augmentation methods.&lt;/li&gt;
-&lt;li&gt;Image augmentation with &lt;code&gt;imgaug&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Popular tools for data augmentation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Metrics</title>
-      <link>https://memoex.github.io/note/tech/metrics/</link>
-      <pubDate>Tue, 06 Mar 2018 11:08:39 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/metrics/</guid>
-      <description>&lt;p&gt;Sometimes it&amp;rsquo;s hard to tell the differences between precision, accuracy, recall and so on especially for newbees like me.&lt;/p&gt;
-
-&lt;p&gt;But let&amp;rsquo;s try to distinguish them with stories.
-In this article, you will see some common used metrics, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Metrics for binary classification: accuracy, precision, reacall, f1-score and so on&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -280,10 +651,10 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
     
     <item>
       <title>酒</title>
-      <link>https://memoex.github.io/note/others/alcohol/</link>
+      <link>https://memoex.github.io/note/life/alcohol/</link>
       <pubDate>Sun, 18 Feb 2018 15:12:01 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/others/alcohol/</guid>
+      <guid>https://memoex.github.io/note/life/alcohol/</guid>
       <description>&lt;h2 id=&#34;黄酒&#34;&gt;黄酒&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s?__biz=MjM5Mzc5NTk1OQ==&amp;amp;mid=2652992222&amp;amp;idx=1&amp;amp;sn=04702e402c61ed5e67b653292152c892&#34;&gt;我知道你为什么不喝黄酒&lt;/a&gt;&lt;/p&gt;
@@ -303,53 +674,6 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://www.bilibili.com/video/av12599804/&#34;&gt;【李子柒】我这儿有清香甘甜的荷花酒，你有故事吗？&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Image</title>
-      <link>https://memoex.github.io/note/tech/image/</link>
-      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/image/</guid>
-      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
-
-&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
-
-&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
-w = np.zeros((2, 3, 3, 3))
-
-# The first filter converts the image to grayscale.
-# Set up the red, green, and blue channels of the filter.
-w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
-w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
-w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
-
-# Second filter detects horizontal edges in the blue channel.
-w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
-    
-&lt;/div&gt;
-
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -456,12 +780,20 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     </item>
     
     <item>
-      <title>路</title>
-      <link>https://memoex.github.io/note/tour/road/</link>
+      <title>行走</title>
+      <link>https://memoex.github.io/note/life/road/</link>
       <pubDate>Thu, 11 Jan 2018 22:43:06 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tour/road/</guid>
-      <description>&lt;ul&gt;
+      <guid>https://memoex.github.io/note/life/road/</guid>
+      <description>&lt;h2 id=&#34;行走记录&#34;&gt;行走记录&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2018-03-24 45321步 33.5km&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;路线&#34;&gt;路线&lt;/h2&gt;
+
+&lt;ul&gt;
 &lt;li&gt;2018-01-07 大钟寺博物馆-中华民族园博物馆-中国动物博物馆&lt;/li&gt;
 &lt;li&gt;2018-01-14 清华大学艺术博物馆-香巴拉户外用品专卖店-中国人民大学&lt;/li&gt;
 &lt;li&gt;2018-01-21 惠新西街南口-天坛&lt;/li&gt;
@@ -473,15 +805,17 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 
 &lt;ol&gt;
 &lt;li&gt;天路文华，西藏历史文化展&lt;/li&gt;
-&lt;li&gt;读城，发现北京四合院之美</description>
+&lt;li&gt;读城，发现北京四合院之美&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;li&gt;2018-03-24 玉渊潭-中国革命军事博物馆</description>
     </item>
     
     <item>
       <title>文化</title>
-      <link>https://memoex.github.io/note/tour/culture/</link>
+      <link>https://memoex.github.io/note/life/culture/</link>
       <pubDate>Mon, 08 Jan 2018 23:04:47 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tour/culture/</guid>
+      <guid>https://memoex.github.io/note/life/culture/</guid>
       <description>&lt;h2 id=&#34;速记&#34;&gt;速记&lt;/h2&gt;
 
 &lt;h3 id=&#34;龙之九子&#34;&gt;龙之九子&lt;/h3&gt;
@@ -512,10 +846,10 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
     
     <item>
       <title>行于五台</title>
-      <link>https://memoex.github.io/note/tour/wutai/</link>
+      <link>https://memoex.github.io/note/life/wutai/</link>
       <pubDate>Tue, 02 Jan 2018 11:23:17 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tour/wutai/</guid>
+      <guid>https://memoex.github.io/note/life/wutai/</guid>
       <description>&lt;h2 id=&#34;出发&#34;&gt;出发&lt;/h2&gt;
 
 &lt;p&gt;旧岁之末，新年伊始，我们来到了五台山。&lt;/p&gt;
@@ -529,42 +863,6 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 &lt;p&gt;仅有的一丝丝忐忑不安，仅仅是有点低的温度。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tensorflow</title>
-      <link>https://memoex.github.io/note/tech/tensorflow/</link>
-      <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/tensorflow/</guid>
-      <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
-
-&lt;p&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tensorflow gpu auto growth&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Reset default graph&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;tf.reset_default_graph()&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tensorboard&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;with tf.Session(config=config) as sess:
-
-    # ...
-
-    writer = tf.summary.FileWriter(&#39;./graphs/test&#39;, sess.graph)
-    writer.flush()
-    writer.close()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Startup tensorboard:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -936,243 +1234,38 @@ git config --global core.editor &amp;quot;vim&amp;quot;
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://memoex.github.io/note/tech/python/</link>
-      <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/python/</guid>
-      <description>&lt;p&gt;Some python notes.&lt;/p&gt;
-
-&lt;h2 id=&#34;package-notes&#34;&gt;Package notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/keras&#34;&gt;Keras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/tensorflow&#34;&gt;Tensorflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;jupyter-notebook&#34;&gt;Jupyter Notebook&lt;/h2&gt;
-
-&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://jupyter-notebook.readthedocs.io/en/stable/public_server.html&#34;&gt;Running a notebook server&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html&#34;&gt;Installing jupyter_contrib_nbextensions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lambdalisue/jupyter-vim-binding&#34;&gt;jupyter-vim-binding&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/29916445&#34;&gt;line number&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments&#34;&gt;Kernels for different environments&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;jupyter-kernels&#34;&gt;Jupyter kernels&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List kernels
-jupyter kernelspec list
-
-# Add python kernel to jupyter
-# Name is like an id. This command can also be use to change dispaly name of an existed kernel.
-/path/to/kernel/env/bin/python -m ipykernel install --prefix=/path/to/jupyter/env --name &#39;python-my-env&#39; --display-name &#39;Python x - Display name&#39;
-
-# Remove kernels (Or just remove the whole directory listed with the command above)
-jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;tricks&#34;&gt;Tricks&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;!pwd&lt;/code&gt;, 执行&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;np.dot??&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;auto-reload-external-python-modules&#34;&gt;Auto reload external python modules&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html&#34;&gt;IPython extension to reload modules before executing user code.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;%load_ext autoreload
-%autoreload 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Math</title>
-      <link>https://memoex.github.io/note/math/math/</link>
-      <pubDate>Wed, 06 Dec 2017 11:58:54 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/math/math/</guid>
-      <description>&lt;p&gt;Math notes.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/math/la&#34;&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;greek-alphabet&#34;&gt;Greek alphabet&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Lowercase&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Uppercase&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;alpha&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\alpha\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(A\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;beta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\beta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(B\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;gamma&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\gamma\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Gamma\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;delta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\delta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Delta\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;epsilon&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\epsilon\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(E\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;zeta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\zeta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(Z\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;eta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\eta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(H\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;theta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\theta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Theta\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;iota&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\iota\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(I\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;kappa&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\kappa\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(K\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;lambda&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\lambda\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Lambda\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;mu&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\mu\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(M\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;nu&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\nu\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(N\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;xi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\xi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Xi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;omicron&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\omicron\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(O\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;pi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\pi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Pi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;rho&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\rho\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(P\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;sigma&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\sigma\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Sigma\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;tau&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\tau\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(T\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;upsilon&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\upsilon\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Upsilon\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;phi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\phi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Phi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;chi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\chi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(X\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;psi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\psi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Psi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;omega&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\omega\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Omega\)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://memoex.github.io/note/tech/hugo/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/tech/hugo/</guid>
       <description>&lt;p&gt;Hugo releated notes. Current take some notes when reading official docuemts&lt;/p&gt;
+
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+
+&lt;h3 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;This is a footnote.[^1]
+
+[^1]: the footnote text.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not only number, words work too.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:footnotes&#34;&gt;&lt;a href=&#34;#fn:footnotes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;github-task-list&#34;&gt;Github task list&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;- [ ] a task list item
+- [ ] list syntax required
+- [ ] incomplete
+- [x] completed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; a task list item&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; list syntax required&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; incomplete&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; completed&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;reading-documents&#34;&gt;Reading documents&lt;/h2&gt;
 
@@ -1196,51 +1289,6 @@ jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
 &lt;li&gt;&lt;code&gt;themes//archetypes/posts.md&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;themes//archetypes/default.md (Auto-generated with hugo new site)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Keras</title>
-      <link>https://memoex.github.io/note/tech/keras/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/keras/</guid>
-      <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Keras version: &lt;code&gt;2.0.8&lt;/code&gt;.
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://faroit.github.io/keras-docs/2.0.8/&#34;&gt;Keras 2.0.8 Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
-
-&lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem description: I want to get the value of a variable in the model.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;How can I get hidden layer representation of the given data? #41&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The simplest way is using the same code of the original model, and&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# replace the output with the variable you want
-# code ...
-
-new_model.set_weights(trained_model.get_weights())
-new_model.predict(input_data, batch_size=32)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

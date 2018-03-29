@@ -20,6 +20,32 @@
       <guid>https://memoex.github.io/note/tech/hugo/</guid>
       <description>&lt;p&gt;Hugo releated notes. Current take some notes when reading official docuemts&lt;/p&gt;
 
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+
+&lt;h3 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;This is a footnote.[^1]
+
+[^1]: the footnote text.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not only number, words work too.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:footnotes&#34;&gt;&lt;a href=&#34;#fn:footnotes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;github-task-list&#34;&gt;Github task list&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;- [ ] a task list item
+- [ ] list syntax required
+- [ ] incomplete
+- [x] completed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; a task list item&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; list syntax required&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; incomplete&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; completed&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;reading-documents&#34;&gt;Reading documents&lt;/h2&gt;
 
 &lt;h3 id=&#34;目录结构&#34;&gt;目录结构&lt;/h3&gt;

@@ -7,96 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Thu, 22 Mar 2018 15:29:35 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2017 11:58:54 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/math/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Calculus</title>
-      <link>https://memoex.github.io/note/math/calculus/</link>
-      <pubDate>Thu, 22 Mar 2018 15:29:35 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/math/calculus/</guid>
-      <description>&lt;p&gt;I can&amp;rsquo;t stand my poor math anymore, and start to re-learn math from calculus.&lt;/p&gt;
-
-&lt;p&gt;This notes will record some formulas and anything intersting about calculus.&lt;/p&gt;
-
-&lt;h2 id=&#34;trigonometry&#34;&gt;Trigonometry&lt;/h2&gt;
-
-&lt;h3 id=&#34;astc-method&#34;&gt;ASTC method&lt;/h3&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/6gLcT4l.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;ASTC method&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/6gLcT4l.png&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;ASTC method&lt;/p&gt;
-    
-&lt;/div&gt;
-
-
-&lt;h3 id=&#34;trig-identities&#34;&gt;Trig Identities&lt;/h3&gt;
-
-&lt;p&gt;$$
-\begin{array}{l}
-cos^2(x) + sin^2(x) =1 \\&lt;br /&gt;
-1 + tan^2(x) = sec^2(x)
-\end{array}
-$$&lt;/p&gt;
-
-&lt;p&gt;$$
-\begin{array}{ll}
-sin(A+B) &amp;amp; = &amp;amp; sin(A)cos(B) + cos(A)sin(B) \\&lt;br /&gt;
-cos(A+B) &amp;amp; = &amp;amp; cos(A)cos(B) - sin(A)sin(B) \\&lt;br /&gt;
-sin(2x)  &amp;amp; = &amp;amp; 2 sin(x) cos(x) \\&lt;br /&gt;
-cos(2x)  &amp;amp; = &amp;amp; 2 cos^2(x) - 1  = 1 - 2 sin^2(x)
-\end{array}
-$$&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linear Algebra</title>
-      <link>https://memoex.github.io/note/math/la/</link>
-      <pubDate>Wed, 14 Mar 2018 15:47:18 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/math/la/</guid>
-      <description>&lt;p&gt;Linear Algebra notes.&lt;/p&gt;
-
-&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
-
-&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;黑白电视到彩色电视
-
-&lt;ul&gt;
-&lt;li&gt;兼容问题&lt;/li&gt;
-&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div&gt;
-$$
-\begin{cases}
-0.299R + 0.587G + 0.114B = Y \\
-0.500R - 0.419G - 0.081B + 128 = C_r \\
--0.169R - 0.331G + 0.500B + 128 = C_b
-\end{cases}
-$$
-&lt;/div&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Math</title>
@@ -267,6 +181,92 @@ $$
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>https://memoex.github.io/note/math/la/</link>
+      <pubDate>Wed, 14 Mar 2018 15:47:18 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/la/</guid>
+      <description>&lt;p&gt;Linear Algebra notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
+
+&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;黑白电视到彩色电视
+
+&lt;ul&gt;
+&lt;li&gt;兼容问题&lt;/li&gt;
+&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div&gt;
+$$
+\begin{cases}
+0.299R + 0.587G + 0.114B = Y \\
+0.500R - 0.419G - 0.081B + 128 = C_r \\
+-0.169R - 0.331G + 0.500B + 128 = C_b
+\end{cases}
+$$
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Calculus</title>
+      <link>https://memoex.github.io/note/math/calculus/</link>
+      <pubDate>Thu, 22 Mar 2018 15:29:35 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/math/calculus/</guid>
+      <description>&lt;p&gt;I can&amp;rsquo;t stand my poor math anymore, and start to re-learn math from calculus.&lt;/p&gt;
+
+&lt;p&gt;This notes will record some formulas and anything intersting about calculus.&lt;/p&gt;
+
+&lt;h2 id=&#34;trigonometry&#34;&gt;Trigonometry&lt;/h2&gt;
+
+&lt;h3 id=&#34;astc-method&#34;&gt;ASTC method&lt;/h3&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/6gLcT4l.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;ASTC method&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/6gLcT4l.png&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;ASTC method&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;h3 id=&#34;trig-identities&#34;&gt;Trig Identities&lt;/h3&gt;
+
+&lt;p&gt;$$
+\begin{array}{l}
+cos^2(x) + sin^2(x) =1 \\&lt;br /&gt;
+1 + tan^2(x) = sec^2(x)
+\end{array}
+$$&lt;/p&gt;
+
+&lt;p&gt;$$
+\begin{array}{ll}
+sin(A+B) &amp;amp; = &amp;amp; sin(A)cos(B) + cos(A)sin(B) \\&lt;br /&gt;
+cos(A+B) &amp;amp; = &amp;amp; cos(A)cos(B) - sin(A)sin(B) \\&lt;br /&gt;
+sin(2x)  &amp;amp; = &amp;amp; 2 sin(x) cos(x) \\&lt;br /&gt;
+cos(2x)  &amp;amp; = &amp;amp; 2 cos^2(x) - 1  = 1 - 2 sin^2(x)
+\end{array}
+$$&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

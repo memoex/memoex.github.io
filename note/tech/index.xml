@@ -7,43 +7,68 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
     <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Tue, 13 Mar 2018 20:29:11 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jan 2018 20:25:38 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Color</title>
-      <link>https://memoex.github.io/note/tech/color/</link>
-      <pubDate>Tue, 13 Mar 2018 20:29:11 +0800</pubDate>
+      <title>Image</title>
+      <link>https://memoex.github.io/note/tech/image/</link>
+      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/color/</guid>
-      <description>&lt;p&gt;We live in a colorful world, but color isn&amp;rsquo;t that simple.
-This article will introduce some knowledges of color, including:&lt;/p&gt;
+      <guid>https://memoex.github.io/note/tech/image/</guid>
+      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
+
+&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
+
+&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;How does human recognize colors&lt;/li&gt;
-&lt;li&gt;Different color space&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
+    
+&lt;/div&gt;
+
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Adobe</title>
-      <link>https://memoex.github.io/note/tech/adobe/</link>
-      <pubDate>Fri, 09 Mar 2018 16:54:35 +0800</pubDate>
+      <title>Loss Function</title>
+      <link>https://memoex.github.io/note/tech/loss/</link>
+      <pubDate>Mon, 19 Mar 2018 19:44:24 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/adobe/</guid>
-      <description>&lt;p&gt;In this article, you will see:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Shortcuts of Photoshop and Illustrator&lt;/li&gt;
-&lt;li&gt;Some tricks&lt;/li&gt;
-&lt;li&gt;Highly recommended materials for learning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <guid>https://memoex.github.io/note/tech/loss/</guid>
+      <description>This article introdcues some common loss function which also called as cost function in classification 1 2.
+Loss function in classification The goal of classification problem, or many machine learning porblem, is given training sets \(\{(x^{(i)}, y^{(i)}); i=1,\cdots,m\}\), to find a good predictor \(f\) so that \(f(x^{(i)})\) is a good estimate of \(y^{(i)}\).
+Why we need a loss function?
+To measure how &amp;ldquo;close&amp;rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\).</description>
     </item>
     
     <item>
@@ -79,6 +104,179 @@ In this article, you will see some common used metrics, including:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Metrics for binary classification: accuracy, precision, reacall, f1-score and so on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://memoex.github.io/note/tech/python/</link>
+      <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/python/</guid>
+      <description>&lt;p&gt;Some python notes.&lt;/p&gt;
+
+&lt;h2 id=&#34;package-notes&#34;&gt;Package notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/keras&#34;&gt;Keras&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/tensorflow&#34;&gt;Tensorflow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;jupyter-notebook&#34;&gt;Jupyter Notebook&lt;/h2&gt;
+
+&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://jupyter-notebook.readthedocs.io/en/stable/public_server.html&#34;&gt;Running a notebook server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html&#34;&gt;Installing jupyter_contrib_nbextensions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lambdalisue/jupyter-vim-binding&#34;&gt;jupyter-vim-binding&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/29916445&#34;&gt;line number&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments&#34;&gt;Kernels for different environments&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;jupyter-kernels&#34;&gt;Jupyter kernels&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List kernels
+jupyter kernelspec list
+
+# Add python kernel to jupyter
+# Name is like an id. This command can also be use to change dispaly name of an existed kernel.
+/path/to/kernel/env/bin/python -m ipykernel install --prefix=/path/to/jupyter/env --name &#39;python-my-env&#39; --display-name &#39;Python x - Display name&#39;
+
+# Remove kernels (Or just remove the whole directory listed with the command above)
+jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;tricks&#34;&gt;Tricks&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;!pwd&lt;/code&gt;, 执行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;np.dot??&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;auto-reload-external-python-modules&#34;&gt;Auto reload external python modules&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html&#34;&gt;IPython extension to reload modules before executing user code.&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;%load_ext autoreload
+%autoreload 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tensorflow</title>
+      <link>https://memoex.github.io/note/tech/tensorflow/</link>
+      <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/tensorflow/</guid>
+      <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;p&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tensorflow gpu auto growth&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Reset default graph&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tf.reset_default_graph()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tensorboard&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;with tf.Session(config=config) as sess:
+
+    # ...
+
+    writer = tf.summary.FileWriter(&#39;./graphs/test&#39;, sess.graph)
+    writer.flush()
+    writer.close()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Startup tensorboard:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Keras</title>
+      <link>https://memoex.github.io/note/tech/keras/</link>
+      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/keras/</guid>
+      <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Keras version: &lt;code&gt;2.0.8&lt;/code&gt;.
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://faroit.github.io/keras-docs/2.0.8/&#34;&gt;Keras 2.0.8 Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
+
+&lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Problem description: I want to get the value of a variable in the model.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;How can I get hidden layer representation of the given data? #41&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The simplest way is using the same code of the original model, and&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# replace the output with the variable you want
+# code ...
+
+new_model.set_weights(trained_model.get_weights())
+new_model.predict(input_data, batch_size=32)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Color</title>
+      <link>https://memoex.github.io/note/tech/color/</link>
+      <pubDate>Tue, 13 Mar 2018 20:29:11 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/color/</guid>
+      <description>&lt;p&gt;We live in a colorful world, but color isn&amp;rsquo;t that simple.
+This article will introduce some knowledges of color, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How does human recognize colors&lt;/li&gt;
+&lt;li&gt;Different color space&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Adobe</title>
+      <link>https://memoex.github.io/note/tech/adobe/</link>
+      <pubDate>Fri, 09 Mar 2018 16:54:35 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/adobe/</guid>
+      <description>&lt;p&gt;In this article, you will see:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Shortcuts of Photoshop and Illustrator&lt;/li&gt;
+&lt;li&gt;Some tricks&lt;/li&gt;
+&lt;li&gt;Highly recommended materials for learning&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -155,53 +353,6 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;hugomore42&#34;&gt;</description>
-    </item>
-    
-    <item>
-      <title>Image</title>
-      <link>https://memoex.github.io/note/tech/image/</link>
-      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/image/</guid>
-      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
-
-&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
-
-&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
-w = np.zeros((2, 3, 3, 3))
-
-# The first filter converts the image to grayscale.
-# Set up the red, green, and blue channels of the filter.
-w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
-w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
-w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
-
-# Second filter detects horizontal edges in the blue channel.
-w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
-    
-&lt;/div&gt;
-
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -303,42 +454,6 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tensorflow</title>
-      <link>https://memoex.github.io/note/tech/tensorflow/</link>
-      <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/tensorflow/</guid>
-      <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
-
-&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
-
-&lt;p&gt;trainable: If &lt;code&gt;True&lt;/code&gt;, the default, also adds the variable to the graph collection &lt;code&gt;GraphKeys.TRAINABLE_VARIABLES&lt;/code&gt;. This collection is used as the default list of variables to use by the &lt;code&gt;Optimizer&lt;/code&gt; classes.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tensorflow gpu auto growth&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Reset default graph&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;tf.reset_default_graph()&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tensorboard&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;with tf.Session(config=config) as sess:
-
-    # ...
-
-    writer = tf.summary.FileWriter(&#39;./graphs/test&#39;, sess.graph)
-    writer.flush()
-    writer.close()
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Startup tensorboard:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -559,70 +674,38 @@ git config --global core.editor &amp;quot;vim&amp;quot;
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://memoex.github.io/note/tech/python/</link>
-      <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/python/</guid>
-      <description>&lt;p&gt;Some python notes.&lt;/p&gt;
-
-&lt;h2 id=&#34;package-notes&#34;&gt;Package notes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/keras&#34;&gt;Keras&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/tensorflow&#34;&gt;Tensorflow&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;jupyter-notebook&#34;&gt;Jupyter Notebook&lt;/h2&gt;
-
-&lt;h3 id=&#34;links&#34;&gt;Links&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://jupyter-notebook.readthedocs.io/en/stable/public_server.html&#34;&gt;Running a notebook server&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html&#34;&gt;Installing jupyter_contrib_nbextensions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lambdalisue/jupyter-vim-binding&#34;&gt;jupyter-vim-binding&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://stackoverflow.com/a/29916445&#34;&gt;line number&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/install/kernel_install.html#kernels-for-different-environments&#34;&gt;Kernels for different environments&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;jupyter-kernels&#34;&gt;Jupyter kernels&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List kernels
-jupyter kernelspec list
-
-# Add python kernel to jupyter
-# Name is like an id. This command can also be use to change dispaly name of an existed kernel.
-/path/to/kernel/env/bin/python -m ipykernel install --prefix=/path/to/jupyter/env --name &#39;python-my-env&#39; --display-name &#39;Python x - Display name&#39;
-
-# Remove kernels (Or just remove the whole directory listed with the command above)
-jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;tricks&#34;&gt;Tricks&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;!pwd&lt;/code&gt;, 执行&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;np.dot??&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;auto-reload-external-python-modules&#34;&gt;Auto reload external python modules&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://ipython.readthedocs.io/en/stable/config/extensions/autoreload.html&#34;&gt;IPython extension to reload modules before executing user code.&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;%load_ext autoreload
-%autoreload 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://memoex.github.io/note/tech/hugo/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/tech/hugo/</guid>
       <description>&lt;p&gt;Hugo releated notes. Current take some notes when reading official docuemts&lt;/p&gt;
+
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+
+&lt;h3 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;This is a footnote.[^1]
+
+[^1]: the footnote text.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Not only number, words work too.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:footnotes&#34;&gt;&lt;a href=&#34;#fn:footnotes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;github-task-list&#34;&gt;Github task list&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-md&#34;&gt;- [ ] a task list item
+- [ ] list syntax required
+- [ ] incomplete
+- [x] completed
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; a task list item&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; list syntax required&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; disabled class=&#34;task-list-item&#34;&gt; incomplete&lt;/label&gt;&lt;/li&gt;
+&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; completed&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&#34;reading-documents&#34;&gt;Reading documents&lt;/h2&gt;
 
@@ -646,51 +729,6 @@ jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
 &lt;li&gt;&lt;code&gt;themes//archetypes/posts.md&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;themes//archetypes/default.md (Auto-generated with hugo new site)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Keras</title>
-      <link>https://memoex.github.io/note/tech/keras/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/keras/</guid>
-      <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Keras version: &lt;code&gt;2.0.8&lt;/code&gt;.
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://faroit.github.io/keras-docs/2.0.8/&#34;&gt;Keras 2.0.8 Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
-
-&lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Problem description: I want to get the value of a variable in the model.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Reference: &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;How can I get hidden layer representation of the given data? #41&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The simplest way is using the same code of the original model, and&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# replace the output with the variable you want
-# code ...
-
-new_model.set_weights(trained_model.get_weights())
-new_model.predict(input_data, batch_size=32)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
