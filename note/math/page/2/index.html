@@ -183,6 +183,12 @@
                 </li>
                 
                 <li class="" >
+                    <a href="https://memoex.github.io/note/tech/datasets/">
+                    Datasets
+                    </a>
+                </li>
+                
+                <li class="" >
                     <a href="https://memoex.github.io/note/tech/python/">
                     Python
                     </a>
@@ -726,44 +732,68 @@ axios.get('https://something.com/foo', { httpsAgent: agent });
                 <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
             </div><div class="col-12">
                 <h1 class="bd-title">
-                    <a class="text-dark bd-title" href="https://memoex.github.io/note/life/culture/">文化</a>
+                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/keras/">Keras</a>
                 </h1>
                 <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Jan 8, 2018</time>
+    <time class="px-1 font-weight-bold indigo-text">Dec 4, 2017</time>
+    
+        <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
+        <ul class="nav d-inline">
+            
+                <li class="nav-item d-inline">
+                    <a class="text-capitalize" href='/tags/keras'>keras</a>
+                </li>
+            
+                <li class="nav-item d-inline">
+                    <a class="text-capitalize" href='/tags/python'>python</a>
+                </li>
+            
+        </ul>
     
 </div>
 
                 <div class="bd-content">
-                    <h2 id="速记">速记</h2>
-
-<h3 id="龙之九子">龙之九子</h3>
+                    <p>Notes about Keras.</p>
 
 <ul>
-<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - <a href="https://www.zhihu.com/question/23759686/answer/41997389">豆子的回答 - 知乎</a></li>
-<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - <a href="https://www.zhihu.com/question/23759686/answer/42089003">知乎</a></li>
+<li>Keras version: <code>2.0.8</code>.
+
+<ul>
+<li><a href="https://faroit.github.io/keras-docs/2.0.8/">Keras 2.0.8 Documentation</a></li>
+</ul></li>
 </ul>
 
-<p>一说</p>
+<hr />
 
-<blockquote>
-<p>龍生九子不成龍，各有所好：<br>
-囚牛，龍種，平生好音樂，今胡琴頭上刻獸是其遺像；<br>
-睚眦，平生好殺，今刀柄上龍吞口是其遺像；<br>
-嘲風，平生好險，今殿角走獸是其遺像；<br>
-蒲牢，平生好鳴，今鐘上獸鈕是其遺像；<br>
-狻猊，平生好坐，今佛座獅子是其遺像；<br>
-霸上，平生好負重，今碑座獸是其遺像；<br>
-狴犴，平生好訟，今獄門上獅子頭是其遺像；<br>
-贔屭，平生好文，今碑兩旁龍是其遺像；<br>
-蚩吻，平生好吞，今殿脊獸頭是其遺像。<br><br>
-李东阳（1447年－1516年） 《怀麓堂集》</p>
-</blockquote>
+<h2 id="frequently-used-snippets">Frequently used snippets</h2>
+
+<pre><code class="language-py">
+</code></pre>
+
+<h2 id="problems-encountered">Problems encountered</h2>
+
+<h3 id="2017-12-04-get-variable-s-value-in-middle-layer">2017-12-04 · Get variable&rsquo;s value in middle layer</h3>
+
+<p><strong>Problem description: I want to get the value of a variable in the model.</strong></p>
+
+<p>Reference: <a href="https://github.com/fchollet/keras/issues/41">How can I get hidden layer representation of the given data? #41</a></p>
+
+<p>The simplest way is using the same code of the original model, and</p>
+
+<pre><code class="language-py"># replace the output with the variable you want
+# code ...
+
+new_model.set_weights(trained_model.get_weights())
+new_model.predict(input_data, batch_size=32)
+</code></pre>
+
+<p>Note the <code>batch_size</code> is import for large amount of samples. The <code>K.function()</code> mentioned in the <a href="https://github.com/fchollet/keras/issues/41">issue #41</a> raised <code>OOM exception</code>. Of course you can split data into batches by yourself and use the <code>K.function()</code> method, but the method showed above is more convinient for me in my case.</p>
 
 <p></p>
                 </div>
 
-                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/life\/culture\/'" >
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/keras\/'" >
                     <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
                 </button>
 
@@ -799,6 +829,12 @@ axios.get('https://something.com/foo', { httpsAgent: agent });
         <li class="nav-item px-1">
             <a class="btn btn-light" href="/note/math/page/3/">
             3
+            </a>
+        </li>
+        
+        <li class="nav-item px-1">
+            <a class="btn btn-light" href="/note/math/page/4/">
+            4
             </a>
         </li>
         

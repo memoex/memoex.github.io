@@ -183,6 +183,12 @@
                 </li>
                 
                 <li class="" >
+                    <a href="https://memoex.github.io/note/tech/datasets/">
+                    Datasets
+                    </a>
+                </li>
+                
+                <li class="" >
                     <a href="https://memoex.github.io/note/tech/python/">
                     Python
                     </a>
@@ -347,6 +353,50 @@
 <main>
     <div class="p-0 container-fluid rounded">
         <div class="col-12">
+                <h1 class="bd-title">
+                    <a class="text-dark bd-title" href="https://memoex.github.io/note/life/culture/">文化</a>
+                </h1>
+                <div class="mb-5">
+    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
+    <time class="px-1 font-weight-bold indigo-text">Jan 8, 2018</time>
+    
+</div>
+
+                <div class="bd-content">
+                    <h2 id="速记">速记</h2>
+
+<h3 id="龙之九子">龙之九子</h3>
+
+<ul>
+<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - <a href="https://www.zhihu.com/question/23759686/answer/41997389">豆子的回答 - 知乎</a></li>
+<li>龙有九个儿子，是跟谁生的？为什么「龙生九子，各不成龙」？ - <a href="https://www.zhihu.com/question/23759686/answer/42089003">知乎</a></li>
+</ul>
+
+<p>一说</p>
+
+<blockquote>
+<p>龍生九子不成龍，各有所好：<br>
+囚牛，龍種，平生好音樂，今胡琴頭上刻獸是其遺像；<br>
+睚眦，平生好殺，今刀柄上龍吞口是其遺像；<br>
+嘲風，平生好險，今殿角走獸是其遺像；<br>
+蒲牢，平生好鳴，今鐘上獸鈕是其遺像；<br>
+狻猊，平生好坐，今佛座獅子是其遺像；<br>
+霸上，平生好負重，今碑座獸是其遺像；<br>
+狴犴，平生好訟，今獄門上獅子頭是其遺像；<br>
+贔屭，平生好文，今碑兩旁龍是其遺像；<br>
+蚩吻，平生好吞，今殿脊獸頭是其遺像。<br><br>
+李东阳（1447年－1516年） 《怀麓堂集》</p>
+</blockquote>
+
+<p></p>
+                </div>
+
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/life\/culture\/'" >
+                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+
+                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
+            </div><div class="col-12">
                 <h1 class="bd-title">
                     <a class="text-dark bd-title" href="https://memoex.github.io/note/life/wutai/">行于五台</a>
                 </h1>
@@ -904,89 +954,6 @@ git config --global core.editor &quot;vim&quot;
                 </button>
 
                 <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
-            </div><div class="col-12">
-                <h1 class="bd-title">
-                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/hugo/">Hugo</a>
-                </h1>
-                <div class="mb-5">
-    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 4, 2017</time>
-    
-        <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/hugo'>Hugo</a>
-                </li>
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/blog'>blog</a>
-                </li>
-            
-        </ul>
-    
-</div>
-
-                <div class="bd-content">
-                    <p>Hugo releated notes. Current take some notes when reading official docuemts</p>
-
-<h2 id="tips">Tips</h2>
-
-<h3 id="footnotes">Footnotes</h3>
-
-<pre><code class="language-md">This is a footnote.[^1]
-
-[^1]: the footnote text.
-</code></pre>
-
-<p>Not only number, words work too.<sup class="footnote-ref" id="fnref:footnotes"><a href="#fn:footnotes">1</a></sup></p>
-
-<h3 id="github-task-list">Github task list</h3>
-
-<pre><code class="language-md">- [ ] a task list item
-- [ ] list syntax required
-- [ ] incomplete
-- [x] completed
-</code></pre>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> a task list item</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> list syntax required</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> incomplete</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> completed</label></li>
-</ul>
-
-<h2 id="reading-documents">Reading documents</h2>
-
-<h3 id="目录结构">目录结构</h3>
-
-<pre><code>.
-├── archetypes
-├── config.toml
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-</code></pre>
-
-<p><code>archetypes</code>: 用于<code>hugo new</code>，Lookup Order for Archetypes：</p>
-
-<ul>
-<li><code>archetypes/posts.md</code></li>
-<li><code>archetypes/default.md</code></li>
-<li><code>themes//archetypes/posts.md</code></li>
-<li><code>themes//archetypes/default.md (Auto-generated with hugo new site)</code></li>
-</ul>
-
-<p></p>
-                </div>
-
-                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/hugo\/'" >
-                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                </button>
-
-                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
             </div>
     </div>
 </main>
@@ -1021,6 +988,16 @@ git config --global core.editor &quot;vim&quot;
             </a>
         </li>
         
+        <li class="nav-item px-1">
+            <a class="btn btn-light" href="/note/page/4/">
+            4
+            </a>
+        </li>
+        
+        
+        <li class="nav-item px-3">
+            <a class="btn btn-light" href="/note/page/4/">Next</a>
+        </li>
         
     </ul>
 </nav>

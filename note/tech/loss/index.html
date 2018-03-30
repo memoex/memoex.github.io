@@ -183,6 +183,12 @@
                 </li>
                 
                 <li class="" >
+                    <a href="https://memoex.github.io/note/tech/datasets/">
+                    Datasets
+                    </a>
+                </li>
+                
+                <li class="" >
                     <a href="https://memoex.github.io/note/tech/python/">
                     Python
                     </a>
@@ -352,9 +358,12 @@
 </div>
 
                             <div class="bd-content">
-                                
+                                <p>This article will introdcue:</p>
 
-<p>This article introdcues some common loss function which also called as cost function in classification <sup class="footnote-ref" id="fnref:wikipedia"><a href="#fn:wikipedia">1</a></sup> <sup class="footnote-ref" id="fnref:cs229"><a href="#fn:cs229">2</a></sup>.</p>
+<ul>
+<li>expected risk</li>
+<li>some common loss function</li>
+</ul>
 
 <h2 id="loss-function-in-classification">Loss function in classification</h2>
 
@@ -364,9 +373,14 @@ to find a good predictor \(f\) so that
 
 <p><strong>Why we need a loss function?</strong></p>
 
-<p>To measure how &ldquo;close&rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\).</p>
+<p>We need a loss function to measure how &ldquo;close&rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\)
+and we usually optimize our model by minimizing the loss.</p>
 
-<p>Before we talk about various of loss functions, we need explain some notations clearly.</p>
+<p></p>
+
+<h3 id="notations">Notations</h3>
+
+<p>The notations will be used in this article:</p>
 
 <ul>
 <li>\(\mathbf{X}\): The space of input values, \(\mathbf{X} = \mathbb{R}^n, n \) is the number of input features.</li>
@@ -380,11 +394,15 @@ In this article, \(y^{(i)} \in \{1, -1\}\) unless otherwise indicated.</li>
 We use \(L(\hat y^{(i)}, y^{(i)})\) to measure how close are \(\hat y^{(i)}\) and \(y^{(i)}\).</li>
 </ul>
 
-<p>First, we need to understand the goal of the learning problem is to minimize <strong>expected risk</strong> \(J\),
+<h3 id="expected-risk">Expected risk</h3>
+
+<p>Before we talk about various of loss functions, we need explain what is expected risk.</p>
+
+<p>The goal of the learning problem is to minimize <strong>expected risk</strong> \(J\),
 defined as<sup class="footnote-ref" id="fnref:wikipedia"><a href="#fn:wikipedia">1</a></sup>:</p>
 
 <p>$$
-{\displaystyle J_{real}=\displaystyle \int _{X\times Y}L(f({{x}}),y)p({{x}},y)\,d{{x}}\,dy}
+{\displaystyle J_{real}=\displaystyle \int _{\mathbf X\times \mathbf Y}L(f({{x}}),y)p({{x}},y)\,d{{x}}\,dy}
 $$</p>
 
 <p>\(p(x,y)\) is the probability density function of the process that generated the data.</p>
@@ -402,41 +420,55 @@ we can get the estimation of expected risk:</p>
 \displaystyle J_{approx}=\displaystyle \frac{1}n \sum_{i=1}^n L(f(x^{(i)}), y^{(i)})
 $$</p>
 
-<p>The words above are background. &#9650;</p>
+<h3 id="common-loss-functions">Common loss functions</h3>
 
 <p>Now we will introduce various of Loss function \(L\), including:</p>
 
 <ol>
+<li>Logistic loss</li>
 <li>Mean squared error (MSE)</li>
+<li>Root mean squared error (RMSE)</li>
 <li>Mean absolute error (MAE)</li>
 <li>Mean absolute percentage error (MAPE)</li>
+<li>Mean squared logarithmic error (MSLE)</li>
+<li>Hinge loss</li>
+<li>Squared hinge loss</li>
+<li>Cross entropy</li>
+<li>Kullback leibler divergence</li>
+<li>logcosh</li>
 </ol>
 
-<h3 id="mean-squared-error-mse">Mean squared error (MSE)</h3>
+<h4 id="logistic-loss">Logistic loss</h4>
+
+<p>$$
+J = \frac{1}n \sum_{i=1}^n \log(1+ e^{-y^{(i)}\hat y^{(i)}})
+$$</p>
+
+<h4 id="mean-squared-error-mse">Mean squared error (MSE)</h4>
 
 <p>$$
 J = \frac{1}n \sum_{i=1}^n(y^{(i)}-\hat y^{(i)})^2
 $$</p>
 
-<h3 id="root-mean-squared-error-rmse">Root mean squared error (RMSE)</h3>
+<h4 id="root-mean-squared-error-rmse">Root mean squared error (RMSE)</h4>
 
 <p>$$
 J = \sqrt{\frac{\displaystyle\sum_{i=1}^n(y^{(i)}-\hat y^{(i)})^2}n }
 $$</p>
 
-<h3 id="mean-absolute-error-mae">Mean absolute error (MAE)</h3>
+<h4 id="mean-absolute-error-mae">Mean absolute error (MAE)</h4>
 
 <p>$$
 J = \frac{1}n \sum_{i=1}^n |y^{(i)}-\hat y^{(i)}|
 $$</p>
 
-<h3 id="mean-absolute-percentage-error-mape">Mean absolute percentage error (MAPE)</h3>
+<h4 id="mean-absolute-percentage-error-mape">Mean absolute percentage error (MAPE)</h4>
 
 <p>$$
 J = \frac{100\%}n \sum_{i=1}^n |\frac{y^{(i)} - \hat y^{(i)}}{y^{(i)}}|
 $$</p>
 
-<h3 id="mean-squared-logarithmic-error-msle">Mean squared logarithmic error (MSLE)</h3>
+<h4 id="mean-squared-logarithmic-error-msle">Mean squared logarithmic error (MSLE)</h4>
 
 <p>$$
 \begin{align}
@@ -447,38 +479,93 @@ $$</p>
 
 <p>This will penalize under estimates more than over estimates.</p>
 
-<h3 id="hinge-loss">Hinge loss</h3>
+<h4 id="hinge-loss">Hinge loss</h4>
 
 <p>$$
 J = \frac{1}n \sum_{i=1}^n \max(0, 1-y^{(i)}\hat y^{(i)})
 $$</p>
 
-<h3 id="squared-hinge-loss">Squared Hinge loss</h3>
+<h4 id="squared-hinge-loss">Squared hinge loss</h4>
 
 <p>$$
 J = \frac{1}n \sum_{i=1}^n ({\max(0, 1-y^{(i)}\hat y^{(i)})})^2
 $$</p>
 
-<h3 id="cross-entropy">Cross entropy</h3>
+<h4 id="cross-entropy">Cross entropy</h4>
+
+<p>Also called as Logarithmic loss (Log loss).</p>
 
 <p>$$
 \begin{align}
-&amp; J = \frac{1}n \sum_{i=1}^n [y^{(i)}\log \hat y^{(i)} + (1-y^{(i)})\log(1- \hat y^{(i)})]
+&amp; J = -\frac{1}n \sum_{i=1}^n [y^{(i)}\log \hat y^{(i)} + (1-y^{(i)})\log(1- \hat y^{(i)})]
 &amp; (y^{(i)} \in \{0, 1\})
 \end{align}
+$$</p>
+
+<h4 id="kullback-leibler-divergence">Kullback leibler divergence</h4>
+
+<p>Also called as Relative entropy.</p>
+
+<p>$$
+J = \sum_{i=1}^n y^{(i)} \log \frac{y^{(i)}}{\hat y^{i}}
+$$</p>
+
+<h4 id="logcosh">logcosh</h4>
+
+<p>Logarithm of the hyperbolic cosine of the prediction error.</p>
+
+<p>According to the code in Keras<sup class="footnote-ref" id="fnref:keras"><a href="#fn:keras">2</a></sup>, there is a <code>logcosh</code> function:</p>
+
+<p>$$
+f(x) = \ln \frac{e^{x}+e^{-x}}2
+$$</p>
+
+<p>(It seems writing \(ln\) here is more comfortable.)</p>
+
+<p>And its graph looks like this:</p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
+    <a class="d-block mx-auto" href="https://i.imgur.com/TzQkQYF.png" data-fancybox="gallery" data-caption="log(cosh(x))">
+        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/TzQkQYF.png" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>log(cosh(x))</p>
+    
+</div>
+
+
+<blockquote>
+<p><code>log(cosh(x))</code> is approximately equal to <code>(x ** 2) / 2</code> for small <code>x</code> and
+to <code>abs(x) - log(2)</code> for large <code>x</code>. This means that <code>logcosh</code> works mostly
+like the mean squared error, but will not be so strongly affected by the
+occasional wildly incorrect prediction.<sup class="footnote-ref" id="fnref:keras"><a href="#fn:keras">2</a></sup></p>
+</blockquote>
+
+<p>So the formula of this error is:</p>
+
+<p>$$
+J = \frac{1}n \sum_{i=1}^n \log(\cosh(y^{(i)}-\hat y^{(i)}))
+$$</p>
+
+<h4 id="cosine-proximity">Cosine proximity</h4>
+
+<p>Also called as cosine similarity.</p>
+
+<p>$$
+J = \cos \theta = \frac {\displaystyle\sum_{i=1}^n y^{(i)}\hat y^{(i)}} {\sqrt{\displaystyle\sum_{i=1}^n {y^{(i)}}^2}\sqrt{\displaystyle\sum_{i=1}^n {\hat y^{(i)}}^2}}
 $$</p>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:wikipedia"><a href="https://en.wikipedia.org/wiki/Loss_functions_for_classification">Loss functions for classification</a>
+<li id="fn:wikipedia"><a href="https://en.wikipedia.org/wiki/Loss_functions_for_classification">Loss functions for classification</a>, Wikipedia.
  <a class="footnote-return" href="#fnref:wikipedia"><sup>[return]</sup></a></li>
-<li id="fn:cs229">Andrew Ng, CS229 Lecture Notes 1
- <a class="footnote-return" href="#fnref:cs229"><sup>[return]</sup></a></li>
+<li id="fn:keras"><a href="https://github.com/keras-team/keras/blob/master/keras/losses.py">losses.py</a>, Keras source code.
+ <a class="footnote-return" href="#fnref:keras"><sup>[return]</sup></a></li>
 </ol>
 </div>
-
                             </div>
                         </div>
                     </div>

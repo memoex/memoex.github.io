@@ -67,9 +67,9 @@
 
 
         <div class="container-fluid">
-        <div class="row flex-xl-nowrap">
-            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-                
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            
 
 
 
@@ -125,7 +125,7 @@
             </a>
             <ul class="p-2 nav bd-sidenav">
                 
-                <li class="active" >
+                <li class="" >
                     <a href="https://memoex.github.io/note/math/math/">
                     Math
                     </a>
@@ -341,310 +341,150 @@
 
     
 
-            </div>
+        </div>
 
-            <div class="d-none d-xl-block col-xl-2 bd-toc">
-            </div>
+        <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
+            
+    
 
-            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col">
-                            <h1 class="bd-title">Math</h1>
-                            <div class="mb-5">
+
+
+
+<main>
+    <div class="p-0 container-fluid rounded">
+        <div class="col-12">
+                <h1 class="bd-title">
+                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/hugo/">Hugo</a>
+                </h1>
+                <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 6, 2017</time>
+    <time class="px-1 font-weight-bold indigo-text">Dec 4, 2017</time>
     
         <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
         <ul class="nav d-inline">
             
                 <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/linear-algebra'>linear algebra</a>
+                    <a class="text-capitalize" href='/tags/hugo'>Hugo</a>
+                </li>
+            
+                <li class="nav-item d-inline">
+                    <a class="text-capitalize" href='/tags/blog'>blog</a>
                 </li>
             
         </ul>
     
 </div>
 
-                            <div class="bd-content">
-                                <p>Math notes.</p>
+                <div class="bd-content">
+                    <p>Hugo releated notes. Current take some notes when reading official docuemts</p>
 
-<ul>
-<li><a href="/note/math/la">Linear Algebra</a></li>
+<h2 id="tips">Tips</h2>
+
+<h3 id="footnotes">Footnotes</h3>
+
+<pre><code class="language-md">This is a footnote.[^1]
+
+[^1]: the footnote text.
+</code></pre>
+
+<p>Not only number, words work too.<sup class="footnote-ref" id="fnref:footnotes"><a href="#fn:footnotes">1</a></sup></p>
+
+<h3 id="github-task-list">Github task list</h3>
+
+<pre><code class="language-md">- [ ] a task list item
+- [ ] list syntax required
+- [ ] incomplete
+- [x] completed
+</code></pre>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> a task list item</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> list syntax required</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> incomplete</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> completed</label></li>
 </ul>
 
-<h2 id="greek-alphabet">Greek alphabet</h2>
+<h2 id="reading-documents">Reading documents</h2>
 
-<table>
-<thead>
-<tr>
-<th align="left">Name</th>
-<th align="left">Lowercase</th>
-<th align="left">Uppercase</th>
-</tr>
-</thead>
+<h3 id="目录结构">目录结构</h3>
 
-<tbody>
-<tr>
-<td align="left"><em>alpha</em></td>
-<td align="left">\(\alpha\)</td>
-<td align="left">\(A\)</td>
-</tr>
+<pre><code>.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+</code></pre>
 
-<tr>
-<td align="left"><em>beta</em></td>
-<td align="left">\(\beta\)</td>
-<td align="left">\(B\)</td>
-</tr>
+<p><code>archetypes</code>: 用于<code>hugo new</code>，Lookup Order for Archetypes：</p>
 
-<tr>
-<td align="left"><em>gamma</em></td>
-<td align="left">\(\gamma\)</td>
-<td align="left">\(\Gamma\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>delta</em></td>
-<td align="left">\(\delta\)</td>
-<td align="left">\(\Delta\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>epsilon</em></td>
-<td align="left">\(\epsilon\)</td>
-<td align="left">\(E\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>zeta</em></td>
-<td align="left">\(\zeta\)</td>
-<td align="left">\(Z\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>eta</em></td>
-<td align="left">\(\eta\)</td>
-<td align="left">\(H\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>theta</em></td>
-<td align="left">\(\theta\)</td>
-<td align="left">\(\Theta\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>iota</em></td>
-<td align="left">\(\iota\)</td>
-<td align="left">\(I\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>kappa</em></td>
-<td align="left">\(\kappa\)</td>
-<td align="left">\(K\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>lambda</em></td>
-<td align="left">\(\lambda\)</td>
-<td align="left">\(\Lambda\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>mu</em></td>
-<td align="left">\(\mu\)</td>
-<td align="left">\(M\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>nu</em></td>
-<td align="left">\(\nu\)</td>
-<td align="left">\(N\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>xi</em></td>
-<td align="left">\(\xi\)</td>
-<td align="left">\(\Xi\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>omicron</em></td>
-<td align="left">\(\omicron\)</td>
-<td align="left">\(O\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>pi</em></td>
-<td align="left">\(\pi\)</td>
-<td align="left">\(\Pi\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>rho</em></td>
-<td align="left">\(\rho\)</td>
-<td align="left">\(P\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>sigma</em></td>
-<td align="left">\(\sigma\)</td>
-<td align="left">\(\Sigma\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>tau</em></td>
-<td align="left">\(\tau\)</td>
-<td align="left">\(T\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>upsilon</em></td>
-<td align="left">\(\upsilon\)</td>
-<td align="left">\(\Upsilon\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>phi</em></td>
-<td align="left">\(\phi\)</td>
-<td align="left">\(\Phi\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>chi</em></td>
-<td align="left">\(\chi\)</td>
-<td align="left">\(X\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>psi</em></td>
-<td align="left">\(\psi\)</td>
-<td align="left">\(\Psi\)</td>
-</tr>
-
-<tr>
-<td align="left"><em>omega</em></td>
-<td align="left">\(\omega\)</td>
-<td align="left">\(\Omega\)</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><code>archetypes/posts.md</code></li>
+<li><code>archetypes/default.md</code></li>
+<li><code>themes//archetypes/posts.md</code></li>
+<li><code>themes//archetypes/default.md (Auto-generated with hugo new site)</code></li>
+</ul>
 
 <p></p>
-
-<h2 id="pythagorean-means">Pythagorean means</h2>
-
-<p>Pythagorean means （毕达哥拉斯的平均数） include:</p>
-
-<ul>
-<li><code>arithmetic mean</code></li>
-<li><code>geometric mean</code></li>
-<li><code>harmonic mean</code></li>
-</ul>
-
-<h3 id="arithmetic-mean">Arithmetic mean</h3>
-
-<p>The definition of arithmetic mean （算术平均数） is:</p>
-
-<p>$$
-AM = \frac1n (x_1 + x_2 + \cdots + x_n)
-$$</p>
-
-<h3 id="geometric-mean">Geometric mean</h3>
-
-<p>The definition of geometric mean （几何平均数） is:</p>
-
-<p>$$
-GM = \sqrt[n]{|x_1 \cdot x_2 \cdot \cdots \cdot x_n|}
-$$</p>
-
-<h3 id="harmonic-mean">Harmonic mean</h3>
-
-<p>The definition of harmonic mean (调和平均数) is:</p>
-
-<div>
-$$
-H = \frac{n}{\frac{1}{x_1} + \frac{1}{x_2} + \cdots + \frac{1}{x_n}} = \frac{n}{\displaystyle\sum_{i=0}^{n} \frac{1}{x_i}}
-$$
-</div>
-
-<p>There are some <a href="https://www.zhihu.com/question/23096098">stories</a> about harmonic mean.</p>
-
-<p>We must encounter this problem about average speed before.</p>
-
-<blockquote>
-<p>There are two docks A and B. <br/>
-One boat go to A from B down the river, its speed is 30 km/h, <br/>
-And this boat go back B from A, its speed is 20 km/h. <br/>
-What is the average speed of this boat?</p>
-
-<p>The answer is the harmonic mean of 20 and 30, 24.</p>
-</blockquote>
-
-<p>Another story:</p>
-
-<blockquote>
-<p>There is a couple, they both go to work by subway everyday.
-But because the distance between their companies and home is different. <br/>
-With the same money in card, husband spend them all with 20 days, and wife with 30 days. <br/>
-For the convinence of recharge, they want to spend all the money simultaneously. <br/>
-So in which days they exchange their cards can achieve this?</p>
-</blockquote>
-
-<h3 id="relationship">Relationship</h3>
-
-<p><code>TODO</code></p>
-
-<h2 id="inequality">Inequality</h2>
-
-<h3 id="bernoulli-s-inequality">Bernoulli&rsquo;s inequality</h3>
-
-<blockquote>
-<p><strong>Bernoulli&rsquo;s Inequality</strong></p>
-
-<p>Let \(n=1,2,3,\cdots\) Then for \(x \gt -1\),
-$$
-(1+x)^n \ge 1+nx
-$$</p>
-</blockquote>
-
-<p><em>Proof.</em></p>
-
-<p>For \(n=1\),
-$$(1+x)^1 = 1+x$$
-which is true as required.</p>
-
-<p>Now suppose the statement is true for \(n=k\), then <br/>
-$$
-(1+x)^k \ge 1+kx
-$$</p>
-
-<p>Because \(x+1\gt0\),
-$$
-\begin{align}
-(1+x)^{k+1} &amp; = (1+x)(1+x)^k \\<br />
-&amp; \ge (1+x)(1+kx)
-\end{align}
-$$</p>
-
-<p>Then it follows that,
-$$
-\begin{align}
-&amp; (1+x)^{k+1} \ge (1+x)(1+kx) \\<br />
-\implies &amp; (1+x)^{k+1} \ge 1+ (k+1)x + kx^2 \\<br />
-\implies &amp; (1+x)^{k+1} \ge 1+ (k+1)x \\<br />
-\end{align}
-$$</p>
-
-<p>By induction, it concludes the statement is true for all \(n\ge1\)</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </main>
+
+                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/hugo\/'" >
+                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
+                </button>
+
+                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
+            </div>
+    </div>
+</main>
+
+
+
+
+
+<nav class="row justify-content-center pb-5">
+    <ul class="nav">
+        
+        <li class="nav-item px-3">
+            <a class="btn btn-light" href="/note/page/3/">Previous</a>
+        </li>
+        
+        
+        <li class="nav-item px-1">
+            <a class="btn btn-light" href="/note/">
+            1
+            </a>
+        </li>
+        
+        <li class="nav-item px-1">
+            <a class="btn btn-light" href="/note/page/2/">
+            2
+            </a>
+        </li>
+        
+        <li class="nav-item px-1">
+            <a class="btn btn-light" href="/note/page/3/">
+            3
+            </a>
+        </li>
+        
+        <li class="nav-item px-1">
+            <a class="btn disabled btn-dark" href="/note/page/4/">
+            4
+            </a>
+        </li>
+        
+        
+    </ul>
+</nav>
+
+
+
+
         </div>
     </div>
+</div>
 
         <footer class="bd-footer text-muted">
 </footer>
@@ -711,26 +551,6 @@ clipboard.on('success', function(e){
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
-<script>
-$(function(){
-    tocbot.init({
-        
-        tocSelector: '.bd-toc',
-        
-        contentSelector: 'main',
-        
-        headingSelector: 'h2, h3, h4',
-        listClass: 'toc-list',
-        listItemClass: 'toc-entry',
-        linkClass: 'font-weight-normal',
-        activeLinkClass: 'active',
-        collapseDepth: 6,
-    });
-});
-</script>
 
 
 

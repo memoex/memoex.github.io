@@ -238,10 +238,25 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
       <pubDate>Mon, 19 Mar 2018 19:44:24 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr. Blue)</author>
       <guid>https://memoex.github.io/note/tech/loss/</guid>
-      <description>This article introdcues some common loss function which also called as cost function in classification 1 2.
-Loss function in classification The goal of classification problem, or many machine learning porblem, is given training sets \(\{(x^{(i)}, y^{(i)}); i=1,\cdots,m\}\), to find a good predictor \(f\) so that \(f(x^{(i)})\) is a good estimate of \(y^{(i)}\).
-Why we need a loss function?
-To measure how &amp;ldquo;close&amp;rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\).</description>
+      <description>&lt;p&gt;This article will introdcue:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;expected risk&lt;/li&gt;
+&lt;li&gt;some common loss function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;loss-function-in-classification&#34;&gt;Loss function in classification&lt;/h2&gt;
+
+&lt;p&gt;The goal of classification problem, or many machine learning porblem, is given training sets \(\{(x^{(i)}, y^{(i)}); i=1,\cdots,m\}\),
+to find a good predictor \(f\) so that
+\(f(x^{(i)})\) is a good estimate of \(y^{(i)}\).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why we need a loss function?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We need a loss function to measure how &amp;ldquo;close&amp;rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\)
+and we usually optimize our model by minimizing the loss.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -320,6 +335,15 @@ $$
 &lt;/div&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Datasets</title>
+      <link>https://memoex.github.io/note/tech/datasets/</link>
+      <pubDate>Thu, 29 Mar 2018 20:32:10 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <guid>https://memoex.github.io/note/tech/datasets/</guid>
+      <description> Image datasets Minist </description>
     </item>
     
     <item>
