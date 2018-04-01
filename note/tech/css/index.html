@@ -67,9 +67,9 @@
 
 
         <div class="container-fluid">
-    <div class="row flex-xl-nowrap">
-        <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
-            
+        <div class="row flex-xl-nowrap">
+            <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+                
 
 
 
@@ -152,7 +152,7 @@
                     </a>
                 </li>
                 
-                <li class="" >
+                <li class="active" >
                     <a href="https://memoex.github.io/note/tech/css/">
                     CSS
                     </a>
@@ -347,202 +347,65 @@
 
     
 
-        </div>
+            </div>
 
-        <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
-            
-    
+            <div class="d-none d-xl-block col-xl-2 bd-toc">
+            </div>
 
-
-
-
-<main>
-    <div class="p-0 container-fluid rounded">
-        <div class="col-12">
-                <h1 class="bd-title">
-                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/git/">Git</a>
-                </h1>
-                <div class="mb-5">
+            <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5" role="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="bd-title">CSS</h1>
+                            <div class="mb-5">
     <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 11, 2017</time>
-    
-        <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/git'>git</a>
-                </li>
-            
-        </ul>
+    <time class="px-1 font-weight-bold indigo-text">Mar 3, 2018</time>
     
 </div>
 
-                <div class="bd-content">
-                    <p>Some git notes.</p>
+                            <div class="bd-content">
+                                <h2 id="quick-notes">Quick notes</h2>
 
-<h2 id="基本配置">基本配置</h2>
+<h3 id="safe-fonts">Safe fonts</h3>
 
-<h3 id="git-config">git config</h3>
+<p><a href="https://www.cssfontstack.com/">A complete collection of web safe CSS font stacks.</a></p>
 
-<pre><code class="language-sh"># List configuration
-git config -l
-git config --global -l
+<p>Add two common fonts for Chinese characters: <code>PingFang SC</code>, <code>Microsoft YaHei</code>.</p>
 
-# Config user's info
-git config --global user.name &quot;Mr.Blue&quot;
-git config --global user.email &quot;silverhugh.77@gmail.com&quot;
-
-# Delete config
-git config --global --unset user.username
-
-# Config editor for git, use vim, nano or so on
-git config --global core.editor &quot;vim&quot;
-# True way to Commit
-#   `git commit` will open an vim editor (set by command before)
-#   write the commit message in it and `:x` to commit
+<pre><code class="language-css">$font-family-serif:           Palatino, Georgia, &quot;Times New Roman&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, serif !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot; !default;
 </code></pre>
+
+<h3 id="difference-between-serif-and-sans-serif">Difference between Serif and Sans Serif</h3>
+
+<p>See this great inforgraphic: <a href="http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/">The Difference Between Serif And Sans-Serif Explained In One Infographic</a></p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
+    <a class="d-block mx-auto" href="https://i.imgur.com/519YeM0.jpg" data-fancybox="gallery" data-caption="Serif (left) and Sans Serif (right)">
+        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/519YeM0.jpg" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>Serif (left) and Sans Serif (right)</p>
+    
+</div>
+
 
 <p></p>
-                </div>
 
-                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/git\/'" >
-                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                </button>
-
-                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
-            </div><div class="col-12">
-                <h1 class="bd-title">
-                    <a class="text-dark bd-title" href="https://memoex.github.io/note/tech/hugo/">Hugo</a>
-                </h1>
-                <div class="mb-5">
-    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-    <time class="px-1 font-weight-bold indigo-text">Dec 4, 2017</time>
-    
-        <i class="pl-3 fa fa-tags fa-lg" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/hugo'>Hugo</a>
-                </li>
-            
-                <li class="nav-item d-inline">
-                    <a class="text-capitalize" href='/tags/blog'>blog</a>
-                </li>
-            
-        </ul>
-    
-</div>
-
-                <div class="bd-content">
-                    <p>Hugo releated notes. Current take some notes when reading official docuemts</p>
-
-<h2 id="tips">Tips</h2>
-
-<h3 id="footnotes">Footnotes</h3>
-
-<pre><code class="language-md">This is a footnote.[^1]
-
-[^1]: the footnote text.
-</code></pre>
-
-<p>Not only number, words work too.<sup class="footnote-ref" id="fnref:footnotes"><a href="#fn:footnotes">1</a></sup></p>
-
-<h3 id="github-task-list">Github task list</h3>
-
-<pre><code class="language-md">- [ ] a task list item
-- [ ] list syntax required
-- [ ] incomplete
-- [x] completed
-</code></pre>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> a task list item</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> list syntax required</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> incomplete</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> completed</label></li>
-</ul>
-
-<h2 id="reading-documents">Reading documents</h2>
-
-<h3 id="目录结构">目录结构</h3>
-
-<pre><code>.
-├── archetypes
-├── config.toml
-├── content
-├── data
-├── layouts
-├── static
-└── themes
-</code></pre>
-
-<p><code>archetypes</code>: 用于<code>hugo new</code>，Lookup Order for Archetypes：</p>
+<h3 id="material-color-palette">Material color palette</h3>
 
 <ul>
-<li><code>archetypes/posts.md</code></li>
-<li><code>archetypes/default.md</code></li>
-<li><code>themes//archetypes/posts.md</code></li>
-<li><code>themes//archetypes/default.md (Auto-generated with hugo new site)</code></li>
+<li><a href="https://material.io/guidelines/style/color.html#color-color-palette">Color palette</a></li>
+<li><a href="http://next.materializecss.com/color.html">Materialize color usage</a></li>
 </ul>
-
-<p></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <button class="btn btn-block btn-light py-1" type="button" onclick="location.href='https:\/\/memoex.github.io\/note\/tech\/hugo\/'" >
-                    <i class="py-2 fa fa-chevron-right fa-lg" aria-hidden="true"></i>
-                </button>
-
-                <hr class="mt-4 mb-5 grey-border border-lighten-1"/>
-            </div>
-    </div>
-</main>
-
-
-
-
-
-<nav class="row justify-content-center pb-5">
-    <ul class="nav">
-        
-        <li class="nav-item px-3">
-            <a class="btn btn-light" href="/note/tech/page/3/">Previous</a>
-        </li>
-        
-        
-        <li class="nav-item px-1">
-            <a class="btn btn-light" href="/note/tech/">
-            1
-            </a>
-        </li>
-        
-        <li class="nav-item px-1">
-            <a class="btn btn-light" href="/note/tech/page/2/">
-            2
-            </a>
-        </li>
-        
-        <li class="nav-item px-1">
-            <a class="btn btn-light" href="/note/tech/page/3/">
-            3
-            </a>
-        </li>
-        
-        <li class="nav-item px-1">
-            <a class="btn disabled btn-dark" href="/note/tech/page/4/">
-            4
-            </a>
-        </li>
-        
-        
-    </ul>
-</nav>
-
-
-
-
+            </main>
         </div>
     </div>
-</div>
 
         <footer class="bd-footer text-muted">
 </footer>
@@ -609,6 +472,26 @@ clipboard.on('success', function(e){
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.2.1/tocbot.min.js"></script>
+<script>
+$(function(){
+    tocbot.init({
+        
+        tocSelector: '.bd-toc',
+        
+        contentSelector: 'main',
+        
+        headingSelector: 'h2, h3, h4',
+        listClass: 'toc-list',
+        listItemClass: 'toc-entry',
+        linkClass: 'font-weight-normal',
+        activeLinkClass: 'active',
+        collapseDepth: 6,
+    });
+});
+</script>
 
 
 
