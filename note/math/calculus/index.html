@@ -426,6 +426,8 @@ there is always a \(\delta \gt 0\), such that: <br>
 \(|f(x)-L| \lt \epsilon\) for all \(x\) satisfying \(0 \lt |x-a| \lt \delta\).</p>
 </blockquote>
 
+<p><strong>DNE</strong>: Do not exist.</p>
+
 <h3 id="new-limits-form-old-ones">New limits form old ones</h3>
 
 <blockquote>
@@ -473,6 +475,40 @@ $$</p>
 <p>If \(g(x) &lt; f(x) &lt; h(x)\) for all x near a,
 and \(\displaystyle \lim_{x \to a} g(x) = \lim_{x \to a} h(x) = L, \text{then} \displaystyle \lim_{x \to a} f(x) = L\)</p>
 </blockquote>
+
+<p>Proof tip:</p>
+
+<p>\(L-\epsilon &lt; g(x) \le f(x) \le h(x) &lt; L + \epsilon \Rightarrow |f(x) - L| &lt; \epsilon \)</p>
+
+<h3 id="limit-problems-involving-polynomials">Limit problems involving polynomials</h3>
+
+<ol>
+<li>Substitute (直接代入)</li>
+<li>Factor (因式分解)
+
+<ul>
+<li>\(\displaystyle\lim_{x\to 2} \frac{x^2-3x+2}{x-2}\)</li>
+<li>\(a^3-b^3=(a-b)(a^2+ab+b^2)\)</li>
+</ul></li>
+<li>Using (a-b)(a+b)
+
+<ul>
+<li>\(\displaystyle\lim_{x\to 5} \frac{\sqrt{x^2-9}-4}{x-5}\)</li>
+<li>conjugate (共轭) expression: \(\sqrt{x^2-9}-4\)</li>
+</ul></li>
+<li>Focus on leading term
+
+<ul>
+<li>\(\displaystyle\lim_{x\to \infty} \frac{C}{x^n} = 0, \ n &gt; 0 \)</li>
+</ul></li>
+<li><strong>Be careful of positive and negative.</strong>
+
+<ul>
+<li>\(\displaystyle\lim_{x\to \infty} \frac{(x^2-9)(9-x^3)}{5x^5}\)</li>
+<li>\(\displaystyle\lim_{x\to -\infty} \frac{\sqrt{x^2-9}}{x} = -1\)</li>
+<li>\(\displaystyle\lim_{x\to 0^-} \frac{|x|}{x} = -1\)</li>
+</ul></li>
+</ol>
                             </div>
                         </div>
                     </div>

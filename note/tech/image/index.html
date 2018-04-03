@@ -366,6 +366,12 @@
                             <div class="bd-content">
                                 <p>Notes about image processing.</p>
 
+<h2 id="links">Links</h2>
+
+<ul>
+<li><a href="http://cs231n.stanford.edu/project.html">CS231n</a></li>
+</ul>
+
 <h2 id="convolution">Convolution</h2>
 
 <h3 id="implementation-of-convolution">Implementation of convolution</h3>
@@ -575,7 +581,7 @@ $$
 
 <ul>
 <li><a href="https://stats.stackexchange.com/a/301041">Saddle points - Stack overflow</a></li>
-<li><a href="https://www.reddit.com/r/MLQuestions/comments/6i1at2/what_causes_these_sudden_drops_in_training_error/">Annealing schedule?</a></li>
+<li><a href="https://keras.io/callbacks/#learningratescheduler">Keras - <code>LearningRateScheduler</code></a></li>
 </ul>
 
 <div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
@@ -588,6 +594,19 @@ $$
     
 </div>
 
+
+<pre><code class="language-py">def lr_sch(epoch):
+    #200 total
+    if epoch &lt;50:
+        return 1e-3
+    if 50&lt;=epoch&lt;100:
+        return 1e-4
+    if epoch&gt;=100:
+        return 1e-5
+lr_scheduler = LearningRateScheduler(lr_sch)
+lr_reducer = ReduceLROnPlateau(monitor='val_acc',factor=0.2,patience=5,
+                               mode='max',min_lr=1e-3)
+</code></pre>
 
 <h3 id="baselines">Baselines</h3>
 
