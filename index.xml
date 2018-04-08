@@ -26,6 +26,28 @@
 &lt;li&gt;&lt;a href=&#34;http://cs231n.stanford.edu/project.html&#34;&gt;CS231n&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&#34;ideas&#34;&gt;Ideas&lt;/h2&gt;
+
+&lt;h3 id=&#34;increment-class-classification&#34;&gt;Increment-class classification&lt;/h3&gt;
+
+&lt;p&gt;How to make n_class in classification incresable without re-train all networks?&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/O5TVg52.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Make classifiers more like human thinking ?&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/O5TVg52.jpg&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;Make classifiers more like human thinking ?&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;The basic problem is always &amp;ldquo;0 or 1&amp;rdquo;, isn&amp;rsquo;t it?&lt;/li&gt;
+&lt;li&gt;This unit may could be assembled to make more complex networks.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
 
 &lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;

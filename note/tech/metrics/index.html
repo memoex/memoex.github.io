@@ -558,9 +558,90 @@ $$</p>
 And the \( F_{0.5} \) measure, which weighs precision higher than recall.
 (More emphasis on \(\displaystyle\frac1{precision}\))<sup class="footnote-ref" id="fnref:f1"><a href="#fn:f1">3</a></sup></p>
 
-<h3 id="type-i-error">Type I error</h3>
+<h3 id="auc">AUC</h3>
 
-<p>Before we talk about Type I error and Type II error, we should explain what is null hypothesis.</p>
+<p>AUC is the area under the (Receiver Operating Characteristic) curve. So let&rsquo;s discuss ROC curve first.</p>
+
+<h4 id="roc">ROC</h4>
+
+<p>The full name of ROC is Receiver Operating Characteristic curve.
+ROC curve was first developed in the World War II for radar-signal detection methodology.</p>
+
+<blockquote>
+<p>We can image a radar used to detect flights of enemy, and you are a radar operator.
+You need to report every time you see a signal in radar.</p>
+
+<ul>
+<li>If you see a signal in radar and you say it&rsquo;s a flight and actually it&rsquo;s really a flight. We called this a hit or TP (True Positive).</li>
+<li>If you see a signal in radar and you say it&rsquo;s a flight but actually it&rsquo;s just a bird. We called this a false alarm or FP (False Positive).</li>
+<li>If you see a signal in radar and you say it&rsquo;s just a bird but actually it&rsquo;s an enemy flight. We called this a miss or FN (False Negative).</li>
+<li>If you see a signal in radar and you say it&rsquo;s just a bird and actually it&rsquo;s a bird. We called this TN (True Negative).</li>
+</ul>
+</blockquote>
+
+<p>In brief, ROC curve is used to assess the seperating ablity of two models in binary classification.</p>
+
+<p>The x-axis of curve is <code>FPR</code> (False Positive Rate), also called as False alarm rate.</p>
+
+<p>$$
+FPR = \frac{FP}{Real \ Negative} = \frac{FP}{FP + TN}
+$$</p>
+
+<p>And the y-axis is <code>TPR</code> (True Positive Rate), also called as Hit rate.</p>
+
+<p>$$
+TPR = \frac{TP}{Real \ Positive} = \frac{TP}{TP + FN}
+$$</p>
+
+<p><strong>For a specific model, how do we plot this ROC curve?</strong></p>
+
+<p>We should be clear about how we decide the class of a case.
+A model in binary classification usually generate a number range from 0 to 1 for every case.
+If this number is larger than a number you preset then you will say  it&rsquo;s a positive case, otherwise it&rsquo;s a negative one.
+This preset number is called <code>threshold</code>.</p>
+
+<p>To generate a ROC curve, we change the threshold from 0 to 1.
+Everytime it will give you a False alarm rate and Hit rate and we plot them in one figure and link them with a curve then we get a ROC curve.</p>
+
+<h4 id="demo-of-roc">Demo of ROC</h4>
+
+<p>Below is a demonstration from <a href="http://www.navan.name/roc/">Navan&rsquo;s website</a>.
+And you can see the tutorial on <a href="https://www.youtube.com/watch?v=OAl6eAyP-yo">Youtube</a>.</p>
+
+<p>In this demonstration, the blue area represents real negative cases and the red area represents real positive cases.
+The x-axis is the predict value, range from 0 to 1 and the y-axis is the number of cases corresponding to the predict value.</p>
+
+<p>The case on the right side of black verticle line will be predicted as positive.</p>
+
+<div class="roc">
+    <div id="slider">
+        <input type="range" min="1" max="200" value="0" id="slider_input"/>
+    </div>
+</div>
+
+<p>Let&rsquo;s anaylaze two extreme situations.</p>
+
+<p>For first one, let&rsquo;s set the threshold to 0 (just drag the black vertical line to the left),
+then all case will be predicted as positive cases. So all real negative cases will be falsely predicted as positive (False Positive).
+The FPR will be 1. And all real positive cases will be predicted correctly so the TPR will be 1 to.</p>
+
+<p>Fot the other one, let&rsquo;s set the threshold to 1 (this time drag the black vertical line to the right).
+Then all case will be predicted as negative cases. All real negative cases are predicted correctly, there is no false positive.
+The false alarm rate will be 0. And all positive cases are predicted wrong. The hit rate is 0 too.</p>
+
+<p>With these two situations, two points are always existed in the curve:
+\((0, 0)\) and \((1, 1)\)</p>
+
+<h4 id="area-under-the-curve">Area under the curve</h4>
+
+<p>The implementation of auc in scikit-learn <a href="https://github.com/scikit-learn/scikit-learn/blob/a24c8b464d094d2c468a16ea9f8bf8d42d949f84/sklearn/metrics/ranking.py#L353">choose unique value in predicts as thresholds</a>.
+And integrate (FPR, TPR) points using <a href="https://github.com/scikit-learn/scikit-learn/blob/a24c8b464d094d2c468a16ea9f8bf8d42d949f84/sklearn/metrics/ranking.py#L101">trapezoidal rule</a>.</p>
+
+<h2 id="related-reading">Related reading</h2>
+
+<h3 id="type-i-and-type-ii-error">Type I and Type II error</h3>
+
+<p>Before we talk about Type I and Type II error, we should explain what is null hypothesis.</p>
 
 <blockquote>
 <p>In statistical hypothesis testing, the <code>null hypothesis</code> (零假设) and <code>alternate hypothesis</code> (备择假设) are two rival hypotheses.</p>
@@ -570,79 +651,89 @@ And the \( F_{0.5} \) measure, which weighs precision higher than recall.
 <li>Alternative hypothesis against null hypothesis and is often symbolized as \(H_1\).</li>
 </ul>
 
-<p>The purpose of hypothesis testing is to establish whether experimental evidence supports the rejection of the null hypothesis.</p>
+<p>The purpose of hypothesis testing is to establish whether experimental evidence supports the rejection of the null hypothesis.
+Thus we will accept alternate hypothesis.<sup class="footnote-ref" id="fnref:papoulis"><a href="#fn:papoulis">4</a></sup></p>
 
 <p>For example, that we wish to establish whether the hypothesis \(H_0\) that a coin is fair is
-true. To do so, we toss the coin 100 times and observe that heads show \(k\) times. If \(k = 15\),
+true. To do so, we toss the coin 100 times and observe that heads show \(k\) times.</p>
+
+<ul>
+<li>If \(k = 15\),
 we reject \(H_0\), that is, we decide on the basis of the evidence that the fair-coin hypothesis
-should be rejected. If \(k = 49\), we accept \(H_0\). that is, we decide that the evidence does not
+should be rejected.</li>
+<li>If \(k = 49\), we accept \(H_0\). that is, we decide that the evidence does not
 support the rejection of the fair-coin hypothesis. The evidence alone. however, does not
-lead to the conclusion that the coin is fair. <sup class="footnote-ref" id="fnref:papoulis"><a href="#fn:papoulis">4</a></sup></p>
+lead to the conclusion that the coin is fair.</li>
+</ul>
 
 <hr />
 
 <p>Why called &ldquo;null&rdquo;?</p>
 
 <p>There are two explain, one is that
-the word “null” in this context means that it’s a commonly accepted fact that researchers work to nullify <sup class="footnote-ref" id="fnref:statisticshowto"><a href="#fn:statisticshowto">5</a></sup> <sup class="footnote-ref" id="fnref:knowswhy"><a href="#fn:knowswhy">6</a></sup>. <br>
+the word &ldquo;null&rdquo; in this context means that it’s a commonly accepted fact that researchers work to nullify <sup class="footnote-ref" id="fnref:statisticshowto"><a href="#fn:statisticshowto">5</a></sup> <sup class="footnote-ref" id="fnref:knowswhy"><a href="#fn:knowswhy">6</a></sup>. <br>
 Another one is that the null statement is expressed as no (significant) relationship between two variables or no (significant) difference between two groups. <sup class="footnote-ref" id="fnref:researchgate"><a href="#fn:researchgate">7</a></sup></p>
 </blockquote>
 
-<p>Type I error is that, we reject \(H_0\) even though it is true.
-A type I error is also known as a &ldquo;false positive&rdquo;, because \(H_0\) is usually a kind of &ldquo;negative&rdquo;.
-The probability for such an error is denoted by \(\alpha\) and is also called the significance level of the test.</p>
+<p><code>Type I error</code> is that, we reject \(H_0\) even though it is true.
+A type I error is also known as a &ldquo;false positive&rdquo;, because \(H_0\) is usually a kind of &ldquo;negative&rdquo; (no relationship).</p>
 
-<p>The number of Type I error:</p>
+<p>The probability for such an error is denoted by \(\alpha\) and is also called the <em>significance level</em> of the test.</p>
 
-<p>$$
+<p><code>Type II error</code> is that, we accept \(H_0\) even though it is false.
+A type II error is also known as a &ldquo;false negative&rdquo;.</p>
+
+<!--
+
+The probability for such an error is a function \\(\beta(\theta)\\) of \\(\theta\\) called the *operating characteristic* (OC) of the test.
+The difference \\(1-\beta(\theta)\\) is the probability that we reject \\(H\_0\\) when false.
+This is denoted by \\(P(\theta)\\) and is called the *power if the test*.
+
+The number of Type I error:
+
+$$
 FP
-$$</p>
+$$
 
-<p>The number we accept \(H_0\) and \(H_0\) is true:</p>
+The number we accept \\(H\_0\\) and \\(H\_0\\) is true:
 
-<p>$$
+$$
 TN
-$$</p>
+$$
 
-<p>Type I error rate:</p>
+Type I error rate:
 
-<p>$$
+$$
 \alpha = \frac{FP}{FP+TN}
-$$</p>
+$$
 
-<h3 id="type-ii-error">Type II error</h3>
+The number of Type II error:
 
-<p>Type II error is that, we accept \(H_0\) even though it is false.
-A type II error is also known as a &ldquo;false negative&rdquo;.
-The probability for such an error is denoted by \(\alpha\) and is also called the significance level of the test.</p>
-
-<p>The number of Type II error:</p>
-
-<p>$$
+$$
 FN
-$$</p>
+$$
 
-<p>The number we accept \(H_0\) and \(H_0\) is true:</p>
+The number we accept \\(H\_0\\) and \\(H\_0\\) is true:
 
-<p>$$
+$$
 TP
-$$</p>
+$$
 
-<p>Type I error rate:</p>
+Type I error rate:
 
-<p>$$
+$$
 \alpha = \frac{FN}{FN+TN}
-$$</p>
+$$
+-->
 
-<h3 id="roc">ROC</h3>
-
-<p>Receiver operating characteristic.</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min.js"></script>
+<script src="/js/roc.js" charset="utf-8"></script>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:zhou"><a href="http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm">http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm</a>
+<li id="fn:zhou"><a href="http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm">机器学习</a>,周志华
  <a class="footnote-return" href="#fnref:zhou"><sup>[return]</sup></a></li>
 <li id="fn:recall"><a href="https://en.wikipedia.org/wiki/Precision_and_recall">https://en.wikipedia.org/wiki/Precision_and_recall</a>
  <a class="footnote-return" href="#fnref:recall"><sup>[return]</sup></a></li>
