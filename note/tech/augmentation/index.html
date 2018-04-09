@@ -826,8 +826,6 @@ y_train = np_utils.to_categorical(y_train, num_classes)
 y_test = np_utils.to_categorical(y_test, num_classes)
 
 datagen = ImageDataGenerator(
-    featurewise_center=True,
-    featurewise_std_normalization=True,
     rotation_range=20,
     width_shift_range=0.2,
     height_shift_range=0.2,
@@ -853,6 +851,12 @@ for e in range(epochs):
             # the generator loops indefinitely
             break
 </code></pre>
+
+<p>When training on cifar-10 dataset, rotation has little effects.
+Width shift, height shift and horizontal flip are used and usually can improve accuracy about 10%.
+By using these data augmentation methods, we can avoid overfitting very efficiently.</p>
+
+<hr />
 
 <p>Data from disk:</p>
 

@@ -386,6 +386,7 @@ In this article, you will see some common used metrics, including:</p>
 <li>recall （召回率，查全率）</li>
 <li>f1-score</li>
 <li>fn-score</li>
+<li>AUC</li>
 </ol>
 
 <p>(中文名称参考《机器学习》，周志华著)<sup class="footnote-ref" id="fnref:zhou"><a href="#fn:zhou">1</a></sup></p>
@@ -634,6 +635,10 @@ The false alarm rate will be 0. And all positive cases are predicted wrong. The 
 
 <h4 id="area-under-the-curve">Area under the curve</h4>
 
+<blockquote>
+<p>The AUC is equal to the probability that a classifer will rank a randomly choosen positive instance higher than a randomly choosen negative one. <sup class="footnote-ref" id="fnref:roc"><a href="#fn:roc">4</a></sup></p>
+</blockquote>
+
 <p>The implementation of auc in scikit-learn <a href="https://github.com/scikit-learn/scikit-learn/blob/a24c8b464d094d2c468a16ea9f8bf8d42d949f84/sklearn/metrics/ranking.py#L353">choose unique value in predicts as thresholds</a>.
 And integrate (FPR, TPR) points using <a href="https://github.com/scikit-learn/scikit-learn/blob/a24c8b464d094d2c468a16ea9f8bf8d42d949f84/sklearn/metrics/ranking.py#L101">trapezoidal rule</a>.</p>
 
@@ -652,7 +657,7 @@ And integrate (FPR, TPR) points using <a href="https://github.com/scikit-learn/s
 </ul>
 
 <p>The purpose of hypothesis testing is to establish whether experimental evidence supports the rejection of the null hypothesis.
-Thus we will accept alternate hypothesis.<sup class="footnote-ref" id="fnref:papoulis"><a href="#fn:papoulis">4</a></sup></p>
+Thus we will accept alternate hypothesis.<sup class="footnote-ref" id="fnref:papoulis"><a href="#fn:papoulis">5</a></sup></p>
 
 <p>For example, that we wish to establish whether the hypothesis \(H_0\) that a coin is fair is
 true. To do so, we toss the coin 100 times and observe that heads show \(k\) times.</p>
@@ -671,8 +676,8 @@ lead to the conclusion that the coin is fair.</li>
 <p>Why called &ldquo;null&rdquo;?</p>
 
 <p>There are two explain, one is that
-the word &ldquo;null&rdquo; in this context means that it’s a commonly accepted fact that researchers work to nullify <sup class="footnote-ref" id="fnref:statisticshowto"><a href="#fn:statisticshowto">5</a></sup> <sup class="footnote-ref" id="fnref:knowswhy"><a href="#fn:knowswhy">6</a></sup>. <br>
-Another one is that the null statement is expressed as no (significant) relationship between two variables or no (significant) difference between two groups. <sup class="footnote-ref" id="fnref:researchgate"><a href="#fn:researchgate">7</a></sup></p>
+the word &ldquo;null&rdquo; in this context means that it’s a commonly accepted fact that researchers work to nullify <sup class="footnote-ref" id="fnref:statisticshowto"><a href="#fn:statisticshowto">6</a></sup> <sup class="footnote-ref" id="fnref:knowswhy"><a href="#fn:knowswhy">7</a></sup>. <br>
+Another one is that the null statement is expressed as no (significant) relationship between two variables or no (significant) difference between two groups. <sup class="footnote-ref" id="fnref:researchgate"><a href="#fn:researchgate">8</a></sup></p>
 </blockquote>
 
 <p><code>Type I error</code> is that, we reject \(H_0\) even though it is true.
@@ -733,12 +738,14 @@ $$
 <hr />
 
 <ol>
-<li id="fn:zhou"><a href="http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm">机器学习</a>,周志华
+<li id="fn:zhou">周志华, <a href="http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/MLbook2016.htm">机器学习</a>
  <a class="footnote-return" href="#fnref:zhou"><sup>[return]</sup></a></li>
-<li id="fn:recall"><a href="https://en.wikipedia.org/wiki/Precision_and_recall">https://en.wikipedia.org/wiki/Precision_and_recall</a>
+<li id="fn:recall">Wikipedia - <a href="https://en.wikipedia.org/wiki/Precision_and_recall">Precision and recall</a>
  <a class="footnote-return" href="#fnref:recall"><sup>[return]</sup></a></li>
-<li id="fn:f1"><a href="https://en.wikipedia.org/wiki/F1_score">https://en.wikipedia.org/wiki/F1_score</a>
+<li id="fn:f1">Wikipedia - <a href="https://en.wikipedia.org/wiki/F1_score">F1 score</a>
  <a class="footnote-return" href="#fnref:f1"><sup>[return]</sup></a></li>
+<li id="fn:roc">Wikipedia - <a href="https://en.wikipedia.org/wiki/Receiver_operating_characteristic#Area_under_the_curve">Receiver operating characteristic</a>
+ <a class="footnote-return" href="#fnref:roc"><sup>[return]</sup></a></li>
 <li id="fn:papoulis">Athanasions Papoulis, Probability, random variable, and stochastic processes (354-355), University Professor Polytechnic University
  <a class="footnote-return" href="#fnref:papoulis"><sup>[return]</sup></a></li>
 <li id="fn:statisticshowto"><a href="http://www.statisticshowto.com/probability-and-statistics/null-hypothesis/">Null Hypothesis Definition and Examples, How to State</a>
