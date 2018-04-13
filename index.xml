@@ -277,7 +277,7 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
       <guid>https://memoex.github.io/note/math/calculus/</guid>
       <description>&lt;p&gt;I can&amp;rsquo;t stand my poor math anymore, and start to re-learn math from calculus.&lt;/p&gt;
 
-&lt;p&gt;This notes will record some formulas and anything intersting about calculus.&lt;/p&gt;
+&lt;p&gt;This notes will record some formulas and anything intersting associates with calculus.&lt;/p&gt;
 
 &lt;h2 id=&#34;trigonometry&#34;&gt;Trigonometry&lt;/h2&gt;
 
@@ -484,7 +484,7 @@ jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
       <pubDate>Thu, 12 Apr 2018 20:12:45 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/image/optimization/</guid>
-      <description>&lt;p&gt;This article will first introduce gradient descent, and then go through most of common optimization methods, such as:&lt;/p&gt;
+      <description>&lt;p&gt;This article will first introduce gradient descent, and then go through most of popular optimization methods, such as:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;SGD&lt;/li&gt;

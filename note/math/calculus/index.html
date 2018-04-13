@@ -415,7 +415,7 @@
                             <div class="bd-content">
                                 <p>I can&rsquo;t stand my poor math anymore, and start to re-learn math from calculus.</p>
 
-<p>This notes will record some formulas and anything intersting about calculus.</p>
+<p>This notes will record some formulas and anything intersting associates with calculus.</p>
 
 <h2 id="trigonometry">Trigonometry</h2>
 
@@ -559,6 +559,8 @@ and \(\displaystyle \lim_{x \to a} g(x) = \lim_{x \to a} h(x) = L, \text{then} \
 </ul></li>
 </ol>
 
+<h2 id="continuity-and-differentiability">Continuity and Differentiability</h2>
+
 <h3 id="continuity">Continuity</h3>
 
 <blockquote>
@@ -585,13 +587,64 @@ in the interval \((a,b)\) such that \(f(c)=0\). The same is true if instead \(f(
 <h3 id="derivative-function">Derivative function</h3>
 
 <p>$$
-f(x) = \lim_{\Delta{x}\to 0}\frac{f(x+\Delta{x})-f(x)}{\Delta{x}}=\lim_{\Delta{x}\to 0}\frac{\Delta{y}}{\Delta{x}}=\frac{dy}{dx}
+f&rsquo;(x) = \lim_{\Delta{x}\to 0}\frac{f(x+\Delta{x})-f(x)}{\Delta{x}}=\lim_{\Delta{x}\to 0}\frac{\Delta{y}}{\Delta{x}}=\frac{dy}{dx}
 $$</p>
 
 <ul>
 <li>\(\Delta{x}\) means change in \(x\)</li>
 <li>\(dx\) means really tiny change in \(x\)</li>
 </ul>
+
+<p>$$
+f^&#x2033;(x) = f^{(2)}(x) = \frac{d^2y}{dx^2}
+$$</p>
+
+<h3 id="differentiability-and-continuity">Differentiability and continuity</h3>
+
+<blockquote>
+<p>If a function \(f\) is differentiable at \(x\), then it&rsquo;s continuous at \(x\).</p>
+</blockquote>
+
+<p>Proof tip.</p>
+
+<p>$$
+\lim_{\Delta{x}\to 0}\Delta{x}\cdot f&rsquo;(x) = \lim_{\Delta{x}\to 0}\frac{f(x+\Delta{x})-f(x)}{\Delta{x}}\cdot \lim_{\Delta{x}\to 0}\Delta{x}
+$$</p>
+
+<ul>
+<li>Differentiable functions are automatically continuous.</li>
+<li>Continuous functions aren&rsquo;t always differentiable.</li>
+</ul>
+
+<h3 id="differentiating-with-basic-operations">Differentiating with basic operations</h3>
+
+<ul>
+<li>constant multiples of functions</li>
+<li>sums and differences of functions</li>
+<li>product rule</li>
+<li>quotient rule</li>
+<li>chain rule</li>
+</ul>
+
+<h4 id="constant-multiplication">Constant multiplication</h4>
+
+<p>$$
+\frac{d}{dx}(cy) = c\frac{dy}{dx}
+$$</p>
+
+<p>Proof tip.</p>
+
+<p>Substitute into the formula of \(f&rsquo;(x)\) directly.</p>
+
+<h4 id="sum-and-difference">Sum and difference</h4>
+
+<p>$$</p>
+
+<p>$$</p>
+
+<p>Proof tip.</p>
+
+<p>Substitute into the formula directly.</p>
                             </div>
                         </div>
                     </div>
