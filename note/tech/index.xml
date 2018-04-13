@@ -5,167 +5,18 @@
     <link>https://memoex.github.io/note/tech/</link>
     <description>Recent content in Tech on Mr.Blue</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>silverhugh.77@gmail.com (Mr. Blue)</managingEditor>
-    <webMaster>silverhugh.77@gmail.com (Mr. Blue)</webMaster>
-    <lastBuildDate>Wed, 31 Jan 2018 20:25:38 +0800</lastBuildDate>
+    <managingEditor>silverhugh.77@gmail.com (Mr.Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr.Blue)</webMaster>
+    <lastBuildDate>Sun, 10 Dec 2017 21:05:14 +0800</lastBuildDate>
     
 	<atom:link href="https://memoex.github.io/note/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Image</title>
-      <link>https://memoex.github.io/note/tech/image/</link>
-      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/image/</guid>
-      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
-
-&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://cs231n.stanford.edu/project.html&#34;&gt;CS231n&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ideas&#34;&gt;Ideas&lt;/h2&gt;
-
-&lt;h3 id=&#34;increment-class-classification&#34;&gt;Increment-class classification&lt;/h3&gt;
-
-&lt;p&gt;How to make n_class in classification incresable without re-train all networks?&lt;/p&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/O5TVg52.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Make classifiers more like human thinking ?&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/O5TVg52.jpg&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;Make classifiers more like human thinking ?&lt;/p&gt;
-    
-&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;The basic problem is always &amp;ldquo;0 or 1&amp;rdquo;, isn&amp;rsquo;t it?&lt;/li&gt;
-&lt;li&gt;This unit may could be assembled to make more complex networks.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
-
-&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
-w = np.zeros((2, 3, 3, 3))
-
-# The first filter converts the image to grayscale.
-# Set up the red, green, and blue channels of the filter.
-w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
-w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
-w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
-
-# Second filter detects horizontal edges in the blue channel.
-w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
-    
-&lt;/div&gt;
-
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Data Augmentation</title>
-      <link>https://memoex.github.io/note/tech/augmentation/</link>
-      <pubDate>Thu, 08 Mar 2018 22:06:06 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/augmentation/</guid>
-      <description>&lt;p&gt;Data augmentation is the process of increasing the size of a dataset by transforming it
-in ways that a neural network is unlikely to learn by itself.&lt;/p&gt;
-
-&lt;p&gt;This article will introduce:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Common data augmentation methods.&lt;/li&gt;
-&lt;li&gt;Image augmentation with &lt;code&gt;imgaug&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Popular tools for data augmentation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Metrics</title>
-      <link>https://memoex.github.io/note/tech/metrics/</link>
-      <pubDate>Tue, 06 Mar 2018 11:08:39 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/metrics/</guid>
-      <description>&lt;p&gt;Sometimes it&amp;rsquo;s hard to tell the differences between precision, accuracy, recall and so on especially for newbees like me.&lt;/p&gt;
-
-&lt;p&gt;But let&amp;rsquo;s try to distinguish them with stories.
-In this article, you will see some common used metrics, including:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Metrics for binary classification: accuracy, precision, reacall, f1-score and so on&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Loss Function</title>
-      <link>https://memoex.github.io/note/tech/loss/</link>
-      <pubDate>Mon, 19 Mar 2018 19:44:24 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/loss/</guid>
-      <description>&lt;p&gt;This article will introdcue:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;expected risk&lt;/li&gt;
-&lt;li&gt;some common loss function&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;loss-function-in-classification&#34;&gt;Loss function in classification&lt;/h2&gt;
-
-&lt;p&gt;The goal of classification problem, or many machine learning porblem, is given training sets \(\{(x^{(i)}, y^{(i)}); i=1,\cdots,m\}\),
-to find a good predictor \(f\) so that
-\(f(x^{(i)})\) is a good estimate of \(y^{(i)}\).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Why we need a loss function?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;We need a loss function to measure how &amp;ldquo;close&amp;rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\)
-and we usually optimize our model by minimizing the loss.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Datasets</title>
-      <link>https://memoex.github.io/note/tech/datasets/</link>
-      <pubDate>Thu, 29 Mar 2018 20:32:10 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
-      <guid>https://memoex.github.io/note/tech/datasets/</guid>
-      <description> Image datasets Minist </description>
-    </item>
-    
-    <item>
       <title>Python</title>
       <link>https://memoex.github.io/note/tech/python/</link>
       <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/python/</guid>
       <description>&lt;p&gt;Some python notes.&lt;/p&gt;
 
@@ -223,7 +74,7 @@ jupyter kernelspec remove &amp;lt;jupyter-kernel-name&amp;gt;
       <title>Tensorflow</title>
       <link>https://memoex.github.io/note/tech/tensorflow/</link>
       <pubDate>Mon, 25 Dec 2017 14:46:16 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/tensorflow/</guid>
       <description>&lt;p&gt;Notes about using Tensorflow&lt;/p&gt;
 
@@ -259,7 +110,7 @@ config.gpu_options.allow_growth = True
       <title>Keras</title>
       <link>https://memoex.github.io/note/tech/keras/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/keras/</guid>
       <description>&lt;p&gt;Notes about Keras.&lt;/p&gt;
 
@@ -304,7 +155,7 @@ new_model.predict(input_data, batch_size=32)
       <title>Color</title>
       <link>https://memoex.github.io/note/tech/color/</link>
       <pubDate>Tue, 13 Mar 2018 20:29:11 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/color/</guid>
       <description>&lt;p&gt;We live in a colorful world, but color isn&amp;rsquo;t that simple.
 This article will introduce some knowledges of color, including:&lt;/p&gt;
@@ -321,7 +172,7 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
       <title>Adobe</title>
       <link>https://memoex.github.io/note/tech/adobe/</link>
       <pubDate>Fri, 09 Mar 2018 16:54:35 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/adobe/</guid>
       <description>&lt;p&gt;In this article, you will see:&lt;/p&gt;
 
@@ -338,7 +189,7 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
       <title>CSS</title>
       <link>https://memoex.github.io/note/tech/css/</link>
       <pubDate>Sat, 03 Mar 2018 19:51:40 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/css/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
@@ -374,7 +225,7 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &amp;quot;Segoe
       <title>JavaScript</title>
       <link>https://memoex.github.io/note/tech/js/</link>
       <pubDate>Mon, 26 Feb 2018 15:14:41 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/js/</guid>
       <description>&lt;p&gt;This is a note about JavaScript.&lt;/p&gt;
 
@@ -411,7 +262,7 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
       <title>Bootstrap</title>
       <link>https://memoex.github.io/note/tech/bootstrap/</link>
       <pubDate>Mon, 29 Jan 2018 22:19:05 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/bootstrap/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
@@ -473,7 +324,7 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
       <title>Docker</title>
       <link>https://memoex.github.io/note/tech/docker/</link>
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/docker/</guid>
       <description>&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
 
@@ -512,7 +363,7 @@ axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
       <title>Matlab</title>
       <link>https://memoex.github.io/note/tech/matlab/</link>
       <pubDate>Sat, 23 Dec 2017 16:02:19 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/matlab/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
@@ -538,7 +389,7 @@ end
       <title>Shell</title>
       <link>https://memoex.github.io/note/tech/shell/</link>
       <pubDate>Wed, 20 Dec 2017 17:00:24 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/shell/</guid>
       <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
@@ -573,7 +424,7 @@ end
       <title>Vim</title>
       <link>https://memoex.github.io/note/tech/vim/</link>
       <pubDate>Mon, 18 Dec 2017 19:09:53 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/vim/</guid>
       <description>&lt;p&gt;This notes contains useful tips for using Vim or editing and I use &lt;a href=&#34;http://vim.spf13.com/&#34;&gt;spf13-vim&lt;/a&gt;.&lt;/p&gt;
 
@@ -632,7 +483,7 @@ end
       <title>Forward Learning</title>
       <link>https://memoex.github.io/note/tech/forward/</link>
       <pubDate>Mon, 18 Dec 2017 19:01:49 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/forward/</guid>
       <description>&lt;p&gt;Papers read during research &lt;strong&gt;forward deep learning&lt;/strong&gt; algorithm.&lt;/p&gt;
 
@@ -696,7 +547,7 @@ end
       <title>Git</title>
       <link>https://memoex.github.io/note/tech/git/</link>
       <pubDate>Mon, 11 Dec 2017 10:41:22 +0800</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/git/</guid>
       <description>&lt;p&gt;Some git notes.&lt;/p&gt;
 
@@ -729,7 +580,7 @@ git config --global core.editor &amp;quot;vim&amp;quot;
       <title>Hugo</title>
       <link>https://memoex.github.io/note/tech/hugo/</link>
       <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
-      <author>silverhugh.77@gmail.com (Mr. Blue)</author>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/hugo/</guid>
       <description>&lt;p&gt;Hugo releated notes. Current take some notes when reading official docuemts&lt;/p&gt;
 

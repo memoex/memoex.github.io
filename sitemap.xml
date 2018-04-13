@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://memoex.github.io/note/tech/image/</loc>
+    <loc>https://memoex.github.io/note/tech/image/image/</loc>
     <lastmod>2018-01-31T20:25:38+08:00</lastmod>
   </url>
   
@@ -13,47 +13,17 @@
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/tech/</loc>
+    <loc>https://memoex.github.io/note/tech/image/</loc>
     <lastmod>2018-01-31T20:25:38+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/tech/augmentation/</loc>
-    <lastmod>2018-03-08T22:06:06+08:00</lastmod>
+    <loc>https://memoex.github.io/note/tech/</loc>
+    <lastmod>2017-12-10T21:05:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://memoex.github.io/note/math/</loc>
-    <lastmod>2017-12-06T11:58:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/note/tech/metrics/</loc>
-    <lastmod>2018-03-06T11:08:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/note/course/</loc>
-    <lastmod>2017-12-24T16:35:25+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/note/tech/loss/</loc>
-    <lastmod>2018-03-19T19:44:24+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/note/life/</loc>
-    <lastmod>2018-04-01T19:50:25+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/note/math/la/</loc>
-    <lastmod>2018-03-14T15:47:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://memoex.github.io/note/tech/datasets/</loc>
+    <loc>https://memoex.github.io/note/tech/image/datasets/</loc>
     <lastmod>2018-03-29T20:32:10+08:00</lastmod>
   </url>
   
@@ -63,8 +33,48 @@
   </url>
   
   <url>
+    <loc>https://memoex.github.io/note/tech/image/augmentation/</loc>
+    <lastmod>2018-03-08T22:06:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/math/</loc>
+    <lastmod>2017-12-06T11:58:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/math/la/</loc>
+    <lastmod>2018-03-14T15:47:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/image/metrics/</loc>
+    <lastmod>2018-03-06T11:08:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/course/</loc>
+    <lastmod>2017-12-24T16:35:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/image/loss/</loc>
+    <lastmod>2018-03-19T19:44:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/life/</loc>
+    <lastmod>2018-04-01T19:50:25+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/note/tech/python/</loc>
     <lastmod>2017-12-10T21:05:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/image/optimization/</loc>
+    <lastmod>2018-04-12T20:12:45+08:00</lastmod>
   </url>
   
   <url>
@@ -75,6 +85,31 @@
   <url>
     <loc>https://memoex.github.io/note/tech/keras/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/about/</loc>
+    <lastmod>2018-04-11T19:02:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/demo/shaoyin/</loc>
+    <lastmod>2018-04-11T18:41:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/demo/tech-and-life/</loc>
+    <lastmod>2018-04-11T18:27:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/demo/poster/</loc>
+    <lastmod>2018-04-11T16:29:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/leetcode/1/</loc>
+    <lastmod>2018-04-11T10:26:00+08:00</lastmod>
   </url>
   
   <url>
@@ -211,6 +246,12 @@
   </url>
   
   <url>
+    <loc>https://memoex.github.io/demo/</loc>
+    <lastmod>2018-04-11T18:41:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://memoex.github.io/tags/docker/</loc>
     <lastmod>2018-01-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -237,6 +278,12 @@
   <url>
     <loc>https://memoex.github.io/tags/keras/</loc>
     <lastmod>2017-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/leetcode/</loc>
+    <lastmod>2018-04-11T10:26:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

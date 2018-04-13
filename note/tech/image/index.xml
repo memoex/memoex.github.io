@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image on Mr.Blue</title>
+    <link>https://memoex.github.io/note/tech/image/</link>
+    <description>Recent content in Image on Mr.Blue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr.Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr.Blue)</webMaster>
+    <lastBuildDate>Wed, 31 Jan 2018 20:25:38 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/note/tech/image/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Image</title>
+      <link>https://memoex.github.io/note/tech/image/image/</link>
+      <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/image/</guid>
+      <description>&lt;p&gt;Notes about image processing.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs231n.stanford.edu/project.html&#34;&gt;CS231n&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ideas&#34;&gt;Ideas&lt;/h2&gt;
+
+&lt;h3 id=&#34;increment-class-classification&#34;&gt;Increment-class classification&lt;/h3&gt;
+
+&lt;p&gt;How to make n_class in classification incresable without re-train all networks?&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/O5TVg52.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Make classifiers more like human thinking ?&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/O5TVg52.jpg&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;Make classifiers more like human thinking ?&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;The basic problem is always &amp;ldquo;0 or 1&amp;rdquo;, isn&amp;rsquo;t it?&lt;/li&gt;
+&lt;li&gt;This unit may could be assembled to make more complex networks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;convolution&#34;&gt;Convolution&lt;/h2&gt;
+
+&lt;h3 id=&#34;implementation-of-convolution&#34;&gt;Implementation of convolution&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://buptldy.github.io/2016/10/01/2016-10-01-im2col/&#34;&gt;Implementing convolution as a matrix multiplication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;提取灰度特征和边缘特征的卷积核：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;# Set up a convolutional weights holding 2 filters, each 3x3
+w = np.zeros((2, 3, 3, 3))
+
+# The first filter converts the image to grayscale.
+# Set up the red, green, and blue channels of the filter.
+w[0, 0, :, :] = [[0, 0, 0], [0, 0.3, 0], [0, 0, 0]]
+w[0, 1, :, :] = [[0, 0, 0], [0, 0.6, 0], [0, 0, 0]]
+w[0, 2, :, :] = [[0, 0, 0], [0, 0.1, 0], [0, 0, 0]]
+
+# Second filter detects horizontal edges in the blue channel.
+w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;im2col&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/gUZGkvi.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;An example for im2col&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/gUZGkvi.png&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;An example for im2col&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Datasets</title>
+      <link>https://memoex.github.io/note/tech/image/datasets/</link>
+      <pubDate>Thu, 29 Mar 2018 20:32:10 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/datasets/</guid>
+      <description> Image datasets Minist </description>
+    </item>
+    
+    <item>
+      <title>Data Augmentation</title>
+      <link>https://memoex.github.io/note/tech/image/augmentation/</link>
+      <pubDate>Thu, 08 Mar 2018 22:06:06 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/augmentation/</guid>
+      <description>&lt;p&gt;Data augmentation is the process of increasing the size of a dataset by transforming it
+in ways that a neural network is unlikely to learn by itself.&lt;/p&gt;
+
+&lt;p&gt;This article will introduce:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Common data augmentation methods.&lt;/li&gt;
+&lt;li&gt;Image augmentation with &lt;code&gt;imgaug&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Popular tools for data augmentation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Metrics</title>
+      <link>https://memoex.github.io/note/tech/image/metrics/</link>
+      <pubDate>Tue, 06 Mar 2018 11:08:39 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/metrics/</guid>
+      <description>&lt;p&gt;Sometimes it&amp;rsquo;s hard to tell the differences between precision, accuracy, recall and so on especially for newbees like me.&lt;/p&gt;
+
+&lt;p&gt;But let&amp;rsquo;s try to distinguish them with stories.
+In this article, you will see some common used metrics, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Metrics for binary classification: accuracy, precision, reacall, f1-score and so on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Loss Function</title>
+      <link>https://memoex.github.io/note/tech/image/loss/</link>
+      <pubDate>Mon, 19 Mar 2018 19:44:24 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/loss/</guid>
+      <description>&lt;p&gt;This article will introdcue:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;expected risk&lt;/li&gt;
+&lt;li&gt;some common loss function&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;loss-function-in-classification&#34;&gt;Loss function in classification&lt;/h2&gt;
+
+&lt;p&gt;The goal of classification problem, or many machine learning porblem, is given training sets \(\{(x^{(i)}, y^{(i)}); i=1,\cdots,m\}\),
+to find a good predictor \(f\) so that
+\(f(x^{(i)})\) is a good estimate of \(y^{(i)}\).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why we need a loss function?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We need a loss function to measure how &amp;ldquo;close&amp;rdquo; of estimate value \(\hat y^{(i)}\) and the target value \(y^{(i)}\)
+and we usually optimize our model by minimizing the loss.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Optimization</title>
+      <link>https://memoex.github.io/note/tech/image/optimization/</link>
+      <pubDate>Thu, 12 Apr 2018 20:12:45 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/image/optimization/</guid>
+      <description>&lt;p&gt;This article will first introduce gradient descent, and then go through most of common optimization methods, such as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;SGD&lt;/li&gt;
+&lt;li&gt;RMSprop&lt;/li&gt;
+&lt;li&gt;Adam&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
