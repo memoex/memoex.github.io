@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Languages on Mr.Blue</title>
+    <link>https://memoex.github.io/note/tech/lang/</link>
+    <description>Recent content in Languages on Mr.Blue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr.Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr.Blue)</webMaster>
+    <lastBuildDate>Sun, 15 Apr 2018 13:42:36 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/note/tech/lang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python</title>
+      <link>https://memoex.github.io/note/tech/lang/python/</link>
+      <pubDate>Sun, 10 Dec 2017 21:05:14 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/python/</guid>
+      <description>&lt;p&gt;Some python notes.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS</title>
+      <link>https://memoex.github.io/note/tech/lang/css/</link>
+      <pubDate>Sat, 03 Mar 2018 19:51:40 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/css/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;safe-fonts&#34;&gt;Safe fonts&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.cssfontstack.com/&#34;&gt;A complete collection of web safe CSS font stacks.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Add two common fonts for Chinese characters: &lt;code&gt;PingFang SC&lt;/code&gt;, &lt;code&gt;Microsoft YaHei&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;$font-family-serif:           Palatino, Georgia, &amp;quot;Times New Roman&amp;quot;, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, serif !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, &amp;quot;Helvetica Neue&amp;quot;, Arial, &amp;quot;PingFang SC&amp;quot;, &amp;quot;Microsoft YaHei&amp;quot;, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;, &amp;quot;Segoe UI Symbol&amp;quot; !default;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;difference-between-serif-and-sans-serif&#34;&gt;Difference between Serif and Sans Serif&lt;/h3&gt;
+
+&lt;p&gt;See this great inforgraphic: &lt;a href=&#34;http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/&#34;&gt;The Difference Between Serif And Sans-Serif Explained In One Infographic&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
+    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/519YeM0.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;Serif (left) and Sans Serif (right)&#34;&gt;
+        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/519YeM0.jpg&#34; /&gt;
+    &lt;/a&gt;
+
+    
+    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;Serif (left) and Sans Serif (right)&lt;/p&gt;
+    
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://memoex.github.io/note/tech/lang/js/</link>
+      <pubDate>Mon, 26 Feb 2018 15:14:41 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/js/</guid>
+      <description>&lt;p&gt;This is a note about JavaScript.&lt;/p&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;ignore-ssl-issue&#34;&gt;Ignore SSL issue&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Error:&lt;/strong&gt; (node:99469) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 4): Error: Hostname/IP doesn&amp;rsquo;t match certificate&amp;rsquo;s altnames: &amp;ldquo;IP: &amp;lt;ip&amp;gt; is not in the cert&amp;rsquo;s list: &amp;ldquo;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/axios/axios/issues/535&#34;&gt;https://github.com/axios/axios/issues/535&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;https = require(&#39;https&#39;)
+axios = require(&#39;axios&#39;)
+
+// At instance level
+const instance = axios.create({
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false
+  })
+});
+instance.get(&#39;https://something.com/foo&#39;);
+
+// At request level
+const agent = new https.Agent({  
+  rejectUnauthorized: false
+});
+axios.get(&#39;https://something.com/foo&#39;, { httpsAgent: agent });
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;hugomore42&#34;&gt;</description>
+    </item>
+    
+    <item>
+      <title>Matlab</title>
+      <link>https://memoex.github.io/note/tech/lang/matlab/</link>
+      <pubDate>Sat, 23 Dec 2017 16:02:19 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/matlab/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;! Matlab start from 1, not 0 !&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;switch&#34;&gt;switch&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;dataset = &#39;minist&#39;;
+switch(dataset):
+    case &#39;cifar-10&#39;
+        code;
+    case &#39;minist&#39;
+        code;
+    otherwise
+        error(&#39;Unrecognized dataset!&#39;)
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://memoex.github.io/note/tech/lang/shell/</link>
+      <pubDate>Wed, 20 Dec 2017 17:00:24 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/shell/</guid>
+      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;system-information&#34;&gt;System information&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;neofetch&lt;/code&gt;, system info&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;du -sh &amp;lt;file&amp;gt;/&amp;lt;directory&amp;gt;&lt;/code&gt;, check the size of file or directory&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;df -h&lt;/code&gt;, display free disk space
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-h&lt;/code&gt;, 1k = 1024 byte&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-H&lt;/code&gt;, 1k = 1000 byte&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -s&lt;/code&gt;, print kernel name
+
+&lt;ul&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;li&gt;Darwin&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;uname -r&lt;/code&gt;, linux release number&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;last -n 50&lt;/code&gt;, check last logged in users&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lastb -n 50&lt;/code&gt;,&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pstree -p&lt;/code&gt;, process tree&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;w&lt;/code&gt;, show who is logged on and what they are doing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

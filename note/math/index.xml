@@ -20,167 +20,12 @@
       <guid>https://memoex.github.io/note/math/math/</guid>
       <description>&lt;p&gt;Math notes.&lt;/p&gt;
 
+&lt;h2 id=&#34;modules&#34;&gt;Modules&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/math/la&#34;&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/math/calculus&#34;&gt;Calculus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://memoex.github.io/note/math/la&#34;&gt;Linear algebra&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;greek-alphabet&#34;&gt;Greek alphabet&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Name&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Lowercase&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Uppercase&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;alpha&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\alpha\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(A\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;beta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\beta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(B\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;gamma&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\gamma\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Gamma\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;delta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\delta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Delta\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;epsilon&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\epsilon\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(E\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;zeta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\zeta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(Z\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;eta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\eta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(H\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;theta&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\theta\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Theta\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;iota&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\iota\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(I\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;kappa&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\kappa\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(K\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;lambda&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\lambda\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Lambda\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;mu&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\mu\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(M\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;nu&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\nu\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(N\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;xi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\xi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Xi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;omicron&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\omicron\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(O\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;pi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\pi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Pi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;rho&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\rho\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(P\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;sigma&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\sigma\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Sigma\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;tau&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\tau\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(T\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;upsilon&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\upsilon\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Upsilon\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;phi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\phi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Phi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;chi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\chi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(X\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;psi&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\psi\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Psi\)&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;em&gt;omega&lt;/em&gt;&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\omega\)&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;\(\Omega\)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -195,39 +40,6 @@
 
 &lt;p&gt;This notes will record some formulas and anything intersting associates with calculus.&lt;/p&gt;
 
-&lt;h2 id=&#34;trigonometry&#34;&gt;Trigonometry&lt;/h2&gt;
-
-&lt;h3 id=&#34;astc-method&#34;&gt;ASTC method&lt;/h3&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/6gLcT4l.png&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;ASTC method&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/6gLcT4l.png&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;ASTC method&lt;/p&gt;
-    
-&lt;/div&gt;
-
-
-&lt;h3 id=&#34;trig-identities&#34;&gt;Trig Identities&lt;/h3&gt;
-
-&lt;p&gt;$$
-\begin{array}{l}
-cos^2(x) + sin^2(x) =1 \\&lt;br /&gt;
-1 + tan^2(x) = sec^2(x)
-\end{array}
-$$&lt;/p&gt;
-
-&lt;p&gt;$$
-\begin{array}{ll}
-sin(A+B) &amp;amp; = &amp;amp; sin(A)cos(B) + cos(A)sin(B) \\&lt;br /&gt;
-cos(A+B) &amp;amp; = &amp;amp; cos(A)cos(B) - sin(A)sin(B) \\&lt;br /&gt;
-sin(2x)  &amp;amp; = &amp;amp; 2 sin(x) cos(x) \\&lt;br /&gt;
-cos(2x)  &amp;amp; = &amp;amp; 2 cos^2(x) - 1  = 1 - 2 sin^2(x)
-\end{array}
-$$&lt;/p&gt;
-
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
@@ -238,35 +50,6 @@ $$&lt;/p&gt;
       <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/math/la/</guid>
       <description>&lt;p&gt;Linear Algebra notes.&lt;/p&gt;
-
-&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix multiplication&lt;/h2&gt;
-
-&lt;h3 id=&#34;the-origin-of-matrix-multiplication&#34;&gt;The origin of matrix multiplication&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;参考：&lt;a href=&#34;https://www.zhihu.com/question/19919917/answer/270694029&#34;&gt;数学家最初发明行列式和矩阵是为了解决什么问题？ - 马同学的回答 - 知乎&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;最初目的：解线性方程组&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;举例：\(YC_rC_b \to RGB\)&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;黑白电视到彩色电视
-
-&lt;ul&gt;
-&lt;li&gt;兼容问题&lt;/li&gt;
-&lt;li&gt;\(Y\): 灰度图&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;div&gt;
-$$
-\begin{cases}
-0.299R + 0.587G + 0.114B = Y \\
-0.500R - 0.419G - 0.081B + 128 = C_r \\
--0.169R - 0.331G + 0.500B + 128 = C_b
-\end{cases}
-$$
-&lt;/div&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

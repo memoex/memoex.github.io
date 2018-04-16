@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博物之旅 on Mr.Blue</title>
+    <link>https://memoex.github.io/note/life/museum/</link>
+    <description>Recent content in 博物之旅 on Mr.Blue</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>silverhugh.77@gmail.com (Mr.Blue)</managingEditor>
+    <webMaster>silverhugh.77@gmail.com (Mr.Blue)</webMaster>
+    <lastBuildDate>Sun, 15 Apr 2018 13:42:36 +0800</lastBuildDate>
+    
+	<atom:link href="https://memoex.github.io/note/life/museum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>北京古代建筑博物馆</title>
+      <link>https://memoex.github.io/note/life/museum/build/</link>
+      <pubDate>Sun, 15 Apr 2018 13:44:46 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/life/museum/build/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
