@@ -231,11 +231,6 @@ config.gpu_options.allow_growth = True
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
 
 &lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
@@ -254,6 +249,62 @@ new_model.predict(input_data, batch_size=32)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Boosting</title>
+      <link>https://memoex.github.io/note/tech/ml/boosting/</link>
+      <pubDate>Tue, 17 Apr 2018 15:42:28 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/ml/boosting/</guid>
+      <description>&lt;p&gt;This article will introduce:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is boosting.&lt;/li&gt;
+&lt;li&gt;Common boosting algorithms, including:
+
+&lt;ul&gt;
+&lt;li&gt;AdaBoost&lt;/li&gt;
+&lt;li&gt;Gradient Boosting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://memoex.github.io/note/tech/lang/go/</link>
+      <pubDate>Tue, 17 Apr 2018 09:23:44 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/go/</guid>
+      <description>&lt;p&gt;Notes for Golang.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go lang cheat sheet &lt;a href=&#34;https://github.com/a8m/go-lang-cheat-sheet&#34;&gt;[Github]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Julia</title>
+      <link>https://memoex.github.io/note/tech/lang/julia/</link>
+      <pubDate>Tue, 17 Apr 2018 08:10:01 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/julia/</guid>
+      <description>&lt;p&gt;Notes for Julia.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.julialang.org/en/stable/manual/getting-started/&#34;&gt;Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introduction to Julia for Pythonistas &lt;a href=&#34;https://www.youtube.com/watch?v=Cj6bjqS5otM&#34;&gt;[YouTube]&lt;/a&gt; &lt;a href=&#34;http://nbviewer.jupyter.org/github/jmxpearson/julia-for-pythonistas/tree/master/&#34;&gt;[Notebook]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
@@ -329,19 +380,6 @@ new_model.predict(input_data, batch_size=32)
 &lt;li&gt;&lt;a href=&#34;http://tieba.baidu.com/p/5089592766?pn=1&#34;&gt;百度贴吧 - 凉月九夕&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://pubgmap.io/&#34;&gt;PUBG Interactive Map&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;h2 id=&#34;思维导图&#34;&gt;思维导图&lt;/h2&gt;
-
-&lt;div class=&#34;col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto&#34;&gt;
-    &lt;a class=&#34;d-block mx-auto&#34; href=&#34;https://i.imgur.com/3mn2zox.jpg&#34; data-fancybox=&#34;gallery&#34; data-caption=&#34;绝地求生的思路&#34;&gt;
-        &lt;img class=&#34;mw-100 mt-2 px-0 rounded d-block mx-auto&#34; src=&#34;https://i.imgur.com/3mn2zox.jpg&#34; /&gt;
-    &lt;/a&gt;
-
-    
-    &lt;p class=&#39;mb-5 mt-2 text-center font-weight-bold&#39;&gt;绝地求生的思路&lt;/p&gt;
-    
-&lt;/div&gt;
-
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

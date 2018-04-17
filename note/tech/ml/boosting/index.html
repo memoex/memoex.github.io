@@ -128,7 +128,7 @@
                 </a>
             </li>
             
-            <li class="active" >
+            <li class="" >
                 <a href="https://memoex.github.io/note/tech/lang/css/">
                 CSS
                 </a>
@@ -203,7 +203,7 @@
                 </a>
             </li>
             
-            <li class="" >
+            <li class="active" >
                 <a href="https://memoex.github.io/note/tech/ml/boosting/">
                 Boosting
                 </a>
@@ -457,151 +457,64 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="bd-title">CSS</h1>
+                            <h1 class="bd-title">Boosting</h1>
                             <div class="mb-5 bd-info">
     <div>
         <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
-        <time class="font-weight-bold grey-text text-darken-3">Mar 3, 2018</time>
-        
-            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Apr 16, 2018</time>
+        <time class="font-weight-bold grey-text text-darken-3">Apr 17, 2018</time>
         
     
     </div>
 </div>
 
                             <div class="bd-content">
-                                <h2 id="quick-notes">Quick notes</h2>
+                                <p>This article will introduce:</p>
 
-<h3 id="safe-fonts">Safe fonts</h3>
+<ul>
+<li>What is boosting.</li>
+<li>Common boosting algorithms, including:
 
-<p><a href="https://www.cssfontstack.com/">A complete collection of web safe CSS font stacks.</a></p>
-
-<p>Add two common fonts for Chinese characters: <code>PingFang SC</code>, <code>Microsoft YaHei</code>.</p>
-
-<pre><code class="language-css">$font-family-serif:           Palatino, Georgia, &quot;Times New Roman&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, serif !default;
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot; !default;
-</code></pre>
-
-<h3 id="difference-between-serif-and-sans-serif">Difference between Serif and Sans Serif</h3>
-
-<p>See this great inforgraphic: <a href="http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/">The Difference Between Serif And Sans-Serif Explained In One Infographic</a></p>
-
-<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
-    <a class="d-block mx-auto" href="https://i.imgur.com/519YeM0.jpg" data-fancybox="gallery" data-caption="Serif (left) and Sans Serif (right)">
-        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/519YeM0.jpg" />
-    </a>
-
-    
-    <p class='mb-5 mt-2 text-center font-weight-bold'>Serif (left) and Sans Serif (right)</p>
-    
-</div>
-
+<ul>
+<li>AdaBoost</li>
+<li>Gradient Boosting</li>
+</ul></li>
+</ul>
 
 <p></p>
 
-<h3 id="material-color-palette">Material color palette</h3>
+<h2 id="boosting">Boosting</h2>
 
-<ul>
-<li><a href="https://material.io/guidelines/style/color.html#color-color-palette">Color palette</a></li>
-<li><a href="http://next.materializecss.com/color.html">Materialize color usage</a></li>
-</ul>
+<p>Boosting usually refers to a family of algorithms that combine weak learners to a single strong learner. <sup class="footnote-ref" id="fnref:boosting"><a href="#fn:boosting">1</a></sup></p>
 
-<h3 id="disable-link">Disable link</h3>
+<h3 id="spam-example">SPAM example</h3>
 
-<pre><code class="language-css">.link-disabled {
-    pointer-events: none; /* This will diable effects when mouse hover, including cursor and underline */
-    color: inherit;
-}
-</code></pre>
+<p>Take the example from Sunil&rsquo;s article.</p>
 
-<h3 id="flex">Flex</h3>
+<p>Consider the problem of classifying SPAM. We have serval rules for classifying:</p>
 
-<p><code>flex</code> is very flexible!</p>
+<ol>
+<li>It&rsquo;s a SPAM if the email has only one image file.</li>
+<li>It&rsquo;s a SPAM if the email has only links.</li>
+<li>It&rsquo;s a SPAM if the email contains sentence like &ldquo;You won a prize money of $XXXX&rdquo;.</li>
+<li>It&rsquo;s not a SPAM if the source of email is in your contract list.</li>
+<li>&hellip;</li>
+</ol>
 
-<div class="d-flex mb-3 font-weight-bold my-5">
-    <div class="p-2 d-flex flex-column justify-content-center rounded z-depth-2">
-        <i class="far fa-list-alt fa-lg fa-fw rounded"></i>
-    </div>
-    <div class="pl-1 indigo rounded"></div>
-    <div class="p-2 d-flex flex-column justify-content-center rounded z-depth-1">
-        <div class="p-2">
-            <i class="fa fa-calendar fa-lg fa-fw"></i>
-            <span class="px-2">2018-04-14</span>
-        </div>
-        <div class="p-2">
-            <i class="fas fa-map-marker-alt fa-lg fa-fw"></i>
-            <span class="px-2">北京古建筑博物馆</span>
-        </div>
-        <div class="p-2">
-            <i class="fas fa-hourglass-half fa-lg fa-fw"></i>
-            <span class="px-2">3.5小时</span>
-        </div>
-    </div>
+<p>Obviously, these rules will not work very well individually. We call these rules weak learners.</p>
+
+<p>To improve it, we combine the prediction of each weak learner.
+We can get the final prediction by voting.
+For example, if 7 of 10 weak learners think a email is SPAM, then we will predict it&rsquo;s a SPAM.
+If only 1 of weak learners think a email is SPAM, we couldn&rsquo;t reject that email.</p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:boosting">Sunil Ray, Quick Introduction to Boosting Algorithms in Machine Learning, <a href="https://www.analyticsvidhya.com/blog/2015/11/quick-introduction-boosting-algorithms-machine-learning/">Analyticsvidhya.com</a>.
+ <a class="footnote-return" href="#fnref:boosting"><sup>[return]</sup></a></li>
+</ol>
 </div>
-
-<pre><code class="language-html">&lt;div class=&quot;d-flex mb-3 font-weight-bold&quot;&gt;
-    &lt;div class=&quot;p-2 d-flex flex-column justify-content-center rounded z-depth-2&quot;&gt;
-        &lt;i class=&quot;far fa-list-alt fa-lg fa-fw rounded&quot;&gt;&lt;/i&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;pl-1 indigo rounded&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;p-2 d-flex flex-column justify-content-center rounded z-depth-1&quot;&gt;
-        &lt;div class=&quot;p-2&quot;&gt;
-            &lt;i class=&quot;fa fa-calendar fa-lg fa-fw&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;px-2&quot;&gt;2018-04-14&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;p-2&quot;&gt;
-            &lt;i class=&quot;fas fa-map-marker-alt fa-lg fa-fw&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;px-2&quot;&gt;北京古建筑博物馆&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;p-2&quot;&gt;
-            &lt;i class=&quot;fas fa-hourglass-half fa-lg fa-fw&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;px-2&quot;&gt;3.5小时&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<h3 id="transition-in-and-out-with-text-shadow">Transition in and out with text shadow</h3>
-
-<p>Effects can be seen <a href="/note">here</a></p>
-
-<pre><code>.bd-preview {
-
-    .icon-more {
-        opacity: 0;
-        -webkit-transition: opacity .15s;   /* Must be set here, not in :hover */
-        transition: opacity .15s;
-    }
-
-    .bd-title {
-        text-shadow: 0 0 0 #fff;
-        transition: text-shadow 0.15s;
-        -webkit-transition: text-shadow 0.15s;
-    }
-
-    &amp;:hover {
-
-        .bd-title {
-            text-shadow: 0 1px 0 #ccc, 
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25);
-        }
-
-        .icon-more {
-            opacity: 1;
-        }
-    }
-}
-
-</code></pre>
                             </div>
                         </div>
                     </div>
@@ -616,8 +529,8 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&
 
 
 var disqus_config = function () {
-    this.page.url = "https://memoex.github.io/note/tech/lang/css/";  
-    this.page.identifier = "/note/tech/lang/css/"; 
+    this.page.url = "https://memoex.github.io/note/tech/ml/boosting/";  
+    this.page.identifier = "/note/tech/ml/boosting/"; 
 };
 
 (function() { 

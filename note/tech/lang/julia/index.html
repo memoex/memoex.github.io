@@ -122,13 +122,13 @@
                 </a>
             </li>
             
-            <li class="" >
+            <li class="active" >
                 <a href="https://memoex.github.io/note/tech/lang/julia/">
                 Julia
                 </a>
             </li>
             
-            <li class="active" >
+            <li class="" >
                 <a href="https://memoex.github.io/note/tech/lang/css/">
                 CSS
                 </a>
@@ -457,151 +457,49 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col">
-                            <h1 class="bd-title">CSS</h1>
+                            <h1 class="bd-title">Julia</h1>
                             <div class="mb-5 bd-info">
     <div>
         <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
-        <time class="font-weight-bold grey-text text-darken-3">Mar 3, 2018</time>
-        
-            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Apr 16, 2018</time>
+        <time class="font-weight-bold grey-text text-darken-3">Apr 17, 2018</time>
         
     
     </div>
 </div>
 
                             <div class="bd-content">
-                                <h2 id="quick-notes">Quick notes</h2>
+                                <p>Notes for Julia.</p>
 
-<h3 id="safe-fonts">Safe fonts</h3>
+<h2 id="links">Links</h2>
 
-<p><a href="https://www.cssfontstack.com/">A complete collection of web safe CSS font stacks.</a></p>
-
-<p>Add two common fonts for Chinese characters: <code>PingFang SC</code>, <code>Microsoft YaHei</code>.</p>
-
-<pre><code class="language-css">$font-family-serif:           Palatino, Georgia, &quot;Times New Roman&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, serif !default;
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot; !default;
-</code></pre>
-
-<h3 id="difference-between-serif-and-sans-serif">Difference between Serif and Sans Serif</h3>
-
-<p>See this great inforgraphic: <a href="http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/">The Difference Between Serif And Sans-Serif Explained In One Infographic</a></p>
-
-<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
-    <a class="d-block mx-auto" href="https://i.imgur.com/519YeM0.jpg" data-fancybox="gallery" data-caption="Serif (left) and Sans Serif (right)">
-        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/519YeM0.jpg" />
-    </a>
-
-    
-    <p class='mb-5 mt-2 text-center font-weight-bold'>Serif (left) and Sans Serif (right)</p>
-    
-</div>
-
+<ul>
+<li><a href="https://docs.julialang.org/en/stable/manual/getting-started/">Docs</a></li>
+<li>Introduction to Julia for Pythonistas <a href="https://www.youtube.com/watch?v=Cj6bjqS5otM">[YouTube]</a> <a href="http://nbviewer.jupyter.org/github/jmxpearson/julia-for-pythonistas/tree/master/">[Notebook]</a></li>
+</ul>
 
 <p></p>
 
-<h3 id="material-color-palette">Material color palette</h3>
+<h2 id="go-through">Go through</h2>
 
-<ul>
-<li><a href="https://material.io/guidelines/style/color.html#color-color-palette">Color palette</a></li>
-<li><a href="http://next.materializecss.com/color.html">Materialize color usage</a></li>
-</ul>
+<h3 id="install-packages">Install packages</h3>
 
-<h3 id="disable-link">Disable link</h3>
-
-<pre><code class="language-css">.link-disabled {
-    pointer-events: none; /* This will diable effects when mouse hover, including cursor and underline */
-    color: inherit;
-}
+<pre><code>Pkg.add(&quot;&lt;package-name&gt;&quot;)
 </code></pre>
 
-<h3 id="flex">Flex</h3>
+<h3 id="julia-notebook">Julia notebook</h3>
 
-<p><code>flex</code> is very flexible!</p>
-
-<div class="d-flex mb-3 font-weight-bold my-5">
-    <div class="p-2 d-flex flex-column justify-content-center rounded z-depth-2">
-        <i class="far fa-list-alt fa-lg fa-fw rounded"></i>
-    </div>
-    <div class="pl-1 indigo rounded"></div>
-    <div class="p-2 d-flex flex-column justify-content-center rounded z-depth-1">
-        <div class="p-2">
-            <i class="fa fa-calendar fa-lg fa-fw"></i>
-            <span class="px-2">2018-04-14</span>
-        </div>
-        <div class="p-2">
-            <i class="fas fa-map-marker-alt fa-lg fa-fw"></i>
-            <span class="px-2">北京古建筑博物馆</span>
-        </div>
-        <div class="p-2">
-            <i class="fas fa-hourglass-half fa-lg fa-fw"></i>
-            <span class="px-2">3.5小时</span>
-        </div>
-    </div>
-</div>
-
-<pre><code class="language-html">&lt;div class=&quot;d-flex mb-3 font-weight-bold&quot;&gt;
-    &lt;div class=&quot;p-2 d-flex flex-column justify-content-center rounded z-depth-2&quot;&gt;
-        &lt;i class=&quot;far fa-list-alt fa-lg fa-fw rounded&quot;&gt;&lt;/i&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;pl-1 indigo rounded&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;p-2 d-flex flex-column justify-content-center rounded z-depth-1&quot;&gt;
-        &lt;div class=&quot;p-2&quot;&gt;
-            &lt;i class=&quot;fa fa-calendar fa-lg fa-fw&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;px-2&quot;&gt;2018-04-14&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;p-2&quot;&gt;
-            &lt;i class=&quot;fas fa-map-marker-alt fa-lg fa-fw&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;px-2&quot;&gt;北京古建筑博物馆&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;p-2&quot;&gt;
-            &lt;i class=&quot;fas fa-hourglass-half fa-lg fa-fw&quot;&gt;&lt;/i&gt;
-            &lt;span class=&quot;px-2&quot;&gt;3.5小时&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<pre><code>Pkg.add(&quot;IJulia&quot;)
+using IJulia
+notebook()
 </code></pre>
 
-<h3 id="transition-in-and-out-with-text-shadow">Transition in and out with text shadow</h3>
+<h3 id="greek-letters">Greek letters</h3>
 
-<p>Effects can be seen <a href="/note">here</a></p>
+<p>In julia, greek letters can be used as variable name.
+To use greek letters in interactive command line, just type <code>\&lt;greek-letter&gt;</code> such as <code>\alpha</code> and then type the key <code>tab</code>.
+Then you can get a \(\alpha\).</p>
 
-<pre><code>.bd-preview {
-
-    .icon-more {
-        opacity: 0;
-        -webkit-transition: opacity .15s;   /* Must be set here, not in :hover */
-        transition: opacity .15s;
-    }
-
-    .bd-title {
-        text-shadow: 0 0 0 #fff;
-        transition: text-shadow 0.15s;
-        -webkit-transition: text-shadow 0.15s;
-    }
-
-    &amp;:hover {
-
-        .bd-title {
-            text-shadow: 0 1px 0 #ccc, 
-               0 2px 0 #c9c9c9,
-               0 3px 0 #bbb,
-               0 4px 0 #b9b9b9,
-               0 5px 0 #aaa,
-               0 6px 1px rgba(0,0,0,.1),
-               0 0 5px rgba(0,0,0,.1),
-               0 1px 3px rgba(0,0,0,.3),
-               0 3px 5px rgba(0,0,0,.2),
-               0 5px 10px rgba(0,0,0,.25);
-        }
-
-        .icon-more {
-            opacity: 1;
-        }
-    }
-}
-
-</code></pre>
+<p>Notice <code>\alpha</code> for \(\alpha\) and <code>\Alpha</code> for capital alpha \(A\).</p>
                             </div>
                         </div>
                     </div>
@@ -616,8 +514,8 @@ $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&
 
 
 var disqus_config = function () {
-    this.page.url = "https://memoex.github.io/note/tech/lang/css/";  
-    this.page.identifier = "/note/tech/lang/css/"; 
+    this.page.url = "https://memoex.github.io/note/tech/lang/julia/";  
+    this.page.identifier = "/note/tech/lang/julia/"; 
 };
 
 (function() { 

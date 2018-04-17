@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://memoex.github.io/note/tech/ml/image/</loc>
-    <lastmod>2018-04-15T13:42:36+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://memoex.github.io/note/math/math/</loc>
-    <lastmod>2018-03-30T14:51:43+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
   </url>
   
   <url>
@@ -39,7 +39,7 @@
   
   <url>
     <loc>https://memoex.github.io/note/math/calculus/</loc>
-    <lastmod>2018-04-13T17:17:32+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
   </url>
   
   <url>
@@ -54,7 +54,7 @@
   
   <url>
     <loc>https://memoex.github.io/note/math/la/</loc>
-    <lastmod>2018-04-13T15:28:41+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
   </url>
   
   <url>
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://memoex.github.io/note/tech/lang/python/</loc>
-    <lastmod>2018-04-15T13:42:36+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
   </url>
   
   <url>
@@ -100,6 +100,21 @@
   <url>
     <loc>https://memoex.github.io/note/tech/framework/keras/</loc>
     <lastmod>2018-04-15T13:42:36+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/ml/boosting/</loc>
+    <lastmod>2018-04-17T15:42:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/lang/go/</loc>
+    <lastmod>2018-04-17T09:23:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://memoex.github.io/note/tech/lang/julia/</loc>
+    <lastmod>2018-04-17T08:10:01+08:00</lastmod>
   </url>
   
   <url>
@@ -154,7 +169,7 @@
   
   <url>
     <loc>https://memoex.github.io/note/tech/lang/css/</loc>
-    <lastmod>2018-04-15T13:42:36+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
   </url>
   
   <url>
@@ -261,7 +276,7 @@
   
   <url>
     <loc>https://memoex.github.io/tags/deep-learning/</loc>
-    <lastmod>2018-04-15T13:42:36+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -297,7 +312,7 @@
   
   <url>
     <loc>https://memoex.github.io/tags/inequality/</loc>
-    <lastmod>2018-03-30T14:51:43+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -327,13 +342,13 @@
   
   <url>
     <loc>https://memoex.github.io/tags/means/</loc>
-    <lastmod>2018-03-30T14:51:43+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://memoex.github.io/</loc>
-    <lastmod>2018-04-15T13:42:36+08:00</lastmod>
+    <lastmod>2018-04-16T22:52:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   

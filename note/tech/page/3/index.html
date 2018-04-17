@@ -117,6 +117,18 @@
             </li>
             
             <li class="" >
+                <a href="https://memoex.github.io/note/tech/lang/go/">
+                Go
+                </a>
+            </li>
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/tech/lang/julia/">
+                Julia
+                </a>
+            </li>
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/tech/lang/css/">
                 CSS
                 </a>
@@ -188,6 +200,12 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/tech/ml/optimization/">
                 Optimization
+                </a>
+            </li>
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/tech/ml/boosting/">
+                Boosting
                 </a>
             </li>
             
@@ -529,6 +547,20 @@
             
         
     
+        
+
+            
+
+            
+        
+    
+        
+
+            
+
+            
+        
+    
 
     
     
@@ -543,6 +575,13 @@
     
     
 
+    
+        
+
+            
+
+            
+        
     
         
 
@@ -656,7 +695,154 @@
 
 <main>
     <div class="p-0 container-fluid rounded">
-        <div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/framework\/bootstrap\/'">
+        <div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/lang\/css\/'">
+            <h1 class="bd-title">
+                CSS
+            </h1>
+            <div class="mb-5 bd-info">
+    <div>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <time class="font-weight-bold grey-text text-darken-3">Mar 3, 2018</time>
+        
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
+            <time class="font-weight-bold grey-text text-darken-3">Apr 16, 2018</time>
+        
+    
+    </div>
+</div>
+
+            <div class="bd-content">
+                <h2 id="quick-notes">Quick notes</h2>
+
+<h3 id="safe-fonts">Safe fonts</h3>
+
+<p><a href="https://www.cssfontstack.com/">A complete collection of web safe CSS font stacks.</a></p>
+
+<p>Add two common fonts for Chinese characters: <code>PingFang SC</code>, <code>Microsoft YaHei</code>.</p>
+
+<pre><code class="language-css">$font-family-serif:           Palatino, Georgia, &quot;Times New Roman&quot;, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, serif !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot; !default;
+</code></pre>
+
+<h3 id="difference-between-serif-and-sans-serif">Difference between Serif and Sans Serif</h3>
+
+<p>See this great inforgraphic: <a href="http://www.urbanfonts.com/blog/2013/02/serif-vs-sans-the-final-battle/">The Difference Between Serif And Sans-Serif Explained In One Infographic</a></p>
+
+<div class="col-12 col-xl-9 col-lg-12 container-fluid mx-0 px-0 mx-auto">
+    <a class="d-block mx-auto" href="https://i.imgur.com/519YeM0.jpg" data-fancybox="gallery" data-caption="Serif (left) and Sans Serif (right)">
+        <img class="mw-100 mt-2 px-0 rounded d-block mx-auto" src="https://i.imgur.com/519YeM0.jpg" />
+    </a>
+
+    
+    <p class='mb-5 mt-2 text-center font-weight-bold'>Serif (left) and Sans Serif (right)</p>
+    
+</div>
+
+
+<p></p>
+            </div>
+
+            <div class="pb-4 col-12 col-xl-8 p-0">
+                <hr class="my-5indigo-border border-lighten-4"/>
+                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
+            </div>
+        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/lang\/js\/'">
+            <h1 class="bd-title">
+                JavaScript
+            </h1>
+            <div class="mb-5 bd-info">
+    <div>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <time class="font-weight-bold grey-text text-darken-3">Feb 26, 2018</time>
+        
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
+            <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
+        
+    
+    </div>
+</div>
+
+            <div class="bd-content">
+                <p>This is a note about JavaScript.</p>
+
+<h2 id="quick-notes">Quick notes</h2>
+
+<h3 id="ignore-ssl-issue">Ignore SSL issue</h3>
+
+<p><strong>Error:</strong> (node:99469) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 4): Error: Hostname/IP doesn&rsquo;t match certificate&rsquo;s altnames: &ldquo;IP: &lt;ip&gt; is not in the cert&rsquo;s list: &ldquo;</p>
+
+<p><a href="https://github.com/axios/axios/issues/535">https://github.com/axios/axios/issues/535</a></p>
+
+<pre><code class="language-js">https = require('https')
+axios = require('axios')
+
+// At instance level
+const instance = axios.create({
+  httpsAgent: new https.Agent({  
+    rejectUnauthorized: false
+  })
+});
+instance.get('https://something.com/foo');
+
+// At request level
+const agent = new https.Agent({  
+  rejectUnauthorized: false
+});
+axios.get('https://something.com/foo', { httpsAgent: agent });
+</code></pre>
+
+<h2 id="hugomore42">
+            </div>
+
+            <div class="pb-4 col-12 col-xl-8 p-0">
+                <hr class="my-5indigo-border border-lighten-4"/>
+                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
+            </div>
+        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/life\/alcohol\/'">
+            <h1 class="bd-title">
+                酒
+            </h1>
+            <div class="mb-5 bd-info">
+    <div>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <time class="font-weight-bold grey-text text-darken-3">Feb 18, 2018</time>
+        
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
+            <time class="font-weight-bold grey-text text-darken-3">Mar 30, 2018</time>
+        
+    
+    </div>
+</div>
+
+            <div class="bd-content">
+                <h2 id="黄酒">黄酒</h2>
+
+<p><a href="https://mp.weixin.qq.com/s?__biz=MjM5Mzc5NTk1OQ==&amp;mid=2652992222&amp;idx=1&amp;sn=04702e402c61ed5e67b653292152c892">我知道你为什么不喝黄酒</a></p>
+
+<p>黄酒是用稻谷酿造的，稻谷本不含糖，必须要将淀粉转化为糖，然后再把糖发酵成酒精，而帮助稻谷糖化并发酵的就是曲。</p>
+
+<h3 id="酿造工艺">酿造工艺</h3>
+
+<ol>
+<li>浸米</li>
+<li>蒸米</li>
+<li>落缸，根据不同的风格，用不同方式投入米、麦曲、酒药、水等各种原料，等待酒发酵。</li>
+<li>开粑,发酵过程中温度会提升，酵母就不再作用了，必须由酿酒师把酒醪表面的漂浮物铲下去，从而起到降温的作用。开耙师傅是匠人，不同的时间点开耙都会酿出风格截然不同的酒。</li>
+<li>装坛</li>
+<li>压榨，从小坛中倒出黄酒，过滤、压榨、澄清、杀菌，每一个步骤都有利于增加黄酒的保质期，但是都会损失一部分风味。</li>
+<li>装瓶</li>
+</ol>
+
+<p><a href="https://www.bilibili.com/video/av12599804/">【李子柒】我这儿有清香甘甜的荷花酒，你有故事吗？</a></p>
+
+<p></p>
+            </div>
+
+            <div class="pb-4 col-12 col-xl-8 p-0">
+                <hr class="my-5indigo-border border-lighten-4"/>
+                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
+            </div>
+        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/framework\/bootstrap\/'">
             <h1 class="bd-title">
                 Bootstrap
             </h1>
@@ -1057,198 +1243,6 @@
 <ul>
 <li>society, intelligence</li>
 </ul></li>
-</ul></li>
-</ul>
-
-<p></p>
-            </div>
-
-            <div class="pb-4 col-12 col-xl-8 p-0">
-                <hr class="my-5indigo-border border-lighten-4"/>
-                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
-            </div>
-        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/lang\/matlab\/'">
-            <h1 class="bd-title">
-                Matlab
-            </h1>
-            <div class="mb-5 bd-info">
-    <div>
-        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
-        <time class="font-weight-bold grey-text text-darken-3">Dec 23, 2017</time>
-        
-            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
-        
-    
-        <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="grey-text text-darken-1 font-weight-bold text-capitalize" href='/tags/matlab'>matlab</a>
-                </li>
-            
-        </ul>
-    
-    </div>
-</div>
-
-            <div class="bd-content">
-                <h2 id="quick-notes">Quick notes</h2>
-
-<p><strong>! Matlab start from 1, not 0 !</strong></p>
-
-<h3 id="switch">switch</h3>
-
-<pre><code class="language-matlab">dataset = 'minist';
-switch(dataset):
-    case 'cifar-10'
-        code;
-    case 'minist'
-        code;
-    otherwise
-        error('Unrecognized dataset!')
-end
-</code></pre>
-
-<p></p>
-            </div>
-
-            <div class="pb-4 col-12 col-xl-8 p-0">
-                <hr class="my-5indigo-border border-lighten-4"/>
-                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
-            </div>
-        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/lang\/shell\/'">
-            <h1 class="bd-title">
-                Shell
-            </h1>
-            <div class="mb-5 bd-info">
-    <div>
-        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
-        <time class="font-weight-bold grey-text text-darken-3">Dec 20, 2017</time>
-        
-            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
-        
-    
-        <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="grey-text text-darken-1 font-weight-bold text-capitalize" href='/tags/shell'>shell</a>
-                </li>
-            
-        </ul>
-    
-    </div>
-</div>
-
-            <div class="bd-content">
-                <h2 id="quick-notes">Quick notes</h2>
-
-<h3 id="system-information">System information</h3>
-
-<ul>
-<li><code>neofetch</code>, system info</li>
-<li><code>du -sh &lt;file&gt;/&lt;directory&gt;</code>, check the size of file or directory</li>
-<li><code>df -h</code>, display free disk space
-
-<ul>
-<li><code>-h</code>, 1k = 1024 byte</li>
-<li><code>-H</code>, 1k = 1000 byte</li>
-</ul></li>
-<li><code>uname -s</code>, print kernel name
-
-<ul>
-<li>Linux</li>
-<li>Darwin</li>
-</ul></li>
-<li><code>uname -r</code>, linux release number</li>
-<li><code>last -n 50</code>, check last logged in users</li>
-<li><code>lastb -n 50</code>,</li>
-<li><code>pstree -p</code>, process tree</li>
-<li><code>w</code>, show who is logged on and what they are doing</li>
-</ul>
-
-<p></p>
-            </div>
-
-            <div class="pb-4 col-12 col-xl-8 p-0">
-                <hr class="my-5indigo-border border-lighten-4"/>
-                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
-            </div>
-        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/vim\/'">
-            <h1 class="bd-title">
-                Vim
-            </h1>
-            <div class="mb-5 bd-info">
-    <div>
-        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
-        <time class="font-weight-bold grey-text text-darken-3">Dec 18, 2017</time>
-        
-            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Mar 30, 2018</time>
-        
-    
-        <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
-        <ul class="nav d-inline">
-            
-                <li class="nav-item d-inline">
-                    <a class="grey-text text-darken-1 font-weight-bold text-capitalize" href='/tags/vim'>vim</a>
-                </li>
-            
-        </ul>
-    
-    </div>
-</div>
-
-            <div class="bd-content">
-                <p>This notes contains useful tips for using Vim or editing and I use <a href="http://vim.spf13.com/">spf13-vim</a>.</p>
-
-<ul>
-<li>spf13-vim is a distribution of vim plugins and resources for Vim.</li>
-<li>Install spf13-vim: <code>curl http://j.mp/spf13-vim3 -L -o - | sh</code></li>
-</ul>
-
-<h2 id="plugins">Plugins</h2>
-
-<h3 id="surround">Surround</h3>
-
-<p>Managing all the &lsquo;&rdquo;[{}]&ldquo;&rsquo; etc.</p>
-
-<ul>
-<li>Characters meaning
-
-<ul>
-<li>operations
-
-<ul>
-<li><code>d</code> delete</li>
-<li><code>c</code> change</li>
-<li><code>y</code> add?</li>
-</ul></li>
-<li><code>s</code> represents <code>surrounding</code></li>
-<li><code>S</code> for visual mode surroundings</li>
-<li><strong>text object</strong> (vim editing)
-
-<ul>
-<li><code>w</code> word</li>
-<li><code>iw</code> in word</li>
-<li><code>aw</code> all word, including space(s)</li>
-</ul></li>
-<li>surroundings
-
-<ul>
-<li><code>(</code> left bracket will give a space between it and content</li>
-<li><code>)</code> right won&rsquo;t</li>
-<li><code>b</code> = <code>)</code></li>
-</ul></li>
-</ul></li>
-<li>Examples
-
-<ul>
-<li><code>yss)</code> surround a line of content with <code>()</code></li>
-<li><code>ysiw&lt;div&gt;</code> surround a word like this <code>&lt;div&gt;nice&lt;/div&gt;</code></li>
-<li><code>VS&lt;div&gt;</code> surround a line with <code>&lt;div&gt;&lt;/div&gt;</code></li>
 </ul></li>
 </ul>
 

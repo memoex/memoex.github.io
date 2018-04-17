@@ -125,6 +125,27 @@ and we usually optimize our model by minimizing the loss.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Boosting</title>
+      <link>https://memoex.github.io/note/tech/ml/boosting/</link>
+      <pubDate>Tue, 17 Apr 2018 15:42:28 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/ml/boosting/</guid>
+      <description>&lt;p&gt;This article will introduce:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;What is boosting.&lt;/li&gt;
+&lt;li&gt;Common boosting algorithms, including:
+
+&lt;ul&gt;
+&lt;li&gt;AdaBoost&lt;/li&gt;
+&lt;li&gt;Gradient Boosting&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Forward Learning</title>
       <link>https://memoex.github.io/note/tech/ml/forward/</link>
       <pubDate>Mon, 18 Dec 2017 19:01:49 +0800</pubDate>

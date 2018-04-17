@@ -24,6 +24,41 @@
     </item>
     
     <item>
+      <title>Go</title>
+      <link>https://memoex.github.io/note/tech/lang/go/</link>
+      <pubDate>Tue, 17 Apr 2018 09:23:44 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/go/</guid>
+      <description>&lt;p&gt;Notes for Golang.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go lang cheat sheet &lt;a href=&#34;https://github.com/a8m/go-lang-cheat-sheet&#34;&gt;[Github]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Julia</title>
+      <link>https://memoex.github.io/note/tech/lang/julia/</link>
+      <pubDate>Tue, 17 Apr 2018 08:10:01 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/lang/julia/</guid>
+      <description>&lt;p&gt;Notes for Julia.&lt;/p&gt;
+
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.julialang.org/en/stable/manual/getting-started/&#34;&gt;Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introduction to Julia for Pythonistas &lt;a href=&#34;https://www.youtube.com/watch?v=Cj6bjqS5otM&#34;&gt;[YouTube]&lt;/a&gt; &lt;a href=&#34;http://nbviewer.jupyter.org/github/jmxpearson/julia-for-pythonistas/tree/master/&#34;&gt;[Notebook]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>CSS</title>
       <link>https://memoex.github.io/note/tech/lang/css/</link>
       <pubDate>Sat, 03 Mar 2018 19:51:40 +0800</pubDate>

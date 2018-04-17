@@ -117,6 +117,18 @@
             </li>
             
             <li class="" >
+                <a href="https://memoex.github.io/note/tech/lang/go/">
+                Go
+                </a>
+            </li>
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/tech/lang/julia/">
+                Julia
+                </a>
+            </li>
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/tech/lang/css/">
                 CSS
                 </a>
@@ -188,6 +200,12 @@
             <li class="" >
                 <a href="https://memoex.github.io/note/tech/ml/optimization/">
                 Optimization
+                </a>
+            </li>
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/tech/ml/boosting/">
+                Boosting
                 </a>
             </li>
             
@@ -542,6 +560,20 @@
             
         
     
+        
+
+            
+
+            
+        
+    
+        
+
+            
+
+            
+        
+    
 
     
     
@@ -556,6 +588,13 @@
     
     
 
+    
+        
+
+            
+
+            
+        
     
         
 
@@ -822,7 +861,199 @@
 
 <main>
     <div class="p-0 container-fluid rounded">
-        <div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/ml\/forward\/'">
+        <div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/lang\/matlab\/'">
+            <h1 class="bd-title">
+                Matlab
+            </h1>
+            <div class="mb-5 bd-info">
+    <div>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <time class="font-weight-bold grey-text text-darken-3">Dec 23, 2017</time>
+        
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
+            <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
+        
+    
+        <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
+        <ul class="nav d-inline">
+            
+                <li class="nav-item d-inline">
+                    <a class="grey-text text-darken-1 font-weight-bold text-capitalize" href='/tags/matlab'>matlab</a>
+                </li>
+            
+        </ul>
+    
+    </div>
+</div>
+
+            <div class="bd-content">
+                <h2 id="quick-notes">Quick notes</h2>
+
+<p><strong>! Matlab start from 1, not 0 !</strong></p>
+
+<h3 id="switch">switch</h3>
+
+<pre><code class="language-matlab">dataset = 'minist';
+switch(dataset):
+    case 'cifar-10'
+        code;
+    case 'minist'
+        code;
+    otherwise
+        error('Unrecognized dataset!')
+end
+</code></pre>
+
+<p></p>
+            </div>
+
+            <div class="pb-4 col-12 col-xl-8 p-0">
+                <hr class="my-5indigo-border border-lighten-4"/>
+                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
+            </div>
+        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/lang\/shell\/'">
+            <h1 class="bd-title">
+                Shell
+            </h1>
+            <div class="mb-5 bd-info">
+    <div>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <time class="font-weight-bold grey-text text-darken-3">Dec 20, 2017</time>
+        
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
+            <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
+        
+    
+        <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
+        <ul class="nav d-inline">
+            
+                <li class="nav-item d-inline">
+                    <a class="grey-text text-darken-1 font-weight-bold text-capitalize" href='/tags/shell'>shell</a>
+                </li>
+            
+        </ul>
+    
+    </div>
+</div>
+
+            <div class="bd-content">
+                <h2 id="quick-notes">Quick notes</h2>
+
+<h3 id="system-information">System information</h3>
+
+<ul>
+<li><code>neofetch</code>, system info</li>
+<li><code>du -sh &lt;file&gt;/&lt;directory&gt;</code>, check the size of file or directory</li>
+<li><code>df -h</code>, display free disk space
+
+<ul>
+<li><code>-h</code>, 1k = 1024 byte</li>
+<li><code>-H</code>, 1k = 1000 byte</li>
+</ul></li>
+<li><code>uname -s</code>, print kernel name
+
+<ul>
+<li>Linux</li>
+<li>Darwin</li>
+</ul></li>
+<li><code>uname -r</code>, linux release number</li>
+<li><code>last -n 50</code>, check last logged in users</li>
+<li><code>lastb -n 50</code>,</li>
+<li><code>pstree -p</code>, process tree</li>
+<li><code>w</code>, show who is logged on and what they are doing</li>
+</ul>
+
+<p></p>
+            </div>
+
+            <div class="pb-4 col-12 col-xl-8 p-0">
+                <hr class="my-5indigo-border border-lighten-4"/>
+                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
+            </div>
+        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/vim\/'">
+            <h1 class="bd-title">
+                Vim
+            </h1>
+            <div class="mb-5 bd-info">
+    <div>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
+        <time class="font-weight-bold grey-text text-darken-3">Dec 18, 2017</time>
+        
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
+            <time class="font-weight-bold grey-text text-darken-3">Mar 30, 2018</time>
+        
+    
+        <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
+        <ul class="nav d-inline">
+            
+                <li class="nav-item d-inline">
+                    <a class="grey-text text-darken-1 font-weight-bold text-capitalize" href='/tags/vim'>vim</a>
+                </li>
+            
+        </ul>
+    
+    </div>
+</div>
+
+            <div class="bd-content">
+                <p>This notes contains useful tips for using Vim or editing and I use <a href="http://vim.spf13.com/">spf13-vim</a>.</p>
+
+<ul>
+<li>spf13-vim is a distribution of vim plugins and resources for Vim.</li>
+<li>Install spf13-vim: <code>curl http://j.mp/spf13-vim3 -L -o - | sh</code></li>
+</ul>
+
+<h2 id="plugins">Plugins</h2>
+
+<h3 id="surround">Surround</h3>
+
+<p>Managing all the &lsquo;&rdquo;[{}]&ldquo;&rsquo; etc.</p>
+
+<ul>
+<li>Characters meaning
+
+<ul>
+<li>operations
+
+<ul>
+<li><code>d</code> delete</li>
+<li><code>c</code> change</li>
+<li><code>y</code> add?</li>
+</ul></li>
+<li><code>s</code> represents <code>surrounding</code></li>
+<li><code>S</code> for visual mode surroundings</li>
+<li><strong>text object</strong> (vim editing)
+
+<ul>
+<li><code>w</code> word</li>
+<li><code>iw</code> in word</li>
+<li><code>aw</code> all word, including space(s)</li>
+</ul></li>
+<li>surroundings
+
+<ul>
+<li><code>(</code> left bracket will give a space between it and content</li>
+<li><code>)</code> right won&rsquo;t</li>
+<li><code>b</code> = <code>)</code></li>
+</ul></li>
+</ul></li>
+<li>Examples
+
+<ul>
+<li><code>yss)</code> surround a line of content with <code>()</code></li>
+<li><code>ysiw&lt;div&gt;</code> surround a word like this <code>&lt;div&gt;nice&lt;/div&gt;</code></li>
+<li><code>VS&lt;div&gt;</code> surround a line with <code>&lt;div&gt;&lt;/div&gt;</code></li>
+</ul></li>
+</ul>
+
+<p></p>
+            </div>
+
+            <div class="pb-4 col-12 col-xl-8 p-0">
+                <hr class="my-5indigo-border border-lighten-4"/>
+                <p class="icon-more"><i class="fas fa-angle-double-right fa-lg"></i></p>
+            </div>
+        </div><div class="my-5 col-12 bd-preview" onclick="window.location='https:\/\/memoex.github.io\/note\/tech\/ml\/forward\/'">
             <h1 class="bd-title">
                 Forward Learning
             </h1>

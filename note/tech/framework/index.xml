@@ -66,11 +66,6 @@ config.gpu_options.allow_growth = True
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;frequently-used-snippets&#34;&gt;Frequently used snippets&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-py&#34;&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
 &lt;h2 id=&#34;problems-encountered&#34;&gt;Problems encountered&lt;/h2&gt;
 
 &lt;h3 id=&#34;2017-12-04-get-variable-s-value-in-middle-layer&#34;&gt;2017-12-04 · Get variable&amp;rsquo;s value in middle layer&lt;/h3&gt;
