@@ -168,6 +168,12 @@
         <ul class="pr-2 nav bd-sidenav">
             
             <li class="" >
+                <a href="https://memoex.github.io/note/tech/ml/ml/">
+                Machine Learning
+                </a>
+            </li>
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/tech/ml/image/">
                 Image
                 </a>
@@ -261,6 +267,12 @@
         
         
         <ul class="pr-2 nav bd-sidenav">
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/tech/write/">
+                Write
+                </a>
+            </li>
             
             <li class="" >
                 <a href="https://memoex.github.io/note/tech/color/">
@@ -1020,6 +1032,55 @@ import os
 
 print os.path.abspath(__file__)
 # Output: /code/path.py
+</code></pre>
+
+<h3 id="trim">trim</h3>
+
+<pre><code>' silver '.strip()
+# 'silver'
+' silver '.lstrip()
+# 'silver '
+' silver '.rstrip()
+# ' silver'
+</code></pre>
+
+<h3 id="count-list">Count list</h3>
+
+<ul>
+<li><a href="https://stackoverflow.com/questions/3496518/python-using-a-dictionary-to-count-the-items-in-a-list">Stackoverflow - Python: Using a dictionary to count the items in a list [duplicate]</a></li>
+</ul>
+
+<p>Method 1. Use Counter</p>
+
+<pre><code class="language-py">from collections import Counter
+L = ['apple','red','apple','red','red','pear']
+count = Counter(L)
+</code></pre>
+
+<p>Method 2. Use defaultdict (fastest), 3 times faster than Counter</p>
+
+<pre><code class="language-py">from collections import defaultdict
+count = defaultdict(int)
+for i in L:
+    count[i] += 1
+</code></pre>
+
+<h3 id="set">Set</h3>
+
+<ul>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-python-optim/">Python 代码性能优化技巧</a></li>
+</ul>
+
+<pre><code class="language-py">a = {1, 2, 3}
+b = {3, 4, 5}
+print '%15s:'%('intersection'), a &amp; b
+print '%15s:'%('exclusive or'), a ^ b
+print '%15s:'%('union'), a | b
+print '%15s:'%('intersection'), a - b
+#  intersection: set([3])
+#  exclusive or: set([1, 2, 4, 5])
+#         union: set([1, 2, 3, 4, 5])
+#  intersection: set([1, 2])
 </code></pre>
                             </div>
                         </div>

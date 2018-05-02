@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Machine Learning</title>
+      <link>https://memoex.github.io/note/tech/ml/ml/</link>
+      <pubDate>Wed, 18 Apr 2018 09:05:03 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/note/tech/ml/ml/</guid>
+      <description> This machine learning note records some important concepts and some most used methods, including:
+ Bias variance tradeoff  Bias variance tradeoff </description>
+    </item>
+    
+    <item>
       <title>Image</title>
       <link>https://memoex.github.io/note/tech/ml/image/</link>
       <pubDate>Wed, 31 Jan 2018 20:25:38 +0800</pubDate>
