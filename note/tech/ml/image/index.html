@@ -591,7 +591,7 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <h2 id="quick-notes">Quick notes</h2>
 
 <ul>
-<li><a href="http://blog.csdn.net/zhcheng26/article/details/51375135">图像识别中的深度学习</a>
+<li><p><a href="http://blog.csdn.net/zhcheng26/article/details/51375135">图像识别中的深度学习</a></p>
 
 <ul>
 <li>LFW, Labeled Faces in the Wild
@@ -608,12 +608,8 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <li>浅层网络可以近似任何分类函数，但相同能力需要的参数呈指数级增长，同样需要更多的训练样本</li>
 <li>GoogLeNet，中间层和底层的特征表示也要能够对训练数据进行准确分类</li>
 </ul></li>
-</ul>
 
-<hr />
-
-<ul>
-<li><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/">Transposed Convolution, Fractionally Strided Convolution or Deconvolution</a>
+<li><p><a href="https://buptldy.github.io/2016/10/29/2016-10-29-deconv/">Transposed Convolution, Fractionally Strided Convolution or Deconvolution</a></p>
 
 <ul>
 <li>文章结构非常清晰，博客排版的样式也很值得学习</li>
@@ -621,8 +617,6 @@ w[1, 2, :, :] = [[1, 2, 1], [0, 0, 0], [-1, -2, -1]]
 <li>我们很容易得到卷积层的反向传播就是和CC的转置相乘。？</li>
 </ul></li>
 </ul>
-
-<hr />
 
 <p><img class='col-12' src="https://culurciello.github.io/assets/unsup/gan_simple.svg" /></p>
 
@@ -641,8 +635,6 @@ $$
 \min_G \max_D {\mathbb E}_{x\sim p_{\rm data}} \log D(x)+{\mathbb E}_{z\sim p_z}[\log (1-D(G(z)))]
 $$
 </div>
-
-<hr />
 
 <h3 id="googlenet-and-inception-module">GoogLeNet and Inception Module</h3>
 
@@ -663,8 +655,6 @@ $$
 <li>Inception v4: <a href="https://arxiv.org/abs/1602.07261">Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning</a></li>
 <li>Xception: <a href="https://arxiv.org/abs/1610.02357">Xception: Deep Learning with Depthwise Separable Convolutions</a></li>
 </ol>
-
-<hr />
 
 <h3 id="tips-and-tricks">Tips and tricks</h3>
 
@@ -691,8 +681,6 @@ $$
 <li>small random numbers, like \(weights \sim 0.001 \times N(0,1) \)</li>
 </ul></li>
 </ol>
-
-<hr />
 
 <h3 id="batch-normalization">Batch normalization</h3>
 
@@ -767,6 +755,24 @@ lr_reducer = ReduceLROnPlateau(monitor='val_acc',factor=0.2,patience=5,
 <ul>
 <li><a href="http://rodrigob.github.io/are_we_there_yet/build/">Who is the best at X ?</a></li>
 <li><a href="https://discuss.gluon.ai/t/topic/1545">CIFAR-10</a></li>
+</ul>
+
+<h3 id="fine-tuning">Fine-tuning</h3>
+
+<ul>
+<li><a href="https://flyyufelix.github.io/2016/10/08/fine-tuning-in-keras-part2.html">A Comprehensive guide to Fine-tuning Deep Learning Models in Keras (Part II)</a></li>
+</ul>
+
+<blockquote>
+<ol>
+<li>truncate the last layer</li>
+<li>use a smaller learning rate</li>
+<li>freeze the weights of the first few layers</li>
+</ol>
+</blockquote>
+
+<ul>
+<li>How transferable are features in deep neural networks? <a href="http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf">[pdf]</a></li>
 </ul>
                             </div>
                         </div>
