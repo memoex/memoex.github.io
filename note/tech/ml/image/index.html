@@ -476,7 +476,7 @@
         <time class="font-weight-bold grey-text text-darken-3">Jan 31, 2018</time>
         
             <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Apr 16, 2018</time>
+            <time class="font-weight-bold grey-text text-darken-3">May 7, 2018</time>
         
     
         <i class="ml-2 fas fa-tags fa-fw" aria-hidden="true"></i>
@@ -535,6 +535,10 @@
 <ul>
 <li><a href="https://buptldy.github.io/2016/10/01/2016-10-01-im2col/">Implementing convolution as a matrix multiplication</a></li>
 </ul>
+
+<blockquote>
+<p>在计算时，卷积核与图像中每个mxm大小的图像块做element-wise相乘，然后得到的结果相加得到一个值，然后再移动一个stride，做同样的运算，直到整副输入图像遍历完</p>
+</blockquote>
 
 <p>提取灰度特征和边缘特征的卷积核：</p>
 
@@ -774,6 +778,18 @@ lr_reducer = ReduceLROnPlateau(monitor='val_acc',factor=0.2,patience=5,
 <ul>
 <li>How transferable are features in deep neural networks? <a href="http://papers.nips.cc/paper/5347-how-transferable-are-features-in-deep-neural-networks.pdf">[pdf]</a></li>
 </ul>
+
+<h3 id="depth-width-point-width">Depth-width &amp; point-width</h3>
+
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/28749411">变形卷积核、可分离卷积？卷积神经网络中十大拍案叫绝的操作。</a></li>
+<li><a href="https://arxiv.org/pdf/1608.04337v1.pdf">Factorized Convolutional Neural Networks</a></li>
+</ul>
+
+<blockquote>
+<p><code>SeparableConv2D</code>: Separable convolutions consist in first performing a depthwise spatial convolution (which acts on each input channel separately) followed by a pointwise convolution which mixes together the resulting output channels. The  depth_multiplier argument controls how many output channels are generated per input channel in the depthwise step.
+（区域和通道分离处理,减少了参数量）</p>
+</blockquote>
                             </div>
                         </div>
                     </div>

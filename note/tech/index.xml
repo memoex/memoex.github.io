@@ -161,6 +161,12 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
       <guid>https://memoex.github.io/note/tech/git/</guid>
       <description>&lt;p&gt;Some git notes.&lt;/p&gt;
 
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://semver.org/&#34;&gt;Semantic Versioning 2.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;基本配置&#34;&gt;基本配置&lt;/h2&gt;
 
 &lt;h3 id=&#34;git-config&#34;&gt;git config&lt;/h3&gt;

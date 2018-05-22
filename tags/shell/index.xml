@@ -18,7 +18,14 @@
       <pubDate>Wed, 20 Dec 2017 17:00:24 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/lang/shell/</guid>
-      <description>&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jlevy/the-art-of-command-line&#34;&gt;The Art of Command Line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/idank/explainshell&#34;&gt;Explainshell&lt;/a&gt; &lt;a href=&#34;http://www.explainshell.com/&#34;&gt;explainshell.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;quick-notes&#34;&gt;Quick notes&lt;/h2&gt;
 
 &lt;h3 id=&#34;system-information&#34;&gt;System information&lt;/h3&gt;
 
