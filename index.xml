@@ -67,7 +67,7 @@
       <pubDate>Thu, 29 Mar 2018 20:32:10 +0800</pubDate>
       <author>silverhugh.77@gmail.com (Mr.Blue)</author>
       <guid>https://memoex.github.io/note/tech/ml/datasets/</guid>
-      <description> Image datasets Minist </description>
+      <description> Image datasets Minist ImageNet  ImageNet labels  </description>
     </item>
     
     <item>
@@ -261,6 +261,15 @@ new_model.predict(input_data, batch_size=32)
 &lt;p&gt;Note the &lt;code&gt;batch_size&lt;/code&gt; is import for large amount of samples. The &lt;code&gt;K.function()&lt;/code&gt; mentioned in the &lt;a href=&#34;https://github.com/fchollet/keras/issues/41&#34;&gt;issue #41&lt;/a&gt; raised &lt;code&gt;OOM exception&lt;/code&gt;. Of course you can split data into batches by yourself and use the &lt;code&gt;K.function()&lt;/code&gt; method, but the method showed above is more convinient for me in my case.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Sort</title>
+      <link>https://memoex.github.io/leetcode/sort/</link>
+      <pubDate>Wed, 23 May 2018 20:04:55 +0800</pubDate>
+      <author>silverhugh.77@gmail.com (Mr.Blue)</author>
+      <guid>https://memoex.github.io/leetcode/sort/</guid>
+      <description></description>
     </item>
     
     <item>
