@@ -1139,6 +1139,51 @@ start_time = datetime.now()
 time_elapsed = datetime.now() - start_time
 print('Time elapsed %s' % (time_elapsed))
 </code></pre>
+
+<h3 id="class-methods">Class methods</h3>
+
+<p><a href="https://julien.danjou.info/guide-python-static-class-abstract-methods/">The definitive guide on how to use static, class or abstract methods in Python</a></p>
+
+<ul>
+<li>unbound method
+
+<ul>
+<li>function (Python 3)</li>
+</ul></li>
+<li>bound method of instance
+
+<ul>
+<li><code>def func(self):</code></li>
+<li>reference of object: <code>&lt;method&gt;.__self__</code></li>
+</ul></li>
+<li>static method
+
+<ul>
+<li><code>@staticmethod</code></li>
+<li><code>def func():</code></li>
+</ul></li>
+<li>bound method of class:
+
+<ul>
+<li><code>@classmethod</code></li>
+<li><code>def func(cls):</code></li>
+<li>usage: avoid to hardcore class name
+
+<ul>
+<li>factory methods</li>
+<li>static methods calling static method</li>
+</ul></li>
+</ul></li>
+<li>abstract method
+
+<ul>
+<li><code>raise NotImplementedError</code>: triggered when calling</li>
+<li><code>__metaclass__  = abc.ABCMeta</code></li>
+<li><code>@abc.abstractmethod</code></li>
+<li>Python3: possible to use the <code>@staticmethod</code> and <code>@classmethod</code> decorators on top of <code>@abstractmethod</code></li>
+<li>you can have code in your abstract methods and call it via <code>super()</code></li>
+</ul></li>
+</ul>
                             </div>
                         </div>
                     </div>
