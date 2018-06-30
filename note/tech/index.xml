@@ -165,11 +165,13 @@ This article will introduce some knowledges of color, including:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://semver.org/&#34;&gt;Semantic Versioning 2.0.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://chris.beams.io/posts/git-commit/&#34;&gt;How to Write a Git Commit Message&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gitmoji.carloscuesta.me/&#34;&gt;gitmoji&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;基本配置&#34;&gt;基本配置&lt;/h2&gt;
+&lt;h2 id=&#34;basic-configuration&#34;&gt;Basic configuration&lt;/h2&gt;
 
-&lt;h3 id=&#34;git-config&#34;&gt;git config&lt;/h3&gt;
+&lt;h3 id=&#34;git-config&#34;&gt;Git config&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# List configuration
 git config -l

@@ -479,7 +479,7 @@
         <time class="font-weight-bold grey-text text-darken-3">Dec 10, 2017</time>
         
             <i class="ml-2 fa fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">Jun 8, 2018</time>
+            <time class="font-weight-bold grey-text text-darken-3">Jun 30, 2018</time>
         
     
     </div>
@@ -1140,50 +1140,24 @@ time_elapsed = datetime.now() - start_time
 print('Time elapsed %s' % (time_elapsed))
 </code></pre>
 
-<h3 id="class-methods">Class methods</h3>
-
-<p><a href="https://julien.danjou.info/guide-python-static-class-abstract-methods/">The definitive guide on how to use static, class or abstract methods in Python</a></p>
+<h3 id="python-package-searching-order">Python package searching order</h3>
 
 <ul>
-<li>unbound method
-
-<ul>
-<li>function (Python 3)</li>
-</ul></li>
-<li>bound method of instance
-
-<ul>
-<li><code>def func(self):</code></li>
-<li>reference of object: <code>&lt;method&gt;.__self__</code></li>
-</ul></li>
-<li>static method
-
-<ul>
-<li><code>@staticmethod</code></li>
-<li><code>def func():</code></li>
-</ul></li>
-<li>bound method of class:
-
-<ul>
-<li><code>@classmethod</code></li>
-<li><code>def func(cls):</code></li>
-<li>usage: avoid to hardcore class name
-
-<ul>
-<li>factory methods</li>
-<li>static methods calling static method</li>
-</ul></li>
-</ul></li>
-<li>abstract method
-
-<ul>
-<li><code>raise NotImplementedError</code>: triggered when calling</li>
-<li><code>__metaclass__  = abc.ABCMeta</code></li>
-<li><code>@abc.abstractmethod</code></li>
-<li>Python3: possible to use the <code>@staticmethod</code> and <code>@classmethod</code> decorators on top of <code>@abstractmethod</code></li>
-<li>you can have code in your abstract methods and call it via <code>super()</code></li>
-</ul></li>
+<li><a href="https://docs.python.org/3.6/library/sys.html#sys.path">https://docs.python.org/3.6/library/sys.html#sys.path</a></li>
 </ul>
+
+<p>The default order is:</p>
+
+<pre><code class="language-sh">'&lt;current path&gt;'    # The directory of current script if avaiable else empty as `''`
+                    # Not avaiable eg: if the interpreter is invoked interactively
+                    #   or if the script is read from standard input
+[...]               # &lt;path&gt; in $PYTHONPATH
+'&lt;entry path&gt;'      # The directory where you startup `python`, `ipython`.
+                    # More precislly, the `entry` of the program.
+[...]               # &lt;path&gt; installation-dependent default
+</code></pre>
+
+<p>This is exactly the order of <code>sys.path</code>.</p>
                             </div>
                         </div>
                     </div>

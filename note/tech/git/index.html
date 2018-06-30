@@ -479,7 +479,7 @@
         <time class="font-weight-bold grey-text text-darken-3">Dec 11, 2017</time>
         
             <i class="ml-2 fa fa-edit fa-fw" aria-hidden="true"></i>
-            <time class="font-weight-bold grey-text text-darken-3">May 22, 2018</time>
+            <time class="font-weight-bold grey-text text-darken-3">Jun 30, 2018</time>
         
     
         <i class="ml-2 fa fa-tags fa-fw" aria-hidden="true"></i>
@@ -501,11 +501,13 @@
 
 <ul>
 <li><a href="https://semver.org/">Semantic Versioning 2.0.0</a></li>
+<li><a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a></li>
+<li><a href="https://gitmoji.carloscuesta.me/">gitmoji</a></li>
 </ul>
 
-<h2 id="基本配置">基本配置</h2>
+<h2 id="basic-configuration">Basic configuration</h2>
 
-<h3 id="git-config">git config</h3>
+<h3 id="git-config">Git config</h3>
 
 <pre><code class="language-sh"># List configuration
 git config -l
@@ -527,9 +529,7 @@ git config --global core.editor &quot;vim&quot;
 
 <p></p>
 
-<p>See also: <a href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a></p>
-
-<p><strong><code>git alias</code></strong></p>
+<h3 id="git-alias">Git alias</h3>
 
 <pre><code class="language-sh">git config --global alias.co checkout
 git config --global alias.br branch
@@ -540,109 +540,154 @@ git config --global alias.last 'log -1 HEAD'
 git config --global alias.ls 'log --oneline -20'
 </code></pre>
 
-<h2 id="远程分支的那点事儿">远程分支的那点事儿</h2>
+<h2 id="git-remote">Git Remote</h2>
 
-<p><strong>如何添加一个远程分支</strong></p>
+<h2 id="add-a-remote-branch">Add a remote branch</h2>
 
-<ul>
-<li>常规操作， <code>git remote add origin git@githubo.com:[username]/[reponame].git</code>
+<p>Normal command:</p>
 
-<ul>
-<li><code>github.com</code> 这里可以做一点文章</li>
-<li>对ssh进行一些配置，可以实现不同仓库使用不同的私钥进行推送</li>
-</ul></li>
-<li>添加一个自己用<code>git init --bare</code>创建的仓库时
+<pre><code>git remote add origin git@githubo.com:&lt;username&gt;/&lt;reponame&gt;.git
+</code></pre>
 
-<ul>
-<li><code>git remote add origin ssh://git@example.com:[port]/~/example.git</code></li>
-</ul></li>
-</ul>
+<hr />
 
-<p><strong>设置<code>upstream</code></strong></p>
+<p>There is some thing we can do to <code>github.com</code>.
+By using <code>~/.ssh/conig</code> we can use different private key for different repo:</p>
+
+<p>SSH config:</p>
+
+<pre><code class="language-sh">Host &lt;hostname&gt;
+    HostName github.com
+    IdentityFile &lt;path of private key&gt;
+
+Host *
+    IdentityFile &lt;path of default private key&gt;
+</code></pre>
+
+<p>Commands:</p>
+
+<pre><code class="language-sh">git clone git@&lt;hostname&gt;:&lt;username&gt;/&lt;reponame&gt;.git
+git remote add origin git@&lt;hostname&gt;:&lt;username&gt;/&lt;reponame&gt;.git
+</code></pre>
+
+<hr />
+
+<p>When you create create a custom git server by run:</p>
+
+<pre><code class="language-sh">git init --bare
+</code></pre>
+
+<p>You can add this repo by running:</p>
+
+<pre><code class="language-sh">git remote add origin ssh://git@&lt;ip&gt;:&lt;port&gt;/~/&lt;path relative to $HOME&gt;.git
+git remote add origin ssh://git@&lt;ip&gt;:&lt;port&gt;/&lt;path relative to /&gt;.git
+</code></pre>
+
+<h3 id="setting-default-upstream">Setting default upstream</h3>
 
 <pre><code class="language-sh">#  -u to set upstream, next time you can run only `git push` or `git pull`
 git push -u origin master
 </code></pre>
 
-<p><strong>强行覆盖</strong></p>
+<h3 id="overwrite">Overwrite</h3>
 
-<ul>
-<li>本地覆盖远程：<code>git push -f origin master</code></li>
-<li>远程覆盖本地
+<p>Overwrite remote branch:</p>
 
-<ol>
-<li><code>git fetch --all</code></li>
-<li><code>git reset --hard origin/master</code></li>
-</ol></li>
-</ul>
+<pre><code class="language-sh">git push -f origin master
+</code></pre>
 
-<h2 id="如何吃好后悔药">如何吃好后悔药</h2>
+<p>Overwrite local branch:</p>
 
-<h3 id="修改commit作者-author-信息和提交信息-commit-message">修改commit作者(author)信息和提交信息(commit message)</h3>
+<pre><code class="language-sh">git fetch --all
+git reset --hard origin/master
+</code></pre>
 
-<p><strong>修改最后一次提交</strong></p>
+<h3 id="pull-submodules">Pull submodules</h3>
 
-<ul>
-<li><code>git commit --amend --reset-author</code> This will user your author information in <code>git config -l</code>.</li>
-<li><code>git commit --amend --author=&quot;Mr.Blue &lt;silverhugh.77@gmail.com&gt;&quot;</code></li>
-<li><code>--no-edit</code> will keep old commit message.</li>
-<li>Without it, it will open an editor which is configured by <code>git config core.editor=nvim</code></li>
-</ul>
+<pre><code class="language-sh">git submodule update --init --recursive     # First time
+git submodule update --recursive
+</code></pre>
 
-<p>修改任意个提交</p>
+<h2 id="feel-free-to-regret">Feel free to regret</h2>
 
-<ul>
-<li><code>git rebase -i &lt;commit-ID&gt;</code> Modify commits after <code>&lt;commit-ID&gt;</code>
+<h3 id="modify-commit">Modify commit</h3>
 
-<ul>
-<li>or just <code>git rebase -i --root</code> from start.</li>
-</ul></li>
-<li>It will open an editor. There are enough information in opened editor.</li>
-<li>If you want to modify some commits, just change <code>pick</code> of that line to <code>edit</code>
+<p>Only modify latest commit:</p>
 
-<ul>
-<li>Just <code>remove</code> that line if you want remove a commit.</li>
-</ul></li>
-<li>Save and exit the editor.</li>
-<li>Then your next step is to modify those chosen commits one by one.
+<pre><code class="language-sh"># Add extra modification
+git add .
+git commit --amend
 
-<ul>
-<li>Use <code>git rebase --continue</code> to go to next commit point</li>
-</ul></li>
-<li>Treat them with the method showed in the previous part.</li>
-</ul>
+# --no-edit will keep old commit message and not open editor
+# git config core.editor=nvim
+git commit --amend --no-edit
 
-<h2 id="标签">标签</h2>
+# reset user.name and user.email depend on your configuration
+# git config -l
+git commit --amend --reset-author
 
-<p><strong>创建标签</strong></p>
+# reset authour information directly
+git commit --amend --author=&quot;Mr.Blue &lt;silverhugh.77@gmail.com&gt;&quot;
+</code></pre>
 
-<ul>
-<li>Lightweight tag: <code>git tag &lt;tag-name&gt;</code></li>
-<li>Signed tag (Recommend): <code>git tag -a &lt;tag-name&gt; -m &lt;message&gt;</code>
+<p>Modify information of any commits:</p>
 
-<ul>
-<li>without <code>-m</code> will launch editor</li>
-</ul></li>
-</ul>
+<pre><code class="language-sh"># Modify commits AFTER `&lt;commit-ID&gt;`
+git rebase -i &lt;commit-ID&gt;
 
-<p><strong>删除标签</strong></p>
+# From the begining
+git rebase -i --root
 
-<p><code>git tag -d &lt;tag-name&gt;</code></p>
+# The commands above will open an editor. Change `pick` to `edit` of that line
+#   if you want to change that commit. Save and exit the editor `:x`.
+# git config core.editor=vim
 
-<p><strong>推送标签</strong></p>
+# The work flow then will be a loop of two steps.
+#   1. Modify your commit
+git add .
+git commit --amend
 
-<p><code>git push origin &lt;tag-name&gt;</code></p>
+#   2. Move to next `edit` commit
+git rebase --continue
+</code></pre>
 
-<h3 id="切换标签">切换标签</h3>
+<h2 id="git-tags">Git tags</h2>
 
-<p><code>git checkout tags/&lt;tag_name&gt;</code></p>
+<h3 id="create-a-tag">Create a tag</h3>
 
-<h2 id="删除被gitignore的文件">删除被gitignore的文件</h2>
+<p>Lightweight tag:</p>
 
-<ul>
-<li><code>git rm &lt;file&gt; --cached</code></li>
-<li><code>git rm -r &lt;folder&gt; --cached</code></li>
-</ul>
+<pre><code class="language-sh">git tag &lt;tag-name&gt;
+</code></pre>
+
+<p>Signed tag (Recommend):</p>
+
+<pre><code class="language-sh">git tag -a &lt;tag-name&gt;
+git tag -a &lt;tag-name&gt; -m &lt;message&gt;
+</code></pre>
+
+<h3 id="remove-a-tag">Remove a tag</h3>
+
+<pre><code class="language-sh">git tag -d &lt;tag-name&gt;
+</code></pre>
+
+<h3 id="push-tag-to-remote">Push tag to remote</h3>
+
+<pre><code class="language-sh">git push origin &lt;tag-name&gt;
+</code></pre>
+
+<h3 id="switch-to-a-tag">Switch to a tag</h3>
+
+<pre><code class="language-sh">git checkout tags/&lt;tag_name&gt;
+</code></pre>
+
+<h2 id="remove-file-from-git">Remove file from git</h2>
+
+<pre><code class="language-sh">git rm &lt;file&gt; --cached
+git rm -r &lt;folder&gt; --cached
+</code></pre>
+
+<p><code>--cached</code> will reserve the file in your disk.</p>
                             </div>
                         </div>
                     </div>
