@@ -14,9 +14,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
 
 
@@ -396,6 +393,18 @@
         <ul class="pr-2 nav bd-sidenav">
             
             <li class="" >
+                <a href="https://memoex.github.io/note/life/museum/siheyuan/">
+                读城——发现北京四合院之美
+                </a>
+            </li>
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/life/museum/shanshiyuan/">
+                单士元110周年诞辰纪念展
+                </a>
+            </li>
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/life/museum/build/">
                 北京古代建筑博物馆
                 </a>
@@ -475,10 +484,10 @@
                             <h1 class="bd-title">Metrics</h1>
                             <div class="mb-5 bd-info">
     <div>
-        <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
         <time class="font-weight-bold grey-text text-darken-3">Mar 6, 2018</time>
         
-            <i class="ml-2 fa fa-edit fa-fw" aria-hidden="true"></i>
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
             <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
         
     
@@ -511,7 +520,7 @@ In this article, you will see some common used metrics, including:</p>
 <li>AUC</li>
 </ol>
 
-<p>(中文名称参考《机器学习》，周志华著)<sup class="footnote-ref" id="fnref:zhou"><a rel="footnote" href="#fn:zhou">1</a></sup></p>
+<p>(中文名称参考《机器学习》，周志华著)<sup class="footnote-ref" id="fnref:zhou"><a href="#fn:zhou">1</a></sup></p>
 
 <p>First, we should know some terminologies from a table.</p>
 
@@ -540,7 +549,7 @@ In this article, you will see some common used metrics, including:</p>
   </tr>
 </table>
 
-<p>The table above is called as a 2x2 contingency table or <code>confusion matrix</code> (混淆矩阵). <sup class="footnote-ref" id="fnref:recall"><a rel="footnote" href="#fn:recall">2</a></sup></p>
+<p>The table above is called as a 2x2 contingency table or <code>confusion matrix</code> (混淆矩阵). <sup class="footnote-ref" id="fnref:recall"><a href="#fn:recall">2</a></sup></p>
 
 <ul>
 <li><code>True Positive (TP)</code>: We predict it is positive, and it&rsquo;s right.</li>
@@ -679,7 +688,7 @@ $$</p>
 <p>Two commonly used F measures are the \(F_2\) measure, which weights recall higher than precision.
 (More emphasis on \(\displaystyle\frac1{recall}\)). <br/>
 And the \( F_{0.5} \) measure, which weighs precision higher than recall.
-(More emphasis on \(\displaystyle\frac1{precision}\))<sup class="footnote-ref" id="fnref:f1"><a rel="footnote" href="#fn:f1">3</a></sup></p>
+(More emphasis on \(\displaystyle\frac1{precision}\))<sup class="footnote-ref" id="fnref:f1"><a href="#fn:f1">3</a></sup></p>
 
 <h3 id="auc">AUC</h3>
 
@@ -758,7 +767,7 @@ The false alarm rate will be 0. And all positive cases are predicted wrong. The 
 <h4 id="area-under-the-curve">Area under the curve</h4>
 
 <blockquote>
-<p>The AUC is equal to the probability that a classifer will rank a randomly choosen positive instance higher than a randomly choosen negative one. <sup class="footnote-ref" id="fnref:roc"><a rel="footnote" href="#fn:roc">4</a></sup></p>
+<p>The AUC is equal to the probability that a classifer will rank a randomly choosen positive instance higher than a randomly choosen negative one. <sup class="footnote-ref" id="fnref:roc"><a href="#fn:roc">4</a></sup></p>
 </blockquote>
 
 <p>In scikit-learn, they implement AUC by <a href="https://github.com/scikit-learn/scikit-learn/blob/a24c8b464d094d2c468a16ea9f8bf8d42d949f84/sklearn/metrics/ranking.py#L353">choosing unique value in predicts as thresholds</a>.
@@ -779,7 +788,7 @@ and then integrating (FPR, TPR) points with <a href="https://github.com/scikit-l
 </ul>
 
 <p>The purpose of hypothesis testing is to establish whether experimental evidence supports the rejection of the null hypothesis.
-Thus we will accept alternate hypothesis.<sup class="footnote-ref" id="fnref:papoulis"><a rel="footnote" href="#fn:papoulis">5</a></sup></p>
+Thus we will accept alternate hypothesis.<sup class="footnote-ref" id="fnref:papoulis"><a href="#fn:papoulis">5</a></sup></p>
 
 <p>For example, that we wish to establish whether the hypothesis \(H_0\) that a coin is fair is
 true. To do so, we toss the coin 100 times and observe that heads show \(k\) times.</p>
@@ -798,8 +807,8 @@ lead to the conclusion that the coin is fair.</li>
 <p>Why called &ldquo;null&rdquo;?</p>
 
 <p>There are two explain, one is that
-the word &ldquo;null&rdquo; in this context means that it’s a commonly accepted fact that researchers work to nullify <sup class="footnote-ref" id="fnref:statisticshowto"><a rel="footnote" href="#fn:statisticshowto">6</a></sup> <sup class="footnote-ref" id="fnref:knowswhy"><a rel="footnote" href="#fn:knowswhy">7</a></sup>. <br>
-Another one is that the null statement is expressed as no (significant) relationship between two variables or no (significant) difference between two groups. <sup class="footnote-ref" id="fnref:researchgate"><a rel="footnote" href="#fn:researchgate">8</a></sup></p>
+the word &ldquo;null&rdquo; in this context means that it’s a commonly accepted fact that researchers work to nullify <sup class="footnote-ref" id="fnref:statisticshowto"><a href="#fn:statisticshowto">6</a></sup> <sup class="footnote-ref" id="fnref:knowswhy"><a href="#fn:knowswhy">7</a></sup>. <br>
+Another one is that the null statement is expressed as no (significant) relationship between two variables or no (significant) difference between two groups. <sup class="footnote-ref" id="fnref:researchgate"><a href="#fn:researchgate">8</a></sup></p>
 </blockquote>
 
 <p><code>Type I error</code> is that, we reject \(H_0\) even though it is true.
@@ -907,6 +916,9 @@ s.setAttribute('data-timestamp', +new Date());
 
 
                 
+                
+
+
             </main>
         </div>
     </div>
@@ -914,7 +926,11 @@ s.setAttribute('data-timestamp', +new Date());
         
 
 
+
         
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

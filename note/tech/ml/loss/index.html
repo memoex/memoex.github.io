@@ -14,9 +14,6 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
 
 
@@ -396,6 +393,18 @@
         <ul class="pr-2 nav bd-sidenav">
             
             <li class="" >
+                <a href="https://memoex.github.io/note/life/museum/siheyuan/">
+                读城——发现北京四合院之美
+                </a>
+            </li>
+            
+            <li class="" >
+                <a href="https://memoex.github.io/note/life/museum/shanshiyuan/">
+                单士元110周年诞辰纪念展
+                </a>
+            </li>
+            
+            <li class="" >
                 <a href="https://memoex.github.io/note/life/museum/build/">
                 北京古代建筑博物馆
                 </a>
@@ -475,10 +484,10 @@
                             <h1 class="bd-title">Loss Function</h1>
                             <div class="mb-5 bd-info">
     <div>
-        <i class="fa fa-calendar fa-fw" aria-hidden="true"></i>
+        <i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>
         <time class="font-weight-bold grey-text text-darken-3">Mar 19, 2018</time>
         
-            <i class="ml-2 fa fa-edit fa-fw" aria-hidden="true"></i>
+            <i class="ml-2 far fa-edit fa-fw" aria-hidden="true"></i>
             <time class="font-weight-bold grey-text text-darken-3">Apr 15, 2018</time>
         
     
@@ -527,7 +536,7 @@ We use \(L(\hat y^{(i)}, y^{(i)})\) to measure how close are \(\hat y^{(i)}\) an
 <p>Before we talk about various of loss functions, we need explain what is expected risk.</p>
 
 <p>The goal of the learning problem is to minimize <strong>expected risk</strong> \(J\),
-defined as<sup class="footnote-ref" id="fnref:wikipedia"><a rel="footnote" href="#fn:wikipedia">1</a></sup>:</p>
+defined as<sup class="footnote-ref" id="fnref:wikipedia"><a href="#fn:wikipedia">1</a></sup>:</p>
 
 <p>$$
 {\displaystyle J_{real}=\displaystyle \int _{\mathbf X\times \mathbf Y}L(f({{x}}),y)p({{x}},y)\,d{{x}}\,dy}
@@ -642,7 +651,7 @@ $$</p>
 
 <p>Logarithm of the hyperbolic cosine of the prediction error.</p>
 
-<p>According to the code in Keras<sup class="footnote-ref" id="fnref:keras"><a rel="footnote" href="#fn:keras">2</a></sup>, there is a <code>logcosh</code> function:</p>
+<p>According to the code in Keras<sup class="footnote-ref" id="fnref:keras"><a href="#fn:keras">2</a></sup>, there is a <code>logcosh</code> function:</p>
 
 <p>$$
 f(x) = \ln \frac{e^{x}+e^{-x}}2
@@ -667,7 +676,7 @@ $$</p>
 <p><code>log(cosh(x))</code> is approximately equal to <code>(x ** 2) / 2</code> for small <code>x</code> and
 to <code>abs(x) - log(2)</code> for large <code>x</code>. This means that <code>logcosh</code> works mostly
 like the mean squared error, but will not be so strongly affected by the
-occasional wildly incorrect prediction.<sup class="footnote-ref" id="fnref:keras"><a rel="footnote" href="#fn:keras">2</a></sup></p>
+occasional wildly incorrect prediction.<sup class="footnote-ref" id="fnref:keras"><a href="#fn:keras">2</a></sup></p>
 </blockquote>
 
 <p>So the formula of this error is:</p>
@@ -723,6 +732,9 @@ s.setAttribute('data-timestamp', +new Date());
 
 
                 
+                
+
+
             </main>
         </div>
     </div>
@@ -730,7 +742,11 @@ s.setAttribute('data-timestamp', +new Date());
         
 
 
+
         
+
+
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

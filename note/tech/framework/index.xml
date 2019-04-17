@@ -167,7 +167,7 @@ new_model.predict(input_data, batch_size=32)
 [^1]: the footnote text.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Not only number, words work too.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:footnotes&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:footnotes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Not only number, words work too.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:footnotes&#34;&gt;&lt;a href=&#34;#fn:footnotes&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;github-task-list&#34;&gt;Github task list&lt;/h3&gt;
 

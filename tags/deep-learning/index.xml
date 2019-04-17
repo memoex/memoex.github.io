@@ -64,7 +64,7 @@
 &lt;li&gt;将问题分割成子问题，但试图用深度学习解决的问题，都不太好分割成子问题&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;orthogonal-bipolar-target-vectors-1&#34;&gt;Orthogonal Bipolar Target Vectors&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;strong&gt;Can OBV construct a middle target for CNN?&lt;/strong&gt;&lt;/p&gt;
 
